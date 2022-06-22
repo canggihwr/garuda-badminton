@@ -80,7 +80,7 @@
 						<a class="shadow-hover" href="about.html">Info & Jadwal Lapangan</a>
 					</li>
 					<li>
-						<a class="shadow-hover" href="blog.html">Cara Penyewaan</a>
+						<a class="shadow-hover" href="/cara-penyewaan">Cara Penyewaan</a>
 					</li>
 					<li>
 						<a class="shadow-hover" href="contact.html">Fasilitas</a>

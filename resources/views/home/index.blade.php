@@ -2,11 +2,13 @@
 			<!-- Hero Section -->
 		
 			<div class="section full-height mob-height">
+				<div class="section full-height height-auto-lg hide-over background-light-blue">
+					
 				<div class="hero-slider-wrap">
-					{{-- <div class="customNavigation">
+					<div class="customNavigation">
 						<a class="prev-hero-sync-1"><i class="fa fa-long-arrow-up"></i></a>
 						<a class="next-hero-sync-1"><i class="fa fa-long-arrow-down"></i></a>
-					</div>		 --}}
+					</div>		
 					<div id="hero-sync1" class="owl-carousel">
 						<div class="item full-height mob-height">	
 							<div class="container text-left">
@@ -54,8 +56,8 @@
 							</div>	
 						</div>
 					</div>
-
-					<div class="container">
+					
+					{{-- <div class="container">
 						<div class="row">
 							<div class="col-md-12">
 								<div id="hero-sync2" class="owl-carousel">
@@ -71,9 +73,34 @@
 								</div>
 							</div>	
 						</div>
-					</div>
+					</div> --}}
 				</div>
+				{{-- <div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="hero-sync2" class="owl-carousel">
+								<div class="item">
+									<p><span>non-member</span></p>	
+								</div>
+								<div class="item">
+									<p><span>member</span></p>	
+								</div>
+								<div class="item">
+									<p><span>fasilitas</span></p>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div> --}}
 				<a href="#top-scroll" data-gal="m_PageScroll2id"><div class="scroll-to-next">next <i class="fa fa-long-arrow-down"></i></div></a>
+
+				<div class="ocean">
+					<div class="wave"></div>
+					<div class="wave"></div>
+				</div>
+				{{-- <div id="particles-js" class="min-height"></div> --}}
+			</div>
+
 			</div>	
 			
 			<!-- Portfolio -->
@@ -222,8 +249,9 @@
 				</div>
 				<button class="overlay__close"><span class="overlay__close-in"></span></button>
 			</div>
+
+			@include('home.cara2')
 			
-			@include('login.login')
             @include('home.footer')	
 
 						

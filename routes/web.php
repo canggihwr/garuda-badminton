@@ -21,3 +21,8 @@ Route::get('/login', function () {
     return view('login/login');
 });
 
+Route::get('/cara-penyewaan', function () {
+    return view('home/cara2');
+});
+
+
