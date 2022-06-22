@@ -353,7 +353,7 @@ body.royal_preloader {
 	margin-bottom: 0;
 }
 .menu-back{
-	background: rgba(0,0,0,0);
+	background: rgba(0, 0, 0, 0);
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
@@ -374,11 +374,11 @@ body.royal_preloader {
 	transition : all 0.3s ease-out;
 }
 .cbp-af-header.cbp-af-header-shrink .logo{
-	width: 180px;
-	height: 46px;
+	width: 150px;
+	height: 38px;
 	top: 18px;
 	background:url('../img/logo-light.png') no-repeat center center;
-	background-size: 180px 46px;
+	background-size: 150px 38px;
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
@@ -2719,7 +2719,7 @@ a.no-lines:hover{
 }
 .footer img{
 	display: block;
-	width: 100px;
+	width: 250px;
 	text-align: center;
 	margin: 0 auto;
 }

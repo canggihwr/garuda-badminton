@@ -20,9 +20,7 @@
                     </li>
                 </ul>	
             </div>	
-            <div class="col-md-12 mt-5">
-                <div class="footer-line"></div>	
-            </div>	
+            	
             <div class="col-md-12 rights my-3">
                 <p>2022 | Canggih Wahyu Rinaldi | 1901050017</p>
             </div>	

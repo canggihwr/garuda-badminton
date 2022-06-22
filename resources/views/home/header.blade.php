@@ -75,16 +75,6 @@
 				<ul>
 					<li>
 						<a class="shadow-hover curent-shadow" href="/" >Home</a>
-						<ul>
-							<li><a class="curent-multi-page" href="index.html">Motion Hover Effect</a></li>
-							<li><a href="index-1.html">Title Follow - Gallery</a></li>
-							<li><a href="index-2.html">Stack Motion Effect</a></li>
-							<li><a href="index-3.html">Hero Letter Effect</a></li>
-							<li><a href="index-4.html">Hero Fullscreen Slider</a></li>
-							<li><a href="index-5.html">Parallax Back Effect</a></li>
-							<li><a href="index-6.html">Hero Video Player</a></li>
-							<li><a href="project.html">Project Page</a></li>
-						</ul>
 					</li>
 					<li>
 						<a class="shadow-hover" href="about.html">Info & Jadwal Lapangan</a>
@@ -97,6 +87,12 @@
 					</li>
 					<li>
 						<a class="shadow-hover" href="#">Login</span></a>
+						<ul>
+							<li>
+								<a class="curent-multi-page" href="/login">Login</a>
+							</li>
+							<li><a href="/daftar">Daftar</a></li>
+						</ul>
 					</li>
 				</ul>
 			</div>

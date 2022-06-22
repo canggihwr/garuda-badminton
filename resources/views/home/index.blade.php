@@ -3,13 +3,13 @@
 		
 			<div class="section full-height mob-height">
 				<div class="hero-slider-wrap">
-					<div class="customNavigation">
+					{{-- <div class="customNavigation">
 						<a class="prev-hero-sync-1"><i class="fa fa-long-arrow-up"></i></a>
 						<a class="next-hero-sync-1"><i class="fa fa-long-arrow-down"></i></a>
-					</div>		
+					</div>		 --}}
 					<div id="hero-sync1" class="owl-carousel">
 						<div class="item full-height mob-height">	
-							<div class="container text-right">
+							<div class="container text-left">
 								<div class="row">
 									<div class="col-md-12 full-height mob-height mx-3">	
 										<div class="hero-slider-img">	
@@ -18,13 +18,13 @@
 										<div class="hero-center-wrap z-bigger">
 											<h1 class="parallax-fade-top">Sewa<br><span>lapangan</span></h1> 
 										</div>
-										<p class="hero-top-text text-right">non<br>member</p>
+										<p class="hero-top-text text-left">non<br>member</p>
 									</div>	
 								</div>
 							</div>	
 						</div>
 						<div class="item full-height mob-height">	
-							<div class="container text-right">
+							<div class="container text-left">
 								<div class="row">
 									<div class="col-md-12 full-height mob-height mx-3">	
 										<div class="hero-slider-img">	
@@ -223,6 +223,7 @@
 				<button class="overlay__close"><span class="overlay__close-in"></span></button>
 			</div>
 			
+			@include('login.login')
             @include('home.footer')	
 
 						
