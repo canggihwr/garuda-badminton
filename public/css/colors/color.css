@@ -27,7 +27,7 @@
 .menu ul li ul li a.curent-multi-page:hover{
 	color: #db4c17 !important;
 }
-#royal_preloader.royal_preloader_progress .royal_preloader_meter,
+/* #royal_preloader.royal_preloader_progress .royal_preloader_meter, */
 #owl-hero-1.owl-theme .owl-controls .owl-page.active span,
 #owl-hero-1.owl-theme .owl-controls .owl-page span:hover,
 #owl-sep-1.owl-theme .owl-controls .owl-page.active span,

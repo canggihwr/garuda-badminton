@@ -59,7 +59,7 @@
 </head>
 <body>	
 
-	<div class="loader">
+	{{-- <div class="loader">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		 width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 			<rect x="0" y="0" width="4" height="10" fill="#333">
@@ -81,47 +81,40 @@
 				begin="0.4s" dur="0.6s" repeatCount="indefinite" />
 			</rect>
 		</svg>	
-	</div>
+	</div> --}}
 						
 
 	<!-- Primary Page Layout
 	================================================== -->
 
-	<div class="section full-height height-auto-lg hide-over background-light-blue">
-		<div class="hero-center-wrap relative-on-lg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 text-center text-lg-left parallax-fade-top align-self-center z-bigger">
-						<h2>Real tech from real developers.</h2>
-						<p class="mt-3 mb-4 pb-3 font-weight-normal">We’ve built companies from the ground up, served hundreds of millions of users and completed multiple exits.</p>
-						<a class="btn btn-primary ml-lg-0 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Whitepaper</span></a>
-						<a class="btn btn-primary js-tilt" href="#app" data-gal="m_PageScroll2id" data-ps2id-offset="68" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Download App</span></a>
-					</div>
-					{{-- <div class="col-lg-6 mt-5 mt-lg-0">
-						<div class="img-wrap header-img">
-							<img src="{{ asset('v2/img/home-il.svg') }}" alt="">
-						</div>
-					</div> --}}
-				</div>
-			</div>
-		</div>
-		<div class="ocean">
-			<div class="wave"></div>
-			<div class="wave"></div>
-		</div>
-		{{-- <div id="particles-js" class="min-height"></div> --}}
-	</div>
+	
 
-	<div class="section z-bigger">
+	<div class="section z-bigger" style="margin-top: 250px">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 mb-4 mb-md-0">
+					<div class="img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
+						<img src="{{ asset('/img/logo-dark.png') }}" alt="">
+					</div>
+				</div>
+				<div class="col-md-6 offset-md-1 align-self-center">
+					<h4>GOR Bulu Tangkis Garuda</h4>
+					<p>Merupakan salah satu lapangan bulu tangkis yang berada di Kota Mataram. Lapangan ini menggunakan standar dari peraturan bermain bulu tangkis dimana mulai dari ukuran lapangan bulu tangkis, garis lapangan, dan lainnya telah sesuai standar. Lapangan bulu tangkis (badminton) ini dibangun dengan kualitas terbaik sehingga pemain hanya perlu membawa peralatan bulu tangkis seperti, sepatu, shuttlecock dan pakaian olahraga.
+
+						Segera kunjungi lapangan bulu tangkis terdekat ini untuk bermain badminton / bulu tangkis di daerah Kota Mataram.</p>
+						<a class="btn btn-primary mt-4 mx-0 js-tilt" href="#buy" data-gal="m_PageScroll2id" data-ps2id-offset="120" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Buy Tokens</span></a>
+				</div>
+			</div>	
+		</div>
 		<div class="section padding-bottom-big" id="buy">
 		<div class="section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center mt-4">
-						<a class="btn btn-primary js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Buy Tokens 35% Off</span></a>
+						<a class="btn btn-primary js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>GOR Bulutangkis Garuda</span></a>
 					</div>
 					<div class="col-md-12 mt-5">
-						<p class="text-center">payment methods</p>
+						<p class="text-center">Menyediakan berbagai peralatan bulu tangkis </p>
 					</div>
 					<div class="col-md-12 mt-1">
 						<ul class="payment-methods">
@@ -284,20 +277,7 @@
 				<div class="col-md-12 my-5"></div>
 			</div>	
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 mb-4 mb-md-0">
-					<div class="img-wrap">
-						<img src="{{ asset('v2/img/2.svg') }}" alt="">
-					</div>
-				</div>
-				<div class="col-md-6 offset-md-1 align-self-center">
-					<h4>More than just a price jump</h4>
-					<p>The Coeus token sale events are unique as they offer tiered bonuses which include not only an increasing token price but also lifetime discounts, a commitment from us to support our tokens liquidity and future value, as well as access to future pre-pre-Token sale events.</p>
-						<a class="btn btn-primary mt-4 mx-0 js-tilt" href="#buy" data-gal="m_PageScroll2id" data-ps2id-offset="120" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Buy Tokens</span></a>
-				</div>
-			</div>	
-		</div>		
+				
 	</div>
 
 	<div class="section padding-top-bottom-big" id="roadmap">

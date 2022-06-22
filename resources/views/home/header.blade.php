@@ -57,9 +57,9 @@
 	
 	
 </head>
-<body class="royal_preloader">	
+<body class="">	
 	
-	<div id="royal_preloader"></div>
+	<div id=""></div>
 
 	
 	<!-- Nav and Logo

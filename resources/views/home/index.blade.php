@@ -4,13 +4,13 @@
 			<div class="section full-height mob-height">
 				<div class="section full-height height-auto-lg hide-over background-light-blue">
 					
-				<div class="hero-slider-wrap">
+				<div class="hero-slider-wrap" style="margin-top: 0%">
 					<div class="customNavigation">
 						<a class="prev-hero-sync-1"><i class="fa fa-long-arrow-up"></i></a>
 						<a class="next-hero-sync-1"><i class="fa fa-long-arrow-down"></i></a>
 					</div>		
 					<div id="hero-sync1" class="owl-carousel">
-						<div class="item full-height mob-height">	
+						<div class="item full-height mob-height" style="margin-left: 3%">	
 							<div class="container text-left">
 								<div class="row">
 									<div class="col-md-12 full-height mob-height mx-3">	
@@ -20,22 +20,23 @@
 										<div class="hero-center-wrap z-bigger">
 											<h1 class="parallax-fade-top">Sewa<br><span>lapangan</span></h1> 
 										</div>
-										<p class="hero-top-text text-left">non<br>member</p>
+										{{-- <p class="hero-top-text text-left">non<br>member</p> --}}
 									</div>	
 								</div>
 							</div>	
 						</div>
-						<div class="item full-height mob-height">	
+						<div class="item full-height mob-height" style="margin-left: 13%">	
 							<div class="container text-left">
 								<div class="row">
-									<div class="col-md-12 full-height mob-height mx-3">	
-										<div class="hero-slider-img">	
+									<div class="col-md-19 full-height mob-height mx-3">	
+										<div class="hero-slider-img">
 											<img src="{{ asset('img/slide/3.png') }}" alt="hero image"/>
 										</div>
 										<div class="hero-center-wrap z-bigger">
 											<h1 class="parallax-fade-top">  Daftar<br><span>    member</span></h1>
 										</div>
-										<p class="hero-top-text">member</p>
+										{{-- <p class="hero-top-text">member</p> --}}
+										
 									</div>	
 								</div>
 							</div>	
@@ -50,7 +51,7 @@
 										<div class="hero-center-wrap z-bigger">
 											<h1 class="parallax-fade-top">Peralatan <br><span>bulutangkis</span></h1>
 										</div>
-										<p class="hero-top-text">fasilitas</p>
+										{{-- <p class="hero-top-text">fasilitas</p> --}}
 									</div>	
 								</div>
 							</div>	
@@ -98,11 +99,17 @@
 					<div class="wave"></div>
 					<div class="wave"></div>
 				</div>
-				{{-- <div id="particles-js" class="min-height"></div> --}}
 			</div>
+			{{-- <div id="particles-js" class="min-height"></div> --}}
+
 
 			</div>	
 			
+			
+
+			@include('home.cara2')
+			
+
 			<!-- Portfolio -->
 			
 			<div class="content padding-top-bottom-big" id="top-scroll">
@@ -250,8 +257,8 @@
 				<button class="overlay__close"><span class="overlay__close-in"></span></button>
 			</div>
 
-			@include('home.cara2')
-			
+
+
             @include('home.footer')	
 
 						

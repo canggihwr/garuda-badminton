@@ -34,7 +34,7 @@
 <!-- JAVASCRIPT
 ================================================== -->
 <script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/royal_preloader.min.js')}}"></script> 
+{{-- <script src="{{ asset('js/royal_preloader.min.js')}}"></script>  --}}
 <script src="{{ asset('js/popper.min.js')}}"></script> 
 <script src="{{ asset('js/bootstrap.min.js')}}"></script>
 <script src="{{ asset('js/plugins.js')}}"></script> 

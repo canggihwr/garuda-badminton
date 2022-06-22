@@ -4,12 +4,12 @@
 	
 	//Preloader
 
-	Royal_Preloader.config({
-		mode           : 'progress',
-		background     : '#ffffff',
-		showProgress   : true,
-		showPercentage : false
-	});
+	// Royal_Preloader.config({
+	// 	mode           : 'progress',
+	// 	background     : '#ffffff',
+	// 	showProgress   : true,
+	// 	showPercentage : false
+	// });
 		
 		
 	//Parallax & fade on scroll	

@@ -1,12 +1,12 @@
 (function($) { "use strict";
 
 	
-	//Preloader
+	// //Preloader
 	
-	$(window).on('load', function(e) { // makes sure the whole site is loaded
-		$(".loader svg").fadeOut(); // will first fade out the loading animation
-		$(".loader").delay(300).fadeOut("slow"); // will fade out the white DIV that covers the website.
-	})	
+	// $(window).on('load', function(e) { // makes sure the whole site is loaded
+	// 	$(".loader svg").fadeOut(); // will first fade out the loading animation
+	// 	$(".loader").delay(300).fadeOut("slow"); // will fade out the white DIV that covers the website.
+	// })	
 		
 		
 	//Parallax & fade on scroll	
