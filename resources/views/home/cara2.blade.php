@@ -48,12 +48,7 @@
 	<link rel="stylesheet" href="{{ asset('v2/css/style.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('v2/css/colors/color.css') }}"/>
 			
-	<!-- Favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="{{ asset('v2/favicon.png') }}">
-	<link rel="apple-touch-icon" href="{{ asset('v2/apple-touch-icon.png') }}">
-	<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('v2/apple-touch-icon-72x72.png') }}">
-	<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('v2/apple-touch-icon-114x114.png') }}">
+	
 	
 	
 </head>
@@ -87,31 +82,31 @@
 	<!-- Primary Page Layout
 	================================================== -->
 
-	
-
-	<div class="section z-bigger" style="margin-top: 250px">
+	<div class="section z-bigger" style="margin-top: 100px">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 mb-4 mb-md-0">
-					<div class="img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-						<img src="{{ asset('/img/logo-dark.png') }}" alt="">
-					</div>
+				<div class="img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24"  style="margin-left: auto;
+				margin-right: auto;
+				width: 50%;">
+					<img src="{{ asset('/img/logo-dark.png') }}" alt="">
 				</div>
-				<div class="col-md-6 offset-md-1 align-self-center">
-					<h4>GOR Bulu Tangkis Garuda</h4>
-					<p>Merupakan salah satu lapangan bulu tangkis yang berada di Kota Mataram. Lapangan ini menggunakan standar dari peraturan bermain bulu tangkis dimana mulai dari ukuran lapangan bulu tangkis, garis lapangan, dan lainnya telah sesuai standar. Lapangan bulu tangkis (badminton) ini dibangun dengan kualitas terbaik sehingga pemain hanya perlu membawa peralatan bulu tangkis seperti, sepatu, shuttlecock dan pakaian olahraga.
-
-						Segera kunjungi lapangan bulu tangkis terdekat ini untuk bermain badminton / bulu tangkis di daerah Kota Mataram.</p>
-						<a class="btn btn-primary mt-4 mx-0 js-tilt" href="#buy" data-gal="m_PageScroll2id" data-ps2id-offset="120" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Buy Tokens</span></a>
-				</div>
-			</div>	
+			</div>
 		</div>
+	</div>
+
+	<div class="section z-bigger">
 		<div class="section padding-bottom-big" id="buy">
 		<div class="section">
 			<div class="container">
 				<div class="row">
+					<div class="col-md-12 mt-5">
+						{{-- <div class="col-md-12 padding-top-bottom">
+							<div class="line-sep"></div>
+						</div> --}}
+						<p class="text-center">Merupakan salah satu lapangan bulu tangkis yang berada di Kota Mataram. Lapangan ini menggunakan standar dari peraturan bermain bulu tangkis dimana mulai dari ukuran lapangan bulu tangkis, garis lapangan, dan lainnya telah sesuai standar. Lapangan bulu tangkis (badminton) ini dibangun dengan kualitas terbaik sehingga pemain hanya perlu membawa peralatan bulu tangkis seperti, sepatu, shuttlecock dan pakaian olahraga. </p>
+					</div>
 					<div class="col-md-12 text-center mt-4">
-						<a class="btn btn-primary js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>GOR Bulutangkis Garuda</span></a>
+						<a class="btn btn-primary js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Daftar Sekarang</span></a>
 					</div>
 					<div class="col-md-12 mt-5">
 						<p class="text-center">Menyediakan berbagai peralatan bulu tangkis </p>
@@ -132,49 +127,49 @@
 				<div class="row">
 					<div class="col-xl-3 col-sm-6">
 						<div class="table-sale background-grey">
-							<p class="text-center"><span>50% Off</span></p>
+							<p class="text-center"><span>Paket Member</span></p>
 							<div class="table-line mt-4 mb-4"></div>
-							<h4 class="text-center">1 coe</h4>
-							<p class="text-center">0.5 US dollars</p>
+							<h4 class="text-center">1 bulan</h4>
+							<p class="text-center">3x/minggu</p>
 							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Sold Out 2M Tokens</p>
-							<p class="text-center">March 20 - 31</p>
+							<p class="text-center">Rp.xxxxxxx</p>
+							<p class="text-center">gabung lah</p>
 							<a class="btn disabled mt-5" href="#" role="button"><span>Sold Out</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-sm-0">
 						<div class="table-sale background-color table-shadow">
-							<h4 class="text-center">now</h4>
+							<h4 class="text-center">Paket 1 Jam</h4>
 							<div class="table-line mt-4 mb-4"></div>
-							<h4 class="text-center">1 coe</h4>
-							<p class="text-center">0.65 US dollars</p>
+							<h4 class="text-center">Rp.25000</h4>
+							<p class="text-center">Senin - Jum'at</p>
 							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Available 8M Tokens</p>
-							<p class="text-center">April 1 - 15</p>
+							<p class="text-center">Rp.35000</p>
+							<p class="text-center">Sabtu - Minggu</p>
 							<a class="btn btn-primary table-ver mt-5 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Buy 35% Off</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-xl-0">
 						<div class="table-sale background-grey future-price">
-							<p class="text-center"><span>25% Off</span></p>
+							<p class="text-center"><span>Paket 2 Jam</span></p>
 							<div class="table-line mt-4 mb-4"></div>
-							<h4 class="text-center">1 coe</h4>
-							<p class="text-center">0.75 US dollars</p>
+							<h4 class="text-center">Rp.45000</h4>
+							<p class="text-center">Senin - Jum'at</p>
 							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Available 6M Tokens</p>
-							<p class="text-center">April 16 - 25</p>
+							<p class="text-center">Rp.65000</p>
+							<p class="text-center">Sabtu - Minggu</p>
 							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>25 days</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-xl-0">
 						<div class="table-sale background-grey future-price">
-							<p class="text-center"><span>10% Off</span></p>
+							<p class="text-center"><span>Paket 3 Jam</span></p>
 							<div class="table-line mt-4 mb-4"></div>
-							<h4 class="text-center">1 coe</h4>
-							<p class="text-center">0.9 US dollars</p>
+							<h4 class="text-center">Rp.70000</h4>
+							<p class="text-center">Senin - Jum'at</p>
 							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Available 4M Tokens</p>
-							<p class="text-center">April 26 - May 10</p>
+							<p class="text-center">Rp.85000</p>
+							<p class="text-center">Sabtu - Minggu</p>
 							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>40 days</span></a>
 						</div>
 					</div>

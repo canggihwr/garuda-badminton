@@ -48,12 +48,7 @@
 	<link rel="stylesheet" href="{{ asset('v2/css/style.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('v2/css/colors/color.css') }}"/>
 			
-	<!-- Favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="{{ asset('v2/favicon.png') }}">
-	<link rel="apple-touch-icon" href="{{ asset('v2/apple-touch-icon.png') }}">
-	<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('v2/apple-touch-icon-72x72.png') }}">
-	<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('v2/apple-touch-icon-114x114.png') }}">
+	
 	
 	
 </head>
