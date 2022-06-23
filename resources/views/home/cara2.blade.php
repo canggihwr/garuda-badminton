@@ -88,7 +88,7 @@
 				<div class="img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24"  style="margin-left: auto;
 				margin-right: auto;
 				width: 50%;">
-					<img src="{{ asset('/img/logo-dark.png') }}" alt="">
+					<img src="/img/logo-dark.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -109,14 +109,15 @@
 						<a class="btn btn-primary js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Daftar Sekarang</span></a>
 					</div>
 					<div class="col-md-12 mt-5">
-						<p class="text-center">Menyediakan berbagai peralatan bulu tangkis </p>
+						<p class="text-center">Pembayaran online melalui berbagai platform pembayaran digital </p>
 					</div>
 					<div class="col-md-12 mt-1">
 						<ul class="payment-methods">
-							<li><img src="{{ asset('v2/img/bitcoin.png') }}" alt=""><p>bitcoin</p></li>
-							<li><img src="{{ asset('v2/img/etherium.png') }}" alt=""><p>ethereum</p></li>
-							<li><img src="{{ asset('v2/img/litecoin.png') }}" alt=""><p>litecoin</p></li>
-							<li><img src="{{ asset('v2/img/usd.png') }}" alt=""><p>US Dollars</p></li>
+							<li><img src="{{ asset('v2/img/dana.png') }}" alt=""><p>dana</p></li>
+							<li><img src="{{ asset('v2/img/gopay.png') }}" alt=""><p>gopay</p></li>
+							<li><img src="{{ asset('v2/img/ovo.png') }}" alt=""><p>ovo</p></li>
+							<li><img src="{{ asset('v2/img/spay.png') }}" alt=""><p>shopeepay</p></li>
+							<li><img src="{{ asset('v2/img/qris.png') }}" alt=""><p>QRIS</p></li>
 						</ul>
 					</div>
 				</div>
@@ -134,7 +135,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<p class="text-center">Rp.xxxxxxx</p>
 							<p class="text-center">gabung lah</p>
-							<a class="btn disabled mt-5" href="#" role="button"><span>Sold Out</span></a>
+							<a class="btn disabled mt-5" href="#" role="button"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-sm-0">
@@ -146,7 +147,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<p class="text-center">Rp.35000</p>
 							<p class="text-center">Sabtu - Minggu</p>
-							<a class="btn btn-primary table-ver mt-5 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Buy 35% Off</span></a>
+							<a class="btn btn-primary table-ver mt-5 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-xl-0">
@@ -158,7 +159,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<p class="text-center">Rp.65000</p>
 							<p class="text-center">Sabtu - Minggu</p>
-							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>25 days</span></a>
+							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-xl-0">
@@ -170,7 +171,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<p class="text-center">Rp.85000</p>
 							<p class="text-center">Sabtu - Minggu</p>
-							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>40 days</span></a>
+							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
 				</div>

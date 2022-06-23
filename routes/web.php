@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login/login');
+    return view('login/sign-in');
+});
+
+Route::get('/daftar', function () {
+    return view('login/sign-up');
 });
 
 Route::get('/cara-penyewaan', function () {
