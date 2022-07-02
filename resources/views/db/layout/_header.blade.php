@@ -19,7 +19,7 @@
 								<!--end::Aside  toggle-->
 								<!--begin::Logo-->
 								<a href="?page=index">
-									<img alt="Logo" src="db/media/logos/logo-2.svg" class="h-25px h-lg-30px" />
+									<img alt="Logo" src="img/logo-light.png" class="h-37px h-lg-45px" />
 								</a>
 								<!--end::Logo-->
 								<!--begin::Nav-->

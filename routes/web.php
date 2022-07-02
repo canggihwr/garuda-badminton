@@ -29,4 +29,11 @@ Route::get('/cara-penyewaan', function () {
     return view('home/cara2');
 });
 
+Route::get('/dashboard', function () {
+    return view('db/dashboard');
+});
+
+Route::get('/redirect', function () {
+    return view('db/dashboard');
+});
 

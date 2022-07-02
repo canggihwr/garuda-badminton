@@ -176,7 +176,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container padding-top-big">
+			{{-- <div class="container padding-top-big">
 				<div class="row">
 					<div class="col-12 col-lg-6 offset-lg-3">
 						<div class="countdown background-dark-blue-1 big-shadow-down">
@@ -193,7 +193,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 		</div>
 
@@ -202,7 +202,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="title-wrap text-center">
-							<h5 class="color-light">overall output over 60 months:</h5>
+							<h5 class="color-light">Grafik jumlah penyewaan bulan ini:</h5>
 						</div>
 					</div>
 					<div class="col-md-12">	
@@ -215,6 +215,7 @@
 				</div>	
 			</div>
 		</div>
+
 	</div>
 
 	<div class="section padding-top-bottom-big background-white" id="concept">
@@ -222,35 +223,89 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
-						<div class="back-title">concept</div>
-						<h3>We are the only global<br>mining operation.</h3>
-						<p>Lend your digital assets to others for trading and earn an interest through margin trading loans.</p>
+						<div class="back-title">gor</div>
+						<h3>Keunggulan</h3>
+						<p>GOR Garuda memiliki banyak keunggulan daftar sekarang dan nikmati kemudahan berolahraga.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="concept-box">
-						<img class="mb-4" src="{{ asset('v2/img/con-1.svg') }}" alt="">
-						<h5>Independent</h5>
+						<img class="mb-4" src="{{ asset('v2/img/con-2.svg') }}" alt="">
+						<h5>Murah</h5>
 						<p>Our mobility concept enables super-simple transportation and worldwide deployment.</p>
 					</div>
 				</div>
 				<div class="col-md-4 mt-4 mt-md-0">
 					<div class="concept-box">
 						<img class="mb-4" src="{{ asset('v2/img/con-2.svg') }}" alt="">
-						<h5>Fully Scalable</h5>
+						<h5>Mudah</h5>
 						<p>Mobile and efficient low-cost hardware and optimized propietary management.</p>
 					</div>
 				</div>
 				<div class="col-md-4 mt-4 mt-md-0">
 					<div class="concept-box">
-						<img class="mb-4" src="{{ asset('v2/img/con-3.svg') }}" alt="">
-						<h5>High Growth</h5>
+						<img class="mb-4" src="{{ asset('v2/img/con-2.svg') }}" alt="">
+						<h5>Fasilitas Lengkap</h5>
 						<p>Our reinvestment strategy enables us to quickly grow our fleet of mobile units.</p>
 					</div>
 				</div>
 				<div class="col-md-12 padding-top-bottom">
 					<div class="line-sep"></div>
 				</div>
+				<div class="col-md-12">
+					<div class="title-wrap text-center">
+						<div class="back-title">Member</div>
+						<h3>Daftar Member</h3>
+					</div>
+				</div>
+				<table class="table table-bordered" id="member">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Nama Member</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+						<tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+						<tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+						<tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+						<tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+						<tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+            </table>
 			</div>	
 		</div>
 		<div class="container">
@@ -378,8 +433,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 align-self-center">
-					<h4>It begins with total security.</h4>
-					<p class="lead">View, manage and sort all your tokens easily. Providing fast coin management in your local currency.</p>
+					<h4>Visi dan Misi. GOR Badminton Garuda</h4>
+					<p class="lead">Visi dan Misi.</p>
 					<ul class="app-list mb-5 mt-4">
 						<li>Smart by design</li>
 						<li>Easy Coin Management</li>
@@ -387,14 +442,16 @@
 						<li>Detailed transaction info</li>
 						<li>Custom fees and limits</li>
 					</ul>
-					<a class="btn btn-primary mx-0 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Download App</span></a>
-					<a class="app-btn ml-4" href="#"><i class="fa fa-apple"></i></a>
+					<a class="btn btn-primary mx-0 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Daftar</span></a>
+					{{-- <a class="app-btn ml-4" href="#"><i class="fa fa-apple"></i></a>
 					<a class="app-btn ml-2" href="#"><i class="fa fa-android"></i></a>
-					<a class="app-btn ml-2" href="#"><i class="fa fa-windows"></i></a>
+					<a class="app-btn ml-2" href="#"><i class="fa fa-windows"></i></a> --}}
 				</div>
 				<div class="col-md-6 order-first order-md-last mb-4 mb-md-0">
-					<div class="img-wrap">
-						<img src="{{ asset('v2/img/app.png') }}" alt="">
+					<div class="img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24"  style="margin-left: auto;
+					margin-right: auto;
+					width: 50%;">
+						<img src="{{ asset('/img/logo-full.png') }}" alt="">
 					</div>
 				</div>
 			</div>	
@@ -406,20 +463,16 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
-						<h5 class="color-light">as featured on:</h5>
+						{{-- <h5 class="color-light">Lakukan pembayaran melalui:</h5> --}}
 					</div>
 				</div>
 				<div class="col-md-12">
 					<ul class="logo-wrap">
-						<li><img src="{{ asset('v2/img/logos/1.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/2.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/3.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/4.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/5.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/6.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/7.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/8.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/logos/9.png') }}" alt=""></li>
+						{{-- <li><img src="{{ asset('v2/img/dana.png') }}" alt=""></li>
+						<li><img src="{{ asset('v2/img/gopay.png') }}" alt=""></li>
+						<li><img src="{{ asset('v2/img/spay.png') }}" alt=""></li>
+						<li><img src="{{ asset('v2/img/qris.png') }}" alt=""></li>
+						<li><img src="{{ asset('v2/img/ovo.png') }}" alt=""></li> --}}
 					</ul>
 				</div>
 			</div>	
@@ -432,9 +485,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
-						<div class="back-title">team</div>
-						<h3>Established since<br>2009 (Belgrade)</h3>
-						<p>We're a close team of creatives, designers & developers who work together.</p>
+						<div class="back-title">lapangan</div>
+						<h3>Daftar Lapangan</h3>
+						<p>GOR Badminton Garuda memiliki 3 lapangan yang terdiri dari.</p>
 					</div>
 				</div>
 			</div>	
@@ -445,12 +498,12 @@
 					<div class="team-wrap">
 						<a class="d-inline" data-toggle="modal" data-target="#team-modal-1">
 							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t5.jpg') }}" alt="">
+								<img src="{{ asset('/img/l2.jpg') }}" alt="">
 								<div class="team-img-mask"></div>
 							</div>
 						</a>
-						<h6>Alex Andrews</h6>
-						<p>Officer & Founder</p>
+						<h6>Lapangan 1</h6>
+						<p>Lapangan 1</p>
 						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-linkedin"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
@@ -461,12 +514,12 @@
 					<div class="team-wrap">
 						<a class="d-inline" data-toggle="modal" data-target="#team-modal-2">
 							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t6.jpg') }}" alt="">
+								<img src="{{ asset('/img/l3.jpg') }}" alt="">
 								<div class="team-img-mask"></div>
 							</div>
 						</a>
-						<h6>Marco Kulis</h6>
-						<p>Development manager</p>
+						<h6>Lapangan 2</h6>
+						<p>Lapangan 2</p>
 						<a class="app-btn" href="#"><i class="fa fa-linkedin"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
@@ -475,79 +528,14 @@
 					<div class="team-wrap">
 						<a class="d-inline" data-toggle="modal" data-target="#team-modal-3">
 							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t7.jpg') }}" alt="">
+								<img src="{{ asset('/img/l4.jpg') }}" alt="">
 								<div class="team-img-mask"></div>
 							</div>
 						</a>
-						<h6>Anna Furius</h6>
-						<p>Senior Developer</p>
+						<h6>Lapangan 3</h6>
+						<p>Lapangan 3</p>
 						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
-					</div>
-				</div>
-				<div class="col-md-12 padding-top-small">
-					<div class="title-wrap text-center mb-5">
-						<h5>Advisory team</h5>
-					</div>
-				</div>
-				<div class="col-xl-3 col-md-6 mb-5 mb-xl-0">
-					<div class="team-wrap">
-						<a class="d-inline" data-toggle="modal" data-target="#team-modal-4">
-							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t1.jpg') }}" alt="">
-								<div class="team-img-mask"></div>
-							</div>
-						</a>
-						<h6>Frank Furius</h6>
-						<p>Managing Director</p>
-						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-linkedin"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
-					</div>
-				</div>
-				<div class="col-xl-3 col-md-6 mb-5 mb-xl-0">
-					<div class="team-wrap">
-						<a class="d-inline" data-toggle="modal" data-target="#team-modal-5">
-							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t2.jpg') }}" alt="">
-								<div class="team-img-mask"></div>
-							</div>
-						</a>
-						<h6>Aca Pesic</h6>
-						<p>Founder & CEO</p>
-						<a class="app-btn" href="#"><i class="fa fa-linkedin"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-					</div>
-				</div>
-				<div class="col-xl-3 col-md-6 mb-5 mb-xl-0">
-					<div class="team-wrap">
-						<a class="d-inline" data-toggle="modal" data-target="#team-modal-6">
-							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t3.jpg') }}" alt="">
-								<div class="team-img-mask"></div>
-							</div>
-						</a>
-						<h6>Ela Dobric</h6>
-						<p>Executive Director</p>
-						<a class="app-btn" href="#"><i class="fa fa-git"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-linkedin"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-					</div>
-				</div>
-				<div class="col-xl-3 col-md-6">
-					<div class="team-wrap">
-						<a class="d-inline" data-toggle="modal" data-target="#team-modal-7">
-							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t4.jpg') }}" alt="">
-								<div class="team-img-mask"></div>
-							</div>
-						</a>
-						<h6>Milena Dobric</h6>
-						<p>Founder & CEO</p>
-						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-linkedin"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
 				</div>

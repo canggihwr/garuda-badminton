@@ -11,8 +11,8 @@
 							<!--end::Aside menu-->
 							<!--begin::Footer-->
 							<div class="aside-footer flex-column-auto pt-5 pb-7 px-5" id="kt_aside_footer">
-								<a href="?page=documentation/getting-started" class="btn btn-bg-light btn-color-gray-500 btn-active-color-gray-900 w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="200+ in-house components and 3rd-party plugins">
-									<span class="btn-label">Docs &amp; Components</span>
+								<a href="?page=documentation/getting-started" class="btn btn-bg-light btn-color-gray-500 btn-active-color-gray-900 w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="Cetak laporan penyewaan lapangan">
+									<span class="btn-label">Cetak Laporan</span>
 									<!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
 									<span class="svg-icon btn-icon svg-icon-2">
 										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

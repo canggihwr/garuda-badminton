@@ -17,7 +17,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Dashboards</span>
+												<span class="menu-title">Dashboard</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -26,10 +26,10 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Multipurpose</span>
+														<span class="menu-title">Home</span>
 													</a>
 												</div>
-												<div class="menu-item">
+												{{-- <div class="menu-item">
 													<a class="menu-link" href="?page=dashboards/ecommerce">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
@@ -93,8 +93,8 @@
 															</span>
 															<span class="menu-title">Website Analytics</span>
 														</a>
-													</div>
-													<div class="menu-item">
+													</div> --}}
+													{{-- <div class="menu-item">
 														<a class="menu-link" href="?page=dashboards/finance-performance">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
@@ -141,7 +141,7 @@
 															</span>
 															<span class="menu-title">Podcast</span>
 														</a>
-													</div>
+													</div> --}}
 													<div class="menu-item">
 														<a class="menu-link" href="?page=landing">
 															<span class="menu-bullet">
@@ -151,7 +151,7 @@
 														</a>
 													</div>
 												</div>
-												<div class="menu-item">
+												{{-- <div class="menu-item">
 													<div class="menu-content">
 														<a class="btn btn-flex btn-color-success fs-base p-0 ms-2 mb-2 collapsible collapsed rotate" data-bs-toggle="collapse" href="#kt_aside_menu_collapse" data-kt-toggle-text="Show Less">
 															<span data-kt-toggle-text-target="true">Show 10 More</span>
@@ -166,11 +166,11 @@
 														</a>
 													</div>
 												</div>
-											</div>
+											</div> --}}
 										</div>
 										<div class="menu-item">
 											<div class="menu-content pt-8 pb-2">
-												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Crafted</span>
+												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Menu</span>
 											</div>
 										</div>
 										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -186,7 +186,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Pages</span>
+												<span class="menu-title">Transaksi</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -195,7 +195,7 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">User Profile</span>
+														<span class="menu-title">Daftar User</span>
 														<span class="menu-arrow"></span>
 													</span>
 													<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -411,7 +411,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Account</span>
+												<span class="menu-title">Daftar User</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -493,7 +493,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Authentication</span>
+												<span class="menu-title">Autentikasi</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -787,7 +787,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Utilities</span>
+												<span class="menu-title">Data Lapangan</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -1140,7 +1140,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Widgets</span>
+												<span class="menu-title">Perlengkapan</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">

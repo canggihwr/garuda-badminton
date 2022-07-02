@@ -13,7 +13,7 @@ License: For each use you must have a valid license purchased only from above li
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="../../../">
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
+		<title>Daftar - GOR Garuda</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -55,22 +55,22 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Heading-->
 							<div class="mb-10 text-center">
 								<!--begin::Title-->
-								<h1 class="text-dark mb-3">Create an Account</h1>
+								<h1 class="text-dark mb-3">Daftar GOR Bumigora</h1>
 								<!--end::Title-->
 								<!--begin::Link-->
-								<div class="text-gray-400 fw-bold fs-4">Already have an account?
-								<a href="../../demo14/dist/authentication/layouts/basic/sign-in.html" class="link-primary fw-bolder">Sign in here</a></div>
+								<div class="text-gray-400 fw-bold fs-4">Sudah punya akun?
+								<a href="/login" class="link-primary fw-bolder">Login di sini!</a></div>
 								<!--end::Link-->
 							</div>
 							<!--end::Heading-->
 							<!--begin::Action-->
 							<button type="button" class="btn btn-light-primary fw-bolder w-100 mb-10">
-							<img alt="Logo" src="db/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Sign in with Google</button>
+							<img alt="Logo" src="db/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Daftar dengan Google</button>
 							<!--end::Action-->
 							<!--begin::Separator-->
 							<div class="d-flex align-items-center mb-10">
 								<div class="border-bottom border-gray-300 mw-50 w-100"></div>
-								<span class="fw-bold text-gray-400 fs-7 mx-2">OR</span>
+								<span class="fw-bold text-gray-400 fs-7 mx-2">ATAU</span>
 								<div class="border-bottom border-gray-300 mw-50 w-100"></div>
 							</div>
 							<!--end::Separator-->
@@ -78,13 +78,13 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="row fv-row mb-7">
 								<!--begin::Col-->
 								<div class="col-xl-6">
-									<label class="form-label fw-bolder text-dark fs-6">First Name</label>
+									<label class="form-label fw-bolder text-dark fs-6">Nama Awal</label>
 									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="first-name" autocomplete="off" />
 								</div>
 								<!--end::Col-->
 								<!--begin::Col-->
 								<div class="col-xl-6">
-									<label class="form-label fw-bolder text-dark fs-6">Last Name</label>
+									<label class="form-label fw-bolder text-dark fs-6">Nama Akhir</label>
 									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="last-name" autocomplete="off" />
 								</div>
 								<!--end::Col-->
@@ -92,8 +92,8 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Input group-->
 							<!--begin::Input group-->
 							<div class="fv-row mb-7">
-								<label class="form-label fw-bolder text-dark fs-6">Email</label>
-								<input class="form-control form-control-lg form-control-solid" type="email" placeholder="" name="email" autocomplete="off" />
+								<label class="form-label fw-bolder text-dark fs-6">Username</label>
+								<input class="form-control form-control-lg form-control-solid" type="username" placeholder="" name="username" autocomplete="off" />
 							</div>
 							<!--end::Input group-->
 							<!--begin::Input group-->
@@ -129,7 +129,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Input group=-->
 							<!--begin::Input group-->
 							<div class="fv-row mb-5">
-								<label class="form-label fw-bolder text-dark fs-6">Confirm Password</label>
+								<label class="form-label fw-bolder text-dark fs-6">Konfirmasi Password</label>
 								<input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="confirm-password" autocomplete="off" />
 							</div>
 							<!--end::Input group-->
@@ -137,15 +137,15 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="fv-row mb-10">
 								<label class="form-check form-check-custom form-check-solid form-check-inline">
 									<input class="form-check-input" type="checkbox" name="toc" value="1" />
-									<span class="form-check-label fw-bold text-gray-700 fs-6">I Agree
-									<a href="#" class="ms-1 link-primary">Terms and conditions</a>.</span>
+									<span class="form-check-label fw-bold text-gray-700 fs-6">Centang
+									<a href="#" class="ms-1 link-primary">sk</a>.</span>
 								</label>
 							</div>
 							<!--end::Input group-->
 							<!--begin::Actions-->
 							<div class="text-center">
 								<button type="button" id="kt_sign_up_submit" class="btn btn-lg btn-primary">
-									<span class="indicator-label">Submit</span>
+									<span class="indicator-label">Daftar</span>
 									<span class="indicator-progress">Please wait...
 									<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 								</button>

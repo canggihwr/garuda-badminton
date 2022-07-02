@@ -539,9 +539,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
-						<div class="back-title">team</div>
-						<h3>Established since<br>2009 (Belgrade)</h3>
-						<p>We're a close team of creatives, designers & developers who work together.</p>
+						<div class="back-title">lapangan</div>
+						<h3>Daftar Lapangan</h3>
+						<p>GOR Badminton Garuda memiliki 3 lapangan yang terdiri dari.</p>
 					</div>
 				</div>
 			</div>	
@@ -552,12 +552,12 @@
 					<div class="team-wrap">
 						<a class="d-inline" data-toggle="modal" data-target="#team-modal-1">
 							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t5.jpg') }}" alt="">
+								<img src="{{ asset('/img/l2.jpg') }}" alt="">
 								<div class="team-img-mask"></div>
 							</div>
 						</a>
-						<h6>Alex Andrews</h6>
-						<p>Officer & Founder</p>
+						<h6>Lapangan 1</h6>
+						<p>Lapangan member</p>
 						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-linkedin"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
@@ -568,12 +568,12 @@
 					<div class="team-wrap">
 						<a class="d-inline" data-toggle="modal" data-target="#team-modal-2">
 							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t6.jpg') }}" alt="">
+								<img src="{{ asset('/img/l3.jpg') }}" alt="">
 								<div class="team-img-mask"></div>
 							</div>
 						</a>
-						<h6>Marco Kulis</h6>
-						<p>Development manager</p>
+						<h6>Lapangan 2</h6>
+						<p>Lapangan member dan non-member</p>
 						<a class="app-btn" href="#"><i class="fa fa-linkedin"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
@@ -582,18 +582,18 @@
 					<div class="team-wrap">
 						<a class="d-inline" data-toggle="modal" data-target="#team-modal-3">
 							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('v2/img/t7.jpg') }}" alt="">
+								<img src="{{ asset('/img/l4.jpg') }}" alt="">
 								<div class="team-img-mask"></div>
 							</div>
 						</a>
-						<h6>Anna Furius</h6>
-						<p>Senior Developer</p>
+						<h6>Lapangan 3</h6>
+						<p>Penyewaan</p>
 						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
 				</div>
-				<div class="col-md-12 padding-top-small">
+				{{-- <div class="col-md-12 padding-top-small">
 					<div class="title-wrap text-center mb-5">
 						<h5>Advisory team</h5>
 					</div>
@@ -657,7 +657,7 @@
 						<a class="app-btn ml-3" href="#"><i class="fa fa-linkedin"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
-				</div>
+				</div> --}}
 			</div>	
 		</div>
 	</div>

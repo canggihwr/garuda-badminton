@@ -107,7 +107,7 @@
 			
 			
 
-			@include('home.cara2')
+			@include('home.home')
 			
 
 			<!-- Portfolio -->

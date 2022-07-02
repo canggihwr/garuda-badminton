@@ -92,6 +92,7 @@
 								<a class="curent-multi-page" href="/login">Login</a>
 							</li>
 							<li><a href="/daftar">Daftar</a></li>
+							<li><a href="/dashboard">Dashboard</a></li>
 						</ul>
 					</li>
 				</ul>
