@@ -37,3 +37,16 @@ Route::get('/redirect', function () {
     return view('db/dashboard');
 });
 
+Route::get('/dashboard/perlengkapan', function () {
+    return view('db/perlengkapan');
+});
+
+Route::get('/dashboard/perlengkapan/add', function () {
+    return view('db/add_perlengkapan');
+});
+
+Route::get('/dashboard/lapangan', function () {
+    return view('db/lapangan');
+});
+
+

@@ -423,9 +423,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
-						<div class="back-title">wallet</div>
-						<h3>Control your future<br>wealth.</h3>
-						<p>All-in-one app to secure, manage and exchange blockchain assets.</p>
+						<div class="back-title">Visi</div>
+						<h3>Visi dan Misi</h3>
+						<p>Adapun visi dan misi dari GOR Bulutangkis Garuda Mataram antara lain :</p>
 					</div>
 				</div>
 			</div>	
@@ -434,13 +434,16 @@
 			<div class="row">
 				<div class="col-md-6 align-self-center">
 					<h4>Visi dan Misi. GOR Badminton Garuda</h4>
-					<p class="lead">Visi dan Misi.</p>
+					<p class="lead">Visi.</p>
+					{{-- <ul class="app-list mb-5 mt-4">
+						<li>Menjadikan GOR Garuda terdepan dan terbaik sebagai penyedia layanan fasilitas olahraga dan memasyarakatkan olah raga bulu tangkis lebih luas.</li>
+					</ul>
+					<p class="lead">Misi.</p> --}}
 					<ul class="app-list mb-5 mt-4">
-						<li>Smart by design</li>
-						<li>Easy Coin Management</li>
-						<li>Instantly import your wallet</li>
-						<li>Detailed transaction info</li>
-						<li>Custom fees and limits</li>
+						<li>Menjadi wadah dan sarana bagi peningkatan dan pengembangan olahraga bulu tangkis.</li>
+						<li>Menyediakan fasilitas yang nyaman bagi masyarakat dan olahragawan untuk dapat berolahraga dengan suasana yang nyaman dan tempat yang menyenangkan.</li>
+						<li>Menjadi pusat olahraga yang dapat berkontribusi dalam memajukan olahraga di Mataram.</li>
+						<li>Menjadi pusat komunitas olahraga</li>
 					</ul>
 					<a class="btn btn-primary mx-0 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Daftar</span></a>
 					{{-- <a class="app-btn ml-4" href="#"><i class="fa fa-apple"></i></a>

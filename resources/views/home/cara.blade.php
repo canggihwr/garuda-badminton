@@ -475,9 +475,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
-						<div class="back-title">wallet</div>
-						<h3>Control your future<br>wealth.</h3>
-						<p>All-in-one app to secure, manage and exchange blockchain assets.</p>
+						<div class="back-title">Visi</div>
+						<h3>Visi dan Misi</h3>
+						<p>Adapun visi dan misi dari GOR Bulutangkis Garuda Mataram antara lain :</p>
 					</div>
 				</div>
 			</div>	

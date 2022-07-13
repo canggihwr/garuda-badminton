@@ -791,338 +791,21 @@
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
+												<div class="menu-item">
+													<a class="menu-link" href="/dashboard/lapangan">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Modals</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-															<span class="menu-link">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">General</span>
-																<span class="menu-arrow"></span>
-															</span>
-															<div class="menu-sub menu-sub-accordion menu-active-bg">
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/general/invite-friends">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Invite Friends</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/general/view-users">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">View Users</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/general/select-users">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Select Users</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/general/upgrade-plan">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Upgrade Plan</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/general/share-earn">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Share &amp; Earn</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-															<span class="menu-link">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Forms</span>
-																<span class="menu-arrow"></span>
-															</span>
-															<div class="menu-sub menu-sub-accordion menu-active-bg">
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/forms/new-target">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">New Target</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/forms/new-card">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">New Card</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/forms/new-address">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">New Address</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/forms/create-api-key">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Create API Key</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/forms/bidding">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Bidding</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-															<span class="menu-link">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Wizards</span>
-																<span class="menu-arrow"></span>
-															</span>
-															<div class="menu-sub menu-sub-accordion menu-active-bg">
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/wizards/create-app">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Create App</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/wizards/create-campaign">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Create Campaign</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/wizards/create-account">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Create Business Acc</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/wizards/create-project">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Create Project</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/wizards/top-up-wallet">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Top Up Wallet</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/wizards/offer-a-deal">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Offer a Deal</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/wizards/two-factor-authentication">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Two Factor Auth</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-															<span class="menu-link">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Search</span>
-																<span class="menu-arrow"></span>
-															</span>
-															<div class="menu-sub menu-sub-accordion menu-active-bg">
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/search/users">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Users</span>
-																	</a>
-																</div>
-																<div class="menu-item">
-																	<a class="menu-link" href="?page=utilities/modals/search/select-location">
-																		<span class="menu-bullet">
-																			<span class="bullet bullet-dot"></span>
-																		</span>
-																		<span class="menu-title">Select Location</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
+														<span class="menu-title">Daftar lapangan</span>
+													</a>
 												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
+												<div class="menu-item">
+													<a class="menu-link" href="/dashboard/lapangan/add">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Search</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/search/horizontal">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Horizontal</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/search/vertical">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Vertical</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/search/users">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Users</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/search/select-location">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Location</span>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Wizards</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/horizontal">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Horizontal</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/vertical">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Vertical</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/two-factor-authentication">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Two Factor Auth</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/create-app">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Create App</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/create-campaign">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Create Campaign</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/create-account">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Create Account</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/create-project">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Create Project</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/modals/wizards/top-up-wallet">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Top Up Wallet</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=utilities/wizards/offer-a-deal">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Offer a Deal</span>
-															</a>
-														</div>
-													</div>
+														<span class="menu-title">Edit lapangan</span>
+													</a>
 												</div>
 											</div>
 										</div>
@@ -1145,51 +828,19 @@
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
 												<div class="menu-item">
-													<a class="menu-link" href="?page=widgets/lists">
+													<a class="menu-link" href="/dashboard/perlengkapan">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Lists</span>
+														<span class="menu-title">List Perlengkapan</span>
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="?page=widgets/statistics">
+													<a class="menu-link" href="/dashboard/perlengkapan/add">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Statistics</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=widgets/charts">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Charts</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=widgets/mixed">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Mixed</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=widgets/tables">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Tables</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=widgets/feeds">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Feeds</span>
+														<span class="menu-title">Tambah Perlengkapan</span>
 													</a>
 												</div>
 											</div>

@@ -5,13 +5,13 @@
 											<div class="card-body d-flex flex-column justify-content-between">
 												<!--begin::Title-->
 												<h2 class="text-white fw-bolder mb-5">
-													<span class="lh-lg">Brilliant Ideas
-													<br />for Your Web Application</span>
+													<span class="lh-lg">Selamat datang di GOR Garuda Mataram
+														<br />Welcome back, Canggih WR</span>
 												</h2>
 												<!--end::Title-->
 												<!--begin::Action-->
 												<div class="m-0">
-													<a href='#' class="btn btn-danger fw-bold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Create Campaign</a>
+													<a href='#' class="btn btn-danger fw-bold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Log Out</a>
 												</div>
 												<!--begin::Action-->
 											</div>

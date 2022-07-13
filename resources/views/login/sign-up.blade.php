@@ -40,7 +40,7 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Root-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Authentication - Sign-up -->
-			<div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed" style="background-image: url(db/media/illustrations/sketchy-1/14.png">
+			<div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed" style="background-image: url(db/media/illustrations/dozzy-1/4.png">
 				<!--begin::Content-->
 				<div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
 					<!--begin::Logo-->
@@ -63,10 +63,10 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Link-->
 							</div>
 							<!--end::Heading-->
-							<!--begin::Action-->
+							{{-- <!--begin::Action-->
 							<button type="button" class="btn btn-light-primary fw-bolder w-100 mb-10">
 							<img alt="Logo" src="db/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Daftar dengan Google</button>
-							<!--end::Action-->
+							<!--end::Action--> --}}
 							<!--begin::Separator-->
 							<div class="d-flex align-items-center mb-10">
 								<div class="border-bottom border-gray-300 mw-50 w-100"></div>

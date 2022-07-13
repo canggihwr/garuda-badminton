@@ -14,8 +14,8 @@
 														</span>
 														<!--end::Svg Icon-->
 														<div class="d-flex flex-column">
-															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">8,600</div>
-															<div class="text-muted fw-bold fs-6">New Customers</div>
+															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">23</div>
+															<div class="text-muted fw-bold fs-6">Jumlah User</div>
 														</div>
 													</div>
 													<!--end::Body-->

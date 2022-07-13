@@ -119,7 +119,7 @@
 		<!--end::Root-->
 		<!--begin::Drawers-->
 
-@include('db.partials.drawers._activity-drawer')
+{{-- @include('db.partials.drawers._activity-drawer') --}}
 
 		
 		<!--begin::Chat drawer-->
@@ -498,4 +498,5 @@
 		
 		<!--end::Drawers-->
 		<!--end::Main-->
+		
 		
