@@ -76,16 +76,16 @@
 															<a href="#" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">Lapangan 1</a>
 															<!--end::Title-->
 															<!--begin::Text-->
-															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">We’ve been focused on making a the from also not been eye</div>
+															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">Contoh deskripsi Lapangan 1 pada Gor Bulutangkis Garuda Mataram</div>
 															<!--end::Text-->
 															<!--begin::Text-->
 															<div class="fs-6 fw-bolder mt-5 d-flex flex-stack">
 																<!--begin::Label-->
 																<span class="badge border border-dashed fs-2 fw-bolder text-dark p-2">
-																<span class="fs-6 fw-bold text-gray-400">$</span>28</span>
+																{{-- <span class="fs-6 fw-bold text-gray-400">$</span>28</span> --}}
 																<!--end::Label-->
 																<!--begin::Action-->
-																<a href="#" class="btn btn-sm btn-primary">Edit </a>
+																<a href="/dashboard/lapangan/edit" class="btn btn-sm btn-primary">Edit </a>
 																<!--end::Action-->
 															</div>
 															<!--end::Text-->
@@ -117,16 +117,16 @@
 															<a href="#" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">Lapangan 2</a>
 															<!--end::Title-->
 															<!--begin::Text-->
-															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">We’ve been focused on making a the from also not been eye</div>
+															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">Contoh deskripsi Lapangan 2 pada Gor Bulutangkis Garuda Mataram</div>
 															<!--end::Text-->
 															<!--begin::Text-->
 															<div class="fs-6 fw-bolder mt-5 d-flex flex-stack">
 																<!--begin::Label-->
 																<span class="badge border border-dashed fs-2 fw-bolder text-dark p-2">
-																<span class="fs-6 fw-bold text-gray-400">$</span>27</span>
+																{{-- <span class="fs-6 fw-bold text-gray-400">$</span>27</span> --}}
 																<!--end::Label-->
 																<!--begin::Action-->
-																<a href="#" class="btn btn-sm btn-primary">Edit </a>
+																<a href="/dashboard/lapangan/edit" class="btn btn-sm btn-primary">Edit </a>
 																<!--end::Action-->
 															</div>
 															<!--end::Text-->
@@ -158,16 +158,16 @@
 															<a href="#" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">Lapangan 3</a>
 															<!--end::Title-->
 															<!--begin::Text-->
-															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">We’ve been focused on making a the from also not been eye</div>
+															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">Contoh deskripsi Lapangan 3 pada Gor Bulutangkis Garuda Mataram</div>
 															<!--end::Text-->
 															<!--begin::Text-->
 															<div class="fs-6 fw-bolder mt-5 d-flex flex-stack">
 																<!--begin::Label-->
 																<span class="badge border border-dashed fs-2 fw-bolder text-dark p-2">
-																<span class="fs-6 fw-bold text-gray-400">$</span>25</span>
+																{{-- <span class="fs-6 fw-bold text-gray-400">$</span>25</span> --}}
 																<!--end::Label-->
 																<!--begin::Action-->
-																<a href="#" class="btn btn-sm btn-primary">Edit </a>
+																<a href="/dashboard/lapangan/edit" class="btn btn-sm btn-primary">Edit </a>
 																<!--end::Action-->
 															</div>
 															<!--end::Text-->

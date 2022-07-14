@@ -67,7 +67,7 @@
 												<!--end::Select2-->
 											</div>
 											<!--begin::Add product-->
-											<a href="../../demo14/dist/apps/ecommerce/catalog/add-product.html" class="btn btn-primary">Tambah Peralatan</a>
+											<a href="/dashboard/perlengkapan/add" class="btn btn-primary">Tambah Peralatan</a>
 											<!--end::Add product-->
 										</div>
 										<!--end::Card toolbar-->

@@ -190,156 +190,22 @@
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Data User</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="/dashboard/user">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">List User</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="/dashboard/user/add">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Tambah</span>
-															</a>
-														</div>
-														
-													</div>
-												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Blog</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/blog/home">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Blog Home</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/blog/post">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Blog Post</span>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Pricing</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/pricing/pricing-1">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Pricing 1</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/pricing/pricing-2">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Pricing 2</span>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Careers</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/careers/list">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Careers List</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/careers/apply">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Careers Apply</span>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">FAQ</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/faq/classic">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Classic</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/faq/extended">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Extended</span>
-															</a>
-														</div>
-													</div>
-												</div>
+												
+												
 												<div class="menu-item">
-													<a class="menu-link" href="?page=pages/about">
+													<a class="menu-link" href="/dashboard/penyewaan">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">About Us</span>
+														<span class="menu-title">Data Penyewaan</span>
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="?page=pages/contact">
+													<a class="menu-link" href="/dashboard/penyewaan/add">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Contact Us</span>
+														<span class="menu-title">Tambah Data</span>
 													</a>
 												</div>
 												<div class="menu-item">
@@ -356,14 +222,6 @@
 															<span class="bullet bullet-dot"></span>
 														</span>
 														<span class="menu-title">Licenses</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=pages/sitemap">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Sitemap</span>
 													</a>
 												</div>
 											</div>
@@ -557,7 +415,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Data Lapangan</span>
+												<span class="menu-title">Lapangan</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -566,11 +424,11 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Daftar lapangan</span>
+														<span class="menu-title">Data lapangan</span>
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="/dashboard/lapangan/add">
+													<a class="menu-link" href="/dashboard/lapangan/edit">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>

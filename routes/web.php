@@ -37,6 +37,16 @@ Route::get('/redirect', function () {
     return view('db/dashboard');
 });
 
+
+Route::get('/dashboard/penyewaan', function () {
+    return view('db/penyewaan');
+});
+
+Route::get('/dashboard/penyewaan/add', function () {
+    return view('db/add_penyewaan');
+});
+
+
 Route::get('/dashboard/perlengkapan', function () {
     return view('db/perlengkapan');
 });
@@ -44,6 +54,7 @@ Route::get('/dashboard/perlengkapan', function () {
 Route::get('/dashboard/perlengkapan/add', function () {
     return view('db/add_perlengkapan');
 });
+
 
 Route::get('/dashboard/user', function () {
     return view('db/user');
@@ -63,6 +74,10 @@ Route::get('/dashboard/admin/add', function () {
 
 Route::get('/dashboard/lapangan', function () {
     return view('db/lapangan');
+});
+
+Route::get('/dashboard/lapangan/edit', function () {
+    return view('db/edit_lapangan');
 });
 
 Route::get('/dashboard/paket', function () {
