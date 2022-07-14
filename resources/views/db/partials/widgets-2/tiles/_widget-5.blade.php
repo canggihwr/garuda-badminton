@@ -1,6 +1,6 @@
 												
 												<!--begin::Tiles Widget 5-->
-												<a href="#" class="card bg-body h-150px">
+												<a href="/dashboard/user" class="card bg-body h-150px">
 													<!--begin::Body-->
 													<div class="card-body d-flex flex-column justify-content-between">
 														<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->

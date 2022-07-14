@@ -195,58 +195,27 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Daftar User</span>
+														<span class="menu-title">Data User</span>
 														<span class="menu-arrow"></span>
 													</span>
 													<div class="menu-sub menu-sub-accordion menu-active-bg">
 														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/user-profile/overview">
+															<a class="menu-link" href="/dashboard/user">
 																<span class="menu-bullet">
 																	<span class="bullet bullet-dot"></span>
 																</span>
-																<span class="menu-title">Overview</span>
+																<span class="menu-title">List User</span>
 															</a>
 														</div>
 														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/user-profile/projects">
+															<a class="menu-link" href="/dashboard/user/add">
 																<span class="menu-bullet">
 																	<span class="bullet bullet-dot"></span>
 																</span>
-																<span class="menu-title">Projects</span>
+																<span class="menu-title">Tambah</span>
 															</a>
 														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/user-profile/campaigns">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Campaigns</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/user-profile/documents">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Documents</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/user-profile/followers">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Followers</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=pages/user-profile/activity">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Activity</span>
-															</a>
-														</div>
+														
 													</div>
 												</div>
 												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -411,74 +380,27 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Daftar User</span>
+												<span class="menu-title">Data User</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
 												<div class="menu-item">
-													<a class="menu-link" href="?page=account/overview">
+													<a class="menu-link" href="/dashboard/user">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Overview</span>
+														<span class="menu-title">Daftar User</span>
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="?page=account/settings">
+													<a class="menu-link" href="/dashboard/user/add">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Settings</span>
+														<span class="menu-title">Tambah User</span>
 													</a>
 												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=account/security">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Security</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=account/billing">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Billing</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=account/statements">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Statements</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=account/referrals">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Referrals</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=account/api-keys">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">API Keys</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=account/logs">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Logs</span>
-													</a>
-												</div>
+												
 											</div>
 										</div>
 										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -493,169 +415,17 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Autentikasi</span>
+												<span class="menu-title">Admin</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Basic Layout</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/basic/sign-in">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Sign-in</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/basic/sign-up">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Sign-up</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/basic/two-steps">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Two-steps</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/basic/password-reset">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Password Reset</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/basic/new-password">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">New Password</span>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Aside Layout</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/aside/sign-in">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Sign-in</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/aside/sign-up">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Sign-up</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/aside/two-steps">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Two-steps</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/aside/password-reset">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Password Reset</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/aside/new-password">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">New Password</span>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-													<span class="menu-link">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Dark Layout</span>
-														<span class="menu-arrow"></span>
-													</span>
-													<div class="menu-sub menu-sub-accordion menu-active-bg">
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/dark/sign-in">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Sign-in</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/dark/sign-up">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Sign-up</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/dark/two-steps">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Two-steps</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/dark/password-reset">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">Password Reset</span>
-															</a>
-														</div>
-														<div class="menu-item">
-															<a class="menu-link" href="?page=authentication/layouts/dark/new-password">
-																<span class="menu-bullet">
-																	<span class="bullet bullet-dot"></span>
-																</span>
-																<span class="menu-title">New Password</span>
-															</a>
-														</div>
-													</div>
-												</div>
+												
 												<div class="menu-item">
-													<a class="menu-link" href="?page=authentication/extended/multi-steps-sign-up">
+													<a class="menu-link" href="/dashboard/admin">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Multi-steps Sign-up</span>
+														<span class="menu-title">Data Admin</span>
 													</a>
 												</div>
 												<div class="menu-item">
@@ -663,7 +433,7 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Two Factor Auth</span>
+														<span class="menu-title">Pendapatan</span>
 													</a>
 												</div>
 												<div class="menu-item">
@@ -847,13 +617,13 @@
 										</div>
 										<div class="menu-item">
 											<div class="menu-content pt-8 pb-2">
-												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Apps</span>
+												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Settings</span>
 											</div>
 										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
+										<div class="menu-item">
+											<a class="menu-link" href="dashboard/paket">
 												<span class="menu-icon">
-													<!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
+													<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 													<span class="svg-icon svg-icon-2">
 														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 															<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor" />
@@ -862,7 +632,22 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Projects</span>
+												<span class="menu-title">Pengaturan Paket</span>
+											</a>
+										</div>
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<span class="menu-link">
+												<span class="menu-icon">
+													<!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
+													<span class="svg-icon svg-icon-2">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<path opacity="0.3" d="M21 10.7192H3C2.4 10.7192 2 11.1192 2 11.7192C2 12.3192 2.4 12.7192 3 12.7192H6V14.7192C6 18.0192 8.7 20.7192 12 20.7192C15.3 20.7192 18 18.0192 18 14.7192V12.7192H21C21.6 12.7192 22 12.3192 22 11.7192C22 11.1192 21.6 10.7192 21 10.7192Z" fill="currentColor" />
+															<path d="M11.6 21.9192C11.4 21.9192 11.2 21.8192 11 21.7192C10.6 21.4192 10.5 20.7191 10.8 20.3191C11.7 19.1191 12.3 17.8191 12.7 16.3191C12.8 15.8191 13.4 15.4192 13.9 15.6192C14.4 15.7192 14.8 16.3191 14.6 16.8191C14.2 18.5191 13.4 20.1192 12.4 21.5192C12.2 21.7192 11.9 21.9192 11.6 21.9192ZM8.7 19.7192C10.2 18.1192 11 15.9192 11 13.7192V8.71917C11 8.11917 11.4 7.71917 12 7.71917C12.6 7.71917 13 8.11917 13 8.71917V13.0192C13 13.6192 13.4 14.0192 14 14.0192C14.6 14.0192 15 13.6192 15 13.0192V8.71917C15 7.01917 13.7 5.71917 12 5.71917C10.3 5.71917 9 7.01917 9 8.71917V13.7192C9 15.4192 8.4 17.1191 7.2 18.3191C6.8 18.7191 6.9 19.3192 7.3 19.7192C7.5 19.9192 7.7 20.0192 8 20.0192C8.3 20.0192 8.5 19.9192 8.7 19.7192ZM6 16.7192C6.5 16.7192 7 16.2192 7 15.7192V8.71917C7 8.11917 7.1 7.51918 7.3 6.91918C7.5 6.41918 7.2 5.8192 6.7 5.6192C6.2 5.4192 5.59999 5.71917 5.39999 6.21917C5.09999 7.01917 5 7.81917 5 8.71917V15.7192V15.8191C5 16.3191 5.5 16.7192 6 16.7192ZM9 4.71917C9.5 4.31917 10.1 4.11918 10.7 3.91918C11.2 3.81918 11.5 3.21917 11.4 2.71917C11.3 2.21917 10.7 1.91916 10.2 2.01916C9.4 2.21916 8.59999 2.6192 7.89999 3.1192C7.49999 3.4192 7.4 4.11916 7.7 4.51916C7.9 4.81916 8.2 4.91918 8.5 4.91918C8.6 4.91918 8.8 4.81917 9 4.71917ZM18.2 18.9192C18.7 17.2192 19 15.5192 19 13.7192V8.71917C19 5.71917 17.1 3.1192 14.3 2.1192C13.8 1.9192 13.2 2.21917 13 2.71917C12.8 3.21917 13.1 3.81916 13.6 4.01916C15.6 4.71916 17 6.61917 17 8.71917V13.7192C17 15.3192 16.8 16.8191 16.3 18.3191C16.1 18.8191 16.4 19.4192 16.9 19.6192C17 19.6192 17.1 19.6192 17.2 19.6192C17.7 19.6192 18 19.3192 18.2 18.9192Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->
+												</span>
+												<span class="menu-title">Account Setting</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion">
@@ -871,7 +656,7 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">My Projects</span>
+														<span class="menu-title">My Account</span>
 													</a>
 												</div>
 												<div class="menu-item">
@@ -879,7 +664,7 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">View Project</span>
+														<span class="menu-title">Edit Account</span>
 													</a>
 												</div>
 												<div class="menu-item">
@@ -887,47 +672,7 @@
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Targets</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/budget">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Budget</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/users">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Users</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/files">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Files</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/activity">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Activity</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/settings">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Settings</span>
+														<span class="menu-title">Deactivate Account</span>
 													</a>
 												</div>
 											</div>

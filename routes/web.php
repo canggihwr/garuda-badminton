@@ -45,8 +45,28 @@ Route::get('/dashboard/perlengkapan/add', function () {
     return view('db/add_perlengkapan');
 });
 
+Route::get('/dashboard/user', function () {
+    return view('db/user');
+});
+
+Route::get('/dashboard/user/add', function () {
+    return view('db/add_user');
+});
+
+Route::get('/dashboard/admin', function () {
+    return view('db/admin');
+});
+
+Route::get('/dashboard/admin/add', function () {
+    return view('db/add_admin');
+});
+
 Route::get('/dashboard/lapangan', function () {
     return view('db/lapangan');
+});
+
+Route::get('/dashboard/paket', function () {
+    return view('db/paket');
 });
 
 

@@ -2,7 +2,7 @@
 
 <html lang="en">
 	<!--begin::Head-->
-	<head><base href="../../../">
+	<head><base href="/dashboard">
 		<title>Dashboard - GOR Garuda Mataram</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<!--begin::Fonts-->

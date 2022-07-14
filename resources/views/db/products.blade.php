@@ -921,7 +921,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Menu-->
 									<div class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px" data-kt-menu="true">
 										<!--begin::Heading-->
-										<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10" style="background-image:url('assets/media/misc/pattern-1.jpg')">
+										<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10" style="background-image:url('db/media/misc/pattern-1.jpg')">
 											<!--begin::Title-->
 											<h3 class="text-white fw-bold mb-3">Quick Links</h3>
 											<!--end::Title-->
