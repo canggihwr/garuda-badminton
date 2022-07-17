@@ -1,0 +1,55 @@
+//
+// Header
+//
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		flex-direction: column;
+		z-index: 2;
+		height: get($header-config, height, desktop);
+		background-color: get($header-config, bg-color);	
+
+		// Fixed header & sticky header modes
+		.header-fixed & {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: get($header-config, z-index);
+			box-shadow: get($header-config, box-shadow);
+			height: get($header-config, height, desktop);			
+			padding: 0;	
+		}
+	}
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		height: get($header-config, height, tablet-and-mobile);
+		position: relative;
+		z-index: 3;
+		background-color: get($header-config, bg-color);			
+		margin-bottom: get($content-spacing-y, tablet-and-mobile);
+
+		// Fixed header and header sticky modes
+		.header-tablet-and-mobile-fixed & {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: get($header-config, z-index);
+			height: get($header-config, height, tablet-and-mobile);
+			box-shadow: get($header-config, tbox-shadow);
+			margin-bottom: 0;
+		}	
+	}
+}

@@ -71,12 +71,20 @@ Route::get('/dashboard/user/add', function () {
     return view('db/add_user');
 });
 
+Route::get('/dashboard/user/edit', function () {
+    return view('db/edit_user');
+});
+
 Route::get('/dashboard/admin', function () {
     return view('db/admin');
 });
 
 Route::get('/dashboard/admin/add', function () {
     return view('db/add_admin');
+});
+
+Route::get('/dashboard/admin/edit', function () {
+    return view('db/edit_admin');
 });
 
 Route::get('/dashboard/lapangan', function () {
@@ -89,6 +97,18 @@ Route::get('/dashboard/lapangan/edit', function () {
 
 Route::get('/dashboard/paket', function () {
     return view('db/paket');
+});
+
+Route::get('/dashboard/paket/add', function () {
+    return view('db/add_paket');
+});
+
+Route::get('/dashboard/paket/edit', function () {
+    return view('db/edit_paket');
+});
+
+Route::get('/dashboard/jadwal', function () {
+    return view('db/jadwal');
 });
 
 

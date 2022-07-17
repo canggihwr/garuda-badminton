@@ -3190,6 +3190,7 @@
 		<!--end::Page Vendors Javascript-->
 		<!--begin::Page Custom Javascript(used by this page)-->
 		<script src="db/js/custom/apps/ecommerce/catalog/save-category.js"></script>
+		<script src="db/js/custom/apps/ecommerce/catalog/save-product.js?2"></script>
 		<script src="db/js/widgets.bundle.js"></script>
 		<script src="db/js/custom/widgets.js"></script>
 		<script src="db/js/custom/apps/chat/chat.js"></script>

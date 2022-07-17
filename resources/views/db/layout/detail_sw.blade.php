@@ -80,7 +80,7 @@
 																		<div class="symbol symbol-circle symbol-25px overflow-hidden me-3">
 																			<a href="../../demo14/dist/apps/ecommerce/customers/details.html">
 																				<div class="symbol-label">
-																					<img src="assets/media/avatars/300-23.jpg" alt="Dan Wilson" class="w-100" />
+																					<img src="db/media/avatars/300-23.jpg" alt="Dan Wilson" class="w-100" />
 																				</div>
 																			</a>
 																		</div>
@@ -141,7 +141,7 @@
 													<div class="card card-flush py-4 flex-row-fluid overflow-hidden">
 														<!--begin::Background-->
 														<div class="position-absolute top-0 end-0 opacity-10 pe-none text-end">
-															<img src="assets/media/icons/duotune/ecommerce/ecm006.svg" class="w-175px" />
+															<img src="db/media/icons/duotune/ecommerce/ecm006.svg" class="w-175px" />
 														</div>
 														<!--end::Background-->
 														
@@ -183,7 +183,7 @@
 																	<!--end::Svg Icon-->Paket</div>
 																</td>
 																<td class="fw-bolder text-end">Online
-																<img src="assets/media/svg/card-logos/visa.svg" class="w-50px ms-2" /></td>
+																<img src="db/media/svg/card-logos/visa.svg" class="w-50px ms-2" /></td>
 															</tr>
 															<!--end::Payment method-->
 															<!--begin::Date-->

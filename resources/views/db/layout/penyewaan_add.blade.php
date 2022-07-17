@@ -254,7 +254,7 @@
 														<thead>
 															<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
 																<th class="w-25px pe-2"></th>
-																<th class="min-w-200px">Product</th>
+																<th class="min-w-200px">Nama Perlegkapan</th>
 																<th class="min-w-90px text-center">Qty</th>
 																<th class="min-w-100px text-end pe-5">Status</th>
 															</tr>
@@ -275,17 +275,17 @@
 																<td>
 																	<div class="d-flex align-items-center" data-kt-ecommerce-edit-order-filter="product" data-kt-ecommerce-edit-order-id="product_1">
 																		<!--begin::Thumbnail-->
-																		<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="symbol symbol-50px">
+																		<a href="#" class="symbol symbol-50px">
 																			<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/1.gif);"></span>
 																		</a>
 																		<!--end::Thumbnail-->
 																		<div class="ms-5">
 																			<!--begin::Title-->
-																			<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Product 1</a>
+																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Shuttlecock</a>
 																			<!--end::Title-->
 																			<!--begin::Price-->
-																			<div class="fw-bold fs-7">Price: $
-																			<span data-kt-ecommerce-edit-order-filter="price">10.00</span></div>
+																			<div class="fw-bold fs-7">Harga: Rp.
+																			<span data-kt-ecommerce-edit-order-filter="price">5000</span></div>
 																			<!--end::Price-->
 																		</div>
 																	</div>
@@ -345,17 +345,17 @@
 																<td>
 																	<div class="d-flex align-items-center" data-kt-ecommerce-edit-order-filter="product" data-kt-ecommerce-edit-order-id="product_2">
 																		<!--begin::Thumbnail-->
-																		<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="symbol symbol-50px">
-																			<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/2.gif);"></span>
+																		<a href="#" class="symbol symbol-50px">
+																			<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/69.gif);"></span>
 																		</a>
 																		<!--end::Thumbnail-->
 																		<div class="ms-5">
 																			<!--begin::Title-->
-																			<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Product 2</a>
+																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Sepatu Sport</a>
 																			<!--end::Title-->
 																			<!--begin::Price-->
-																			<div class="fw-bold fs-7">Price: $
-																			<span data-kt-ecommerce-edit-order-filter="price">55.00</span></div>
+																			<div class="fw-bold fs-7">Harga: Rp.
+																			<span data-kt-ecommerce-edit-order-filter="price">25000</span></div>
 																			<!--end::Price-->
 																		</div>
 																	</div>
@@ -415,17 +415,17 @@
 																<td>
 																	<div class="d-flex align-items-center" data-kt-ecommerce-edit-order-filter="product" data-kt-ecommerce-edit-order-id="product_3">
 																		<!--begin::Thumbnail-->
-																		<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="symbol symbol-50px">
+																		<a href="#" class="symbol symbol-50px">
 																			<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/3.gif);"></span>
 																		</a>
 																		<!--end::Thumbnail-->
 																		<div class="ms-5">
 																			<!--begin::Title-->
-																			<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Product 3</a>
+																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Raket</a>
 																			<!--end::Title-->
 																			<!--begin::Price-->
-																			<div class="fw-bold fs-7">Price: $
-																			<span data-kt-ecommerce-edit-order-filter="price">86.00</span></div>
+																			<div class="fw-bold fs-7">Harga: Rp.
+																			<span data-kt-ecommerce-edit-order-filter="price">15000</span></div>
 																			<!--end::Price-->
 																		</div>
 																	</div>

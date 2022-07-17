@@ -1,0 +1,64 @@
+//
+// Aside Default
+//
+
+// General mode(all devices)
+.aside {
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
+	background-color: get($aside-config, bg-color);
+	@include border-radius($card-border-radius);
+
+	// Aside menu
+	.aside-menu {
+		.menu {
+			// Link padding x
+			@include menu-link-padding-x(get($aside-config, menu-padding-x));
+
+			// Menu indention
+			@include menu-link-indention(get($aside-config, menu-indention), get($aside-config, menu-padding-x));
+
+			// Menu item
+			$active-bg-color: if(isDarkMode(), $gray-200,#F3F6F9);
+
+			.menu-item {
+				// Customize menu link default state       
+				@include menu-link-default-state( $title-color: $gray-600, $icon-color: $gray-400, $bullet-color:$gray-400, $arrow-color:$gray-400, $bg-color: null, $all-links: true);
+
+				// Customize menu link hover state       
+				@include menu-link-hover-state( $title-color: $gray-900, $icon-color: $gray-900, $bullet-color: $gray-900, $arrow-color: $gray-900, $bg-color: transparent, $all-links: true);
+
+				// Customize menu link here state       
+				@include menu-link-here-state( $title-color: $gray-900, $icon-color: $gray-900, $bullet-color: $gray-900, $arrow-color: $gray-900, $bg-color: transparent, $all-links: true);
+
+				// Customize menu link show state       
+				@include menu-link-show-state( $title-color: $gray-900, $icon-color: $gray-900, $bullet-color: $gray-900, $arrow-color: $gray-900, $bg-color: transparent, $all-links: true);
+
+				// Customize menu link active state       
+				@include menu-link-active-state( $title-color: $gray-900, $icon-color: $gray-900, $bullet-color: $gray-900, $arrow-color: $gray-900, $bg-color: $active-bg-color, $all-links: true);
+			}
+		}
+	}
+}
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+	.aside {
+		width: get($aside-config, width);
+		transition: width get($aside-config, transition-speed) ease;
+		position: fixed;
+		left: get($content-spacing-x, desktop);
+		top: get($header-config, height, desktop) + get($content-spacing-y, desktop);
+		bottom: get($content-spacing-y, desktop);
+	}
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	.aside {
+		box-shadow: none;
+		border-radius: 0;
+		display: none;
+	}
+}

@@ -1,3 +1,3 @@
 @include('db.header.header')
-@include('db.layout.p_list')
+@include('db.layout.peralatan_list')
 @include('db.header.footer')
