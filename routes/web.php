@@ -46,6 +46,13 @@ Route::get('/dashboard/penyewaan/add', function () {
     return view('db/add_penyewaan');
 });
 
+Route::get('/dashboard/penyewaan/detail', function () {
+    return view('db/detail_sewa');
+});
+
+Route::get('/dashboard/penyewaan/bayar', function () {
+    return view('db/bayar');
+});
 
 Route::get('/dashboard/perlengkapan', function () {
     return view('db/perlengkapan');

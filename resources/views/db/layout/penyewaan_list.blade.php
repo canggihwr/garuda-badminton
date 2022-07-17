@@ -175,17 +175,11 @@
 													<option value="Completed">Completed</option>
 													<option value="Denied">Denied</option>
 													<option value="Expired">Expired</option>
-													<option value="Failed">Failed</option>
-													<option value="Pending">Pending</option>
-													<option value="Processing">Processing</option>
-													<option value="Refunded">Refunded</option>
-													<option value="Delivered">Delivered</option>
-													<option value="Delivering">Delivering</option>
 												</select>
 												<!--end::Select2-->
 											</div>
 											<!--begin::Add product-->
-											<a href="../../demo14/dist/apps/ecommerce/catalog/add-product.html" class="btn btn-primary">Tambah Data</a>
+											<a href="/dashboard/penyewaan/add" class="btn btn-primary">Tambah Data</a>
 											<!--end::Add product-->
 										</div>
 										<!--end::Card toolbar-->
