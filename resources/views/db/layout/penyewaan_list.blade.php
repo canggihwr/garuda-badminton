@@ -278,7 +278,7 @@
                                                         <div class="d-flex align-items-center text-center">
 
                                                             <a href="#" class="symbol symbol-50px">
-                                                            <span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/1.gif);"></span>
+                                                            <span class="symbol-label" style="background-image:url(db/media/stock/ecommerce/note.gif);"></span>
                                                             </a>
                                                         </div>
                                                        </td>
@@ -288,7 +288,7 @@
 													<!--begin::Status=-->
 													<td class=" pe-0" data-order="Failed">
 														<!--begin::Badges-->
-														<div class="badge badge-light-danger text-center">Failed</div>
+														<div class="badge badge-light-warning text-center">Menunggu konfirmasi</div>
 														<!--end::Badges-->
 													</td>
 													<!--end::Status=-->

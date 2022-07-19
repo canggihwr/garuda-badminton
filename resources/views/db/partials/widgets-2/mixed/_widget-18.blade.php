@@ -115,7 +115,7 @@
 														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-5">
 															<span class="symbol-label">
-																<img src="db/media/svg/brand-logos/adidas.svg" class="h-50 align-self-center" alt="" />
+																<img src="db/media/icons/duotune/maps/map001.svg" class="h-50 align-self-center" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->
@@ -135,7 +135,7 @@
 														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-5">
 															<span class="symbol-label">
-																<img src="db/media/svg/brand-logos/airbnb-2.svg" class="h-50 align-self-center" alt="" />
+																<img src="db/media/icons/duotune/maps/map001.svg" class="h-50 align-self-center" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->
@@ -155,7 +155,7 @@
 														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-5">
 															<span class="symbol-label">
-																<img src="db/media/svg/brand-logos/adidas-9.svg" class="h-50 align-self-center" alt="" />
+																<img src="db/media/icons/duotune/maps/map001.svg" class="h-50 align-self-center" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->

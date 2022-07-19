@@ -240,7 +240,7 @@
 														<div class="fw-bolder fs-3 mt-7" style="text-align: right">
 															<div class="separator mb-6"></div>
 															Total : Rp.
-														<span id="kt_ecommerce_edit_order_total_price">0.00</span></div>
+														<span id="kt_ecommerce_edit_order_total_price">45,000</span></div>
 														<!--end::Total price-->
 													</div>
 													<!--end::Input group-->

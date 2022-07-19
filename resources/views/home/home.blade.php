@@ -99,11 +99,12 @@
 		<div class="section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 mt-5">
+					<div class="col-md-12 mt-3">
+						<p class="text-center"><span class="badge text-center">Jl. Swasembada No.32, Kekalik Jaya, Kec. Sekarbela, Kota Mataram</span></p>
 						{{-- <div class="col-md-12 padding-top-bottom">
 							<div class="line-sep"></div>
 						</div> --}}
-						<p class="text-center">Merupakan salah satu lapangan bulu tangkis yang berada di Kota Mataram. Lapangan ini menggunakan standar dari peraturan bermain bulu tangkis dimana mulai dari ukuran lapangan bulu tangkis, garis lapangan, dan lainnya telah sesuai standar. Lapangan bulu tangkis (badminton) ini dibangun dengan kualitas terbaik sehingga pemain hanya perlu membawa peralatan bulu tangkis seperti, sepatu, shuttlecock dan pakaian olahraga. </p>
+						<p class="text-center">Merupakan salah satu lapangan bulu tangkis yang berada di Kota Mataram. Lapangan ini menggunakan standar dari peraturan bermain bulu tangkis dimana mulai dari ukuran lapangan bulu tangkis, garis lapangan, dan lainnya telah sesuai standar. Lapangan bulu tangkis (badminton) ini dibangun dengan kualitas terbaik sehingga pemain dapat berolahraga dengan nyaman. </p>
 					</div>
 					<div class="col-md-12 text-center mt-4">
 						<a class="btn btn-primary js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Daftar Sekarang</span></a>
@@ -132,10 +133,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<h4 class="text-center">1 bulan</h4>
 							<p class="text-center">3x/minggu</p>
-							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Rp.xxxxxxx</p>
-							<p class="text-center">gabung lah</p>
-							<a class="btn disabled mt-5" href="#" role="button"><span>Pesan Lapangan</span></a>
+							<a class="btn disabled mt-5" href="#" role="button"><span>Daftar Sekarang</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-sm-0">
@@ -143,10 +141,7 @@
 							<h4 class="text-center">Paket 1 Jam</h4>
 							<div class="table-line mt-4 mb-4"></div>
 							<h4 class="text-center">Rp.25000</h4>
-							<p class="text-center">Senin - Jum'at</p>
-							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Rp.35000</p>
-							<p class="text-center">Sabtu - Minggu</p>
+							<p class="text-center">Senin - Minggu</p>
 							<a class="btn btn-primary table-ver mt-5 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
@@ -155,10 +150,7 @@
 							<p class="text-center"><span>Paket 2 Jam</span></p>
 							<div class="table-line mt-4 mb-4"></div>
 							<h4 class="text-center">Rp.45000</h4>
-							<p class="text-center">Senin - Jum'at</p>
-							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Rp.65000</p>
-							<p class="text-center">Sabtu - Minggu</p>
+							<p class="text-center">Senin - Minggu</p>
 							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
@@ -166,11 +158,8 @@
 						<div class="table-sale background-grey future-price">
 							<p class="text-center"><span>Paket 3 Jam</span></p>
 							<div class="table-line mt-4 mb-4"></div>
-							<h4 class="text-center">Rp.70000</h4>
-							<p class="text-center">Senin - Jum'at</p>
-							<div class="table-line mt-4 mb-4"></div>
-							<p class="text-center">Rp.85000</p>
-							<p class="text-center">Sabtu - Minggu</p>
+							<h4 class="text-center">Rp.65000</h4>
+							<p class="text-center">Senin - Minggu</p>
 							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
@@ -312,8 +301,7 @@
 			<div class="row">
 				<div class="col-md-6 align-self-center">
 					<h4>Creating a win-win<br>for everyone</h4>
-					<p class="lead">An exciting business opportunity should come with equally exciting rewards.</p>
-					<p>Early adopters can earn up to a 200% bonus based on the final token value should we reach our 100 mil tokens hardcap during our planned token sale event.</p>
+					<p class="lead">An exciting business opportunity should come with equally exciting rewards.<br>Early adopters can earn up to a 200% bonus based on the final token value should we reach our 100 mil tokens hardcap during our planned token sale event.</p>
 					<a class="btn btn-primary mt-4 mx-0 js-tilt" href="#roadmap" data-gal="m_PageScroll2id" data-ps2id-offset="68" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Roadmap</span></a>
 				</div>
 				<div class="col-md-5 offset-md-1 order-first order-md-last mb-4 mb-md-0">
@@ -461,21 +449,59 @@
 		</div>	
 	</div>
 
+	<div class="section padding-top-bottom-big" id="cara">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title-wrap text-center">
+						<div class="back-title">Cara</div>
+						<h3>Cara Pemesanan</h3>
+						<p>Adapun tata cara untuk melakukan pemesanan melalui web GOR Bulutangkis Garuda Mataram adalah sebagai berikut :</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 align-self-center">
+					<h5>Cara Pemesanan :</h5>
+					<ul class="col-md-6 mb-5">
+						<li>
+							<span class="badge text-left"><a href="/login">Masuk/Login</a> jika suah memiliki akun, jika belum silahkan melakukan pendaftaran atau<a href="/daftar"> registrasi.</a></span></li><li><span class="badge text-left">Pada halaman utama, pilih menu <a href="#cara">jadwal</a> dan cari jadwal yang diinginkan.</span></li><li><span class="badge text-left">Setelah melihat detail jadwal, kemudian masuk ke menu <a href="#cara">penyewaan</a> untuk melakukan penyewaan lapangan.</span></li><li><span class="badge text-left">Masukkan data pemesanan seperti tanggal, waktu, dan paket pemesanan.</span></li><li><span class="badge text-left">Jika jadwal tidak bisa dipesan, maka jadwal tersebut sudah tidak tersedia atau sudah dipesan terlebih dahulu oleh orang lain.</li><li> <span class="badge text-left">Jika jadwal berhasil dipesan, maka lanjutkan ke proses <a href="#cara">pembayaran</a></span></li><li><span class="badge text-left">Masukkan data metode pembayaran dan kirim bukti pembayaran.</span></li><li><span class="badge text-left">Jika berhasil maka pesanan akan <a href="#cara">dikonfirmasi</a> oleh admin.</span></li><li><span class="badge text-left">Bawa <a href="#cara">bukti pembayaran</a> saat ingin menggunakan lapangan sebagai bukti.</span>
+						</li>
+					</ul>
+					
+					<a class="btn btn-danger mx-0 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Pesan Lapangan</span></a>
+					{{-- <a class="app-btn ml-4" href="#"><i class="fa fa-apple"></i></a>
+					<a class="app-btn ml-2" href="#"><i class="fa fa-android"></i></a>
+					<a class="app-btn ml-2" href="#"><i class="fa fa-windows"></i></a> --}}
+				</div>
+				<div class="col-md-6 order-first order-md-last mb-4 mb-md-0">
+					<div class="img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24"  style="margin-left: auto;
+					margin-right: 0;
+					width: 50%;">
+						<img src="{{ asset('/img/logo-full.png') }}" alt="">
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>
+
 	<div class="section padding-top-big padding-bottom background-dark-blue-1">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
-						{{-- <h5 class="color-light">Lakukan pembayaran melalui:</h5> --}}
+						<h5 class="color-light">Lakukan pembayaran melalui:</h5>
 					</div>
 				</div>
 				<div class="col-md-12">
 					<ul class="logo-wrap">
-						{{-- <li><img src="{{ asset('v2/img/dana.png') }}" alt=""></li>
+						<li><img src="{{ asset('v2/img/dana.png') }}" alt=""></li>
 						<li><img src="{{ asset('v2/img/gopay.png') }}" alt=""></li>
 						<li><img src="{{ asset('v2/img/spay.png') }}" alt=""></li>
 						<li><img src="{{ asset('v2/img/qris.png') }}" alt=""></li>
-						<li><img src="{{ asset('v2/img/ovo.png') }}" alt=""></li> --}}
+						<li><img src="{{ asset('v2/img/ovo.png') }}" alt=""></li>
 					</ul>
 				</div>
 			</div>	

@@ -72,7 +72,7 @@
 																			<path d="M12 22C14.6 22 17 21 18.7 19.4C17.9 16.9 15.2 15 12 15C8.8 15 6.09999 16.9 5.29999 19.4C6.99999 21 9.4 22 12 22Z" fill="currentColor" />
 																		</svg>
 																	</span>
-																	<!--end::Svg Icon-->Customer</div>
+																	<!--end::Svg Icon-->Nama Member</div>
 																</td>
 																<td class="fw-bolder text-end">
 																	<div class="d-flex align-items-center justify-content-end">
@@ -80,13 +80,13 @@
 																		<div class="symbol symbol-circle symbol-25px overflow-hidden me-3">
 																			<a href="../../demo14/dist/apps/ecommerce/customers/details.html">
 																				<div class="symbol-label">
-																					<img src="db/media/avatars/300-23.jpg" alt="Dan Wilson" class="w-100" />
+																					<img src="db/media/avatars/unnamed.jpg" alt="Dan Wilson" class="w-100" />
 																				</div>
 																			</a>
 																		</div>
 																		<!--end::Avatar-->
 																		<!--begin::Name-->
-																		<a href="../../demo14/dist/apps/ecommerce/customers/details.html" class="text-gray-600 text-hover-primary">Dan Wilson</a>
+																		<a href="../../demo14/dist/apps/ecommerce/customers/details.html" class="text-gray-600 text-hover-primary">Canggih WR</a>
 																		<!--end::Name-->
 																	</div>
 																</td>
@@ -104,9 +104,9 @@
 																			<path opacity="0.3" d="M19 4H5V20H19V4Z" fill="currentColor" />
 																		</svg>
 																	</span>
-																	<!--end::Svg Icon-->Phone</div>
+																	<!--end::Svg Icon-->No HP</div>
 																</td>
-																<td class="fw-bolder text-end">+6141 234 567</td>
+																<td class="fw-bolder text-end">+62 831 6653 1526</td>
 															</tr>
 															<!--end::Date-->
 
@@ -139,11 +139,7 @@
 													<!--end::Payment address-->
 													<!--begin::Shipping address-->
 													<div class="card card-flush py-4 flex-row-fluid overflow-hidden">
-														<!--begin::Background-->
-														<div class="position-absolute top-0 end-0 opacity-10 pe-none text-end">
-															<img src="db/media/icons/duotune/ecommerce/ecm006.svg" class="w-175px" />
-														</div>
-														<!--end::Background-->
+														
 														
 														<!--begin::Card body-->
 											<div class="card-body pt-0">
@@ -182,8 +178,8 @@
 																	</span>
 																	<!--end::Svg Icon-->Paket</div>
 																</td>
-																<td class="fw-bolder text-end">Online
-																<img src="db/media/svg/card-logos/visa.svg" class="w-50px ms-2" /></td>
+																<td class="fw-bolder text-end">Gopay
+																<img src="v2/img/gopay.png" class="w-20px ms-2" /></td>
 															</tr>
 															<!--end::Payment method-->
 															<!--begin::Date-->
@@ -243,8 +239,8 @@
 																				<!--end::Thumbnail-->
 																				<!--begin::Title-->
 																				<div class="ms-5">
-																					<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="fw-bolder text-gray-600 text-hover-primary">Product 1</a>
-																					<div class="fs-7 text-muted">Delivery Date: 30/03/2022</div>
+																					<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="fw-bolder text-gray-600 text-hover-primary">Shuttlecock</a>
+																					<div class="fs-7 text-muted">tambah beli shuttlecock</div>
 																				</div>
 																				<!--end::Title-->
 																			</div>
@@ -254,10 +250,10 @@
 																		<td class="text-end">2</td>
 																		<!--end::Quantity-->
 																		<!--begin::Price-->
-																		<td class="text-end">$120.00</td>
+																		<td class="text-end">Rp.1200.00</td>
 																		<!--end::Price-->
 																		<!--begin::Total-->
-																		<td class="text-end">$240.00</td>
+																		<td class="text-end">Rp.2400.00</td>
 																		<!--end::Total-->
 																	</tr>
 																	<tr>
@@ -266,13 +262,13 @@
 																			<div class="d-flex align-items-center">
 																				<!--begin::Thumbnail-->
 																				<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="symbol symbol-50px">
-																					<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/100.gif);"></span>
+																					<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/3.gif);"></span>
 																				</a>
 																				<!--end::Thumbnail-->
 																				<!--begin::Title-->
 																				<div class="ms-5">
-																					<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="fw-bolder text-gray-600 text-hover-primary">Footwear</a>
-																					<div class="fs-7 text-muted">Delivery Date: 30/03/2022</div>
+																					<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="fw-bolder text-gray-600 text-hover-primary">Raket</a>
+																					<div class="fs-7 text-muted">tambah sewa raket</div>
 																				</div>
 																				<!--end::Title-->
 																			</div>
@@ -282,17 +278,17 @@
 																		<td class="text-end">1</td>
 																		<!--end::Quantity-->
 																		<!--begin::Price-->
-																		<td class="text-end">$24.00</td>
+																		<td class="text-end">Rp.24.000</td>
 																		<!--end::Price-->
 																		<!--begin::Total-->
-																		<td class="text-end">$24.00</td>
+																		<td class="text-end">Rp.24.000</td>
 																		<!--end::Total-->
 																	</tr>
 																	<!--end::Products-->
 																	<!--begin::Subtotal-->
 																	<tr>
 																		<td colspan="3" class="text-end">Subtotal</td>
-																		<td class="text-end">Rp.264.00</td>
+																		<td class="text-end">Rp.2640.00</td>
 																	</tr>
 																	<!--end::Subtotal-->
 																	

@@ -5,20 +5,17 @@
         <!--begin::Page title-->
         <div class="page-title d-flex flex-column me-3">
             <!--begin::Title-->
-            <h1 class="d-flex text-dark fw-bolder my-1 fs-3">Mixed</h1>
+            <h1 class="d-flex text-dark fw-bolder my-1 fs-3">Daftar Paket</h1>
             <!--end::Title-->
             <!--begin::Breadcrumb-->
             <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
                 <!--begin::Item-->
                 <li class="breadcrumb-item text-gray-600">
-                    <a href="../../demo14/dist/index.html" class="text-gray-600 text-hover-primary">Home</a>
+                    <a href="../../demo14/dist/index.html" class="text-gray-600 text-hover-primary">Dashboard</a>
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-gray-600">Widgets</li>
-                <!--end::Item-->
-                <!--begin::Item-->
-                <li class="breadcrumb-item text-gray-500">Mixed</li>
+                <li class="breadcrumb-item text-gray-600">Data Paket</li>
                 <!--end::Item-->
             </ul>
             <!--end::Breadcrumb-->

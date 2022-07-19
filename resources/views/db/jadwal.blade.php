@@ -274,7 +274,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Modal header-->
 											<div class="modal-header border-0 justify-content-end">
 												<!--begin::Edit-->
-												<div class="btn btn-icon btn-sm btn-color-gray-400 btn-active-icon-primary me-2" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Edit Event" id="kt_modal_view_event_edit">
+												<div class="btn btn-icon btn-sm btn-color-gray-400 btn-active-icon-primary me-2" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Edit Jadwal" id="kt_modal_view_event_edit">
 													<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
 													<span class="svg-icon svg-icon-2">
 														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
