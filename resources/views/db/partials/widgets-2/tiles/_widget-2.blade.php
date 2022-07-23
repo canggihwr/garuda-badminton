@@ -6,12 +6,18 @@
 												<!--begin::Title-->
 												<h2 class="text-white fw-bolder mb-5">
 													<span class="lh-lg">Selamat datang di GOR Garuda Mataram
-														<br />Welcome back, <a href="#">Canggih WR</a></span>
+														<br />Welcome back, <a href="#">{{ auth()->user()->name }}</a></span>
 												</h2>
 												<!--end::Title-->
 												<!--begin::Action-->
 												<div class="m-0">
-													<a href='#' class="btn btn-danger fw-bold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Log Out</a>
+													<form action="/logout" method="POST">
+														@csrf
+														<button type="submit" class="btn btn-danger fw-bold px-6 py-3">
+															Log Out
+														</button>
+														{{-- <a href='/logout' class="btn btn-danger fw-bold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Log Out</a> --}}
+													</form>
 												</div>
 												<!--begin::Action-->
 											</div>

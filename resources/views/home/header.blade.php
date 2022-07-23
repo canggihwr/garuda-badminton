@@ -8,23 +8,6 @@
 	================================================== -->
 	<meta charset="utf-8">
 	<title>GOR Bulutangkis Garuda</title>
-	{{-- <meta name="description"  content="Professional Creative Template" />
-	<meta name="author" content="IG Design">
-	<meta name="keywords"  content="ig design, website, design, html5, css3, jquery, creative, clean, animated, portfolio, blog, one-page, multi-page, corporate, business," />
-	<meta property="og:title" content="Professional Creative Template" /> --}}
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:image:width" content="470" />
-	<meta property="og:image:height" content="246" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="Professional Creative Template" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="https://twitter.com/IvanGrozdic" />
-	<meta name="twitter:domain" content="http://ivang-design.com/" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:description" content="Professional Creative Template" />
-	<meta name="twitter:image" content="http://ivang-design.com/" />
 
 	<!-- Mobile Specific Metas
 	================================================== -->
@@ -83,8 +66,25 @@
 						<a class="shadow-hover" href="/cara-penyewaan">Cara Penyewaan</a>
 					</li>
 					<li>
-						<a class="shadow-hover" href="contact.html">Fasilitas</a>
+						<a class="shadow-hover" href="/">Fasilitas</a>
 					</li>
+					@auth
+					<li>
+						<a class="shadow-hover" href="#">Welcome back, {{ auth()->user()->name }}</span></a>
+						<ul>
+							<li>
+								<a class="curent-multi-page" href="/dashboard">Dashboard</a>
+							</li>
+							<li>
+								<form id="log" action="/logout" method="POST">
+									@csrf
+									<a  href="javascript:{}" onclick="document.getElementById('log').submit();">Logout</a>
+								</form>
+							</li>
+						</ul>
+					</li>
+										
+					@else
 					<li>
 						<a class="shadow-hover" href="#">Login</span></a>
 						<ul>
@@ -92,9 +92,11 @@
 								<a class="curent-multi-page" href="/login">Login</a>
 							</li>
 							<li><a href="/daftar">Daftar</a></li>
-							<li><a href="/dashboard">Dashboard</a></li>
 						</ul>
 					</li>
+						
+					@endauth
+					
 				</ul>
 			</div>
 		</nav>

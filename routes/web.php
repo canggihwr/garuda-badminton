@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,17 +23,23 @@ Route::get('/login', function () {
     return view('login/sign-in');
 });
 
-Route::get('/daftar', function () {
-    return view('login/sign-up');
-});
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::post('/logout', [LoginController::class, 'logout']);
+
+
+Route::get('/daftar', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/daftar', [RegisterController::class, 'store']);
+
 
 Route::get('/cara-penyewaan', function () {
     return view('home/cara2');
 });
 
-Route::get('/dashboard', function () {
-    return view('db/dashboard');
-});
+Route::get('/dashboard', function() {
+    return view('/dashboard/index');
+})->middleware('auth');
 
 Route::get('/redirect', function () {
     return view('db/dashboard');
