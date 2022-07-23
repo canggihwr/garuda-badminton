@@ -18,7 +18,7 @@
 										<li class="breadcrumb-item text-gray-600">Paket</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-gray-500">Edit paket</li>
+										<li class="breadcrumb-item text-gray-500">Tambah paket</li>
 										<!--end::Item-->
 									</ul>
 									<!--end::Breadcrumb-->
@@ -56,12 +56,13 @@
 									<!--begin::Card header-->
 									<div class="card-header">
 										<!--begin::Card title-->
-										<div class="card-title fs-3 fw-bolder">Edit Paket</div>
+										<div class="card-title fs-3 fw-bolder">Tambah Paket</div>
 										<!--end::Card title-->
 									</div>
 									<!--end::Card header-->
 									<!--begin::Form-->
-									<form id="kt_project_settings_form" class="form">
+									<form id="" action="/dashboard/paket/add" method="POST" class="form">
+										@csrf
 										<!--begin::Card body-->
 										<div class="card-body p-9">
 											
@@ -74,7 +75,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<input type="text" class="form-control form-control-solid" name="name" placeholder="Nama Paket" value="" />
+													<input type="text" class="form-control form-control-solid" name="nama" placeholder="Nama Paket" value="" />
 												</div>
 											</div>
 											<!--end::Row-->
@@ -88,7 +89,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<input type="text" class="form-control form-control-solid" name="name" placeholder="Waktu Main" value="" />
+													<input type="text" class="form-control form-control-solid" name="waktu_main" placeholder="Waktu Main" value="" />
 												</div>
 											</div>
 											<!--end::Row-->
@@ -115,7 +116,7 @@
 														</span>
 														<!--end::Svg Icon-->
 													</span>
-													<input type="text" class="form-control form-control-solid" placeholder="Harga" value="" aria-label="Harga" aria-describedby="basic-addon1"/>
+													<input type="text" class="form-control form-control-solid" placeholder="Harga" name="harga" value="" aria-label="Harga" aria-describedby="basic-addon1"/>
 												</div>
 											</div>
 											</div>

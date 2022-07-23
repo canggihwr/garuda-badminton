@@ -1,8 +1,11 @@
 <?php
 
+use App\Models\User;
+use App\Models\Paket;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +41,7 @@ Route::get('/cara-penyewaan', function () {
 });
 
 Route::get('/dashboard', function() {
-    return view('/dashboard/index');
+    return view('/db/dashboard');
 })->middleware('auth');
 
 Route::get('/redirect', function () {
@@ -72,7 +75,10 @@ Route::get('/dashboard/perlengkapan/add', function () {
 
 
 Route::get('/dashboard/user', function () {
-    return view('db/user');
+    return view('db/user', [
+        'user' => User::all()
+
+    ]);
 });
 
 Route::get('/dashboard/user/add', function () {
@@ -103,16 +109,27 @@ Route::get('/dashboard/lapangan/edit', function () {
     return view('db/edit_lapangan');
 });
 
+
 Route::get('/dashboard/paket', function () {
-    return view('db/paket');
+    return view('db/paket', [
+        'paket' => Paket::all()
+
+    ]);
 });
+
+Route::get('/dashboard/paket/edit/{paket:id}', [PaketController::class, 'edit']);
+
+Route::get('/dashboard/paket/hapus/{paket:id}', [PaketController::class, 'destroy']);
+
+Route::post('/dashboard/paket/update/{paket:id}', [PaketController::class, 'update']);
+
+
+
+Route::post('/dashboard/paket/add', [PaketController::class, 'store']);
+
 
 Route::get('/dashboard/paket/add', function () {
     return view('db/add_paket');
-});
-
-Route::get('/dashboard/paket/edit', function () {
-    return view('db/edit_paket');
 });
 
 Route::get('/dashboard/jadwal', function () {

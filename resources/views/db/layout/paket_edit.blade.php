@@ -61,7 +61,8 @@
 									</div>
 									<!--end::Card header-->
 									<!--begin::Form-->
-									<form id="kt_project_settings_form" class="form">
+									<form action="/dashboard/paket/update/{{ $paket->id }}" method="POST" id="" class="form">
+										@csrf
 										<!--begin::Card body-->
 										<div class="card-body p-9">
 											
@@ -74,7 +75,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<input type="text" class="form-control form-control-solid" name="name" value="Paket 1" />
+													<input type="text" class="form-control form-control-solid" name="nama" value="{{ $paket->nama }}" />
 												</div>
 											</div>
 											<!--end::Row-->
@@ -88,7 +89,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<input type="text" class="form-control form-control-solid" name="name" value="1 Jam" />
+													<input type="text" class="form-control form-control-solid" name="waktu_main" value="{{ $paket->waktu_main }}" />
 												</div>
 											</div>
 											<!--end::Row-->
@@ -115,7 +116,7 @@
 														</span>
 														<!--end::Svg Icon-->
 													</span>
-													<input type="text" class="form-control form-control-solid" placeholder="Harga" value="Rp.25000" aria-label="Harga" aria-describedby="basic-addon1"/>
+													<input type="text" class="form-control form-control-solid" placeholder="Harga" name="harga" value="{{ $paket->harga }}" aria-label="Harga" aria-describedby="basic-addon1"/>
 												</div>
 											</div>
 											</div>

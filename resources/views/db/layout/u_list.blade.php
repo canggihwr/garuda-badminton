@@ -34,7 +34,9 @@
         <div class="d-flex flex-wrap flex-stack pb-7">
             <!--begin::Title-->
             <div class="d-flex flex-wrap align-items-center my-1">
-                <h3 class="fw-bolder me-5 my-1">User (3)</h3>
+                
+                <h3 class="fw-bolder me-5 my-1">Jumlah Member ({{ $user->count(); }})</h3>
+                
                 <!--begin::Search-->
                 <div class="d-flex align-items-center position-relative my-1">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
@@ -131,35 +133,7 @@
                                 <!--end::Head-->
                                 <!--begin::Body-->
                                 <tbody class="fs-6">
-                                    <tr>
-                                        <td>
-                                            <!--begin::User-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Wrapper-->
-                                                <div class="me-5 position-relative">
-                                                    <!--begin::Avatar-->
-                                                    <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="db/media/avatars/unnamed.jpg" />
-                                                    </div>
-                                                    <!--end::Avatar-->
-                                                </div>
-                                                <!--end::Wrapper-->
-                                                <!--begin::Info-->
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <a href="" class="mb-1 text-gray-800 text-hover-primary">Canggih Wahyu Rinaldi</a>
-                                                    <div class="fw-bold fs-6 text-gray-400">cwr@gmail.com</div>
-                                                </div>
-                                                <!--end::Info-->
-                                            </div>
-                                            <!--end::User-->
-                                        </td>
-                                        <td>083199487686</td>
-                                        <td>
-                                            <span class="badge badge-light-success fw-bolder px-4 py-3">Member</span>
-                                        </td>
-                                        <td class="text-end">
-                                            <a href="" class="btn btn-light btn-sm">Detail</a>
-                                        </td>
+                                        @foreach ($user as $u)
                                         <tr>
                                             <td>
                                                 <!--begin::User-->
@@ -175,14 +149,14 @@
                                                     <!--end::Wrapper-->
                                                     <!--begin::Info-->
                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <a href="" class="mb-1 text-gray-800 text-hover-primary">Rangga Abdul Qodir</a>
-                                                        <div class="fw-bold fs-6 text-gray-400">rangga_aq@gmail.com</div>
+                                                        <a href="" class="mb-1 text-gray-800 text-hover-primary">{{ $u->name }}</a>
+                                                        <div class="fw-bold fs-6 text-gray-400">{{ $u->email }}</div>
                                                     </div>
                                                     <!--end::Info-->
                                                 </div>
                                                 <!--end::User-->
                                             </td>
-                                            <td>087759742907</td>
+                                            <td>{{ $u->no_hp }}</td>
                                             <td>
                                                 <span class="badge badge-light-success fw-bolder px-4 py-3">Member</span>
                                             </td>
@@ -190,36 +164,7 @@
                                                 <a href="" class="btn btn-light btn-sm">Detail</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <!--begin::User-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Wrapper-->
-                                                    <div class="me-5 position-relative">
-                                                        <!--begin::Avatar-->
-                                                        <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="db/media/avatars/300-25.jpg" />
-                                                        </div>
-                                                        <!--end::Avatar-->
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                    <!--begin::Info-->
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <a href="" class="mb-1 text-gray-800 text-hover-primary">M. Alfandiansyah</a>
-                                                        <div class="fw-bold fs-6 text-gray-400">alfan@gmail.com</div>
-                                                    </div>
-                                                    <!--end::Info-->
-                                                </div>
-                                                <!--end::User-->
-                                            </td>
-                                            <td>083119962622</td>
-                                            <td>
-                                                <span class="badge badge-light-success fw-bolder px-4 py-3">Member</span>
-                                            </td>
-                                            <td class="text-end">
-                                                <a href="" class="btn btn-light btn-sm">Detail</a>
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                     
                                 </tbody>
                                 <!--end::Body-->
