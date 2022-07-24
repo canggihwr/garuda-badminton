@@ -3187,6 +3187,10 @@
 		<!--begin::Page Vendors Javascript(used by this page)-->
 		<script src="db/plugins/custom/datatables/datatables.bundle.js"></script>
 		<script src="db/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
+
+		<script src="db/js/custom/documentation/search.js"></script>
+		<script src="db/js/custom/documentation/general/datatables/buttons.js"></script>
+
 		<!--end::Page Vendors Javascript-->
 		<!--begin::Page Custom Javascript(used by this page)-->
 		<script src="db/js/custom/apps/ecommerce/catalog/save-category.js"></script>
@@ -3196,9 +3200,10 @@
 		<script src="db/js/custom/apps/chat/chat.js"></script>
 		<script src="db/js/custom/utilities/modals/create-app.js"></script>
 		<script src="db/js/custom/utilities/modals/users-search.js"></script>
+		<script src="db/js/custom/documentation/forms/flatpickr.js"></script>
+		<script src="db/js/custom/documentation/search.js"></script>
 		<!--end::Page Custom Javascript-->
 		<!--end::Javascript-->
-		
 	</body>
 	<!--end::Body-->
 </html>

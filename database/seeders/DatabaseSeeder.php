@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Canggih WR',
             'username' => 'cwr',
             'no_hp' => '083199487686',
+            'tipe_akun' => 'Admin',
+            'foto' => 'unnamed.jpg',
             'email' => 'cwr@gmail.com',
             'password' => bcrypt('c')
         ]);
@@ -36,19 +38,27 @@ class DatabaseSeeder extends Seeder
             'name' => 'Alfandiansyah',
             'username' => 'alfa',
             'no_hp' => '0831199626222',
-
+            'foto' => 'blank.png',
+            'tipe_akun' => 'Admin',
             'email' => 'alfan@gmail.com',
             'password' => bcrypt('1')
         ]);
         
         Paket::create([
             'nama' => 'Paket 1 Jam',
-            'waktu_main' => 1,
+            'lama' => 1,
             'harga' => 25000,
+        ]);
+
+        Paket::create([
+            'nama' => 'Paket 4 Jam',
+            'lama' => 4,
+            'harga' => 85000,
         ]);
 
         Lapangan::create([
             'nama' => 'Lapangan 1',
+            'foto' => '',
             'deskripsi' => 'Lapangan utama GOR Garuda Mataram',
         ]);
     }

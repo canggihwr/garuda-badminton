@@ -67,7 +67,7 @@
 								<!--begin::Theme mode-->
 								<div class="d-flex align-items-center ms-1">
 
-@include('db.partials.theme-mode._main')
+								@include('db.partials.theme-mode._main')
 
 								</div>
 								<!--end::Theme mode-->
@@ -77,19 +77,19 @@
 									<div class="btn btn-flex align-items-center bg-hover-white bg-hover-opacity-10 py-2 px-2 px-md-3" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
 										<!--begin::Name-->
 										<div class="d-none d-md-flex flex-column align-items-end justify-content-center me-2 me-md-4">
-											<span class="text-muted fs-8 fw-bold lh-1 mb-1">Canggih WR</span>
-											<span class="text-white fs-8 fw-bolder lh-1">Admin</span>
+											<span class="text-muted fs-8 fw-bold lh-1 mb-1">{{ auth()->user()->name }}</span>
+											<span class="text-white fs-8 fw-bolder lh-1">{{ auth()->user()->tipe_akun }}</span>
 										</div>
 										<!--end::Name-->
 										<!--begin::Symbol-->
 										<div class="symbol symbol-30px symbol-md-40px">
-											<img src="db/media/avatars/unnamed.jpg" alt="image" />
+											<img src="db/media/avatars/{{ auth()->user()->foto }}" alt="image" />
 										</div>
 										<!--end::Symbol-->
 									</div>
 									<!--end::User info-->
 
-@include('db.partials.menus._user-account-menu')
+								@include('db.partials.menus._user-account-menu')
 
 
 								</div>

@@ -2,10 +2,13 @@
 
 use App\Models\User;
 use App\Models\Paket;
+use App\Models\Lapangan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PaketController;
+use App\Http\Controllers\LapanganController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PenyewaanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,13 +52,12 @@ Route::get('/redirect', function () {
 });
 
 
-Route::get('/dashboard/penyewaan', function () {
-    return view('db/penyewaan');
-});
+Route::get('/dashboard/penyewaan/', [PenyewaanController::class, 'list']);
 
-Route::get('/dashboard/penyewaan/add', function () {
-    return view('db/add_penyewaan');
-});
+
+Route::get('/dashboard/penyewaan/add', [PenyewaanController::class, 'show']);
+Route::post('/dashboard/penyewaan/add', [PenyewaanController::class, 'store']);
+
 
 Route::get('/dashboard/penyewaan/detail', function () {
     return view('db/detail_sewa');
@@ -102,12 +104,22 @@ Route::get('/dashboard/admin/edit', function () {
 });
 
 Route::get('/dashboard/lapangan', function () {
-    return view('db/lapangan');
+    return view('db/lapangan', [
+        'lapangan' => Lapangan::all()
+    ]);
 });
 
-Route::get('/dashboard/lapangan/edit', function () {
-    return view('db/edit_lapangan');
+Route::get('/dashboard/lapangan/add', function () {
+    return view('db/add_lapangan');
 });
+
+Route::post('/dashboard/lapangan/add', [LapanganController::class, 'store']);
+
+Route::get('/dashboard/lapangan/edit/{lapangan:id}', [LapanganController::class, 'edit']);
+
+Route::get('/dashboard/lapangan/hapus/{lapangan:id}', [LapanganController::class, 'destroy']);
+
+Route::post('/dashboard/lapangan/update/{lapangan:id}', [LapanganController::class, 'update']);
 
 
 Route::get('/dashboard/paket', function () {

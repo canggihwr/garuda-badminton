@@ -6,14 +6,14 @@
 											<div class="menu-content d-flex align-items-center px-3">
 												<!--begin::Avatar-->
 												<div class="symbol symbol-50px me-5">
-													<img alt="Logo" src="db/media/avatars/unnamed.jpg" />
+													<img alt="Logo" src="db/media/avatars/{{ auth()->user()->foto }}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Username-->
 												<div class="d-flex flex-column">
-													<div class="fw-bolder d-flex align-items-center fs-5">Canggih WR
-													<span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Admin</span></div>
-													<a href="#" class="fw-bold text-muted text-hover-primary fs-7">cwr@gmail.com</a>
+													<div class="fw-bolder d-flex align-items-center fs-5">{{ auth()->user()->name }}
+													<span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">{{ auth()->user()->tipe_akun }}</span></div>
+													<a href="#" class="fw-bold text-muted text-hover-primary fs-7">{{ auth()->user()->email }}</a>
 												</div>
 												<!--end::Username-->
 											</div>

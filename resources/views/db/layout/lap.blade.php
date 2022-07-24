@@ -45,10 +45,16 @@
 												<h3 class="text-dark">Daftar Lapangan</h3>
 												<!--end::Title-->
 												<!--begin::Link-->
-												<a href="#" class="fs-6 fw-bold link-primary">Lihat Semua</a>
+												<a href="/dashboard/lapangan/add" class="fs-6 fw-bold button btn-primary">Lihat Semua</a>
 												<!--end::Link-->
 											</div>
 											<!--end::Content-->
+											@if(session()->has('success'))
+											<div class="alert alert-success alert-dismissible fade show" role="alert">
+												{{ session('success') }}
+												<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+											</div>
+											@endif
 											<!--begin::Separator-->
 											<div class="separator separator-dashed mb-9"></div>
 											<!--end::Separator-->
@@ -136,6 +142,7 @@
 													<!--end::Hot sales post-->
 												</div>
 												<!--end::Col-->
+												@foreach ($lapangan as $l)
 												<!--begin::Col-->
 												<div class="col-md-4">
 													<!--begin::Hot sales post-->
@@ -155,10 +162,10 @@
 														<!--begin::Body-->
 														<div class="mt-5">
 															<!--begin::Title-->
-															<a href="#" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">Lapangan 3</a>
+															<a href="#" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">{{ $l->nama }}</a>
 															<!--end::Title-->
 															<!--begin::Text-->
-															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">Contoh deskripsi Lapangan 3 pada Gor Bulutangkis Garuda Mataram</div>
+															<div class="fw-bold fs-5 text-gray-600 text-dark mt-3">{{ $l->deskripsi }}</div>
 															<!--end::Text-->
 															<!--begin::Text-->
 															<div class="fs-6 fw-bolder mt-5 d-flex flex-stack">
@@ -167,7 +174,10 @@
 																{{-- <span class="fs-6 fw-bold text-gray-400">$</span>25</span> --}}
 																<!--end::Label-->
 																<!--begin::Action-->
-																<a href="/dashboard/lapangan/edit" class="btn btn-sm btn-primary">Edit </a>
+																<a href="/dashboard/lapangan/edit/{{ $l->id }}" class="btn btn-sm btn-primary">Edit </a>
+																<!--end::Action-->
+																<!--begin::Action-->
+																<a href="/dashboard/lapangan/hapus/{{ $l->id }}" class="btn btn-sm btn-danger">Hapus </a>
 																<!--end::Action-->
 															</div>
 															<!--end::Text-->
@@ -177,6 +187,7 @@
 													<!--end::Hot sales post-->
 												</div>
 												<!--end::Col-->
+												@endforeach
 											</div>
 											<!--end::Row-->
 										</div>

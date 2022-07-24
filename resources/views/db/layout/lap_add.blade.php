@@ -18,7 +18,7 @@
 										<li class="breadcrumb-item text-gray-600">Lapangan</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-gray-500">Edit lapangan</li>
+										<li class="breadcrumb-item text-gray-500">Tambah lapangan</li>
 										<!--end::Item-->
 									</ul>
 									<!--end::Breadcrumb-->
@@ -56,14 +56,14 @@
 									<!--begin::Card header-->
 									<div class="card-header">
 										<!--begin::Card title-->
-										<div class="card-title fs-3 fw-bolder">Edit Lapangan</div>
+										<div class="card-title fs-3 fw-bolder">Tambah Lapangan</div>
 										<!--end::Card title-->
 									</div>
 									<!--end::Card header-->
 									<!--begin::Form-->
-									<form id="kt_project_settings_form" class="form" action="/dashboard/lapangan/update/{{ $lapangan->id }}" method="POST">
-										<!--begin::Card body-->
+									<form id="kt_project_settings_form" class="form" action="/dashboard/lapangan/add" method="POST">
 										@csrf
+										<!--begin::Card body-->
 										<div class="card-body p-9">
 											<!--begin::Row-->
 											<div class="row mb-5">
@@ -116,7 +116,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<input type="text" class="form-control form-control-solid" name="nama" value="{{ $lapangan->nama }}" />
+													<input type="text" class="form-control form-control-solid" name="nama" value="" />
 												</div>
 											</div>
 											<!--end::Row-->
@@ -130,7 +130,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<textarea name="deskripsi" class="form-control form-control-solid h-100px">{{ $lapangan->deskripsi }}</textarea>
+													<textarea name="deskripsi" class="form-control form-control-solid h-100px"></textarea>
 												</div>
 												<!--begin::Col-->
 											</div>
@@ -159,7 +159,7 @@
 										<div class="card-footer d-flex justify-content-end py-6 px-9">
 											<a href="/dashboard/lapangan" class="btn btn-light btn-active-light-primary me-2">Batal</a>
                                             
-											<button type="submit" class="btn btn-primary">Simpan</button>
+											<button type="submit" class="btn btn-primary" id="kt_project_settings_submit">Simpan</button>
 										</div>
 										<!--end::Card footer-->
 									</form>
