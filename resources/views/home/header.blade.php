@@ -60,13 +60,13 @@
 						<a class="shadow-hover curent-shadow" href="/" >Home</a>
 					</li>
 					<li>
-						<a class="shadow-hover" href="about.html">Info & Jadwal Lapangan</a>
+						<a class="shadow-hover" href="#info">Info & Jadwal Lapangan</a>
 					</li>
 					<li>
-						<a class="shadow-hover" href="/cara-penyewaan">Cara Penyewaan</a>
+						<a class="shadow-hover" href="#cara">Cara Penyewaan</a>
 					</li>
 					<li>
-						<a class="shadow-hover" href="/">Fasilitas</a>
+						<a class="shadow-hover" href="#fasilitas">Fasilitas</a>
 					</li>
 					@auth
 					<li>

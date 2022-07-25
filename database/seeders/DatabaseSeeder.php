@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'alfa',
             'no_hp' => '0831199626222',
             'foto' => 'blank.png',
-            'tipe_akun' => 'Admin',
+            'tipe_akun' => 'Member',
             'email' => 'alfan@gmail.com',
             'password' => bcrypt('1')
         ]);
@@ -60,6 +60,12 @@ class DatabaseSeeder extends Seeder
             'nama' => 'Lapangan 1',
             'foto' => '',
             'deskripsi' => 'Lapangan utama GOR Garuda Mataram',
+        ]);
+
+        Lapangan::create([
+            'nama' => 'Lapangan 2',
+            'foto' => '',
+            'deskripsi' => 'Lapangan kedua GOR Garuda Mataram',
         ]);
     }
 }

@@ -34,6 +34,7 @@
     <div class="d-flex flex-wrap flex-stack pb-7">
         <!--begin::Title-->
         <div class="d-flex flex-wrap align-items-center my-1">
+            
             <h3 class="fw-bolder me-5 my-1">Admin (2)</h3>
             <!--begin::Search-->
             <div class="d-flex align-items-center position-relative my-1">
@@ -94,6 +95,8 @@
         <div id="kt_project_users_card_pane" class="tab-pane fade show active">
             <!--begin::Row-->
             <div class="row g-6 g-xl-9">
+                @foreach ($user as $u)
+                    
                 
                 <!--begin::Col-->
                 <div class="col-md-6 col-xxl-4">
@@ -108,11 +111,11 @@
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Name-->
-                            <a href="/dashboard/admin/edit" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">Imam Firmansyah <i class="bi bi-pencil-fill fs-7"></i></a>
-                            <div class="badge badge-light-success text-center mb-2">Admin</div>
+                            <a href="/dashboard/admin/edit" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">{{ $u->name }} <i class="bi bi-pencil-fill fs-7"></i></a>
+                            <div class="badge badge-light-success text-center mb-2">{{ $u->tipe_akun }}</div>
                             <!--end::Name-->
                             <!--begin::Position-->
-                            <div class="fw-bold text-gray-400 mb-6">imamfirman15@gmail.com</div>
+                            <div class="fw-bold text-gray-400 mb-6">{{ $u->email }}</div>
                             <!--end::Position-->
                             <!--begin::Info-->
                             <div class="d-flex flex-center flex-wrap">
@@ -138,48 +141,8 @@
                     <!--end::Card-->
                 </div>
                 <!--end::Col-->
-                <!--begin::Col-->
-                <div class="col-md-6 col-xxl-4">
-                    <!--begin::Card-->
-                    <div class="card">
-                        <!--begin::Card body-->
-                        <div class="card-body d-flex flex-center flex-column pt-12 p-9">
-                            <!--begin::Avatar-->
-                            <div class="symbol symbol-65px symbol-circle mb-5">
-                                <img src="db/media//avatars/blank.png" alt="image" />
-                                <div class="bg-success position-absolute border border-4 border-white h-15px w-15px rounded-circle translate-middle start-100 top-100 ms-n3 mt-n3"></div>
-                            </div>
-                            <!--end::Avatar-->
-                            <!--begin::Name-->
-                            <a href="/dashboard/admin/edit" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">Febrian <i class="bi bi-pencil-fill fs-7"></i></a>
-                            <div class="badge badge-light-success text-center mb-2">Admin</div>
-                            <!--end::Name-->
-                            <!--begin::Position-->
-                            <div class="fw-bold text-gray-400 mb-6">febrian112@gmail.com</div>
-                            <!--end::Position-->
-                            <!--begin::Info-->
-                            <div class="d-flex flex-center flex-wrap">
-                                <!--begin::Stats-->
-                                <div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
-                                    <div class="fs-6 fw-bolder text-gray-700  text-center">Rp.90,000</div>
-                                    <div class="fw-bold text-gray-400  text-center">Pendapatan</div>
-                                </div>
-                                <!--end::Stats-->
-                                <!--begin::Stats-->
-                                <div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
-                                    <div class="fs-6 fw-bolder text-gray-700  text-center">2</div>
-                                    <div class="fw-bold text-gray-400  text-center">Transaksi</div>
-                                </div>
-                                <!--end::Stats-->
-                                
-                            </div>
-                            <!--end::Info-->
-                        </div>
-                        <!--end::Card body-->
-                    </div>
-                    <!--end::Card-->
-                </div>
-                <!--end::Col-->
+
+                @endforeach
                 
             </div>
             <!--end::Row-->

@@ -43,7 +43,21 @@
 													<!--begin::Card header-->
 													<div class="card-header">
 														<div class="card-title">
-															<h2>Detail Sewa <span class="badge badge-light-success ms-2 fs-6">Menunggu Pembayaran</span></h2>
+															<h2>Detail Pemesanan 
+																@if($penyewaan->status == 'Menunggu Pembayaran')
+																<span class="badge badge-secondary ms-2 fs-6">{{ $penyewaan->status }}</span>
+														
+																@elseif($penyewaan->status == 'Menunggu Konfirmasi')
+																<span class="badge badge-light-warning ms-2 fs-6">{{ $penyewaan->status }}</span>
+
+																@elseif($penyewaan->status == 'Dikonfirmasi')
+																<span class="badge badge-light-success ms-2 fs-6">{{ $penyewaan->status }}</span>
+																
+																@else
+																<span class="badge badge-light-primary ms-2 fs-6">{{ $penyewaan->status }}</span>
+																
+																@endif
+															</h2>
 														</div>
 													</div>
 													<!--end::Card header-->
@@ -55,7 +69,7 @@
 														
                                                         
 														<!--begin::Card body-->
-											<div class="card-body pt-0 ">
+											<div class="card-body pt-0 " style="margin-left: 3rem">
 												<div class="table-responsive">
 													<!--begin::Table-->
 													<table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-300px mb-0 mt-0" >
@@ -63,7 +77,7 @@
 														<tbody class="fw-bold text-gray-600">
 															<!--begin::Customer name-->
 															<tr>
-																<td class="text-muted">
+																<td class="text-gray-800">
 																	<div class="d-flex align-items-center">
 																	<!--begin::Svg Icon | path: icons/duotune/communication/com006.svg-->
 																	<span class="svg-icon svg-icon-2 me-2">
@@ -72,21 +86,21 @@
 																			<path d="M12 22C14.6 22 17 21 18.7 19.4C17.9 16.9 15.2 15 12 15C8.8 15 6.09999 16.9 5.29999 19.4C6.99999 21 9.4 22 12 22Z" fill="currentColor" />
 																		</svg>
 																	</span>
-																	<!--end::Svg Icon-->Nama Member</div>
+																	<!--end::Svg Icon-->Nama Penyewa</div>
 																</td>
 																<td class="fw-bolder text-end">
 																	<div class="d-flex align-items-center justify-content-end">
 																		<!--begin:: Avatar -->
 																		<div class="symbol symbol-circle symbol-25px overflow-hidden me-3">
-																			<a href="../../demo14/dist/apps/ecommerce/customers/details.html">
+																			<a href="/dashboard/penyewaan">
 																				<div class="symbol-label">
-																					<img src="db/media/avatars/unnamed.jpg" alt="Dan Wilson" class="w-100" />
+																					<img src="db/media/avatars/blank.png" alt="" class="w-100" />
 																				</div>
 																			</a>
 																		</div>
 																		<!--end::Avatar-->
 																		<!--begin::Name-->
-																		<a href="../../demo14/dist/apps/ecommerce/customers/details.html" class="text-gray-600 text-hover-primary">Canggih WR</a>
+																		<a href="/dashboard/penyewaan" class="text-gray-600 text-hover-primary">{{ $penyewaan->user->name }}</a>
 																		<!--end::Name-->
 																	</div>
 																</td>
@@ -95,7 +109,7 @@
 															
 															<!--begin::Date-->
 															<tr>
-																<td class="text-muted">
+																<td class="text-gray-800">
 																	<div class="d-flex align-items-center">
 																	<!--begin::Svg Icon | path: icons/duotune/electronics/elc003.svg-->
 																	<span class="svg-icon svg-icon-2 me-2">
@@ -106,13 +120,13 @@
 																	</span>
 																	<!--end::Svg Icon-->No HP</div>
 																</td>
-																<td class="fw-bolder text-end">+62 831 6653 1526</td>
+																<td class="fw-bolder text-end">{{ $penyewaan->user->no_hp }}</td>
 															</tr>
 															<!--end::Date-->
 
                                                             <!--begin::Customer email-->
 															<tr>
-																<td class="text-muted">
+																<td class="text-gray-800">
 																	<div class="d-flex align-items-center">
 																	<!--begin::Svg Icon | path: icons/duotune/communication/com011.svg-->
 																	<span class="svg-icon svg-icon-2 me-2">
@@ -128,6 +142,39 @@
 																</td>
 															</tr>
 															<!--end::Payment method-->
+
+															<!--begin::Date-->
+															<tr>
+																<td class="text-gray-800">
+																	<div class="d-flex align-items-center">
+																	<!--begin::Svg Icon | path: icons/duotune/files/fil002.svg-->
+																	<span class="svg-icon svg-icon-2 me-2">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+																			<path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="currentColor" />
+																			<path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->Tanggal sewa</div>
+																</td>
+																<td class="fw-bolder text-end">{{ $penyewaan->tgl_main }}</td>
+															</tr>
+															<!--end::Date-->
+															<!--begin::Date-->
+															<tr>
+																<td class="text-gray-800">
+																	<div class="d-flex align-items-center">
+																	<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm006.svg-->
+																	<span class="svg-icon svg-icon-2 me-2">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path opacity="0.3" d="M20.9 12.9C20.3 12.9 19.9 12.5 19.9 11.9C19.9 11.3 20.3 10.9 20.9 10.9H21.8C21.3 6.2 17.6 2.4 12.9 2V2.9C12.9 3.5 12.5 3.9 11.9 3.9C11.3 3.9 10.9 3.5 10.9 2.9V2C6.19999 2.5 2.4 6.2 2 10.9H2.89999C3.49999 10.9 3.89999 11.3 3.89999 11.9C3.89999 12.5 3.49999 12.9 2.89999 12.9H2C2.5 17.6 6.19999 21.4 10.9 21.8V20.9C10.9 20.3 11.3 19.9 11.9 19.9C12.5 19.9 12.9 20.3 12.9 20.9V21.8C17.6 21.3 21.4 17.6 21.8 12.9H20.9Z" fill="currentColor"/>
+                                                                            <path d="M16.9 10.9H13.6C13.4 10.6 13.2 10.4 12.9 10.2V5.90002C12.9 5.30002 12.5 4.90002 11.9 4.90002C11.3 4.90002 10.9 5.30002 10.9 5.90002V10.2C10.6 10.4 10.4 10.6 10.2 10.9H9.89999C9.29999 10.9 8.89999 11.3 8.89999 11.9C8.89999 12.5 9.29999 12.9 9.89999 12.9H10.2C10.4 13.2 10.6 13.4 10.9 13.6V13.9C10.9 14.5 11.3 14.9 11.9 14.9C12.5 14.9 12.9 14.5 12.9 13.9V13.6C13.2 13.4 13.4 13.2 13.6 12.9H16.9C17.5 12.9 17.9 12.5 17.9 11.9C17.9 11.3 17.5 10.9 16.9 10.9Z" fill="currentColor"/>
+                                                                            </svg>
+																	</span>
+																	<!--end::Svg Icon-->Waktu sewa</div>
+																</td>
+																<td class="fw-bolder text-end">{{ $penyewaan->waktu_main }}</td>
+															</tr>
+															<!--end::Date-->
 														</tbody>
 														<!--end::Table body-->
 													</table>
@@ -142,31 +189,36 @@
 														
 														
 														<!--begin::Card body-->
-											<div class="card-body pt-0">
+											<div class="card-body pt-0 " style="margin-right: 3rem">
 												<div class="table-responsive">
 													<!--begin::Table-->
 													<table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-300px  mb-0 mt-0">
 														<!--begin::Table body-->
 														<tbody class="fw-bold text-gray-600">
-															<!--begin::Date-->
-															<tr>
-																<td class="text-muted">
-																	<div class="d-flex align-items-center">
-																	<!--begin::Svg Icon | path: icons/duotune/files/fil002.svg-->
-																	<span class="svg-icon svg-icon-2 me-2">
-																		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-																			<path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="currentColor" />
-																			<path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="currentColor" />
-																		</svg>
-																	</span>
-																	<!--end::Svg Icon-->Tanggal sewa</div>
-																</td>
-																<td class="fw-bolder text-end">30/03/2022</td>
-															</tr>
-															<!--end::Date-->
+															
+
+
 															<!--begin::Payment method-->
 															<tr>
-																<td class="text-muted">
+																<td class="text-gray-800">
+																	<div class="d-flex align-items-center">
+																	<!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+																	<span class="svg-icon svg-icon-2 me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+																		<path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+																		</svg></span>
+																		<!--end::Svg Icon-->
+																	Paket
+																</div>
+																</td>
+																<td class="fw-bolder text-end">{{ $penyewaan->paket->nama }}
+																</td>
+															</tr>
+															<!--end::Payment method-->
+
+															<!--begin::Payment method-->
+															<tr>
+																<td class="text-gray-800">
 																	<div class="d-flex align-items-center">
 																	<!--begin::Svg Icon | path: icons/duotune/finance/fin008.svg-->
 																	<span class="svg-icon svg-icon-2 me-2">
@@ -176,28 +228,57 @@
 																			<path d="M13 13.9189C13 12.2189 14.3 10.9189 16 10.9189H21V7.91895C21 6.81895 20.1 5.91895 19 5.91895H3C2.4 5.91895 2 6.31895 2 6.91895V20.9189C2 21.5189 2.4 21.9189 3 21.9189H19C20.1 21.9189 21 21.0189 21 19.9189V16.9189H16C14.3 16.9189 13 15.6189 13 13.9189Z" fill="currentColor" />
 																		</svg>
 																	</span>
-																	<!--end::Svg Icon-->Paket</div>
+																	<!--end::Svg Icon-->Metode Pembayaran</div>
 																</td>
-																<td class="fw-bolder text-end">Gopay
+																<td class="fw-bolder text-end">{{ $penyewaan->metode }}
 																<img src="v2/img/gopay.png" class="w-20px ms-2" /></td>
 															</tr>
 															<!--end::Payment method-->
-															<!--begin::Date-->
+
+															<!--begin::Payment method-->
 															<tr>
-																<td class="text-muted">
+																<td class="text-gray-800">
 																	<div class="d-flex align-items-center">
-																	<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm006.svg-->
-																	<span class="svg-icon svg-icon-2 me-2">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path opacity="0.3" d="M20.9 12.9C20.3 12.9 19.9 12.5 19.9 11.9C19.9 11.3 20.3 10.9 20.9 10.9H21.8C21.3 6.2 17.6 2.4 12.9 2V2.9C12.9 3.5 12.5 3.9 11.9 3.9C11.3 3.9 10.9 3.5 10.9 2.9V2C6.19999 2.5 2.4 6.2 2 10.9H2.89999C3.49999 10.9 3.89999 11.3 3.89999 11.9C3.89999 12.5 3.49999 12.9 2.89999 12.9H2C2.5 17.6 6.19999 21.4 10.9 21.8V20.9C10.9 20.3 11.3 19.9 11.9 19.9C12.5 19.9 12.9 20.3 12.9 20.9V21.8C17.6 21.3 21.4 17.6 21.8 12.9H20.9Z" fill="currentColor"/>
-                                                                            <path d="M16.9 10.9H13.6C13.4 10.6 13.2 10.4 12.9 10.2V5.90002C12.9 5.30002 12.5 4.90002 11.9 4.90002C11.3 4.90002 10.9 5.30002 10.9 5.90002V10.2C10.6 10.4 10.4 10.6 10.2 10.9H9.89999C9.29999 10.9 8.89999 11.3 8.89999 11.9C8.89999 12.5 9.29999 12.9 9.89999 12.9H10.2C10.4 13.2 10.6 13.4 10.9 13.6V13.9C10.9 14.5 11.3 14.9 11.9 14.9C12.5 14.9 12.9 14.5 12.9 13.9V13.6C13.2 13.4 13.4 13.2 13.6 12.9H16.9C17.5 12.9 17.9 12.5 17.9 11.9C17.9 11.3 17.5 10.9 16.9 10.9Z" fill="currentColor"/>
-                                                                            </svg>
-																	</span>
-																	<!--end::Svg Icon-->Waktu sewa</div>
+																	<!--begin::Svg Icon | path: assets/media/icons/duotune/finance/fin003.svg-->
+																	<span class="svg-icon svg-icon-2 me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M20 18H4C3.4 18 3 17.6 3 17V7C3 6.4 3.4 6 4 6H20C20.6 6 21 6.4 21 7V17C21 17.6 20.6 18 20 18ZM12 8C10.3 8 9 9.8 9 12C9 14.2 10.3 16 12 16C13.7 16 15 14.2 15 12C15 9.8 13.7 8 12 8Z" fill="currentColor"/>
+																		<path d="M18 6H20C20.6 6 21 6.4 21 7V9C19.3 9 18 7.7 18 6ZM6 6H4C3.4 6 3 6.4 3 7V9C4.7 9 6 7.7 6 6ZM21 17V15C19.3 15 18 16.3 18 18H20C20.6 18 21 17.6 21 17ZM3 15V17C3 17.6 3.4 18 4 18H6C6 16.3 4.7 15 3 15Z" fill="currentColor"/>
+																		</svg></span>
+																		<!--end::Svg Icon-->
+																		Tipe Pembayaran</div>
 																</td>
-																<td class="fw-bolder text-end">09:00 - 12:00</td>
+																<td class="fw-bolder text-end">{{ $penyewaan->tipe }}
+																</td>
 															</tr>
-															<!--end::Date-->
+															<!--end::Payment method-->
+
+															<!--begin::Payment method-->
+															<tr>
+																<td class="text-gray-800">
+																	<div class="d-flex align-items-center">
+																	<!--begin::Svg Icon | path: assets/media/icons/duotune/files/fil025.svg-->
+																	<span class="svg-icon svg-icon-2 me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" fill="currentColor"/>
+																		<path d="M20 8L14 2V6C14 7.10457 14.8954 8 16 8H20Z" fill="currentColor"/>
+																		<path d="M10.3629 14.0084L8.92108 12.6429C8.57518 12.3153 8.03352 12.3153 7.68761 12.6429C7.31405 12.9967 7.31405 13.5915 7.68761 13.9453L10.2254 16.3488C10.6111 16.714 11.215 16.714 11.6007 16.3488L16.3124 11.8865C16.6859 11.5327 16.6859 10.9379 16.3124 10.5841C15.9665 10.2565 15.4248 10.2565 15.0789 10.5841L11.4631 14.0084C11.1546 14.3006 10.6715 14.3006 10.3629 14.0084Z" fill="currentColor"/>
+																		</svg></span>
+																		<!--end::Svg Icon-->
+																	Bukti Pembayaran</div>
+																</td>
+																
+																<td class="fw-bolder text-end"><a href="#" class="btn btn-sm btn-success " data-bs-toggle="modal" data-bs-target="#kt_modal_1"><i class="fas fa-envelope-open-text fs-4 me-2"></i> Cek</a>
+																</td>
+
+															</tr>
+															<!--end::Payment method-->
+
+															<!--begin::Subtotal-->
+															<tr>
+																<td class=" fs-5 text-end">Harga Sewa Lapangan</td>
+																<td class=" fs-4 fw-boldest text-end">Rp.{{ $penyewaan->paket->harga }}</td>
+															</tr>
+															<!--end::Subtotal-->
+															
 														</tbody>
 														<!--end::Table body-->
 													</table>
@@ -211,14 +292,14 @@
                                                 
 													<!--begin::Card body-->
 													<div class="card-body pt-0">
-                                                        
-														<div class="table-responsive">
+														                                                       
+														<div class="table-responsive" style="margin-left: 3rem; margin-right: 3rem" >
 															<!--begin::Table-->
 															<table class="table align-middle table-row-dashed fs-6 gy-5 mb-0">
 																<!--begin::Table head-->
 																<thead>
 																	<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-																		<th class="min-w-175px">Perlengkapan</th>
+																		<th class="min-w-175px">Peralatan</th>
 																		<th class="min-w-70px text-end">Qty</th>
 																		<th class="min-w-100px text-end">Harga</th>
 																		<th class="min-w-100px text-end">Total</th>
@@ -226,7 +307,7 @@
 																</thead>
 																<!--end::Table head-->
 																<!--begin::Table body-->
-																<tbody class="fw-bold text-gray-600">
+																{{-- <tbody class="fw-bold text-gray-600">
 																	<!--begin::Products-->
 																	<tr>
 																		<!--begin::Product-->
@@ -268,7 +349,7 @@
 																				<!--begin::Title-->
 																				<div class="ms-5">
 																					<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="fw-bolder text-gray-600 text-hover-primary">Raket</a>
-																					<div class="fs-7 text-muted">tambah sewa raket</div>
+																					<div class="fs-7 text-gray-800">tambah sewa raket</div>
 																				</div>
 																				<!--end::Title-->
 																			</div>
@@ -285,37 +366,158 @@
 																		<!--end::Total-->
 																	</tr>
 																	<!--end::Products-->
+																</tbody> --}}
+																<!--end::Table head-->
+															</table>
+															<!--end::Table-->
+															<!--begin::Table-->
+															<table class="table align-middle table-row-dashed fs-6 gy-5 mb-0">
+																<!--begin::Table head-->
+																<thead>
+																	<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+																		<th class="min-w-175px"></th>
+																		<th class="min-w-70px text-end"></th>
+																		<th class="min-w-100px text-end"></th>
+																		<th class="min-w-100px text-end"></th>
+																	</tr>
+																</thead>
+																<!--end::Table head-->
+																<!--begin::Table body-->
+																<tbody class="fw-bold text-gray-600">
+																																
 																	<!--begin::Subtotal-->
 																	<tr>
-																		<td colspan="3" class="text-end">Subtotal</td>
-																		<td class="text-end">Rp.2640.00</td>
+																		<td colspan="3" class="text-end">Harga Peralatan</td>
+																		<td class="text-end">Rp.0.00</td>
 																	</tr>
 																	<!--end::Subtotal-->
 																	
 																	<!--begin::Grand total-->
 																	<tr>
-																		<td colspan="3" class="fs-3 text-dark text-end">Grand Total</td>
-																		<td class="text-dark fs-3 fw-boldest text-end">Rp.269.00</td>
+																		<td colspan="3" class="fs-4 text-dark text-end">Total Bayar</td>
+																		<td class="text-dark fs-2 fw-boldest text-end">Rp. {{ $penyewaan->paket->harga }}</td>
 																	</tr>
 																	<!--end::Grand total-->
 																</tbody>
 																<!--end::Table head-->
 															</table>
 															<!--end::Table-->
+															
+															<div>
+																
+	
+															</div>
 														</div>
                                                         <div class="mt-15" style="text-align: right">
-                                                            <a href="/dashboard/penyewaan" class="btn btn-light me-5">Kembali</a>
-                                                            <a href="/dashboard/penyewaan" class="btn btn-success">Lanjut Bayar</a>
+                                                            <a href="/dashboard/penyewaan" class="btn btn-light me-5 mb-3">Kembali</a>
+															@if($penyewaan->status == 'Menunggu Pembayaran')
+															<a href="/dashboard/penyewaan/bayar/{{ $penyewaan->id }}" class="btn btn-success">Lanjut Bayar</a>
+                                                            @endif
+															@if ($penyewaan->status == 'Menunggu Konfirmasi')
+																@if (auth()->user()->tipe_akun == 'Admin')
+																<form action="/dashboard/penyewaan/konfirmasi/{{ $penyewaan->id }}" method="POST">
+																	@csrf
+																<input type="hidden" name="status" value="Dikonfirmasi">
+																<input type="hidden" name="getid" value="{{ $penyewaan->id }}">
+
+																<button type="submit" class="btn btn-success">
+																	Konfirmasi Pembayaran
+																</button>
+																</form>
+																@endif
+																
+															@endif
                                                         </div>
 													</div>
+													@if($penyewaan->status == 'Menunggu Pembayaran')
+													<div class="modal fade" tabindex="-1" id="kt_modal_1">
+														<div class="modal-dialog">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<h5 class="modal-title">Bukti Pembayaran</h5>
+													
+																	<!--begin::Close-->
+																	<div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+																		<span class="svg-icon svg-icon-2x"></span>
+																	</div>
+																	<!--end::Close-->
+																</div>
+													
+																<div class="modal-body">
+																	<!--begin::Image-->
+																	<div class="mt-5 mb-10 text-center">
+																		<p> Bukti pembayaran tidak ada </p>
+																	</div>
+													
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+																	@if ($penyewaan->status == 'Menunggu Konfirmasi')
+																@if (auth()->user()->tipe_akun == 'Admin')
+																<form action="/dashboard/penyewaan/konfirmasi/{{ $penyewaan->id }}" method="POST">
+																	@csrf
+																<input type="hidden" name="status" value="Dikonfirmasi">
+																<input type="hidden" name="getid" value="{{ $penyewaan->id }}">
+
+																<button type="submit" class="btn btn-success">
+																	Konfirmasi Pembayaran
+																</button>
+																</form>
+																@endif
+																
+															@endif
+																</div>
+															</div>
+														</div>
+													</div>
+													@else
+													<div class="modal fade" tabindex="-1" id="kt_modal_1">
+														<div class="modal-dialog">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<h5 class="modal-title">Bukti Pembayaran</h5>
+													
+																	<!--begin::Close-->
+																	<div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+																		<span class="svg-icon svg-icon-2x"></span>
+																	</div>
+																	<!--end::Close-->
+																</div>
+													
+																<div class="modal-body">
+																	<!--begin::Image-->
+															<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-550px" style="background-image:url('db/media/stock/ecommerce/ss.gif')"></div>
+															<!--end::Image-->
+																</div>
+													
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+																	@if ($penyewaan->status == 'Menunggu Konfirmasi')
+																@if (auth()->user()->tipe_akun == 'Admin')
+																<form action="/dashboard/penyewaan/konfirmasi/{{ $penyewaan->id }}" method="POST">
+																	@csrf
+																<input type="hidden" name="status" value="Dikonfirmasi">
+																<input type="hidden" name="getid" value="{{ $penyewaan->id }}">
+
+																<button type="submit" class="btn btn-success">
+																	Konfirmasi Pembayaran
+																</button>
+																</form>
+																@endif
+																
+															@endif
+																</div>
+															</div>
+														</div>
+													</div>
+													@endif
 													<!--end::Card body-->
+													
 												</div>
 												<!--end::Product List-->
 											</div>
 											<!--end::Orders-->
 										</div>
 										<!--end::Tab pane-->
-										
 									</div>
 									<!--end::Tab content-->
 								</div>

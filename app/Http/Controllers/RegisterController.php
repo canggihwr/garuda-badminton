@@ -24,6 +24,7 @@ class RegisterController extends Controller
             'email' => 'required|unique:users|email',
             'password' => 'required'
         ]);
+        $data['tipe_akun'] = $request->tipe_akun;
 
         $data['password'] = bcrypt($data['password']);
         User::create($data);

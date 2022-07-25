@@ -89,7 +89,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<input type="text" class="form-control form-control-solid" name="waktu_main" placeholder="Waktu Main" value="" />
+													<input type="text" class="form-control form-control-solid" name="lama" placeholder="Waktu Main" value="" />
 												</div>
 											</div>
 											<!--end::Row-->

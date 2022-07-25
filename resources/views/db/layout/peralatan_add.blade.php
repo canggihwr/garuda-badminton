@@ -52,7 +52,8 @@
 							<!--end::Toolbar-->
 							<!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
-								<form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row" data-kt-redirect="/dashboard/perlengkapan">
+								<form id="kt_ecommerce_add_category_form" action="/dashboard/peralatan/add" method="POST" class="form d-flex flex-column flex-lg-row"  data-kt-redirect="/dashboard/peralatan">
+									@csrf
 									<!--begin::Aside column-->
 									<div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
 										<!--begin::Thumbnail settings-->
@@ -79,7 +80,7 @@
 														<i class="bi bi-pencil-fill fs-7"></i>
 														<!--end::Icon-->
 														<!--begin::Inputs-->
-														<input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+														<input type="file" name="foto" accept=".png, .jpg, .jpeg" />
 														<input type="hidden" name="avatar_remove" />
 														<!--end::Inputs-->
 													</label>
@@ -122,7 +123,7 @@
 											<!--begin::Card body-->
 											<div class="card-body pt-0">
 												<!--begin::Select2-->
-												<select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select">
+												<select class="form-select mb-2" name="status" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select">
 													<option></option>
 													<option value="published" selected="selected">Tersedia</option>
 													<option value="scheduled">Restock</option>
@@ -135,7 +136,7 @@
 												<!--begin::Datepicker-->
 												<div class="d-none mt-10">
 													<label for="kt_ecommerce_add_category_status_datepicker" class="form-label">Tanggal restock</label>
-													<input class="form-control" id="kt_ecommerce_add_category_status_datepicker" placeholder="Pilih tanggal &amp; waktu" />
+													<input class="form-control" name="restock" id="kt_ecommerce_add_category_status_datepicker" placeholder="Pilih tanggal &amp; waktu" />
 												</div>
 												<!--end::Datepicker-->
 											</div>
@@ -163,7 +164,7 @@
 													<label class="required form-label">Nama Peralatan</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="category_name" class="form-control mb-2" placeholder="Nama peralatan" value="" />
+													<input type="text" name="nama" class="form-control mb-2" placeholder="Nama peralatan" value="" />
 													<!--end::Input-->
 													<!--begin::Description-->
 													<div class="text-muted fs-7">Silahkan masukkan nama perlatan bulu tangkis.</div>
@@ -176,7 +177,7 @@
 													<label class="required form-label">Harga beli/sewa (Rp.)</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="price" class="form-control mb-2" placeholder="Harga peralatan" value="" />
+													<input type="text" name="harga" class="form-control mb-2" placeholder="Harga peralatan" value="" />
 													<!--end::Input-->
 													<!--begin::Description-->
 													<div class="text-muted fs-7">Set harga peralatan.</div>
@@ -191,7 +192,7 @@
 													
 													<!--begin::Editor-->
 													<div class="min-h-150px mb-2">
-														<textarea class="form-control" placeholder="Deskripsi peralatan" id="floatingTextarea2" style="height: 120px"></textarea>
+														<textarea class="form-control" name="deskripsi" placeholder="Deskripsi peralatan" id="floatingTextarea2" style="height: 120px"></textarea>
 													
 													<!--end::Editor-->
 													<!--begin::Description-->
@@ -207,10 +208,10 @@
 										
 										<div class="d-flex justify-content-end">
 											<!--begin::Button-->
-											<a href="../../demo14/dist/apps/ecommerce/catalog/products.html" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+											<a href="/dashboard/peralatan" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
 											<!--end::Button-->
 											<!--begin::Button-->
-											<button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">
+											<button type="submit" id="" class="btn btn-primary">
 												<span class="indicator-label">Simpan</span>
 												<span class="indicator-progress">Please wait...
 												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>

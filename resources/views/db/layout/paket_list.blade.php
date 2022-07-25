@@ -36,7 +36,12 @@
         <!--begin::Row-->
         @if(session()->has('success'))
 							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								{{ session('success') }}
+								<!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr084.svg-->
+<span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path opacity="0.5" d="M12.8956 13.4982L10.7949 11.2651C10.2697 10.7068 9.38251 10.7068 8.85731 11.2651C8.37559 11.7772 8.37559 12.5757 8.85731 13.0878L12.7499 17.2257C13.1448 17.6455 13.8118 17.6455 14.2066 17.2257L21.1427 9.85252C21.6244 9.34044 21.6244 8.54191 21.1427 8.02984C20.6175 7.47154 19.7303 7.47154 19.2051 8.02984L14.061 13.4982C13.7451 13.834 13.2115 13.834 12.8956 13.4982Z" fill="currentColor"/>
+<path d="M7.89557 13.4982L5.79487 11.2651C5.26967 10.7068 4.38251 10.7068 3.85731 11.2651C3.37559 11.7772 3.37559 12.5757 3.85731 13.0878L7.74989 17.2257C8.14476 17.6455 8.81176 17.6455 9.20663 17.2257L16.1427 9.85252C16.6244 9.34044 16.6244 8.54191 16.1427 8.02984C15.6175 7.47154 14.7303 7.47154 14.2051 8.02984L9.06096 13.4982C8.74506 13.834 8.21146 13.834 7.89557 13.4982Z" fill="currentColor"/>
+</svg></span>
+<!--end::Svg Icon--> {{ session('success') }}
 								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 							</div>
 							@endif
@@ -47,6 +52,7 @@
                 <div class="card card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body p-0">
+                        @if( $p->lama == 1)
                         <!--begin::Header-->
                         <div class="px-9 pt-7 card-rounded h-275px w-100 bg-primary">
                             <!--begin::Heading-->
@@ -96,6 +102,408 @@
                             <!--end::Balance-->
                         </div>
                         <!--end::Header-->
+						@elseif( $p->lama == 2)
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-danger">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@elseif( $p->lama == 3)
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-success">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@elseif( $p->lama == 4)
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-warning">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@elseif( $p->lama == 5)
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-success">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@elseif( $p->lama == 6)
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-danger">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@elseif( $p->lama == 7)
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-warning">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@elseif( $p->lama == 8)
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-primary">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@else
+                        <!--begin::Header-->
+                        <div class="px-9 pt-7 card-rounded h-275px w-100 bg-danger">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <h3 class="m-0 text-white fw-bolder fs-3">{{ $p->nama }}</h3>
+                                <div class="ms-1">
+                                    <!--begin::Menu-->
+                                    <button type="button" class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-primary                                  
+                                     border-0 me-n3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr017.svg-->
+                                        <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        <path d="M21 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H21C21.6 2 22 2.4 22 3V21C22 21.6 21.6 22 21 22ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor"/>
+                                        </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Aksi</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/edit/{{ $p->id }}" class="menu-link px-3">Edit Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="/dashboard/paket/hapus/{{ $p->id }}" class="menu-link px-3">Hapus Paket</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        
+                                    </div>
+                                    <!--end::Menu 3-->
+                                    <!--end::Menu-->
+                                </div>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Balance-->
+                            <div class="d-flex text-center flex-column text-white pt-8">
+                                <span class="fw-bold fs-7">Harga</span>
+                                <span class="fw-bolder fs-2x pt-1">Rp.{{ $p->harga }}</span>
+                            </div>
+                            <!--end::Balance-->
+                        </div>
+                        <!--end::Header-->
+						@endif
+                        
                         <!--begin::Items-->
                         <div class="bg-body shadow-sm card-rounded mx-9 mb-9 px-6 py-9 position-relative z-index-1" style="margin-top: -100px">
                             <!--begin::Item-->
@@ -124,7 +532,7 @@
                                     <!--end::Title-->
                                     <!--begin::Label-->
                                     <div class="d-flex align-items-center">
-                                        <div class="fw-bolder fs-5 text-gray-800 pe-1">{{ $p->waktu_main }} Jam</div>
+                                        <div class="fw-bolder fs-5 text-gray-800 pe-1">{{ $p->lama }} Jam</div>
                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
                                         <span class="svg-icon svg-icon-5 svg-icon-success ms-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

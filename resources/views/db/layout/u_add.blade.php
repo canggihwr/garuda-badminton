@@ -51,7 +51,9 @@
 							<!--end::Toolbar-->
 							<!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
-								<form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row" data-kt-redirect="/dashboard/perlengkapan">
+								<form id="" class="form d-flex flex-column flex-lg-row" action="/dashboard/user/add" method="POST">
+									@csrf
+									<input type="hidden" name="tipe_akun" value="Member">
 									<!--begin::Aside column-->
 									<div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
 										<!--begin::Thumbnail settings-->
@@ -124,7 +126,7 @@
 													<label class="required form-label">Nama</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="category_name" class="form-control mb-2" placeholder="Nama" value="" />
+													<input type="text" name="name" class="form-control mb-2" placeholder="Nama" value="" />
 													<!--end::Input-->
 												</div>
 												<!--end::Input group-->
@@ -134,7 +136,7 @@
 													<label class="required form-label">Username</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="price" class="form-control mb-2" placeholder="Username" value="" />
+													<input type="text" name="username" class="form-control mb-2" placeholder="Username" value="" />
 													<!--end::Input-->
 												</div>
 												<!--end::Input group-->
@@ -146,7 +148,7 @@
 													
 													<!--begin::Editor-->
 													<div class="">
-                                                        <input type="password" name="price" class="form-control mb-2" placeholder="Password" value="" />
+                                                        <input type="password" name="password" class="form-control mb-2" placeholder="Password" value="" />
 
 													<!--end::Editor-->
 													</div>
@@ -160,7 +162,7 @@
 													
 													<!--begin::Editor-->
 													<div class="">
-                                                        <input type="text" name="price" class="form-control mb-2" placeholder="No Hp" value="" />
+                                                        <input type="text" name="no_hp" class="form-control mb-2" placeholder="No Hp" value="" />
 
 													<!--end::Editor-->
 													</div>
@@ -174,7 +176,7 @@
 										
 										<div class="d-flex justify-content-end">
 											<!--begin::Button-->
-											<a href="../../demo14/dist/apps/ecommerce/catalog/products.html" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+											<a href="/dashboard/user" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
 											<!--end::Button-->
 											<!--begin::Button-->
 											<button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">

@@ -40,13 +40,11 @@ class PaketController extends Controller
         $data = $request->validate([
             'nama' => 'required',
             'harga' => 'required',
-            'waktu_main' => 'required'
+            'lama' => 'required'
         ]);
 
         Paket::create($data);
 
         return redirect('/dashboard/paket')->with('success', 'Paket berhasil ditambahkan!');
-        
-        
     }
 }

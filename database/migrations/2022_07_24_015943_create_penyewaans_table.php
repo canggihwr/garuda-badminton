@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreignId('lapangan_id');
             $table->foreignId('paket_id');
+            $table->foreignId('peralatan_id')->nullable();
             $table->date('tgl_main');
             $table->string('waktu_main');
             $table->string('metode')->nullable();

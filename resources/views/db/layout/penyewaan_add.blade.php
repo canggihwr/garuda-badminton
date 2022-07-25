@@ -199,7 +199,8 @@
 																<div class="d-flex align-items-center me-2">
 																	<!--begin::Radio-->
 																	<div class="form-check form-check-custom form-check-solid form-check-primary me-6">
-																		<input class="form-check-input" type="radio" name="paket_id" value="{{ $p->id }}"/>
+																		<input class="form-check-input" type="radio" name="paket_id" onchange="handleChange(this);" value="{{ $p->harga }}"/>
+																		{{-- <input class="form-check-input" type="radio" name="paket_id" value="{{ $p->id }}"/> --}}
 																	</div>
 																	<!--end::Radio-->
 
@@ -227,7 +228,19 @@
 															</label>
 															<!--end::Radio button-->
 															
+												
+															
 														@endforeach
+
+														<script>
+															function handleChange(src) {
+															// alert(src.value);
+															let result = document.querySelector('#result')
+															result.textContent = src.value;
+															}
+														</script>
+
+														
 
 														</div>
 														<!--end::Radio group-->
@@ -242,7 +255,7 @@
 																<!--end::Label-->
 																<div class="mb-7">
 																	<span class="fw-bolder fs-4 mt-1 ms-2">Rp.</span>
-																	<span class="fw-bolder fs-3x">45000</span>
+																	<span class="fw-bolder fs-3x" id="result">0.00</span>
 																</div>
 																
 																<!--begin::Description-->
@@ -253,6 +266,7 @@
 															<!--end::Input group-->
 											
 														<!--end::Total price-->
+														
 													</div>
 													<!--end::Input group-->
 													<!--begin::Separator-->
@@ -273,6 +287,7 @@
 														<!--end::Table head-->
 														<!--begin::Table body-->
 														<tbody class="fw-bold text-gray-600">
+															@foreach ($peralatan as $item)
 															<!--begin::Table row-->
 															<tr>
 																<!--begin::Checkbox-->
@@ -292,11 +307,11 @@
 																		<!--end::Thumbnail-->
 																		<div class="ms-5">
 																			<!--begin::Title-->
-																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Shuttlecock</a>
+																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">{{ $item->nama }}</a>
 																			<!--end::Title-->
 																			<!--begin::Price-->
 																			<div class="fw-bold fs-7">Harga: Rp.
-																			<span data-kt-ecommerce-edit-order-filter="price">5000</span></div>
+																			<span data-kt-ecommerce-edit-order-filter="price">{{ $item->harga }}</span></div>
 																			<!--end::Price-->
 																		</div>
 																	</div>
@@ -304,188 +319,59 @@
 																<!--end::Product=-->
 																<td>
 																	<!--begin::Dialer-->
-													<div class="position-relative w-md-90px" data-kt-dialer="true" data-kt-dialer-min="1" data-kt-dialer-max="9" data-kt-dialer-step="1" data-kt-dialer-prefix="" data-kt-dialer-decimals="">
-														<!--begin::Decrease control-->
-														<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-															<!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
-															<span class="svg-icon svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
-																	<rect x="6.0104" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-														</button>
-														<!--end::Decrease control-->
-														<!--begin::Input control-->
-														<input type="text" class="form-control form-control border-0 ps-12" data-kt-dialer-control="input" placeholder="Jumlah" name="manageBudget" readonly="readonly" value="1" />
-														<!--end::Input control-->
-														<!--begin::Increase control-->
-														<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-															<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
-															<span class="svg-icon svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
-																	<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor" />
-																	<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-														</button>
-														<!--end::Increase control-->
-													</div>
-													<!--end::Dialer-->
+																	<div class="position-relative w-md-90px" data-kt-dialer="true" data-kt-dialer-min="1" data-kt-dialer-max="9" data-kt-dialer-step="1" data-kt-dialer-prefix="" data-kt-dialer-decimals="">
+																		<!--begin::Decrease control-->
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
+																					<rect x="6.0104" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->
+																		</button>
+																		<!--end::Decrease control-->
+																		<!--begin::Input control-->
+																		<input type="text" class="form-control form-control border-0 ps-12" data-kt-dialer-control="input" placeholder="Jumlah" name="manageBudget" readonly="readonly" value="1" />
+																		<!--end::Input control-->
+																		<!--begin::Increase control-->
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor" />
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->
+																		</button>
+																		<!--end::Increase control-->
+																	</div>
+																	<!--end::Dialer-->
 																</td>
 																<!--begin::Qty=-->
 																<td class="text-end pe-5" data-order="39">
-																	<span class="fw-bolder ms-3"><span class="fw-bolder ms-3"><span class="badge badge-light-success ms-2 fs-7">tersedia</span></span>
-																</td>
-																<!--end::Qty=-->
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<!--begin::Checkbox-->
-																<td>
-																	<div class="form-check form-check-sm form-check-custom form-check-solid">
-																		<input class="form-check-input" type="checkbox" value="1" />
-																	</div>
-																</td>
-																<!--end::Checkbox-->
-																<!--begin::Product=-->
-																<td>
-																	<div class="d-flex align-items-center" data-kt-ecommerce-edit-order-filter="product" data-kt-ecommerce-edit-order-id="product_2">
-																		<!--begin::Thumbnail-->
-																		<a href="#" class="symbol symbol-50px">
-																			<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/69.gif);"></span>
-																		</a>
-																		<!--end::Thumbnail-->
-																		<div class="ms-5">
-																			<!--begin::Title-->
-																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Sepatu Sport</a>
-																			<!--end::Title-->
-																			<!--begin::Price-->
-																			<div class="fw-bold fs-7">Harga: Rp.
-																			<span data-kt-ecommerce-edit-order-filter="price">25000</span></div>
-																			<!--end::Price-->
-																		</div>
-																	</div>
-																</td>
-																<!--end::Product=-->
-																<td>
-																	<!--begin::Dialer-->
-													<div class="position-relative w-md-90px" data-kt-dialer="true" data-kt-dialer-min="1" data-kt-dialer-max="9" data-kt-dialer-step="1" data-kt-dialer-prefix="" data-kt-dialer-decimals="">
-														<!--begin::Decrease control-->
-														<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-															<!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
-															<span class="svg-icon svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
-																	<rect x="6.0104" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-														</button>
-														<!--end::Decrease control-->
-														<!--begin::Input control-->
-														<input type="text" class="form-control form-control border-0 ps-12" data-kt-dialer-control="input" placeholder="Jumlah" name="manageBudget" readonly="readonly" value="1" />
-														<!--end::Input control-->
-														<!--begin::Increase control-->
-														<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-															<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
-															<span class="svg-icon svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
-																	<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor" />
-																	<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-														</button>
-														<!--end::Increase control-->
-													</div>
-													<!--end::Dialer-->
-																</td>
-																<!--begin::Qty=-->
-																<td class="text-end pe-5" data-order="35">
-																	<span class="fw-bolder ms-3"><span class="badge badge-light-success ms-2 fs-7">tersedia</span></span>
-																</td>
-																<!--end::Qty=-->
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<!--begin::Checkbox-->
-																<td>
-																	<div class="form-check form-check-sm form-check-custom form-check-solid">
-																		<input class="form-check-input" type="checkbox" value="1" />
-																	</div>
-																</td>
-																<!--end::Checkbox-->
-																<!--begin::Product=-->
-																<td>
-																	<div class="d-flex align-items-center" data-kt-ecommerce-edit-order-filter="product" data-kt-ecommerce-edit-order-id="product_3">
-																		<!--begin::Thumbnail-->
-																		<a href="#" class="symbol symbol-50px">
-																			<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/3.gif);"></span>
-																		</a>
-																		<!--end::Thumbnail-->
-																		<div class="ms-5">
-																			<!--begin::Title-->
-																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Raket</a>
-																			<!--end::Title-->
-																			<!--begin::Price-->
-																			<div class="fw-bold fs-7">Harga: Rp.
-																			<span data-kt-ecommerce-edit-order-filter="price">15000</span></div>
-																			<!--end::Price-->
-																		</div>
-																	</div>
-																</td>
-																<!--end::Product=-->
-																
+																	@if($item->status == 'Tersedia')
+																	<span class="fw-bolder ms-3"><span class="fw-bolder ms-3"><span class="badge badge-light-success ms-2 fs-7">{{ $item->status }}</span></span>
+																	
+																	@elseif($item->status == 'Tidak tersedia')
+																	<span class="fw-bolder ms-3"><span class="fw-bolder ms-3"><span class="badge badge-light-danger ms-2 fs-7">{{ $item->status }}</span></span>
+																	
+																	@else
+																	<span class="fw-bolder ms-3"><span class="fw-bolder ms-3"><span class="badge badge-light-warning ms-2 fs-7">{{ $item->status }}</span></span>
+																	
+																	@endif
+																	
+																	
+																	
 
-																<td>
-																	<!--begin::Dialer-->
-													<div class="position-relative w-md-90px" data-kt-dialer="true" data-kt-dialer-min="1" data-kt-dialer-max="9" data-kt-dialer-step="1" data-kt-dialer-prefix="" data-kt-dialer-decimals="">
-														<!--begin::Decrease control-->
-														<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-															<!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
-															<span class="svg-icon svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
-																	<rect x="6.0104" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-														</button>
-														<!--end::Decrease control-->
-														<!--begin::Input control-->
-														<input type="text" class="form-control form-control border-0 ps-12" data-kt-dialer-control="input" placeholder="Jumlah" name="manageBudget" readonly="readonly" value="1" />
-														<!--end::Input control-->
-														<!--begin::Increase control-->
-														<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-															<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
-															<span class="svg-icon svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
-																	<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor" />
-																	<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-														</button>
-														<!--end::Increase control-->
-													</div>
-													<!--end::Dialer-->
-																</td>
-																<!--begin::Qty=-->
-																<td class="text-end pe-5" data-order="26">
-																	<span class="fw-bolder ms-3"><span class="badge badge-light-success ms-2 fs-7">tersedia</span></span>
 																</td>
 																<!--end::Qty=-->
 															</tr>
-															<!--end::Table row-->
-															
+															<!--end::Table row-->	
+															@endforeach													
 														</tbody>
 														<!--end::Table body-->
 													</table>

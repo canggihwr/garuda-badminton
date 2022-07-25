@@ -30,7 +30,7 @@
 									<!--begin::Wrapper-->
 									<div class="me-3">
 										<!--begin::Menu-->
-										<a class="btn btn-light fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+										<a class="btn btn-light fw-bolder" href="/dashboard/user" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
 										<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
 										<span class="svg-icon svg-icon-5 svg-icon-gray-500 me-1">
 											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -51,8 +51,11 @@
 							<!--end::Toolbar-->
 							<!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
-								<form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row" data-kt-redirect="/dashboard/perlengkapan">
+								<form action="/dashboard/user/update/{{ $user->id }}" method="POST" id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row">
 									<!--begin::Aside column-->
+									@csrf
+									<input type="hidden" name="tipe_akun" value="Member">
+									<input type="hidden" name="getid" value="{{ $user->id }}">
 									<div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
 										<!--begin::Thumbnail settings-->
 										<div class="card card-flush py-4">
@@ -124,7 +127,7 @@
 													<label class="required form-label">Nama</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="category_name" class="form-control mb-2" placeholder="Nama" value="Canggih Wahyu Rinaldi" />
+													<input type="text" name="name" class="form-control mb-2" placeholder="Nama" value="{{ $user->name }}" />
 													<!--end::Input-->
 												</div>
 												<!--end::Input group-->
@@ -134,7 +137,7 @@
 													<label class="required form-label">Username</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="price" class="form-control mb-2" placeholder="Username" value="canggihwr" />
+													<input type="text" name="username" class="form-control mb-2" placeholder="Username" value="{{ $user->username }}" />
 													<!--end::Input-->
 												</div>
 												<!--end::Input group-->
@@ -146,7 +149,7 @@
 													
 													<!--begin::Editor-->
 													<div class="">
-                                                        <input type="password" name="price" class="form-control mb-2" placeholder="Password" value="hahahahahah" />
+                                                        <input type="password" name="password" class="form-control mb-2" placeholder="Password" value="{{ $user->password }}" />
 
 													<!--end::Editor-->
 													</div>
@@ -160,7 +163,22 @@
 													
 													<!--begin::Editor-->
 													<div class="">
-                                                        <input type="text" name="price" class="form-control mb-2" placeholder="No Hp" value="083166531526" />
+                                                        <input type="text" name="no_hp" class="form-control mb-2" placeholder="No Hp" value="{{ $user->no_hp }}" />
+
+													<!--end::Editor-->
+													</div>
+												</div>
+												<!--end::Input group-->
+
+												<!--begin::Input group-->
+												<div class="mb-10 fv-row">
+													<!--begin::Label-->
+													<label class="form-label">Email</label>
+													<!--end::Label-->
+													
+													<!--begin::Editor-->
+													<div class="">
+                                                        <input type="text" name="email" class="form-control mb-2" placeholder="No Hp" value="{{ $user->email }}" />
 
 													<!--end::Editor-->
 													</div>
@@ -174,10 +192,11 @@
 										
 										<div class="d-flex justify-content-end">
 											<!--begin::Button-->
-											<a href="../../demo14/dist/apps/ecommerce/catalog/products.html" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+											<a href="/dashboard/user" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
 											<!--end::Button-->
 											<!--begin::Button-->
-											<button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">
+											<button type="submit" > Update </button>
+												<button type="submit" class="btn btn-primary">
 												<span class="indicator-label">Update</span>
 												<span class="indicator-progress">Please wait...
 												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>

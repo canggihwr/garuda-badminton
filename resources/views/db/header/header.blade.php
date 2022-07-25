@@ -16,6 +16,7 @@
 		<link href="db/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="db/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
 		<!--end::Global Stylesheets Bundle-->
+
 		<!--begin::Page Vendor Stylesheets(used by this page)-->
 		<link href="db/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="db/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />

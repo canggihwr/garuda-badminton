@@ -195,7 +195,12 @@
 											<div class="card-body">
 												@if(session()->has('success'))
 												<div class="alert alert-success alert-dismissible fade show" role="alert">
-													{{ session('success') }}
+													<!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr084.svg-->
+<span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path opacity="0.5" d="M12.8956 13.4982L10.7949 11.2651C10.2697 10.7068 9.38251 10.7068 8.85731 11.2651C8.37559 11.7772 8.37559 12.5757 8.85731 13.0878L12.7499 17.2257C13.1448 17.6455 13.8118 17.6455 14.2066 17.2257L21.1427 9.85252C21.6244 9.34044 21.6244 8.54191 21.1427 8.02984C20.6175 7.47154 19.7303 7.47154 19.2051 8.02984L14.061 13.4982C13.7451 13.834 13.2115 13.834 12.8956 13.4982Z" fill="currentColor"/>
+<path d="M7.89557 13.4982L5.79487 11.2651C5.26967 10.7068 4.38251 10.7068 3.85731 11.2651C3.37559 11.7772 3.37559 12.5757 3.85731 13.0878L7.74989 17.2257C8.14476 17.6455 8.81176 17.6455 9.20663 17.2257L16.1427 9.85252C16.6244 9.34044 16.6244 8.54191 16.1427 8.02984C15.6175 7.47154 14.7303 7.47154 14.2051 8.02984L9.06096 13.4982C8.74506 13.834 8.21146 13.834 7.89557 13.4982Z" fill="currentColor"/>
+</svg></span>
+<!--end::Svg Icon--> {{ session('success') }}
 													<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 												</div>
 												@endif
@@ -230,22 +235,67 @@
 												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->tgl_main }}</td>
 												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->waktu_main }}</td>
 												 <td>
-													<span class="badge badge-light">{{ $p->status }}</span>
+													@if($p->status == 'Menunggu Pembayaran')
+													<span class="badge badge-secondary">{{ $p->status }}</span>
+															
+														
+													@elseif($p->status == 'Menunggu Konfirmasi')
+													<span class="badge badge-warning">{{ $p->status }}</span>
+															
+
+													@elseif($p->status == 'Dikonfirmasi')
+													<span class="badge badge-success">{{ $p->status }}</span>
+															
+																
+													@else
+													<span class="badge badge-primary">{{ $p->status }}</span>
+															
+					
+													@endif
 												 </td>
 												   
+												 @if ($p->status == 'Menunggu Pembayaran')
 												 
-												 <td class="text-center"><div class="d-flex align-items-center text-center">
-
-													<a href="#" class="symbol symbol-50px">
-													<span class="symbol-label" style="background-image:url(db/media/stock/ecommerce/note.gif);"></span>
-													</a>
-												</div></td>
-												 <td class="text-end">Rp.45,000</td>
 												 <td class="text-center">
-													<span class="badge badge-light badge-square "><a href="#"><i class="bi bi-eye-fill"></i></a></span>
-													<span class="badge badge-success badge-square "><a href="#"><i class="bi bi-cash"></i></a></span>
-													<span class="badge badge-danger badge-square "><a href="#"><i class="bi bi-x"></i></a></span>
+													<div class="d-flex align-items-center text-center">
+													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
+													<span class="symbol-label" style="background-image:url(db/media/svg/files/blank-image.svg);"></span>
+													</a>
+													</div>
 												</td>
+												@else
+													<td class="text-center"><div class="d-flex align-items-center text-center">
+														<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
+															<span class="symbol-label" style="background-image:url(db/media/stock/ecommerce/ss.gif);"></span>
+																
+											
+													</a>
+													</div></td>
+												@endif
+												 <td class="text-end">Rp.45,000</td>
+												 @if (auth()->user()->tipe_akun == 'Admin')
+													<td class="text-center">
+													<span class="btn btn-secondary btn-sm text-grey-800"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-grey-900 bi bi-eye-fill"></i> detail</a></span>
+													<span class="btn btn-danger btn-sm text-white"><a href="/dashboard/penyewaan/batal/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-white bi bi-trash"></i> hapus</a></span>
+													
+													</td>
+												 @else 
+												 <td class="text-center ">
+													@if ($p->status == 'Dikonfirmasi')
+													<span class="badge badge-secondary badge-square text-grey-900"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-grey-900 bi bi-eye-fill"></i> detail</a></span>
+													@else
+													<span class="badge badge-secondary badge-square text-grey-900"><a href="/dashboard/penyewaan/detail/{{ $p->id }}"><i class="text-grey-900 bi bi-eye-fill"></i></a></span>
+													@endif
+													@if ($p->status == 'Menunggu Pembayaran')
+													<span class="badge badge-success badge-square text-white"><a href="/dashboard/penyewaan/bayar/{{ $p->id }}"><i class="text-white bi bi-currency-dollar"></i></a></span>	
+													@endif
+													@if ($p->status == 'Dikonfirmasi')
+													@else
+													<span class="badge badge-danger badge-square text-white"><a href="/dashboard/penyewaan/batal/{{ $p->id }}"><i class="text-white bi bi-x"></i></a></span>
+													@endif
+												</td>
+												 @endif
+												 
 
 												</tr>
 													

@@ -3190,11 +3190,12 @@
 
 		<script src="db/js/custom/documentation/search.js"></script>
 		<script src="db/js/custom/documentation/general/datatables/buttons.js"></script>
+		<script src="db/js/custom/documentation/forms/dropzonejs.js"></script>
 
 		<!--end::Page Vendors Javascript-->
 		<!--begin::Page Custom Javascript(used by this page)-->
 		<script src="db/js/custom/apps/ecommerce/catalog/save-category.js"></script>
-		<script src="db/js/custom/apps/ecommerce/catalog/save-product.js?2"></script>
+		<script src="db/js/custom/apps/ecommerce/catalog/save-product.js"></script>
 		<script src="db/js/widgets.bundle.js"></script>
 		<script src="db/js/custom/widgets.js"></script>
 		<script src="db/js/custom/apps/chat/chat.js"></script>

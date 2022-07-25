@@ -95,7 +95,7 @@
 	</div>
 
 	<div class="section z-bigger">
-		<div class="section padding-bottom-big" id="buy">
+		<div class="section padding-bottom-big" id="awal">
 		<div class="section">
 			<div class="container">
 				<div class="row">
@@ -186,7 +186,7 @@
 		</div>
 		</div>
 
-		<div class="section padding-top-big padding-bottom-big background-dark-blue-1">
+		{{-- <div class="section padding-top-big padding-bottom-big background-dark-blue-1">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -203,7 +203,7 @@
 					</div>
 				</div>	
 			</div>
-		</div>
+		</div> --}}
 
 	</div>
 
@@ -253,51 +253,27 @@
                             <th scope="col">No.</th>
                             <th scope="col">Nama Member</th>
                             <th scope="col">Email</th>
+                            <th scope="col">No HP</th>
                             <th scope="col">Username</th>
                         </tr>
                     </thead>
                     <tbody>
+						@foreach ($user as $u)
+							
                         <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <th scope="row">{{ $u->id }}</th>
+                            <td>{{ $u->name }}</td>
+                            <td>{{ $u->email }}</td>
+                            <td>{{ $u->no_hp }}</td>
+                            <td>{{ $u->username }}</td>
                         </tr>
-						<tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-						<tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-						<tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-						<tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-						<tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+						@endforeach
+						
                     </tbody>
             </table>
 			</div>	
 		</div>
-		<div class="container">
+		{{-- <div class="container">
 			<div class="row">
 				<div class="col-md-6 align-self-center">
 					<h4>Creating a win-win<br>for everyone</h4>
@@ -310,7 +286,7 @@
 					</div>
 				</div>
 			</div>	
-		</div>	
+		</div>	 --}}
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 my-5"></div>
@@ -319,7 +295,7 @@
 				
 	</div>
 
-	<div class="section padding-top-bottom-big" id="roadmap">
+	{{-- <div class="section padding-top-bottom-big" id="roadmap">
 		<div class="background-parallax" style="background-image: url('img/parallax-1.jpg')" data-enllax-ratio=".5" data-enllax-type="background" data-enllax-direction="vertical"></div>
 		<div class="container">
 			<div class="row">
@@ -404,9 +380,9 @@
 			</div>	
 		</div>
 	
-	</div>
+	</div> --}}
 
-	<div class="section padding-top-bottom-big" id="app">
+	<div class="section padding-top-bottom-big" id="info">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -496,19 +472,26 @@
 					</div>
 				</div>
 				<div class="col-md-12">
-					<ul class="logo-wrap">
+					{{-- <ul class="logo-wrap">
 						<li><img src="{{ asset('v2/img/dana.png') }}" alt=""></li>
 						<li><img src="{{ asset('v2/img/gopay.png') }}" alt=""></li>
 						<li><img src="{{ asset('v2/img/spay.png') }}" alt=""></li>
 						<li><img src="{{ asset('v2/img/qris.png') }}" alt=""></li>
 						<li><img src="{{ asset('v2/img/ovo.png') }}" alt=""></li>
-					</ul>
+					</ul> --}}
+					<p class="text-center" style="">
+						<span class="btn btn-primary">DANA</span>
+						<span class="btn btn-success">GOPAY</span>
+						<span class="btn btn-info">OVO</span>
+						<span class="btn btn-warning"> SHOPEEPAY </span>
+						<span class="btn btn-secondary">QRIS</span>
+					</p>
 				</div>
 			</div>	
 		</div>
 	</div>
 
-	<div class="section padding-top-bottom-big" id="team">
+	<div class="section padding-top-bottom-big" id="fasilitas">
 		<div class="background-parallax" style="background-image: url('img/parallax-3.jpg') }}')" data-enllax-ratio=".5" data-enllax-type="background" data-enllax-direction="vertical"></div>
 		<div class="container">
 			<div class="row">
@@ -534,9 +517,7 @@
 						<h6>Lapangan 1</h6>
 						<p>Lapangan 1</p>
 						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-linkedin"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
@@ -549,8 +530,6 @@
 						</a>
 						<h6>Lapangan 2</h6>
 						<p>Lapangan 2</p>
-						<a class="app-btn" href="#"><i class="fa fa-linkedin"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
@@ -565,7 +544,6 @@
 						<p>Lapangan 3</p>
 						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
 						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-git"></i></a>
 					</div>
 				</div>
 			</div>	
@@ -998,7 +976,7 @@
 		</div>
 	</div> --}}
 	
-	
+{{-- 	
 	<div class="section padding-top-bottom-big" id="contact">
 		<div class="background-parallax" style="background-image: url('img/parallax-4.jpg')" data-enllax-ratio=".5" data-enllax-type="background" data-enllax-direction="vertical"></div>
 		<div class="container">
@@ -1086,52 +1064,8 @@
 			</form>	
 		</div>
 	</div>
-	
-    <div class="section padding-top-big">
-        <div class="background-parallax" style="background-image: url('img/parallax-5.jpg')" data-enllax-ratio=".5" data-enllax-type="background" data-enllax-direction="vertical"></div>
-        <div class="container padding-bottom-big">
-            <div class="row justify-content-between">
-                <div class="col-lg-4">
-                    <h6 class="text-white mb-4">Stay tunned:</h6>
-                    <div class="suscribe">
-                        <input class="form-control text-left" placeholder="Enter your email" type="text" name="name" />
-                        <button type="submit" class="btn btn-primary m-0 js-tilt" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>subscribe</span></button>
-                    </div>
-                    <p class="text-left text-white mb-0"><small>* we promise that we won´t spam you, never.</small></p>
-                </div>
-                <div class="col-lg-5 mt-4">
-                    <ul class="footer-list">
-                        <li class="text-left"><a href="#">concept</a></li>
-                        <li class="text-left"><a href="#">roadmap</a></li>
-                        <li class="text-left"><a href="#">buy tokens</a></li>
-                        <li class="text-left"><a href="#">team</a></li>
-                        <li class="text-left"><a href="#">FAQ</a></li>
-                        <li class="text-left"><a href="#">download app</a></li>
-                        <li class="text-left"><a href="#">contact</a></li>
-                        <li class="text-left"><a href="#">news</a></li>
-                        <li class="text-left"><a href="#">overall output</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="section py-4 background-dark-blue">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 footer text-center text-lg-left">
-                        <p>Copyright © 2018, Coeus. Template made by <a href="https://themeforest.net/user/ig_design/portfolio?ref=IG_design">IG Design</a></p>
-                    </div>
-                    <div class="col-lg-6 footer mt-4 mr-auto mt-lg-0 mr-lg-0 text-center text-lg-right">
-                        <a class="app-btn mx-2 mr-lg-3" href="#"><i class="fa fa-twitter"></i></a>
-                        <a class="app-btn mx-2 mr-lg-3" href="#"><i class="fa fa-linkedin"></i></a>
-                        <a class="app-btn mx-2 mr-lg-3" href="#"><i class="fa fa-facebook"></i></a>
-                        <a class="app-btn mx-2 mr-lg-3" href="#"><i class="fa fa-git"></i></a>
-                        <a class="app-btn mx-2 mr-lg-3" href="#"><i class="fa fa-pinterest-p"></i></a>
-                        <a class="app-btn mx-2 mr-lg-0" href="#"><i class="fa fa-paper-plane"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	 --}}
+
     
     
     

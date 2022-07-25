@@ -89,7 +89,7 @@
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-xl-9 fv-row">
-													<input type="text" class="form-control form-control-solid" name="waktu_main" value="{{ $paket->waktu_main }}" />
+													<input type="text" class="form-control form-control-solid" name="lama" value="{{ $paket->lama }}" />
 												</div>
 											</div>
 											<!--end::Row-->

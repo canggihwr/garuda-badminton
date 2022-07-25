@@ -28,12 +28,29 @@
 							</div>
 
 							<!--end::Toolbar-->
+                            
+
+                            <script>
+                            Dropzone.options.bukti = { // camelized version of the `id`
+                                paramName: "bukti", // The name that will be used to transfer the file
+                                maxFilesize: 5, // MB
+                                accept: function(file, done) {
+                                if (file.name == "justinbieber.jpg") {
+                                    done("Naha, you don't.");
+                                }
+                                else { done(); }
+                                }
+                            };
+                            </script>
 
                             <!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
 								<!--begin::Form-->
-								<form id="kt_ecommerce_edit_order_form" class="form d-flex flex-column flex-lg-row" data-kt-redirect="../../demo14/dist/apps/ecommerce/sales/listing.html">
-									<!--begin::Aside column-->
+								<form id="bukti" class="form d-flex flex-column flex-lg-row" action="/dashboard/penyewaan/pembayaran/{{ $penyewaan->id }}" method="POST">
+									@csrf
+                                    <input type="hidden" name="getid" value="{{ $penyewaan->id }}">
+                                    <input type="hidden" name="status" value="Menunggu Konfirmasi">
+                                    <!--begin::Aside column-->
 									<div class="w-100 flex-lg-row-auto w-lg-300px mb-7 me-7 me-lg-10">
 										<!--begin::Order details-->
 										<div class="card card-flush py-4">
@@ -57,7 +74,7 @@
 														<label class="form-label">Order ID</label>
 														<!--end::Label-->
 														<!--begin::Auto-generated ID-->
-														<div class="fw-bolder fs-3 mb-3">#13408</div>
+														<div class="fw-bolder fs-3 mb-3">#{{ $penyewaan->kode }}</div>
 														<!--end::Input-->
 														<!--begin::Alert-->
                                                             <div class="alert bg-light-primary d-flex flex-column flex-sm-row p-5 mb-7">
@@ -69,27 +86,27 @@
                                                                         <tbody>
                                                                             <tr>
                                                                                 <td>Nama</td>
-                                                                                <td> : Canggih WR</td>
+                                                                                <td> : {{ $penyewaan->user->name }}</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>Lapangan</td>
-                                                                                <td> : 1</td>
+                                                                                <td> : {{ $penyewaan->lapangan->nama }}</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>Tanggal</td>
-                                                                                <td> : 12/7/2022</td>
+                                                                                <td> : {{ $penyewaan->tgl_main }}</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>Paket</td>
-                                                                                <td> : 2</td>
+                                                                                <td> : {{ $penyewaan->paket->nama }}</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>Waktu</td>
-                                                                                <td> : 09:00-12:00</td>
+                                                                                <td> : {{ $penyewaan->waktu_main }}</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>Total</td>
-                                                                                <td> : Rp.45000</td>
+                                                                                <td> : Rp.{{ $penyewaan->paket->harga }}</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
@@ -126,14 +143,14 @@
                                                     <label class="required form-label">Metode Pembayaran</label>
 														<!--end::Label-->
 														<!--begin::Select2-->
-														<select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" name="payment_method" id="kt_ecommerce_edit_order_payment">
+														<select name="metode" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Pilih metode pembayaran" id="kt_ecommerce_edit_order_payment">
 															<option></option>
-															<option value="dana">Dana</option>
-															<option value="gopay">Gopay</option>
-															<option value="ovo">OVO</option>
-															<option value="shopee">Shopeepay</option>
-															<option value="qris">QRIS</option>
-															<option value="bank">Transfer Bank</option>
+															<option value="Dana">Dana</option>
+															<option value="Gopay">Gopay</option>
+															<option value="OVO">OVO</option>
+															<option value="Shopeepay">Shopeepay</option>
+															<option value="QRIS">QRIS</option>
+															<option value="Bank">Transfer Bank</option>
 														</select>
 														<!--end::Select2-->
 														<!--begin::Description-->
@@ -156,7 +173,7 @@
                                                             <label class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6" data-kt-button="true">
                                                                 <!--begin::Radio-->
                                                                 <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                                    <input class="form-check-input" type="radio" name="discount_option" value="1" />
+                                                                    <input class="form-check-input" type="radio" name="tipe" value="Full" />
                                                                 </span>
                                                                 <!--end::Radio-->
                                                                 <!--begin::Info-->
@@ -174,7 +191,7 @@
                                                             <label class="btn btn-outline btn-outline-dashed btn-outline-default active d-flex text-start p-6" data-kt-button="true">
                                                                 <!--begin::Radio-->
                                                                 <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                                    <input class="form-check-input" type="radio" name="discount_option" value="2" checked="checked" />
+                                                                    <input class="form-check-input" type="radio" name="tipe" value="DP" checked="checked" />
                                                                 </span>
                                                                 <!--end::Radio-->
                                                                 <!--begin::Info-->
@@ -201,7 +218,7 @@
                                                     <div class="d-flex flex-column text-center mb-5">
                                                         <div class="d-flex align-items-start justify-content-center mb-7">
                                                             <span class="fw-bolder fs-4 mt-1 ms-2">Rp.</span>
-                                                            <span class="fw-bolder fs-3x">45000</span>
+                                                            <span class="fw-bolder fs-3x">{{ $penyewaan->paket->harga }}</span>
                                                         </div>
                                                     </div>
                                                     <!--end::Slider-->
@@ -271,16 +288,17 @@
                                         <!--begin::Input group-->
                                         <div class="fv-row mb-2">
                                             <!--begin::Dropzone-->
-                                            <div class="dropzone" id="kt_ecommerce_add_product_media">
+                                            <div class="dropzone" id="kt_dropzonejs_example_1">
                                                 <!--begin::Message-->
                                                 <div class="dz-message needsclick">
                                                     <!--begin::Icon-->
                                                     <i class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
                                                     <!--end::Icon-->
+
                                                     <!--begin::Info-->
                                                     <div class="ms-4">
                                                         <h3 class="fs-5 fw-bolder text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                        <span class="fs-7 fw-bold text-gray-400">Upload format .jpg .png</span>
+                                                        <span class="fs-7 fw-bold text-gray-400">Upload up to 10 files</span>
                                                     </div>
                                                     <!--end::Info-->
                                                 </div>
@@ -297,7 +315,7 @@
                                 <!--end::Media-->
                                 <div class="d-flex justify-content-end">
                                     <!--begin::Button-->
-                                    <a href="../../demo14/dist/apps/ecommerce/catalog/products.html" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Cancel</a>
+                                    <a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Batal</a>
                                     <!--end::Button-->
                                     <!--begin::Button-->
                                     <button type="submit" id="kt_ecommerce_edit_order_submit" class="btn btn-primary">

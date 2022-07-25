@@ -338,24 +338,24 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Perlengkapan</span>
+												<span class="menu-title">Peralatan</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
 												<div class="menu-item">
-													<a class="menu-link" href="/dashboard/perlengkapan">
+													<a class="menu-link" href="/dashboard/peralatan">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">List Perlengkapan</span>
+														<span class="menu-title">List Peralatan</span>
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="/dashboard/perlengkapan/add">
+													<a class="menu-link" href="/dashboard/peralatan/add">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Tambah Perlengkapan</span>
+														<span class="menu-title">Tambah Peralatan</span>
 													</a>
 												</div>
 											</div>
