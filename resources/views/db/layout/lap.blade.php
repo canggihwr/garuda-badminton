@@ -45,7 +45,7 @@
 												<h3 class="text-dark">Daftar Lapangan</h3>
 												<!--end::Title-->
 												<!--begin::Link-->
-												<a href="/dashboard/lapangan/add" class="fs-6 fw-bold button btn-primary">Lihat Semua</a>
+												<a href="/dashboard/lapangan/add" class="fs-6 fw-bold btn btn-primary">Tambah Lapangan</a>
 												<!--end::Link-->
 											</div>
 											<!--end::Content-->
@@ -101,7 +101,7 @@
 																{{-- <span class="fs-6 fw-bold text-gray-400">$</span>25</span> --}}
 																<!--end::Label-->
 																<!--begin::Action-->
-																<a href="/dashboard/lapangan/edit/{{ $l->id }}" class="btn btn-sm btn-primary">Edit </a>
+																<a href="/dashboard/lapangan/edit/{{ $l->id }}" class="btn btn-sm btn-warning" style="margin-right: 6px">Edit </a>
 																<!--end::Action-->
 																<!--begin::Action-->
 																<a href="/dashboard/lapangan/hapus/{{ $l->id }}" class="btn btn-sm btn-danger">Hapus </a>

@@ -219,7 +219,7 @@
 												</tr>
 												@endforeach
 												
-												<!--end::Table row-->
+												{{-- <!--end::Table row-->
 
 												<!--begin::Table row-->
 												<tr>
@@ -448,7 +448,7 @@
 													</td>
 													<!--end::Action=-->
 												</tr>
-												<!--end::Table row-->
+												<!--end::Table row--> --}}
 											</tbody>
 											<!--end::Table body-->
 										</table>

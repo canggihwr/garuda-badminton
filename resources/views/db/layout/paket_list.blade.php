@@ -11,7 +11,7 @@
             <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
                 <!--begin::Item-->
                 <li class="breadcrumb-item text-gray-600">
-                    <a href="../../demo14/dist/index.html" class="text-gray-600 text-hover-primary">Dashboard</a>
+                    <a href="/dashboard" class="text-gray-600 text-hover-primary">Dashboard</a>
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
@@ -526,7 +526,7 @@
                                 <div class="d-flex align-items-center flex-wrap w-100">
                                     <!--begin::Title-->
                                     <div class="mb-1 pe-3 flex-grow-1">
-                                        <a href="#" class="fs-5 text-gray-800 text-hover-primary fw-bolder">Waktu Main</a>
+                                        <a  class="fs-5 text-gray-800 text-hover-primary fw-bolder">Waktu Main</a>
                                         <div class="text-gray-400 fw-bold fs-7">semua lapangan</div>
                                     </div>
                                     <!--end::Title-->

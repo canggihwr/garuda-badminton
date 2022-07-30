@@ -11,7 +11,7 @@
             <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
                 <!--begin::Item-->
                 <li class="breadcrumb-item text-gray-600">
-                    <a href="../../demo14/dist/index.html" class="text-gray-600 text-hover-primary">Dashboard</a>
+                    <a href="/dashboard" class="text-gray-600 text-hover-primary">Dashboard</a>
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
@@ -140,7 +140,7 @@
                     <!--begin::Card body-->
                     <div class="card-body pt-0">
                         @if(session()->has('success'))
-							<div class="alert alert-success alert-dismissible fade show" role="alert">
+							<div class="alert alert-success alert-dismissible fade show mt-7" role="alert">
 								<!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr084.svg-->
 <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path opacity="0.5" d="M12.8956 13.4982L10.7949 11.2651C10.2697 10.7068 9.38251 10.7068 8.85731 11.2651C8.37559 11.7772 8.37559 12.5757 8.85731 13.0878L12.7499 17.2257C13.1448 17.6455 13.8118 17.6455 14.2066 17.2257L21.1427 9.85252C21.6244 9.34044 21.6244 8.54191 21.1427 8.02984C20.6175 7.47154 19.7303 7.47154 19.2051 8.02984L14.061 13.4982C13.7451 13.834 13.2115 13.834 12.8956 13.4982Z" fill="currentColor"/>

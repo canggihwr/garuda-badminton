@@ -12,7 +12,7 @@
 									<ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
 										<!--begin::Item-->
 										<li class="breadcrumb-item text-gray-600">
-											<a href="../../demo14/dist/index.html" class="text-gray-600 text-hover-primary">Dashboard</a>
+											<a href="/dashboard" class="text-gray-600 text-hover-primary">Dashboard</a>
 										</li>
 										<!--end::Item-->
 										<!--begin::Item-->
@@ -138,7 +138,7 @@
 																	<!--end::Svg Icon-->Lapangan</div>
 																</td>
 																<td class="fw-bolder text-end">
-																	<a href="../../demo14/dist/apps/user-management/users/view.html" class="text-gray-600 text-hover-primary">Lapangan 1</a>
+																	<a class="text-gray-600 text-hover-primary">{{ $penyewaan->lapangan->nama }}</a>
 																</td>
 															</tr>
 															<!--end::Payment method-->
@@ -274,8 +274,8 @@
 
 															<!--begin::Subtotal-->
 															<tr>
-																<td class=" fs-5 text-end">Harga Sewa Lapangan</td>
-																<td class=" fs-4 fw-boldest text-end">Rp.{{ $penyewaan->paket->harga }}</td>
+																<td class=" fs-5 text-dark text-end">Harga Sewa Lapangan</td>
+																<td class=" fs-3 fw-boldest text-dark text-end">Rp.{{ $penyewaan->paket->harga }}</td>
 															</tr>
 															<!--end::Subtotal-->
 															

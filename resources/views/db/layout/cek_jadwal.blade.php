@@ -11,7 +11,7 @@
             <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
                 <!--begin::Item-->
                 <li class="breadcrumb-item text-gray-600">
-                    <a href="../../demo14/dist/index.html" class="text-gray-600 text-hover-primary">Dashboard</a>
+                    <a href="/dashboard" class="text-gray-600 text-hover-primary">Dashboard</a>
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->

@@ -65,7 +65,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								<!--end::Aside  toggle-->
 								<!--begin::Logo-->
-								<a href="../../demo14/dist/index.html">
+								<a href="/dashboard">
 									<img alt="Logo" src="db/media/logos/logo-2.svg" class="h-25px h-lg-30px" />
 								</a>
 								<!--end::Logo-->
@@ -1204,7 +1204,7 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="menu-item px-5">
 											<div class="menu-content px-5">
 												<label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success" for="kt_user_menu_dark_mode_toggle">
-													<input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="../../demo14/dist/index.html" />
+													<input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="/dashboard" />
 													<span class="pulse-ring ms-n1"></span>
 													<span class="form-check-label text-gray-600 fs-7">Dark Mode</span>
 												</label>
@@ -1250,7 +1250,7 @@ License: For each use you must have a valid license purchased only from above li
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
 												<div class="menu-item">
-													<a class="menu-link" href="../../demo14/dist/index.html">
+													<a class="menu-link" href="/dashboard">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -1586,7 +1586,7 @@ License: For each use you must have a valid license purchased only from above li
 													</div>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="../../demo14/dist/pages/about.html">
+													<a class="menu-link" href="/">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -1594,7 +1594,7 @@ License: For each use you must have a valid license purchased only from above li
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="../../demo14/dist/pages/contact.html">
+													<a class="menu-link" href="/">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -1602,7 +1602,7 @@ License: For each use you must have a valid license purchased only from above li
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="../../demo14/dist/pages/team.html">
+													<a class="menu-link" href="/">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -3336,7 +3336,7 @@ License: For each use you must have a valid license purchased only from above li
 									<ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
 										<!--begin::Item-->
 										<li class="breadcrumb-item text-gray-600">
-											<a href="../../demo14/dist/index.html" class="text-gray-600 text-hover-primary">Home</a>
+											<a href="/dashboard" class="text-gray-600 text-hover-primary">Home</a>
 										</li>
 										<!--end::Item-->
 										<!--begin::Item-->
@@ -11060,19 +11060,7 @@ License: For each use you must have a valid license purchased only from above li
 		<!--end::Help drawer-->
 		<!--end::Engage drawers-->
 		<!--begin::Engage toolbar-->
-		<div class="engage-toolbar d-flex position-fixed px-5 fw-bolder zindex-2 top-50 end-0 transform-90 mt-20 gap-2">
-			<!--begin::Demos drawer toggle-->
-			<button id="kt_engage_demos_toggle" class="engage-demos-toggle btn btn-flex h-35px bg-body btn-color-gray-700 btn-active-color-gray-900 shadow-sm fs-6 px-4 rounded-top-0" title="Check out 22 more demos" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">
-				<span id="kt_engage_demos_label">Demos</span>
-			</button>
-			<!--end::Demos drawer toggle-->
-			<!--begin::Help drawer toggle-->
-			<button id="kt_help_toggle" class="engage-help-toggle btn btn-flex h-35px bg-body btn-color-gray-700 btn-active-color-gray-900 shadow-sm px-5 rounded-top-0" title="Learn &amp; Get Inspired" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">Help</button>
-			<!--end::Help drawer toggle-->
-			<!--begin::Purchase link-->
-			<a href="https://1.envato.market/EA4JP" target="_blank" class="engage-purchase-link btn btn-color-gray-700 bg-body btn-active-color-gray-900' btn-flex h-35px px-5 shadow-sm rounded-top-0">Buy now</a>
-			<!--end::Purchase link-->
-		</div>
+		
 		<!--end::Engage toolbar-->
 		<!--begin::Scrolltop-->
 		<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">

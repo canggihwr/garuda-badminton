@@ -224,13 +224,13 @@
 												@foreach ($penyewaan as $p)
 												<tr class="odd">
 												 <td>
-												  <a href="#" class="text-dark text-hover-primary">{{ $p->kode }}</a>
+												  <a href="/dashboard/penyewaan/#" class="text-dark text-hover-primary">{{ $p->kode }}</a>
 												 </td>
 												 <td>
-												  <a href="#" class="text-dark text-hover-primary">{{ $p->user->name }}</a>
+												  <a href="/dashboard/penyewaan/#" class="text-dark text-hover-primary">{{ $p->user->name }}</a>
 												 </td>
 												 <td>
-													<a href="#" class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
+													<a href="/dashboard/penyewaan/#" class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
 												   </td>
 												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->tgl_main }}</td>
 												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->waktu_main }}</td>

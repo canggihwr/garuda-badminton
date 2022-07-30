@@ -83,7 +83,7 @@
 										<!--end::Name-->
 										<!--begin::Symbol-->
 										<div class="symbol symbol-30px symbol-md-40px">
-											<img src="db/media/avatars/{{ auth()->user()->foto }}" alt="image" />
+											<img src="db/media/avatars/blank.png" alt="image" />
 										</div>
 										<!--end::Symbol-->
 									</div>
