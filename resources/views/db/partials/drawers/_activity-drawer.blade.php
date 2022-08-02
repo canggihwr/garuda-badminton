@@ -59,7 +59,7 @@
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="db/media/avatars/300-14.jpg" alt="img" />
+												<img  alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -82,12 +82,12 @@
 											<div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2">
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="db/media/avatars/300-2.jpg" alt="img" />
+													<img  alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="db/media/avatars/300-14.jpg" alt="img" />
+													<img  alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
@@ -333,7 +333,7 @@
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="db/media/avatars/300-14.jpg" alt="img" />
+												<img  alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -379,7 +379,7 @@
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
-												<img src="db/media/avatars/300-2.jpg" alt="img" />
+												<img  alt="img" />
 											</div>
 											<!--end::User-->
 										</div>

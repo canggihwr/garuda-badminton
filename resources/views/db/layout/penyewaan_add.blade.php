@@ -1,4 +1,5 @@
 
+						 <script src="js/peralatan.js" async></script>
 						
 						<!--begin::Container-->
 						<div class="d-flex flex-column flex-column-fluid container-fluid">
@@ -58,7 +59,7 @@
 														<label class="form-label">ID Pemesanan</label>
 														<!--end::Label-->
 														<!--begin::Auto-generated ID-->
-														<div class="fw-bolder fs-3 mb-3">#13408</div>
+														<div class="fw-bolder fs-3 mb-3">#G-000X</div>
 														<!--end::Input-->
 														<!--begin::Alert-->
                                                             <div class="alert bg-light-primary d-flex flex-column flex-sm-row p-5 mb-7">
@@ -272,6 +273,17 @@
 													<!--begin::Separator-->
 													<div class="separator"></div>
 													<!--end::Separator-->
+
+													<div class="mb-10 fv-row" id="totalbeli">
+														<!--begin::Label-->
+														<label class="form-label">Total Peralatan</label>
+														<!--end::Label-->
+														<div class="mb-7">
+															<span class="fw-bolder fs-4 mt-1 ms-2">Rp.</span>
+															<span class="fw-bolder fs-3x" id="totalharga">0.00</span>
+														</div>
+														
+													</div>
 													
 													<!--begin::Table-->
 													<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_edit_order_product_table">
@@ -279,6 +291,7 @@
 														<thead>
 															<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
 																<th class="w-25px pe-2"></th>
+																{{-- <th class="w-25px pe-2"></th> --}}
 																<th class="min-w-200px">Nama Item</th>
 																<th class="min-w-90px text-center">Qty</th>
 																<th class="min-w-100px text-end pe-5">Status</th>
@@ -292,26 +305,33 @@
 															<tr>
 																<!--begin::Checkbox-->
 																<td>
+																	@if ($item->status == 'Tersedia')
 																	<div class="form-check form-check-sm form-check-custom form-check-solid">
-																		<input class="form-check-input" type="checkbox" value="1" />
+																		<input class="form-check-input" name="itemcheck" id="itemcheck" type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this);" />
 																	</div>
+																	@else
+																	<div class="form-check form-check-sm form-check-custom form-check-solid">
+																		<input class="form-check-input"  name="itemcheck" id="itemcheck"  type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this);" />
+																	</div>
+																	@endif
 																</td>
 																<!--end::Checkbox-->
+																{{-- <td><button class="btn-danger" id="additem">tambah</button></td> --}}
 																<!--begin::Product=-->
 																<td>
 																	<div class="d-flex align-items-center" data-kt-ecommerce-edit-order-filter="product" data-kt-ecommerce-edit-order-id="product_1">
 																		<!--begin::Thumbnail-->
-																		<a href="#" class="symbol symbol-50px">
-																			<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/1.gif);"></span>
+																		<a href="/dashboard/penyewaan/add/#" class="symbol symbol-50px">
+																			<span class="symbol-label" style="background-image:url(img/fotoperalatan/{{ $item->foto }});"></span>
 																		</a>
 																		<!--end::Thumbnail-->
 																		<div class="ms-5">
 																			<!--begin::Title-->
-																			<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">{{ $item->nama }}</a>
+																			<a href="/dashboard/penyewaan/add/#" class="text-gray-800 text-hover-primary fs-5 fw-bolder">{{ $item->nama }}</a>
 																			<!--end::Title-->
 																			<!--begin::Price-->
 																			<div class="fw-bold fs-7">Harga: Rp.
-																			<span data-kt-ecommerce-edit-order-filter="price">{{ $item->harga }}</span></div>
+																			<span id="hargaitem" data-kt-ecommerce-edit-order-filter="price">{{ $item->harga }}</span></div>
 																			<!--end::Price-->
 																		</div>
 																	</div>
@@ -376,6 +396,15 @@
 														<!--end::Table body-->
 													</table>
 													<!--end::Table-->
+													<script>
+														
+														function itemChange(hrg) {
+														let paket = document.querySelector('#result')
+														var harga = parseInt(paket.textContent) + parseInt(hrg.value)
+														let result = document.querySelector('#totalharga')
+														result.textContent = harga;
+														}
+													</script>
 												</div>
 											</div>
 											<!--end::Card header-->

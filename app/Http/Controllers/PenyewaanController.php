@@ -122,4 +122,10 @@ class PenyewaanController extends Controller
         
         
     }
+
+    public function destroy(Penyewaan $penyewaan)
+    {
+        Penyewaan::destroy($penyewaan->id);
+        return redirect('/dashboard/penyewaan')->with('success', 'Pesanan berhasil dibatalkan!');
+    }
 }

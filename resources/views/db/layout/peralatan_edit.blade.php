@@ -149,7 +149,7 @@
 												<!--begin::Datepicker-->
 												<div class="d-none mt-10">
 													<label for="kt_ecommerce_add_category_status_datepicker" class="form-label">Tanggal restock</label>
-													<input class="form-control" name="restock" id="kt_ecommerce_add_category_status_datepicker" placeholder="Pilih tanggal &amp; waktu" />
+													<input class="form-control" name="restock" id="kt_ecommerce_add_category_status_datepicker" placeholder="Pilih tanggal restock" />
 												</div>
 												<!--end::Datepicker-->
 											</div>

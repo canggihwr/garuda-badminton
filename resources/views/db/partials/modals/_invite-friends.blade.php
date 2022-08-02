@@ -59,7 +59,7 @@
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="db/media/avatars/300-6.jpg" />
+											<img alt="Pic"  />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -227,7 +227,7 @@
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="db/media/avatars/300-9.jpg" />
+											<img alt="Pic"  />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->

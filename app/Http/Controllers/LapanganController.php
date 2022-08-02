@@ -25,12 +25,12 @@ class LapanganController extends Controller
     {
         if ($request->hasFile('foto')) {
             $request->file('foto')->move('img/fotolapangan/', $request->file('foto')->getClientOriginalName());
+            $data['foto'] = $request->file('foto')->getClientOriginalName();
         } 
 
         $data = [
             'nama' => $request->nama,
-            'deskripsi' => $request->deskripsi,
-            'foto' => $request->file('foto')->getClientOriginalName()
+            'deskripsi' => $request->deskripsi
         ];
 
         Lapangan::where('id', $lapangan->id)->update($data);

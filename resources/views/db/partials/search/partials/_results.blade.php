@@ -10,7 +10,7 @@
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-6.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -25,7 +25,7 @@
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-2.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -40,7 +40,7 @@
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-9.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -55,7 +55,7 @@
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-14.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -70,7 +70,7 @@
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-11.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->

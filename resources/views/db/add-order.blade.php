@@ -221,7 +221,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-6.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -236,7 +236,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-2.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -251,7 +251,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-9.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -266,7 +266,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-14.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -281,7 +281,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="db/media/avatars/300-11.jpg" alt="" />
+															<img  alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -5502,7 +5502,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="db/media/avatars/300-14.jpg" alt="img" />
+												<img  alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -5525,12 +5525,12 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2">
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="db/media/avatars/300-2.jpg" alt="img" />
+													<img  alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="db/media/avatars/300-14.jpg" alt="img" />
+													<img  alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
@@ -5770,7 +5770,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="db/media/avatars/300-14.jpg" alt="img" />
+												<img  alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -5814,7 +5814,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
-												<img src="db/media/avatars/300-2.jpg" alt="img" />
+												<img  alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -7917,7 +7917,7 @@ License: For each use you must have a valid license purchased only from above li
 										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
-												<img alt="Pic" src="db/media/avatars/300-6.jpg" />
+												<img alt="Pic"  />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Info-->
@@ -8007,7 +8007,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="db/media/avatars/300-6.jpg" />
+													<img alt="Pic"  />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8223,7 +8223,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="db/media/avatars/300-9.jpg" />
+													<img alt="Pic"  />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8702,7 +8702,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="db/media/avatars/300-6.jpg" />
+											<img alt="Pic"  />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8870,7 +8870,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="db/media/avatars/300-9.jpg" />
+											<img alt="Pic"  />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->

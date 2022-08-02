@@ -10,7 +10,7 @@
 										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
-												<img alt="Pic" src="db/media/avatars/300-6.jpg" />
+												<img alt="Pic"  />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Info-->

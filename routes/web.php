@@ -72,6 +72,8 @@ Route::get('/dashboard/penyewaan/bayar', function () {
 });
 
 
+Route::get('/dashboard/penyewaan/batal/{penyewaan:id}', [PenyewaanController::class, 'destroy']);
+
 Route::get('/dashboard/penyewaan/detail/{penyewaan:id}', [PenyewaanController::class, 'detail']);
 
 Route::get('/dashboard/penyewaan/bayar/{penyewaan:id}', [PenyewaanController::class, 'bayar']);

@@ -29,12 +29,13 @@ class PeralatanController extends Controller
 
         if ($request->hasFile('foto')) {
             $request->file('foto')->move('img/fotoperalatan/', $request->file('foto')->getClientOriginalName());
+            $data['foto'] = $request->file('foto')->getClientOriginalName();
+
         } 
 
         $data = [
 
             'nama' => $request->nama,
-            'foto' => $request->file('foto')->getClientOriginalName(),
             'harga' => $request->harga,
             'status' => $stats,
             'restock' => $request->restock,
@@ -76,12 +77,11 @@ class PeralatanController extends Controller
 
         if ($request->hasFile('foto')) {
             $request->file('foto')->move('img/fotoperalatan/', $request->file('foto')->getClientOriginalName());
+            $data['foto'] = $request->file('foto')->getClientOriginalName();
         } 
 
         $data = [
-
             'nama' => $request->nama,
-            'foto' => $request->file('foto')->getClientOriginalName(),
             'harga' => $request->harga,
             'status' => $stats,
             'restock' => $request->restock,
