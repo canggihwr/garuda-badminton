@@ -51,10 +51,10 @@
 							<!--end::Toolbar-->
 							<!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
-								<form action="/dashboard/user/update/{{ $user->id }}" method="POST" id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row">
+								<form action="/dashboard/user/update/{{ $user->id }}" method="POST" id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row" enctype="multipart/form-data">
 									<!--begin::Aside column-->
 									@csrf
-									<input type="hidden" name="tipe_akun" value="Member">
+									<input type="hidden" name="tipe_akun" value="{{ $user->tipe_akun }}">
 									<input type="hidden" name="getid" value="{{ $user->id }}">
 									<div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
 										<!--begin::Thumbnail settings-->
@@ -71,9 +71,15 @@
 											<!--begin::Card body-->
 											<div class="card-body text-center pt-0">
 												<!--begin::Image input-->
-												<div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" style="background-image: url(db/media/avatars/unnamed.png)">
+												<div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" style="background-image: url(db/media/avatars/blank.png)">
 													<!--begin::Preview existing avatar-->
+													@if ($user->foto == '')
 													<div class="image-input-wrapper w-150px h-150px"></div>
+														
+													@else
+													<div class="image-input-wrapper w-150px h-150px" style="background-image: url(db/media/avatars/blank.png)"></div>
+													
+													@endif
 													<!--end::Preview existing avatar-->
 													<!--begin::Label-->
 													<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Upload Foto">
@@ -81,7 +87,7 @@
 														<i class="bi bi-pencil-fill fs-7"></i>
 														<!--end::Icon-->
 														<!--begin::Inputs-->
-														<input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+														<input type="file" class="form-control" name="foto" accept=".png, .jpg, .jpeg" />
 														<input type="hidden" name="avatar_remove" />
 														<!--end::Inputs-->
 													</label>
@@ -195,8 +201,7 @@
 											<a href="/dashboard/user" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
 											<!--end::Button-->
 											<!--begin::Button-->
-											<button type="submit" > Update </button>
-												<button type="submit" class="btn btn-primary">
+											<button type="submit" class="btn btn-primary">
 												<span class="indicator-label">Update</span>
 												<span class="indicator-progress">Please wait...
 												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>

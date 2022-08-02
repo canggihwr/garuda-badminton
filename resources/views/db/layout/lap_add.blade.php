@@ -61,7 +61,7 @@
 									</div>
 									<!--end::Card header-->
 									<!--begin::Form-->
-									<form id="kt_project_settings_form" class="form" action="/dashboard/lapangan/add" method="POST">
+									<form id="kt_project_settings_form" class="form" action="/dashboard/lapangan/add" method="POST" enctype="multipart/form-data">
 										@csrf
 										<!--begin::Card body-->
 										<div class="card-body p-9">
@@ -75,15 +75,15 @@
 												<!--begin::Col-->
 												<div class="col-lg-8">
 													<!--begin::Image input-->
-													<div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('db/media/svg/avatars/blank.svg')">
+													<div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('db/media/svg/files/blank-image.svg')">
 														<!--begin::Preview existing avatar-->
-														<div class="image-input-wrapper w-225px h-225px bgi-position-center" style="background-size: 95%; background-image: url('img/l2.jpg')"></div>
+														<div class="image-input-wrapper w-225px h-225px bgi-position-center"></div>
 														<!--end::Preview existing avatar-->
 														<!--begin::Label-->
 														<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Upload foto">
 															<i class="bi bi-pencil-fill fs-7"></i>
 															<!--begin::Inputs-->
-															<input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+															<input class="form-control" type="file" name="foto" accept=".png, .jpg, .jpeg" />
 															<input type="hidden" name="avatar_remove" />
 															<!--end::Inputs-->
 														</label>
@@ -101,7 +101,7 @@
 													</div>
 													<!--end::Image input-->
 													<!--begin::Hint-->
-													<div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+													<div class="form-text">Upload file type: png, jpg, jpeg.</div>
 													<!--end::Hint-->
 												</div>
 												<!--end::Col-->

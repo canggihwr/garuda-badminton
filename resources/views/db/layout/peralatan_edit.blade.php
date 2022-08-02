@@ -1,3 +1,4 @@
+
 						
 						<!--begin::Container-->
 						<div class="d-flex flex-column flex-column-fluid container-fluid">
@@ -6,7 +7,7 @@
 								<!--begin::Page title-->
 								<div class="page-title d-flex flex-column me-3">
 									<!--begin::Title-->
-									<h1 class="d-flex text-dark fw-bolder my-1 fs-1">Tambah User</h1>
+									<h1 class="d-flex text-dark fw-bolder my-1 fs-1">Edit Peralatan</h1>
 									<!--end::Title-->
 									<!--begin::Breadcrumb-->
 									<ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
@@ -16,10 +17,10 @@
 										</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-gray-600">User</li>
+										<li class="breadcrumb-item text-gray-600">Peralatan</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-gray-500">Tambah User</li>
+										<li class="breadcrumb-item text-gray-500">Edit Peralatan</li>
 										<!--end::Item-->
 									</ul>
 									<!--end::Breadcrumb-->
@@ -51,9 +52,8 @@
 							<!--end::Toolbar-->
 							<!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
-								<form id="" class="form d-flex flex-column flex-lg-row" action="/dashboard/user/add" method="POST" enctype="multipart/form-data">
+								<form id="kt_ecommerce_add_category_form" action="/dashboard/peralatan/update/{{ $peralatan->id }}" method="POST" class="form d-flex flex-column flex-lg-row"  data-kt-redirect="/dashboard/peralatan" enctype="multipart/form-data">
 									@csrf
-									<input type="hidden" name="tipe_akun" value="Member">
 									<!--begin::Aside column-->
 									<div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
 										<!--begin::Thumbnail settings-->
@@ -72,7 +72,7 @@
 												<!--begin::Image input-->
 												<div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" style="background-image: url(db/media/svg/files/blank-image.svg)">
 													<!--begin::Preview existing avatar-->
-													<div class="image-input-wrapper w-150px h-150px"></div>
+													<div class="image-input-wrapper w-150px h-150px" style="background-image: url(img/fotoperalatan/{{ $peralatan->foto }})"></div>
 													<!--end::Preview existing avatar-->
 													<!--begin::Label-->
 													<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Upload Foto">
@@ -98,13 +98,64 @@
 												</div>
 												<!--end::Image input-->
 												<!--begin::Description-->
-												<div class="text-muted fs-7">format *.png, *.jpg and *.jpeg</div>
+												<div class="text-muted fs-7">Pilih file image dengan format *.png, *.jpg and *.jpeg</div>
 												<!--end::Description-->
 											</div>
 											<!--end::Card body-->
 										</div>
 										<!--end::Thumbnail settings-->
-										
+										<!--begin::Status-->
+										<div class="card card-flush py-4">
+											<!--begin::Card header-->
+											<div class="card-header">
+												<!--begin::Card title-->
+												<div class="card-title">
+													<h2>Status Barang</h2>
+												</div>
+												<!--end::Card title-->
+												<!--begin::Card toolbar-->
+												<div class="card-toolbar">
+													<div class="rounded-circle bg-success w-15px h-15px" id="kt_ecommerce_add_category_status"></div>
+												</div>
+												<!--begin::Card toolbar-->
+											</div>
+											<!--end::Card header-->
+											<!--begin::Card body-->
+											<div class="card-body pt-0">
+												<!--begin::Select2-->
+												<select class="form-select mb-2" name="status" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select">
+													<option></option>
+													@if ($peralatan->status == "Tersedia")
+													<option value="published" selected="selected">Tersedia</option>
+													@else
+													<option value="published">Tersedia</option>
+													@endif
+
+													@if ($peralatan->status == "Restock")
+													<option value="scheduled" selected="selected">Restock</option>
+													@else
+													<option value="scheduled">Restock</option>
+													@endif
+
+													@if ($peralatan->status == "Tidak tersedia")
+													<option value="unpublished" selected="selected">Tidak tersedia</option>
+													@else
+													<option value="unpublished">Tidak tersedia</option>
+													@endif
+													
+												</select>
+												<!--end::Select2-->
+												
+												<!--begin::Datepicker-->
+												<div class="d-none mt-10">
+													<label for="kt_ecommerce_add_category_status_datepicker" class="form-label">Tanggal restock</label>
+													<input class="form-control" name="restock" id="kt_ecommerce_add_category_status_datepicker" placeholder="Pilih tanggal &amp; waktu" />
+												</div>
+												<!--end::Datepicker-->
+											</div>
+											<!--end::Card body-->
+										</div>
+										<!--end::Status-->
 									</div>
 									<!--end::Aside column-->
 									<!--begin::Main column-->
@@ -114,7 +165,7 @@
 											<!--begin::Card header-->
 											<div class="card-header">
 												<div class="card-title">
-													<h2>Data diri</h2>
+													<h2>Deskripsi</h2>
 												</div>
 											</div>
 											<!--end::Card header-->
@@ -123,62 +174,41 @@
 												<!--begin::Input group-->
 												<div class="mb-10 fv-row">
 													<!--begin::Label-->
-													<label class="required form-label">Nama</label>
+													<label class="required form-label">Nama Peralatan</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="name" class="form-control mb-2" placeholder="Nama" value="" />
+													<input type="text" name="nama" class="form-control mb-2" placeholder="Nama peralatan" value="{{ $peralatan->nama }}" />
 													<!--end::Input-->
+													
 												</div>
 												<!--end::Input group-->
 												<!--begin::Input group-->
 												<div class="mb-10 fv-row">
 													<!--begin::Label-->
-													<label class="required form-label">Email</label>
+													<label class="required form-label">Harga beli/sewa (Rp.)</label>
 													<!--end::Label-->
 													<!--begin::Input-->
-													<input type="text" name="email" class="form-control mb-2" placeholder="Email" value="" />
+													<input type="text" name="harga" class="form-control mb-2" placeholder="Harga peralatan" value="{{ $peralatan->harga }}" />
 													<!--end::Input-->
+													
 												</div>
 												<!--end::Input group-->
 												<!--begin::Input group-->
-												<div class="mb-10 fv-row">
+												<div>
 													<!--begin::Label-->
-													<label class="required form-label">Username</label>
-													<!--end::Label-->
-													<!--begin::Input-->
-													<input type="text" name="username" class="form-control mb-2" placeholder="Username" value="" />
-													<!--end::Input-->
-												</div>
-												<!--end::Input group-->
-                                                <!--begin::Input group-->
-												<div class="mb-10 fv-row">
-													<!--begin::Label-->
-													<label class="form-label">Password</label>
+													<label class="form-label">Deskripsi</label>
 													<!--end::Label-->
 													
 													<!--begin::Editor-->
-													<div class="">
-                                                        <input type="password" name="password" class="form-control mb-2" placeholder="Password" value="" />
-
-													<!--end::Editor-->
-													</div>
-												</div>
-												<!--end::Input group-->
-                                                <!--begin::Input group-->
-												<div class="mb-10 fv-row">
-													<!--begin::Label-->
-													<label class="form-label">No HP</label>
-													<!--end::Label-->
+													<div class="min-h-150px mb-2">
+														<textarea class="form-control" name="deskripsi" placeholder="Deskripsi peralatan" id="floatingTextarea2" style="height: 120px">{{ $peralatan->deskripsi }}</textarea>
 													
-													<!--begin::Editor-->
-													<div class="">
-                                                        <input type="text" name="no_hp" class="form-control mb-2" placeholder="No Hp" value="" />
-
 													<!--end::Editor-->
-													</div>
+													
+												</div>
+													<!--end::Description-->
 												</div>
 												<!--end::Input group-->
-												
 											</div>
 											<!--end::Card header-->
 										</div>
@@ -186,10 +216,10 @@
 										
 										<div class="d-flex justify-content-end">
 											<!--begin::Button-->
-											<a href="/dashboard/user" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+											<a href="/dashboard/peralatan" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
 											<!--end::Button-->
 											<!--begin::Button-->
-											<button type="submit" id="" class="btn btn-success">
+											<button type="submit" id="" class="btn btn-primary">
 												<span class="indicator-label">Simpan</span>
 												<span class="indicator-progress">Please wait...
 												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>

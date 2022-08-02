@@ -387,7 +387,7 @@
 											<a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Cancel</a>
 											<!--end::Button-->
 
-											<input type="hidden" class="form-control" name="kode" value="1340{{ auth()->user()->id }}" />
+											<input type="hidden" class="form-control" name="kode" value="G-000" />
 											<input type="hidden" class="form-control" name="user_id" value="{{ auth()->user()->id }}" />
 											<input type="hidden" class="form-control" name="status" value="Menunggu Pembayaran" />
 

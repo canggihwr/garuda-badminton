@@ -11,10 +11,11 @@ use Illuminate\Http\Request;
 
 class PenyewaanController extends Controller
 {
-    public function list(Penyewaan $penyewaan)
+    public function list()
     {
         return view('db/penyewaan', [
             'penyewaan' => Penyewaan::all()
+
         ]);
         
     }
@@ -37,6 +38,7 @@ class PenyewaanController extends Controller
 
     public function pembayaran(Request $request)
     {
+        // return $request->all();
         $id = $request->getid;
         $data = $request->validate([
             'tipe' => 'required',
@@ -45,20 +47,18 @@ class PenyewaanController extends Controller
         ]);
 
         if ($request->hasFile('bukti')) {
-            $path = $request->file('bukti')->store('uploads');
-        }else {
-            $path = '';
-
-        }
-
+            $request->file('bukti')->move('img/buktipembayaran/', $request->file('bukti')->getClientOriginalName());
+        } 
+        
         $data = [
             'tipe' => $request->tipe,
             'metode' => $request->metode,
-            'bukti' => $request->bukti,
+            'bukti' => $request->file('bukti')->getClientOriginalName(),
             'status' => $request->status
         ];
 
         Penyewaan::where('id', $id)->update($data);
+
         return redirect('/dashboard/penyewaan')->with('success', 'Pembayaran berhasil! Harap menunggu konfirmasi admin');
         
     }

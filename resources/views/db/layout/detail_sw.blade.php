@@ -429,7 +429,7 @@
 															@endif
                                                         </div>
 													</div>
-													@if($penyewaan->status == 'Menunggu Pembayaran')
+													@if($penyewaan->bukti == '')
 													<div class="modal fade" tabindex="-1" id="kt_modal_1">
 														<div class="modal-dialog">
 															<div class="modal-content">
@@ -451,20 +451,7 @@
 													
 																<div class="modal-footer">
 																	<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-																	@if ($penyewaan->status == 'Menunggu Konfirmasi')
-																@if (auth()->user()->tipe_akun == 'Admin')
-																<form action="/dashboard/penyewaan/konfirmasi/{{ $penyewaan->id }}" method="POST">
-																	@csrf
-																<input type="hidden" name="status" value="Dikonfirmasi">
-																<input type="hidden" name="getid" value="{{ $penyewaan->id }}">
-
-																<button type="submit" class="btn btn-success">
-																	Konfirmasi Pembayaran
-																</button>
-																</form>
-																@endif
-																
-															@endif
+																	
 																</div>
 															</div>
 														</div>
@@ -485,7 +472,7 @@
 													
 																<div class="modal-body">
 																	<!--begin::Image-->
-															<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-550px" style="background-image:url('db/media/stock/ecommerce/ss.gif')"></div>
+															<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-550px" style="background-image:url('img/buktipembayaran/{{ $penyewaan->bukti }}')"></div>
 															<!--end::Image-->
 																</div>
 													

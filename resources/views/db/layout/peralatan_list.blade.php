@@ -28,24 +28,9 @@
 								<!--end::Page title-->
 								<!--begin::Actions-->
 								<div class="d-flex align-items-center py-2 py-md-1">
-									<!--begin::Wrapper-->
-									<div class="me-3">
-										<!--begin::Menu-->
-										<a class="btn btn-light fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-										<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-										<span class="svg-icon svg-icon-5 svg-icon-gray-500 me-1">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-												<path d="M12.0657 12.5657L14.463 14.963C14.7733 15.2733 14.8151 15.7619 14.5621 16.1204C14.2384 16.5789 13.5789 16.6334 13.1844 16.2342L9.69464 12.7029C9.30968 12.3134 9.30968 11.6866 9.69464 11.2971L13.1844 7.76582C13.5789 7.3666 14.2384 7.42107 14.5621 7.87962C14.8151 8.23809 14.7733 8.72669 14.463 9.03696L12.0657 11.4343C11.7533 11.7467 11.7533 12.2533 12.0657 12.5657Z" fill="currentColor" />
-											</svg>
-										</span>
-										<!--end::Svg Icon-->Cancel</a>
-										
-									</div>
-									<!--end::Wrapper-->
+
 									
-									<!--begin::Button-->
-									<a href="#" class="btn btn-success fw-bolder" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Tambah</a>
-									<!--end::Button-->
+									<a href="/dashboard/peralatan/add" class="btn btn-success fw-bolder">Tambah Peralatan</a>
 								</div>
 								<!--end::Actions-->
 							</div>
@@ -88,7 +73,7 @@
 												<!--end::Select2-->
 											</div>
 											<!--begin::Add product-->
-											<a href="/dashboard/peralatan/add" class="btn btn-primary">Tambah Peralatan</a>
+											
 											<!--end::Add product-->
 										</div>
 										<!--end::Card toolbar-->
@@ -144,13 +129,13 @@
 													<td>
 														<div class="d-flex align-items-center">
 															<!--begin::Thumbnail-->
-															<a href="" class="symbol symbol-50px">
-																<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/1.gif);"></span>
+															<a href="/dashboard/peralatan/edit/{{ $p->id }}" class="symbol symbol-50px">
+																<span class="symbol-label" style="background-image:url('img/fotoperalatan/{{ $p->foto }}');"></span>
 															</a>
 															<!--end::Thumbnail-->
 															<div class="ms-5">
 																<!--begin::Title-->
-																<a href="" class="text-gray-800 text-hover-primary fs-5 fw-bolder" data-kt-ecommerce-product-filter="product_name">{{ $p->nama }}</a>
+																<a href="/dashboard/peralatan/edit/{{ $p->id }}" class="text-gray-800 text-hover-primary fs-5 fw-bolder" data-kt-ecommerce-product-filter="product_name">{{ $p->nama }}</a>
 																<!--end::Title-->
 															</div>
 														</div>

@@ -12,6 +12,14 @@ class UserController extends Controller
         return view('db/user', [
             "user" => User::all()
         ]);
+        return view('db/add_user');
+
+    }
+
+    public function view()
+    {
+        return view('db/add_user');
+
     }
 
     public function store(Request $request)
@@ -24,8 +32,15 @@ class UserController extends Controller
             'email' => 'required|unique:users|email',
             'password' => 'required'
         ]);
+
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('img/fotouser/', $request->file('foto')->getClientOriginalName());
+            $data['foto'] = $request->file('foto')->getClientOriginalName();
+        } 
+        
         $data['tipe_akun'] = $request->tipe_akun;
         $data['password'] = bcrypt($data['password']);
+
         User::create($data);
 
         return redirect('/dashboard/user')->with('success', 'User berhasil ditambah!');
@@ -43,20 +58,19 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
-        $data = $request->validate([
-            'name' => 'required',
-            'no_hp' => 'required',
-            'username' => ['required', 'unique:users'],
-            'email' => 'required|unique:users|email',
-            'password' => 'required'
-        ]);
-        $data['tipe_akun'] = $request->tipe_akun;
-        $data['password'] = bcrypt($data['password']);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('img/fotouser/', $request->file('foto')->getClientOriginalName());
+            $data['foto'] = $request->file('foto')->getClientOriginalName();
+        } 
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['username'] = $request->username;
+        $data['no_hp'] = $request->no_hp;
+        $data['password'] = bcrypt($request->password);
         $id =  $request->getid;
 
         User::where('id', $id)->update($data);
-        return $data;
-        // return redirect('/dashboard/user')->with('success', 'User berhasil diubah!');
+        return redirect('/dashboard/user')->with('success', 'User berhasil diubah!');
 
     }
 

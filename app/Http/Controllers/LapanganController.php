@@ -23,10 +23,15 @@ class LapanganController extends Controller
 
     public function update(Request $request, Lapangan $lapangan)
     {
-        $data = $request->validate([
-            'nama' => 'required',
-            'deskripsi' => 'required'
-        ]);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('img/fotolapangan/', $request->file('foto')->getClientOriginalName());
+        } 
+
+        $data = [
+            'nama' => $request->nama,
+            'deskripsi' => $request->deskripsi,
+            'foto' => $request->file('foto')->getClientOriginalName()
+        ];
 
         Lapangan::where('id', $lapangan->id)->update($data);
         return redirect('/dashboard/lapangan')->with('success', 'Lapangan berhasil diubah!');
@@ -41,13 +46,14 @@ class LapanganController extends Controller
 
     public function store(Request $request)
     {
-        
-        $data = $request->validate([
-            'nama' => 'required',
-            'deskripsi' => 'required'
-        ]);
 
-        Lapangan::create($data);
+        $data = Lapangan::create($request->all());
+
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('img/fotolapangan/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        } 
 
         return redirect('/dashboard/lapangan')->with('success', 'Lapangan berhasil ditambahkan!');
         

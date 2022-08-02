@@ -52,7 +52,7 @@
 							<!--end::Toolbar-->
 							<!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
-								<form id="kt_ecommerce_add_category_form" action="/dashboard/peralatan/add" method="POST" class="form d-flex flex-column flex-lg-row"  data-kt-redirect="/dashboard/peralatan">
+								<form id="kt_ecommerce_add_category_form" action="/dashboard/peralatan/add" method="POST" class="form d-flex flex-column flex-lg-row"  data-kt-redirect="/dashboard/peralatan" enctype="multipart/form-data">
 									@csrf
 									<!--begin::Aside column-->
 									<div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
@@ -80,7 +80,7 @@
 														<i class="bi bi-pencil-fill fs-7"></i>
 														<!--end::Icon-->
 														<!--begin::Inputs-->
-														<input type="file" name="foto" accept=".png, .jpg, .jpeg" />
+														<input type="file" class="form-control" name="foto" accept=".png, .jpg, .jpeg" />
 														<input type="hidden" name="avatar_remove" />
 														<!--end::Inputs-->
 													</label>
@@ -130,9 +130,7 @@
 													<option value="unpublished">Tidak tersedia</option>
 												</select>
 												<!--end::Select2-->
-												<!--begin::Description-->
-												<div class="text-muted fs-7">Set status ketersediaan barang.</div>
-												<!--end::Description-->
+												
 												<!--begin::Datepicker-->
 												<div class="d-none mt-10">
 													<label for="kt_ecommerce_add_category_status_datepicker" class="form-label">Tanggal restock</label>
@@ -166,9 +164,7 @@
 													<!--begin::Input-->
 													<input type="text" name="nama" class="form-control mb-2" placeholder="Nama peralatan" value="" />
 													<!--end::Input-->
-													<!--begin::Description-->
-													<div class="text-muted fs-7">Silahkan masukkan nama perlatan bulu tangkis.</div>
-													<!--end::Description-->
+													
 												</div>
 												<!--end::Input group-->
 												<!--begin::Input group-->
@@ -179,9 +175,7 @@
 													<!--begin::Input-->
 													<input type="text" name="harga" class="form-control mb-2" placeholder="Harga peralatan" value="" />
 													<!--end::Input-->
-													<!--begin::Description-->
-													<div class="text-muted fs-7">Set harga peralatan.</div>
-													<!--end::Description-->
+													
 												</div>
 												<!--end::Input group-->
 												<!--begin::Input group-->
@@ -195,8 +189,7 @@
 														<textarea class="form-control" name="deskripsi" placeholder="Deskripsi peralatan" id="floatingTextarea2" style="height: 120px"></textarea>
 													
 													<!--end::Editor-->
-													<!--begin::Description-->
-													<div class="text-muted fs-7">Set deskripsi peralatan bulu tangkis.</div>
+													
 												</div>
 													<!--end::Description-->
 												</div>

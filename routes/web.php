@@ -108,6 +108,8 @@ Route::get('/dashboard/user', function () {
     ]);
 });
 
+Route::get('/dashboard/user/add', [UserController::class, 'view']);
+
 Route::post('/dashboard/user/add', [UserController::class, 'store']);
 
 Route::get('/dashboard/user/edit/{user:id}', [UserController::class, 'edit']);
@@ -115,10 +117,6 @@ Route::get('/dashboard/user/edit/{user:id}', [UserController::class, 'edit']);
 Route::get('/dashboard/user/hapus/{user:id}', [UserController::class, 'destroy']);
 
 Route::post('/dashboard/user/update/{user:id}', [UserController::class, 'update']);
-
-Route::get('/dashboard/user/add', function () {
-    return view('db/add_user');
-});
 
 Route::get('/dashboard/admin', function () {
     return view('db/admin', [

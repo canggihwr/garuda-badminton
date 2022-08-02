@@ -27,9 +27,14 @@ class PeralatanController extends Controller
             $stats = 'Tersedia';
         }
 
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('img/fotoperalatan/', $request->file('foto')->getClientOriginalName());
+        } 
+
         $data = [
 
             'nama' => $request->nama,
+            'foto' => $request->file('foto')->getClientOriginalName(),
             'harga' => $request->harga,
             'status' => $stats,
             'restock' => $request->restock,
@@ -56,8 +61,33 @@ class PeralatanController extends Controller
         $data = $request->validate([
             'nama' => 'required',
             'harga' => 'required',
-            'waktu_main' => 'required',
+            'status' => 'required'
         ]);
+
+        $stats = '';
+
+        if ($data['status'] == 'unpublished') {
+            $stats = 'Tidak tersedia';
+        } else if($data['status'] == 'scheduled') {
+            $stats = 'Restock';
+        }else {
+            $stats = 'Tersedia';
+        }
+
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('img/fotoperalatan/', $request->file('foto')->getClientOriginalName());
+        } 
+
+        $data = [
+
+            'nama' => $request->nama,
+            'foto' => $request->file('foto')->getClientOriginalName(),
+            'harga' => $request->harga,
+            'status' => $stats,
+            'restock' => $request->restock,
+            'deskripsi' => $request->deskripsi
+        ];
+        
 
         Peralatan::where('id', $peralatan->id)->update($data);
         return redirect('/dashboard/peralatan')->with('success', 'Peralatan berhasil diubah!');

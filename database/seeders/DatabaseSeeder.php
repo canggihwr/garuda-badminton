@@ -43,6 +43,16 @@ class DatabaseSeeder extends Seeder
             'email' => 'alfan@gmail.com',
             'password' => bcrypt('1')
         ]);
+
+        User::create([
+            'name' => 'Rangga',
+            'username' => 'rangga',
+            'no_hp' => '0831199626222',
+            'foto' => 'blank.png',
+            'tipe_akun' => 'Member',
+            'email' => 'alfan@gmail.com',
+            'password' => bcrypt('r')
+        ]);
         
         Paket::create([
             'nama' => 'Paket 1 Jam',
@@ -51,21 +61,39 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Paket::create([
+            'nama' => 'Paket 2 Jam',
+            'lama' => 2,
+            'harga' => 45000,
+        ]);
+
+        Paket::create([
+            'nama' => 'Paket 3 Jam',
+            'lama' => 3,
+            'harga' => 65000,
+        ]);
+
+        Paket::create([
             'nama' => 'Paket 4 Jam',
             'lama' => 4,
-            'harga' => 85000,
+            'harga' => 80000,
         ]);
 
         Lapangan::create([
             'nama' => 'Lapangan 1',
-            'foto' => '',
+            'foto' => 'l1.jpg',
             'deskripsi' => 'Lapangan utama GOR Garuda Mataram',
         ]);
 
         Lapangan::create([
             'nama' => 'Lapangan 2',
-            'foto' => '',
+            'foto' => 'l2.jpg',
             'deskripsi' => 'Lapangan kedua GOR Garuda Mataram',
+        ]);
+
+        Lapangan::create([
+            'nama' => 'Lapangan 2',
+            'foto' => 'l3.jpg',
+            'deskripsi' => 'Lapangan ketiga GOR Garuda Mataram',
         ]);
     }
 }

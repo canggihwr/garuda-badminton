@@ -224,13 +224,13 @@
 												@foreach ($penyewaan as $p)
 												<tr class="odd">
 												 <td>
-												  <a href="/dashboard/penyewaan/#" class="text-dark text-hover-primary">{{ $p->kode }}</a>
+												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->kode }}{{ $p->id }}</a>
 												 </td>
 												 <td>
-												  <a href="/dashboard/penyewaan/#" class="text-dark text-hover-primary">{{ $p->user->name }}</a>
+												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->user->name }}</a>
 												 </td>
 												 <td>
-													<a href="/dashboard/penyewaan/#" class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
+													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
 												   </td>
 												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->tgl_main }}</td>
 												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->waktu_main }}</td>
@@ -238,7 +238,6 @@
 													@if($p->status == 'Menunggu Pembayaran')
 													<span class="badge badge-secondary">{{ $p->status }}</span>
 															
-														
 													@elseif($p->status == 'Menunggu Konfirmasi')
 													<span class="badge badge-warning">{{ $p->status }}</span>
 															
@@ -254,8 +253,7 @@
 													@endif
 												 </td>
 												   
-												 @if ($p->status == 'Menunggu Pembayaran')
-												 
+												 @if ($p->bukti == '')
 												 <td class="text-center">
 													<div class="d-flex align-items-center text-center">
 													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
@@ -266,10 +264,8 @@
 												@else
 													<td class="text-center"><div class="d-flex align-items-center text-center">
 														<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
-															<span class="symbol-label" style="background-image:url(db/media/stock/ecommerce/ss.gif);"></span>
-																
-											
-													</a>
+															<span class="symbol-label" style="background-image:url(img/buktipembayaran/{{ $p->bukti }});"></span>
+														</a>
 													</div></td>
 												@endif
 												 <td class="text-end">Rp.45,000</td>
@@ -290,6 +286,7 @@
 													<span class="badge badge-success badge-square text-white"><a href="/dashboard/penyewaan/bayar/{{ $p->id }}"><i class="text-white bi bi-currency-dollar"></i></a></span>	
 													@endif
 													@if ($p->status == 'Dikonfirmasi')
+
 													@else
 													<span class="badge badge-danger badge-square text-white"><a href="/dashboard/penyewaan/batal/{{ $p->id }}"><i class="text-white bi bi-x"></i></a></span>
 													@endif

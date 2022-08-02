@@ -46,7 +46,7 @@
                             <!--begin::Post-->
 							<div class="content flex-column-fluid" id="kt_content">
 								<!--begin::Form-->
-								<form id="bukti" class="form d-flex flex-column flex-lg-row" action="/dashboard/penyewaan/pembayaran/{{ $penyewaan->id }}" method="POST">
+								<form id="bukti" class="form d-flex flex-column flex-lg-row" action="/dashboard/penyewaan/pembayaran/{{ $penyewaan->id }}" method="POST" enctype="multipart/form-data">
 									@csrf
                                     <input type="hidden" name="getid" value="{{ $penyewaan->id }}">
                                     <input type="hidden" name="status" value="Menunggu Konfirmasi">
@@ -74,7 +74,7 @@
 														<label class="form-label">Order ID</label>
 														<!--end::Label-->
 														<!--begin::Auto-generated ID-->
-														<div class="fw-bolder fs-3 mb-3">#{{ $penyewaan->kode }}</div>
+														<div class="fw-bolder fs-3 mb-3">#{{ $penyewaan->kode }}{{ $penyewaan->id }}</div>
 														<!--end::Input-->
 														<!--begin::Alert-->
                                                             <div class="alert bg-light-primary d-flex flex-column flex-sm-row p-5 mb-7">
@@ -243,8 +243,8 @@
                                     <!--end::Card header-->
                                     <!--begin::Card body-->
                                     <div class="card-body pt-0">
-                                        {{-- <!--begin::Image input-->
-                                        <div class="image-input image-input-empty" data-kt-image-input="true" style="background-image: url(/db/media/svg/avatars/blank.svg)">
+                                        <!--begin::Image input-->
+                                        <div class="image-input image-input-empty" data-kt-image-input="true" style="background-image: url(/db/media/icons/duotune/arrows/arr078.svg)">
                                             <!--begin::Image preview wrapper-->
                                             <div class="image-input-wrapper w-525px h-125px"></div>
                                             <!--end::Image preview wrapper-->
@@ -258,7 +258,7 @@
                                                 <i class="bi bi-pencil-fill fs-7"></i>
 
                                                 <!--begin::Inputs-->
-                                                <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+                                                <input class="form-control" type="file" name="bukti" accept=".png, .jpg, .jpeg" />
                                                 <input type="hidden" name="avatar_remove" />
                                                 <!--end::Inputs-->
                                             </label>
@@ -284,9 +284,10 @@
                                             </span>
                                             <!--end::Remove button-->
                                         </div>
-                                        <!--end::Image input--> --}}
+                                        <!--end::Image input-->
+
                                         <!--begin::Input group-->
-                                        <div class="fv-row mb-2">
+                                        <div class="fv-row mb-2 form-input form-control">
                                             <!--begin::Dropzone-->
                                             <div class="dropzone" id="kt_dropzonejs_example_1">
                                                 <!--begin::Message-->
@@ -294,7 +295,6 @@
                                                     <!--begin::Icon-->
                                                     <i class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
                                                     <!--end::Icon-->
-
                                                     <!--begin::Info-->
                                                     <div class="ms-4">
                                                         <h3 class="fs-5 fw-bolder text-gray-900 mb-1">Drop files here or click to upload.</h3>
