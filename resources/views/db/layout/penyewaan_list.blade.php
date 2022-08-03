@@ -208,33 +208,35 @@
 											  <thead>
 											   <!--begin::Table row-->
 											   <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase">
-												<th class="min-w-50px">ID Sewa</th>
-												<th class="min-w-100px">Penyewa</th>
-												<th class="min-w-90px">Lapangan</th>
-												<th class="min-w-90px">Tanggal</th>
-												<th class="min-w-30px">Waktu</th>
-												<th class="text-center min-w-50px">Status</th>
-												<th class="text-center min-w-145px">Bukti</th>
-												<th class="text-end min-w-100px pe-5">Total</th>
-												<th class="text-center min-w-100px">Actions</th>
+												<th style="white-space: nowrap" class="min-w-50px">ID Sewa</th>
+												<th style="white-space: nowrap" class="min-w-100px">Nama Penyewa</th>
+												<th style="white-space: nowrap" class="min-w-90px">Lapangan</th>
+												<th style="white-space: nowrap" class="min-w-90px">Tanggal Main</th>
+												<th style="white-space: nowrap" class="min-w-30px">Waktu Main</th>
+												<th style="white-space: nowrap; text-align: center" class="min-w-30px">Paket</th>
+												<th style="white-space: nowrap; text-align: center" class="text-center min-w-50px">Status</th>
+												<th style="white-space: nowrap" class="text-center min-w-145px">Bukti</th>
+												<th style="white-space: nowrap" class="text-end min-w-100px pe-5">Total</th>
+												<th style="white-space: nowrap" class="text-center min-w-100px">Actions</th>
 											   </tr>
 											   <!--end::Table row-->
 											  </thead>
 											  <tbody class="fw-bold text-gray-600">
 												@foreach ($penyewaan as $p)
 												<tr class="odd">
-												 <td>
+												 <td style="white-space: nowrap">
 												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->kode }}{{ $p->id }}</a>
 												 </td>
-												 <td>
+												 <td style="white-space: nowrap">
 												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->user->name }}</a>
 												 </td>
-												 <td>
+												 <td style="white-space: nowrap">
 													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
 												   </td>
-												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->tgl_main }}</td>
-												 <td data-order="2022-03-10T14:40:00+05:00">{{ $p->waktu_main }}</td>
-												 <td>
+												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">{{ $p->tgl_main }}</td>
+												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">{{ $p->waktu_main }}</td>
+												 <td style="white-space: nowrap" data-order="2022-03-10T14:40:00+05:00">{{ $p->paket->nama }}</td>
+												 <td style="white-space: nowrap; text-align: center">
 													@if($p->status == 'Menunggu Pembayaran')
 													<span class="badge badge-secondary">{{ $p->status }}</span>
 															
@@ -254,7 +256,7 @@
 												 </td>
 												   
 												 @if ($p->bukti == '')
-												 <td class="text-center">
+												 <td style="white-space: nowrap; text-align: center" class="text-center">
 													<div class="d-flex align-items-center text-center">
 													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
 													<span class="symbol-label" style="background-image:url(db/media/svg/files/blank-image.svg);"></span>
@@ -262,21 +264,21 @@
 													</div>
 												</td>
 												@else
-													<td class="text-center"><div class="d-flex align-items-center text-center">
+													<td style="white-space: nowrap" class="text-center"><div class="d-flex align-items-center text-center">
 														<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
 															<span class="symbol-label" style="background-image:url(img/buktipembayaran/{{ $p->bukti }});"></span>
 														</a>
 													</div></td>
 												@endif
-												 <td class="text-end">Rp.45,000</td>
+												 <td style="white-space: nowrap" class="text-end">Rp.45,000</td>
 												 @if (auth()->user()->tipe_akun == 'Admin')
-													<td class="text-center">
+													<td style="white-space: nowrap" class="text-center">
 													<span class="btn btn-secondary btn-sm text-grey-800"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-grey-900 bi bi-eye-fill"></i> detail</a></span>
 													<span class="btn btn-danger btn-sm text-white"><a href="/dashboard/penyewaan/batal/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-white bi bi-trash"></i> hapus</a></span>
 													
 													</td>
 												 @else 
-												 <td class="text-center ">
+												 <td style="white-space: nowrap" class="text-center ">
 													@if ($p->status == 'Dikonfirmasi')
 													<span class="badge badge-secondary badge-square text-grey-900"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-grey-900 bi bi-eye-fill"></i> detail</a></span>
 													@else

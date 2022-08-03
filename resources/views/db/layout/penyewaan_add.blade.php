@@ -233,13 +233,7 @@
 															
 														@endforeach
 
-														<script>
-															function handleChange(src) {
-															// alert(src.value);
-															let result = document.querySelector('#result')
-															result.textContent = src.value;
-															}
-														</script>
+														
 
 														
 
@@ -305,15 +299,17 @@
 															<tr>
 																<!--begin::Checkbox-->
 																<td>
+																	<div class="form-item">
 																	@if ($item->status == 'Tersedia')
-																	<div class="form-check form-check-sm form-check-custom form-check-solid">
-																		<input class="form-check-input" name="itemcheck" id="itemcheck" type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this);" />
+																	<div class="form-check form-check-sm form-check-custom form-check-solid form-item">
+																		<input class="form-check-input" name="itemcheck" id="item{{ $item->id }}" type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this)" />
 																	</div>
 																	@else
 																	<div class="form-check form-check-sm form-check-custom form-check-solid">
-																		<input class="form-check-input"  name="itemcheck" id="itemcheck"  type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this);" />
+																		<input class="form-check-input"  name="itemcheck" id="item{{ $item->id }}"  type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this)" disabled />
 																	</div>
 																	@endif
+																</div>
 																</td>
 																<!--end::Checkbox-->
 																{{-- <td><button class="btn-danger" id="additem">tambah</button></td> --}}
@@ -396,15 +392,89 @@
 														<!--end::Table body-->
 													</table>
 													<!--end::Table-->
-													<script>
+													<div class="mb-10 fv-row text-end" id="trow">
+														<!--begin::Label-->
+														<label class="form-label">Total Peralatan</label>
+														<!--end::Label-->
+														<div class="mb-7">
+															<span class="fw-bolder fs-4 mt-1 ms-2">Rp.</span>
+															<span class="fw-bolder fs-3x" id="thrg">0.00</span>
+														</div>
+													</div>
+
+													{{-- <script type="text/javascript">
+													
+															var unchecked = document.getElementsByClassName('form-item')
+															for (var i = 0; i < unchecked.length; i++) {
+																var button = unchecked[i]
+																button.addEventListener('click', uncheckeditem)
+															}
+
+															var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+															for (var i = 0; i < quantityInputs.length; i++) {
+																var input = quantityInputs[i]
+																input.addEventListener('change', quantityChanged)
+															}
+
+															var add = document.getElementsByClassName('form-item')
+															for (var i = 0; i < add.length; i++) {
+																var button = add[i]
+																alert(button.id);
+																button.addEventListener('click', checkeditem)
+															}
 														
-														function itemChange(hrg) {
-														let paket = document.querySelector('#result')
-														var harga = parseInt(paket.textContent) + parseInt(hrg.value)
-														let result = document.querySelector('#totalharga')
-														result.textContent = harga;
+														function checkeditem(event) {
+															var button = event.target
+															alert("checkmate")
+															document.getElementById("result").innerHTML = "checked"
+															var shopItem = button.parentElement.parentElement
+															var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+															var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+															var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+															addItemToCart(title, price, imageSrc)
+															updateCartTotal()
 														}
+													</script> --}}
+
+													<script type="text/javascript">
+
+													function handleChange(src) {
+															// alert(src.value);
+															let result = document.querySelector('#result')
+															result.textContent = src.value;
+															up();
+															}
+													
+
+													function itemChange(hrg) {
+														// let paket = document.querySelector('#result')
+														if (document.getElementById(hrg.id).checked == true){
+															var paket = document.getElementById("result").innerHTML
+															var harga = parseInt(paket) + parseInt(hrg.value)
+															document.getElementById("totalharga").innerHTML = harga;
+															up();
+														} else if(document.getElementById(hrg.id).checked == false) {
+															var paket = document.getElementById("result").innerHTML
+															var harga = parseInt(paket)
+															document.getElementById("totalharga").innerHTML = harga;
+															up();
+														} else {
+														}
+														
+														}
+
+													function up() {
+														var atas = document.getElementById("result").innerHTML;
+														var bawah = document.getElementById("totalharga").innerHTML;
+														var mid = parseInt(atas)+parseInt(bawah);
+														document.getElementById("thrg").innerHTML = mid;
+														itemChange();
+													}
+
 													</script>
+
+
+													
 												</div>
 											</div>
 											<!--end::Card header-->

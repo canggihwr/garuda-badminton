@@ -27,9 +27,11 @@ class PeralatanController extends Controller
             $stats = 'Tersedia';
         }
 
+        $datafoto = "";
+
         if ($request->hasFile('foto')) {
             $request->file('foto')->move('img/fotoperalatan/', $request->file('foto')->getClientOriginalName());
-            $data['foto'] = $request->file('foto')->getClientOriginalName();
+            $datafoto = $request->file('foto')->getClientOriginalName();
 
         } 
 
@@ -38,6 +40,7 @@ class PeralatanController extends Controller
             'nama' => $request->nama,
             'harga' => $request->harga,
             'status' => $stats,
+            'foto' => $datafoto,
             'restock' => $request->restock,
             'deskripsi' => $request->deskripsi
         ];
@@ -75,15 +78,19 @@ class PeralatanController extends Controller
             $stats = 'Tersedia';
         }
 
+        $datafoto = "";
+
+
         if ($request->hasFile('foto')) {
             $request->file('foto')->move('img/fotoperalatan/', $request->file('foto')->getClientOriginalName());
-            $data['foto'] = $request->file('foto')->getClientOriginalName();
+            $datafoto = $request->file('foto')->getClientOriginalName();
         } 
 
         $data = [
             'nama' => $request->nama,
             'harga' => $request->harga,
             'status' => $stats,
+            'foto' => $datafoto,
             'restock' => $request->restock,
             'deskripsi' => $request->deskripsi
         ];
