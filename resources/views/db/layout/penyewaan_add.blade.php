@@ -276,11 +276,15 @@
 															<span class="fw-bolder fs-4 mt-1 ms-2">Rp.</span>
 															<span class="fw-bolder fs-3x" id="totalharga">0.00</span>
 														</div>
+														<div class="mb-7" style="text-align: end">
+															<button type="button" class="btn btn-danger btn-sm" id="batal" style="margin-right: 5px">Batal</button>
+															<button type="button" class="btn btn-primary btn-sm" id="update">Update</button>
+														</div>
 														
 													</div>
 													
 													<!--begin::Table-->
-													<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_edit_order_product_table">
+													<table class="table align-middle table-row-dashed fs-6 gy-5" id="itemtable">
 														<!--begin::Table head-->
 														<thead>
 															<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
@@ -302,11 +306,11 @@
 																	<div class="form-item">
 																	@if ($item->status == 'Tersedia')
 																	<div class="form-check form-check-sm form-check-custom form-check-solid form-item">
-																		<input class="form-check-input" name="itemcheck" id="item{{ $item->id }}" type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this)" />
+																		<input class="form-check-input" name="itemcheck" id="item{{ $item->id }}" type="checkbox" value="{{ $item->harga }}" onclick="cek(this)" />
 																	</div>
 																	@else
 																	<div class="form-check form-check-sm form-check-custom form-check-solid">
-																		<input class="form-check-input"  name="itemcheck" id="item{{ $item->id }}"  type="checkbox" value="{{ $item->harga }}" onchange="itemChange(this)" disabled />
+																		<input class="form-check-input"  name="itemcheck" id="item{{ $item->id }}"  type="checkbox" value="{{ $item->harga }}" onclick="cek(this)" disabled />
 																	</div>
 																	@endif
 																</div>
@@ -337,7 +341,7 @@
 																	<!--begin::Dialer-->
 																	<div class="position-relative w-md-90px" data-kt-dialer="true" data-kt-dialer-min="1" data-kt-dialer-max="9" data-kt-dialer-step="1" data-kt-dialer-prefix="" data-kt-dialer-decimals="">
 																		<!--begin::Decrease control-->
-																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																		<button type="button"   class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
 																			<!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
 																			<span class="svg-icon svg-icon-1">
 																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -349,10 +353,10 @@
 																		</button>
 																		<!--end::Decrease control-->
 																		<!--begin::Input control-->
-																		<input type="text" class="form-control form-control border-0 ps-12" data-kt-dialer-control="input" placeholder="Jumlah" name="manageBudget" readonly="readonly" value="1" />
+																		<input type="text" class="form-control form-control border-0 ps-12" data-kt-dialer-control="input" name="manageqty" id="item{{ $item->id }}" readonly="readonly" value="1" onchange="qty(this)"  />
 																		<!--end::Input control-->
 																		<!--begin::Increase control-->
-																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																		<button type="button"  class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
 																			<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
 																			<span class="svg-icon svg-icon-1">
 																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -402,78 +406,198 @@
 														</div>
 													</div>
 
-													{{-- <script type="text/javascript">
-													
-															var unchecked = document.getElementsByClassName('form-item')
-															for (var i = 0; i < unchecked.length; i++) {
-																var button = unchecked[i]
-																button.addEventListener('click', uncheckeditem)
-															}
-
-															var quantityInputs = document.getElementsByClassName('cart-quantity-input')
-															for (var i = 0; i < quantityInputs.length; i++) {
-																var input = quantityInputs[i]
-																input.addEventListener('change', quantityChanged)
-															}
-
-															var add = document.getElementsByClassName('form-item')
-															for (var i = 0; i < add.length; i++) {
-																var button = add[i]
-																alert(button.id);
-																button.addEventListener('click', checkeditem)
-															}
-														
-														function checkeditem(event) {
-															var button = event.target
-															alert("checkmate")
-															document.getElementById("result").innerHTML = "checked"
-															var shopItem = button.parentElement.parentElement
-															var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-															var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-															var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-															addItemToCart(title, price, imageSrc)
-															updateCartTotal()
-														}
-													</script> --}}
-
 													<script type="text/javascript">
 
-													function handleChange(src) {
-															// alert(src.value);
-															let result = document.querySelector('#result')
-															result.textContent = src.value;
-															up();
-															}
-													
-
-													function itemChange(hrg) {
-														// let paket = document.querySelector('#result')
-														if (document.getElementById(hrg.id).checked == true){
-															var paket = document.getElementById("result").innerHTML
-															var harga = parseInt(paket) + parseInt(hrg.value)
-															document.getElementById("totalharga").innerHTML = harga;
-															up();
-														} else if(document.getElementById(hrg.id).checked == false) {
-															var paket = document.getElementById("result").innerHTML
-															var harga = parseInt(paket)
-															document.getElementById("totalharga").innerHTML = harga;
-															up();
-														} else {
-														}
+														var checkboxes = document.querySelectorAll('input[name=itemcheck]')
+														var qtys = document.querySelectorAll('input[name=manageqty]')
 														
+														for (var i = 0; i < checkboxes.length; i++) {
+															if(checkboxes[i].checked == true) {
+																for (var j = 0; j < qtys.length; j++) {
+																	if(qtys[j].id == checkboxes[i].id) {
+																		var chgs = qtys[j];
+																		chgs.addEventListener('change', qty)
+																	}
+																}
+															} 
 														}
+														// document.getElementById("thrg").innerHTML = harga;
+														// updateharga(harga);
 
-													function up() {
-														var atas = document.getElementById("result").innerHTML;
-														var bawah = document.getElementById("totalharga").innerHTML;
-														var mid = parseInt(atas)+parseInt(bawah);
-														document.getElementById("thrg").innerHTML = mid;
-														itemChange();
+
+													function cek(src) {
+														var checkboxes = document.querySelectorAll('input[name=itemcheck]')
+														var harga = document.getElementById("result").innerHTML;
+														for (var i = 0; i < checkboxes.length; i++) {
+															if(checkboxes[i].checked == true) {
+																harga = parseInt(harga) + parseInt(checkboxes[i].value);
+															} 
+
+															if(checkboxes[i].checked == false) {
+																harga = parseInt(harga) + parseInt('0');
+															}
+														}
+														document.getElementById("totalharga").innerHTML = harga;
+														// updateharga(harga);
+														qty(harga);
+
 													}
 
+													function qty2(src) {
+														var checkboxes = document.querySelectorAll('input[name=itemcheck]')
+														var qtys = document.querySelectorAll('input[name=manageqty]')
+														for (var i = 0; i < checkboxes.length; i++) {
+															if(checkboxes[i].checked == true) {
+																for (var j = 0; j < qtys.length; j++) {
+																	
+																}
+															} 
+															if(checkboxes[i].checked == false) {
+
+															}
+														}
+														document.getElementById("thrg").innerHTML = harga;
+														// updateharga(harga);
+														qty2(harga);
+
+													}
+
+
+													function qty(q) {
+														var checkboxes = document.querySelectorAll('input[name=itemcheck]')
+														var qtys = document.querySelectorAll('input[name=manageqty]')
+														var harga = document.getElementById("result").innerHTML;
+														var qty ='1';
+														var hrqty = '0';
+														for (var i = 0; i < checkboxes.length; i++) {
+															if(checkboxes[i].checked == true) {
+																harga = parseInt(harga) + parseInt(checkboxes[i].value);
+																for (var j = 0; j < qtys.length; j++) {
+																	if(qtys[j].id == checkboxes[i].id) {
+																		if(qtys[j].value > 1){
+																			hrqty = parseInt(checkboxes[i].value)*(qtys[j].value-1);
+																		}else {
+																			hrqty = '0'
+																		}
+																		// alert(qtys[j].value);
+																		// qty = qtys[j].value;
+																		// hrqty = parseInt(checkboxes[i].value) * parseInt(qty);
+																		// if(qtys[j].value > 1) {
+																		// 	hrqty = parseInt(checkboxes[i].value) * parseInt(qty);
+																		// } else {
+																		// 	hrqty = parseInt(checkboxes[i].value);
+																		// }
+																	}
+																}
+																harga = parseInt(harga) + parseInt(hrqty);
+															} 
+
+															if(checkboxes[i].checked == false) {
+																harga = parseInt(harga) + parseInt('0');
+															}
+														}
+														document.getElementById("thrg").innerHTML = harga;
+														// updateharga(harga);
+
+													}
+
+
+
+
+													function updateharga(hrg) {
+															document.getElementById("totalharga").innerHTML = hrg;
+													}
+														
+													function handleChange(src) {
+														document.getElementById("result").innerHTML = src.value;
+														cek();
+														qty();
+													}
+
+													function clear() {
+														var checkboxes = document.querySelectorAll('input[name=itemcheck]:checked')
+
+														for (var i = 0; i < checkboxes.length; i++) {
+															var getid = checkboxes[i].id;
+															document.getElementById(getid).checked = false;
+														}
+													}
+													
+														
 													</script>
 
 
+													
+
+													<script type="text/javascript">
+													var button = document.getElementById('batal');
+													button.onclick = function() {
+														var array = []
+														var checkboxes = document.querySelectorAll('input[name=itemcheck]:checked')
+
+														for (var i = 0; i < checkboxes.length; i++) {
+															var getid = checkboxes[i].id;
+															document.getElementById(getid).checked = false;
+														}
+
+														document.getElementById("totalharga").innerHTML = document.getElementById("result").innerHTML;
+
+														
+													}
+
+													// var button2 = document.getElementById('update');
+													// button2.onclick = function() {
+													// 	var array = []
+													// 	var checkboxes = document.querySelectorAll('input[name=itemcheck]:checked')
+													// 	for (var i = 0; i < checkboxes.length; i++) {
+													// 		var paket = checkboxes[i].value;
+													// 		var awal = document.getElementById("result").innerHTML
+													// 		var harga = parseInt(awal) + parseInt(getval)
+													// 		document.getElementById("totalharga").innerHTML = harga;
+													// 		awal = harga;
+													// 		document.getElementById("totalharga").innerHTML = awal;
+													// 	}
+
+													// }
+													
+													function handleChange(src) {
+															// alert(src.value);
+														document.getElementById("result").innerHTML = src.value;
+															// up();
+													}
+													// 		document.getElementById("totalharga").innerHTML = "0.00";
+
+													// function batal() {
+													// 	alert("I am an alert box!");
+													// 	$('input:checkbox').removeAttr('checked');
+													// }
+													
+
+													// function itemChange(hrg) {
+													// 	// let paket = document.querySelector('#result')
+													// 	if (document.getElementById(hrg.id).checked == true){
+													// 		var paket = document.getElementById("result").innerHTML
+													// 		var harga = parseInt(paket) + parseInt(hrg.value)
+													// 		document.getElementById("totalharga").innerHTML = harga;
+													// 		up();
+													// 	} 
+													// 	if(document.getElementById(hrg.id).checked == false) {
+													// 		var paket = document.getElementById("result").innerHTML
+													// 		var harga = parseInt(paket)
+													// 		document.getElementById("totalharga").innerHTML = harga;
+													// 		up();
+													// 	} 
+													// 	}
+
+													// function up() {
+													// 	var atas = document.getElementById("result").innerHTML;
+													// 	var bawah = document.getElementById("totalharga").innerHTML;
+													// 	var mid = parseInt(atas)+parseInt(bawah);
+													// 	document.getElementById("thrg").innerHTML = mid;
+													// 	itemChange();
+													// }
+
+													</script>
 													
 												</div>
 											</div>
