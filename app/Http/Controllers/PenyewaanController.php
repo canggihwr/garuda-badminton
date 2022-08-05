@@ -89,12 +89,14 @@ class PenyewaanController extends Controller
 
     public function store(Request $request)
     {
-        
-        
-        // $data = $request->validate([
-        //     'lapangan' => 'required',
-        //     'paket' => 'required',
-        // ]);
+        // return $request;
+        $datalap = Penyewaan::all();
+        $data = $request->validate([
+            'lapangan_id' => 'required',
+            'paket_id' => 'required',
+            'tgl_main' => 'required',
+            'waktu_main' => 'required'
+        ]);
 
         $pkt = Paket::all();
         $getidpaket = '';
@@ -113,12 +115,40 @@ class PenyewaanController extends Controller
             'peralatan_id' => $getidpaket,
             'tgl_main' => $request->tgl_main,
             'status' => $request->status,
+            'total' => $request->bayar,
             'waktu_main' => $request->waktu_main
         ];
 
-        Penyewaan::create($data);
+        
 
-        return redirect('/dashboard/penyewaan')->with('success', 'Berhasil dipesan!, silahkan melakukan pembayaran!');
+        $kosong = '';
+        
+        foreach ($datalap as $l){
+            if($request->tgl_main == $l->tgl_main){
+                if($request->waktu_main == $l->waktu_main){
+                    if($request->lapangan_id == $l->lapangan_id){
+                        $kosong = 'false';
+                    }
+                }
+            }
+        }
+
+        $items = $request->item;
+        $qtys = $request->qty;
+        $sync = [];
+        for($i=0;$i<count($items); $i++){
+            $sync[$items[$i]] = ['qty' => $qtys[$i]];
+        }
+
+        
+
+        if($kosong == 'false') {
+            return redirect('/dashboard/penyewaan')->with('fail', 'Lapangan gagal dipesan!, silahkan memilih jadwal atau lapangan lain!');
+        } else{
+            $penyewaan = Penyewaan::create($data)->peralatan()->attach($sync);
+            return redirect('/dashboard/penyewaan')->with('success', 'Berhasil dipesan!, silahkan melakukan pembayaran!');
+
+        }
         
         
     }

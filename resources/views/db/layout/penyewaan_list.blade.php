@@ -196,11 +196,22 @@
 												@if(session()->has('success'))
 												<div class="alert alert-success alert-dismissible fade show" role="alert">
 													<!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr084.svg-->
-<span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<path opacity="0.5" d="M12.8956 13.4982L10.7949 11.2651C10.2697 10.7068 9.38251 10.7068 8.85731 11.2651C8.37559 11.7772 8.37559 12.5757 8.85731 13.0878L12.7499 17.2257C13.1448 17.6455 13.8118 17.6455 14.2066 17.2257L21.1427 9.85252C21.6244 9.34044 21.6244 8.54191 21.1427 8.02984C20.6175 7.47154 19.7303 7.47154 19.2051 8.02984L14.061 13.4982C13.7451 13.834 13.2115 13.834 12.8956 13.4982Z" fill="currentColor"/>
-<path d="M7.89557 13.4982L5.79487 11.2651C5.26967 10.7068 4.38251 10.7068 3.85731 11.2651C3.37559 11.7772 3.37559 12.5757 3.85731 13.0878L7.74989 17.2257C8.14476 17.6455 8.81176 17.6455 9.20663 17.2257L16.1427 9.85252C16.6244 9.34044 16.6244 8.54191 16.1427 8.02984C15.6175 7.47154 14.7303 7.47154 14.2051 8.02984L9.06096 13.4982C8.74506 13.834 8.21146 13.834 7.89557 13.4982Z" fill="currentColor"/>
-</svg></span>
-<!--end::Svg Icon--> {{ session('success') }}
+													<span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.5" d="M12.8956 13.4982L10.7949 11.2651C10.2697 10.7068 9.38251 10.7068 8.85731 11.2651C8.37559 11.7772 8.37559 12.5757 8.85731 13.0878L12.7499 17.2257C13.1448 17.6455 13.8118 17.6455 14.2066 17.2257L21.1427 9.85252C21.6244 9.34044 21.6244 8.54191 21.1427 8.02984C20.6175 7.47154 19.7303 7.47154 19.2051 8.02984L14.061 13.4982C13.7451 13.834 13.2115 13.834 12.8956 13.4982Z" fill="currentColor"/>
+													<path d="M7.89557 13.4982L5.79487 11.2651C5.26967 10.7068 4.38251 10.7068 3.85731 11.2651C3.37559 11.7772 3.37559 12.5757 3.85731 13.0878L7.74989 17.2257C8.14476 17.6455 8.81176 17.6455 9.20663 17.2257L16.1427 9.85252C16.6244 9.34044 16.6244 8.54191 16.1427 8.02984C15.6175 7.47154 14.7303 7.47154 14.2051 8.02984L9.06096 13.4982C8.74506 13.834 8.21146 13.834 7.89557 13.4982Z" fill="currentColor"/>
+													</svg></span>
+													<!--end::Svg Icon--> {{ session('success') }}
+													<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+												</div>
+												@endif
+												@if(session()->has('fail'))
+												<div class="alert alert-danger alert-dismissible fade show" role="alert">
+													<!--begin::Svg Icon | path: assets/media/icons/duotune/arrows/arr015.svg-->
+													<span class="svg-icon svg-icon-danger svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+														<path opacity="0.3" d="M12 10.6L14.8 7.8C15.2 7.4 15.8 7.4 16.2 7.8C16.6 8.2 16.6 8.80002 16.2 9.20002L13.4 12L12 10.6ZM10.6 12L7.8 14.8C7.4 15.2 7.4 15.8 7.8 16.2C8 16.4 8.3 16.5 8.5 16.5C8.7 16.5 8.99999 16.4 9.19999 16.2L12 13.4L10.6 12Z" fill="currentColor"/>
+														<path d="M22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2C17.5 2 22 6.5 22 12ZM13.4 12L16.2 9.20001C16.6 8.80001 16.6 8.19999 16.2 7.79999C15.8 7.39999 15.2 7.39999 14.8 7.79999L12 10.6L9.2 7.79999C8.8 7.39999 8.2 7.39999 7.8 7.79999C7.4 8.19999 7.4 8.80001 7.8 9.20001L10.6 12L7.8 14.8C7.4 15.2 7.4 15.8 7.8 16.2C8 16.4 8.3 16.5 8.5 16.5C8.7 16.5 9 16.4 9.2 16.2L12 13.4L14.8 16.2C15 16.4 15.3 16.5 15.5 16.5C15.7 16.5 16 16.4 16.2 16.2C16.6 15.8 16.6 15.2 16.2 14.8L13.4 12Z" fill="currentColor"/>
+														</svg></span>
+														<!--end::Svg Icon--> {{ session('fail') }}
 													<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 												</div>
 												@endif
@@ -225,7 +236,7 @@
 												@foreach ($penyewaan as $p)
 												<tr class="odd">
 												 <td style="white-space: nowrap">
-												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->kode }}{{ $p->id }}</a>
+												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">#{{ $p->kode }}{{ $p->id }}</a>
 												 </td>
 												 <td style="white-space: nowrap">
 												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->user->name }}</a>
@@ -270,7 +281,7 @@
 														</a>
 													</div></td>
 												@endif
-												 <td style="white-space: nowrap" class="text-end">Rp.45,000</td>
+												 <td style="white-space: nowrap" class="text-end">Rp.{{ $p->total }}</td>
 												 @if (auth()->user()->tipe_akun == 'Admin')
 													<td style="white-space: nowrap" class="text-center">
 													<span class="btn btn-secondary btn-sm text-grey-800"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-grey-900 bi bi-eye-fill"></i> detail</a></span>

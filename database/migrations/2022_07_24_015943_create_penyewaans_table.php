@@ -19,12 +19,13 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreignId('lapangan_id');
             $table->foreignId('paket_id');
-            $table->foreignId('peralatan_id')->nullable();
+            // $table->foreignId('peralatan_id')->nullable();
             $table->date('tgl_main');
             $table->string('waktu_main');
             $table->string('metode')->nullable();
             $table->string('tipe')->nullable();
             $table->string('bukti')->nullable();
+            $table->string('total')->nullable();
             $table->string('status')->nullable();
             $table->timestamp('tgl_sewa')->nullable();
             $table->timestamps();

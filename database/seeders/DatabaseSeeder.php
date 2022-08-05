@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Paket;
 use App\Models\Lapangan;
+use App\Models\Peralatan;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -91,9 +92,36 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Lapangan::create([
-            'nama' => 'Lapangan 2',
+            'nama' => 'Lapangan 3',
             'foto' => 'l3.jpg',
             'deskripsi' => 'Lapangan ketiga GOR Garuda Mataram',
+        ]);
+
+        Peralatan::create([
+            'nama' => 'Shuttlecock',
+            'foto' => '3-128_2.png',
+            'status' => 'Tersedia',
+            'harga' => '5000',
+            'deskripsi' => 'y',
+            'restock' => '',
+        ]);
+
+        Peralatan::create([
+            'nama' => 'wine',
+            'foto' => '4.png',
+            'status' => 'Tersedia',
+            'harga' => '35000',
+            'deskripsi' => 'q',
+            'restock' => '',
+        ]);
+
+        Peralatan::create([
+            'nama' => 'robo',
+            'foto' => '22.png',
+            'status' => 'Tersedia',
+            'harga' => '45000',
+            'deskripsi' => 'q',
+            'restock' => '',
         ]);
     }
 }

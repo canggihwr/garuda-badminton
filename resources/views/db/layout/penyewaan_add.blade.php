@@ -255,7 +255,7 @@
 																
 																<!--begin::Description-->
 																<div class="text-inverse-light fs-8" style="text-align: left">*Silahkan memilih item di bawah jika ingin memesan peralatan bulu tangkis tambahan.</div>
-																
+																			
 																<!--end::Description-->
 															</div>
 															<!--end::Input group-->
@@ -266,19 +266,16 @@
 													<!--end::Input group-->
 													<!--begin::Separator-->
 													<div class="separator"></div>
+													
 													<!--end::Separator-->
 
-													<div class="mb-10 fv-row" id="totalbeli">
+													<div class="mb-10 fv-row" id="totalbeli" style="display: none">
 														<!--begin::Label-->
 														<label class="form-label">Total Peralatan</label>
 														<!--end::Label-->
-														<div class="mb-7">
+														<div class="mb-7" >
 															<span class="fw-bolder fs-4 mt-1 ms-2">Rp.</span>
 															<span class="fw-bolder fs-3x" id="totalharga">0.00</span>
-														</div>
-														<div class="mb-7" style="text-align: end">
-															<button type="button" class="btn btn-danger btn-sm" id="batal" style="margin-right: 5px">Batal</button>
-															<button type="button" class="btn btn-primary btn-sm" id="update">Update</button>
 														</div>
 														
 													</div>
@@ -307,10 +304,14 @@
 																	@if ($item->status == 'Tersedia')
 																	<div class="form-check form-check-sm form-check-custom form-check-solid form-item">
 																		<input class="form-check-input" name="itemcheck" id="item{{ $item->id }}" type="checkbox" value="{{ $item->harga }}" onclick="cek(this)" />
+																		<input class="form-check-input" name="item[]" id="items" type="checkbox" value="{{ $item->id }}" hidden />
+																		<input class="form-check-input" name="qty[]" id="qtys" type="checkbox" value="" hidden />
 																	</div>
 																	@else
 																	<div class="form-check form-check-sm form-check-custom form-check-solid">
 																		<input class="form-check-input"  name="itemcheck" id="item{{ $item->id }}"  type="checkbox" value="{{ $item->harga }}" onclick="cek(this)" disabled />
+																		<input class="form-check-input" name="item[]" id="items" type="checkbox" value="{{ $item->id }}" hidden />
+																		<input class="form-check-input" name="qty[]" id="qtys" type="checkbox" value="" hidden />
 																	</div>
 																	@endif
 																</div>
@@ -383,10 +384,6 @@
 																	<span class="fw-bolder ms-3"><span class="fw-bolder ms-3"><span class="badge badge-light-warning ms-2 fs-7">{{ $item->status }}</span></span>
 																	
 																	@endif
-																	
-																	
-																	
-
 																</td>
 																<!--end::Qty=-->
 															</tr>
@@ -398,11 +395,12 @@
 													<!--end::Table-->
 													<div class="mb-10 fv-row text-end" id="trow">
 														<!--begin::Label-->
-														<label class="form-label">Total Peralatan</label>
+														<label class="form-label">Total Bayar</label>
 														<!--end::Label-->
 														<div class="mb-7">
 															<span class="fw-bolder fs-4 mt-1 ms-2">Rp.</span>
 															<span class="fw-bolder fs-3x" id="thrg">0.00</span>
+															<input type="text" id="bayar" name="bayar" value="0" hidden>
 														</div>
 													</div>
 
@@ -427,10 +425,12 @@
 
 													function cek(src) {
 														var checkboxes = document.querySelectorAll('input[name=itemcheck]')
+														var item = document.querySelectorAll('input[id=items]')
 														var harga = document.getElementById("result").innerHTML;
 														for (var i = 0; i < checkboxes.length; i++) {
 															if(checkboxes[i].checked == true) {
 																harga = parseInt(harga) + parseInt(checkboxes[i].value);
+																item[i].checked = true;
 															} 
 
 															if(checkboxes[i].checked == false) {
@@ -443,29 +443,10 @@
 
 													}
 
-													function qty2(src) {
-														var checkboxes = document.querySelectorAll('input[name=itemcheck]')
-														var qtys = document.querySelectorAll('input[name=manageqty]')
-														for (var i = 0; i < checkboxes.length; i++) {
-															if(checkboxes[i].checked == true) {
-																for (var j = 0; j < qtys.length; j++) {
-																	
-																}
-															} 
-															if(checkboxes[i].checked == false) {
-
-															}
-														}
-														document.getElementById("thrg").innerHTML = harga;
-														// updateharga(harga);
-														qty2(harga);
-
-													}
-
-
 													function qty(q) {
 														var checkboxes = document.querySelectorAll('input[name=itemcheck]')
 														var qtys = document.querySelectorAll('input[name=manageqty]')
+														var qtyinput = document.querySelectorAll('input[id=qtys]')
 														var harga = document.getElementById("result").innerHTML;
 														var qty ='1';
 														var hrqty = '0';
@@ -474,6 +455,8 @@
 																harga = parseInt(harga) + parseInt(checkboxes[i].value);
 																for (var j = 0; j < qtys.length; j++) {
 																	if(qtys[j].id == checkboxes[i].id) {
+																		qtyinput[i].value = qtys[j].value;
+																		qtyinput[i].checked = true;
 																		if(qtys[j].value > 1){
 																			hrqty = parseInt(checkboxes[i].value)*(qtys[j].value-1);
 																		}else {
@@ -497,6 +480,8 @@
 															}
 														}
 														document.getElementById("thrg").innerHTML = harga;
+														document.getElementById("bayar").value = harga;
+
 														// updateharga(harga);
 
 													}
@@ -510,6 +495,7 @@
 														
 													function handleChange(src) {
 														document.getElementById("result").innerHTML = src.value;
+														document.getElementById("bayar").value = src.value;
 														cek();
 														qty();
 													}
@@ -563,6 +549,7 @@
 													function handleChange(src) {
 															// alert(src.value);
 														document.getElementById("result").innerHTML = src.value;
+														qty();
 															// up();
 													}
 													// 		document.getElementById("totalharga").innerHTML = "0.00";
@@ -607,7 +594,7 @@
 										
 										<div class="d-flex justify-content-end">
 											<!--begin::Button-->
-											<a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Cancel</a>
+											<a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-danger me-5">Batal</a>
 											<!--end::Button-->
 
 											<input type="hidden" class="form-control" name="kode" value="G-000" />

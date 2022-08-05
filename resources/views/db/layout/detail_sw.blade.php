@@ -307,66 +307,39 @@
 																</thead>
 																<!--end::Table head-->
 																<!--begin::Table body-->
-																{{-- <tbody class="fw-bold text-gray-600">
+																<tbody class="fw-bold text-gray-600">
+																	@foreach ($penyewaan->peralatan as $item)
 																	<!--begin::Products-->
 																	<tr>
 																		<!--begin::Product-->
 																		<td>
 																			<div class="d-flex align-items-center">
 																				<!--begin::Thumbnail-->
-																				<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="symbol symbol-50px">
-																					<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/1.gif);"></span>
+																				<a  class="symbol symbol-50px">
+																					<span class="symbol-label" style="background-image:url(img/fotoperalatan/{{ $item->foto }});"></span>
 																				</a>
 																				<!--end::Thumbnail-->
 																				<!--begin::Title-->
 																				<div class="ms-5">
-																					<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="fw-bolder text-gray-600 text-hover-primary">Shuttlecock</a>
-																					<div class="fs-7 text-muted">tambah beli shuttlecock</div>
+																					<a  class="fw-bolder text-gray-800 text-hover-primary">{{ $item->nama }}</a>
+																					<div class="fs-7 text-muted">{{ $item->deskripsi }}</div>
 																				</div>
 																				<!--end::Title-->
 																			</div>
 																		</td>
 																		<!--end::Product-->
 																		<!--begin::Quantity-->
-																		<td class="text-end">2</td>
+																		<td class="text-end" id="qtysatuan">{{ $item->pivot->qty }}</td>
 																		<!--end::Quantity-->
 																		<!--begin::Price-->
-																		<td class="text-end">Rp.1200.00</td>
+																		<td class="text-end">Rp.<span class="text-end" id="hargasatuan">{{ $item->harga }}</span></td>
 																		<!--end::Price-->
 																		<!--begin::Total-->
-																		<td class="text-end">Rp.2400.00</td>
+																		<td class="text-end">Rp.<span class="text-end" id="totalsatuan"></span></td>
 																		<!--end::Total-->
 																	</tr>
-																	<tr>
-																		<!--begin::Product-->
-																		<td>
-																			<div class="d-flex align-items-center">
-																				<!--begin::Thumbnail-->
-																				<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="symbol symbol-50px">
-																					<span class="symbol-label" style="background-image:url(db/media//stock/ecommerce/3.gif);"></span>
-																				</a>
-																				<!--end::Thumbnail-->
-																				<!--begin::Title-->
-																				<div class="ms-5">
-																					<a href="../../demo14/dist/apps/ecommerce/catalog/edit-product.html" class="fw-bolder text-gray-600 text-hover-primary">Raket</a>
-																					<div class="fs-7 text-gray-800">tambah sewa raket</div>
-																				</div>
-																				<!--end::Title-->
-																			</div>
-																		</td>
-																		<!--end::Product-->
-																		<!--begin::Quantity-->
-																		<td class="text-end">1</td>
-																		<!--end::Quantity-->
-																		<!--begin::Price-->
-																		<td class="text-end">Rp.24.000</td>
-																		<!--end::Price-->
-																		<!--begin::Total-->
-																		<td class="text-end">Rp.24.000</td>
-																		<!--end::Total-->
-																	</tr>
-																	<!--end::Products-->
-																</tbody> --}}
+																	@endforeach
+																</tbody>
 																<!--end::Table head-->
 															</table>
 															<!--end::Table-->
@@ -388,14 +361,14 @@
 																	<!--begin::Subtotal-->
 																	<tr>
 																		<td colspan="3" class="text-end">Harga Peralatan</td>
-																		<td class="text-end">Rp.0.00</td>
+																		<td class="text-end" >Rp.<span class="text-end" id="jumlah">0.00</span></td>
 																	</tr>
 																	<!--end::Subtotal-->
 																	
 																	<!--begin::Grand total-->
 																	<tr>
 																		<td colspan="3" class="fs-4 text-dark text-end">Total Bayar</td>
-																		<td class="text-dark fs-2 fw-boldest text-end">Rp. {{ $penyewaan->paket->harga }}</td>
+																		<td class="text-dark fs-2 fw-boldest text-end">Rp. {{ $penyewaan->total }}</td>
 																	</tr>
 																	<!--end::Grand total-->
 																</tbody>
@@ -404,12 +377,31 @@
 															<!--end::Table-->
 															
 															<div>
+																<script type="text/javascript">
+
+																	var hargas = document.querySelectorAll('span[id=hargasatuan]')
+																	var qtys = document.querySelectorAll('td[id=qtysatuan]')
+																	var totals = document.querySelectorAll('span[id=totalsatuan]')
+																	var jumlah = 0;
+
+																	for (var i = 0; i < qtys.length; i++) {
+																		var harga = hargas[i].innerHTML
+																		var qty = qtys[i].innerHTML
+																		var total = totals[i].innerHTML
+																		total = parseInt(harga)*parseInt(qty)
+																		totals[i].innerHTML = total
+																		jumlah = parseInt(jumlah)+parseInt(total)
+																	}
+																	document.getElementById("jumlah").innerHTML = jumlah;
+
+			
+																</script>
 																
 	
 															</div>
 														</div>
-                                                        <div class="mt-15" style="text-align: right">
-                                                            <a href="/dashboard/penyewaan" class="btn btn-light me-5 mb-3">Kembali</a>
+                                                        <div class="mt-15" style="text-align: right" style="white-space: nowrap">
+                                                            <a href="/dashboard/penyewaan" class="btn btn-danger me-5 mb-3">Kembali</a>
 															@if($penyewaan->status == 'Menunggu Pembayaran')
 															<a href="/dashboard/penyewaan/bayar/{{ $penyewaan->id }}" class="btn btn-success">Lanjut Bayar</a>
                                                             @endif
