@@ -78,7 +78,7 @@
 													<!--begin::Hot sales post-->
 													<div class="card-xl-stretch ms-md-6">
 														<!--begin::Overlay-->
-														<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="img/fotolapangan{{ $l->foto }}">
+														<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="img/fotolapangan/{{ $l->foto }}">
 															<!--begin::Image-->
 															<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('img/fotolapangan/{{ $l->foto }}')"></div>
 															<!--end::Image-->
@@ -104,7 +104,7 @@
 																{{-- <span class="fs-6 fw-bold text-gray-400">$</span>25</span> --}}
 																<!--end::Label-->
 																<!--begin::Action-->
-																<a href="/dashboard/lapangan/edit/{{ $l->id }}" class="btn btn-sm btn-warning" style="margin-right: 6px">Edit </a>
+																<a href="/dashboard/lapangan/edit/{{ $l->id }}" class="btn btn-sm btn-primary" style="margin-right: 6px">Edit </a>
 																<!--end::Action-->
 																<!--begin::Action-->
 																<a href="/dashboard/lapangan/hapus/{{ $l->id }}" class="btn btn-sm btn-danger">Hapus </a>

@@ -27,7 +27,10 @@ use App\Http\Controllers\PeralatanController;
 
 Route::get('/', function () {
     return view('home/index', [
-        'user' => User::all()
+        'user' => User::all(),
+        'peralatan' => Peralatan::all(),
+        'lapangan' => Lapangan::all(),
+        'penyewaan' => Penyewaan::all()
     ]);
 });
 

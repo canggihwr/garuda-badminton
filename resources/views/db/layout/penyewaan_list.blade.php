@@ -215,7 +215,7 @@
 													<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 												</div>
 												@endif
-											 <table class="table align-middle border rounded table-row-dashed fs-6 g-5" id="kt_datatable_example_1">
+											 <table class="table align-middle table-striped border rounded table-row-dashed fs-6 g-5" id="kt_datatable_example_1">
 											  <thead>
 											   <!--begin::Table row-->
 											   <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase">
@@ -252,15 +252,15 @@
 													<span class="badge badge-secondary">{{ $p->status }}</span>
 															
 													@elseif($p->status == 'Menunggu Konfirmasi')
-													<span class="badge badge-warning">{{ $p->status }}</span>
+													<span class="badge badge-light-warning">{{ $p->status }}</span>
 															
 
 													@elseif($p->status == 'Dikonfirmasi')
-													<span class="badge badge-success">{{ $p->status }}</span>
+													<span class="badge badge-light-success">{{ $p->status }}</span>
 															
 																
 													@else
-													<span class="badge badge-primary">{{ $p->status }}</span>
+													<span class="badge badge-light-primary">{{ $p->status }}</span>
 															
 					
 													@endif
@@ -284,24 +284,28 @@
 												 <td style="white-space: nowrap" class="text-end">Rp.{{ $p->total }}</td>
 												 @if (auth()->user()->tipe_akun == 'Admin')
 													<td style="white-space: nowrap" class="text-center">
-													<span class="btn btn-secondary btn-sm text-grey-800"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-grey-900 bi bi-eye-fill"></i> detail</a></span>
-													<span class="btn btn-danger btn-sm text-white"><a href="/dashboard/penyewaan/batal/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-white bi bi-trash"></i> hapus</a></span>
-													
+													@if ($p->status == 'Dikonfirmasi')
+													<button type="button" class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i> detail</a></button>
+													<span class="btn btn-success btn-sm"><a href="/dashboard/penyewaan/selesai/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-check"></i>selesai</a></span>	
+													@else
+													<button type="button" class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i> detail</a></button>
+													<button type="button" class="btn btn-danger btn-sm"><a href="/dashboard/penyewaan/batal/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-trash"></i> hapus</a></button>
+													@endif
 													</td>
 												 @else 
-												 <td style="white-space: nowrap" class="text-center ">
+												 <td style="white-space: nowrap">
 													@if ($p->status == 'Dikonfirmasi')
-													<span class="badge badge-secondary badge-square text-grey-900"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit;"><i class="text-grey-900 bi bi-eye-fill"></i> detail</a></span>
+													<span class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i> detail</a></span>
 													@else
-													<span class="badge badge-secondary badge-square text-grey-900"><a href="/dashboard/penyewaan/detail/{{ $p->id }}"><i class="text-grey-900 bi bi-eye-fill"></i></a></span>
+													<span class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i>detail</a></span>
 													@endif
 													@if ($p->status == 'Menunggu Pembayaran')
-													<span class="badge badge-success badge-square text-white"><a href="/dashboard/penyewaan/bayar/{{ $p->id }}"><i class="text-white bi bi-currency-dollar"></i></a></span>	
+													<span class="btn btn-success btn-sm"><a href="/dashboard/penyewaan/bayar/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-currency-dollar"></i>bayar</a></span>	
 													@endif
-													@if ($p->status == 'Dikonfirmasi')
-
+													@if ($p->status == 'Selesai')
+													<span class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i>detail</a></span>
 													@else
-													<span class="badge badge-danger badge-square text-white"><a href="/dashboard/penyewaan/batal/{{ $p->id }}"><i class="text-white bi bi-x"></i></a></span>
+													<span class="btn btn-danger btn-sm"><a href="/dashboard/penyewaan/batal/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-x"></i>batal</a></span>
 													@endif
 												</td>
 												 @endif

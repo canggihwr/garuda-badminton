@@ -14,7 +14,7 @@ class PenyewaanController extends Controller
     public function list()
     {
         return view('db/penyewaan', [
-            'penyewaan' => Penyewaan::all()
+            'penyewaan' => Penyewaan::orderBy('id', 'DESC')->get()
 
         ]);
         
@@ -136,16 +136,20 @@ class PenyewaanController extends Controller
         $items = $request->item;
         $qtys = $request->qty;
         $sync = [];
-        for($i=0;$i<count($items); $i++){
-            $sync[$items[$i]] = ['qty' => $qtys[$i]];
+        if (!empty($items)) {
+            for($i=0;$i<count($items); $i++){
+                $sync[$items[$i]] = ['qty' => $qtys[$i]];
+            }
         }
-
-        
 
         if($kosong == 'false') {
             return redirect('/dashboard/penyewaan')->with('fail', 'Lapangan gagal dipesan!, silahkan memilih jadwal atau lapangan lain!');
         } else{
-            $penyewaan = Penyewaan::create($data)->peralatan()->attach($sync);
+            if (!empty($items)){
+                Penyewaan::create($data)->peralatan();
+            } else {
+                Penyewaan::create($data)->peralatan()->attach($sync);
+            }
             return redirect('/dashboard/penyewaan')->with('success', 'Berhasil dipesan!, silahkan melakukan pembayaran!');
 
         }
@@ -155,7 +159,9 @@ class PenyewaanController extends Controller
 
     public function destroy(Penyewaan $penyewaan)
     {
-        Penyewaan::destroy($penyewaan->id);
+        $detach = Penyewaan::find($penyewaan->id);
+        $detach->peralatan()->detach();
+        $detach->delete($penyewaan->id);
         return redirect('/dashboard/penyewaan')->with('success', 'Pesanan berhasil dibatalkan!');
     }
 }

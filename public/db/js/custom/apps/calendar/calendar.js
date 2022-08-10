@@ -1,1 +1,123 @@
-"use strict";var KTAppCalendar=function(){var e,t,n,a,o,r,i,l,d,s,c,m,u,v,f,p,y,D,_,b,k,g,S,Y,h,T,M,w,E,L,x={id:"",eventName:"",eventDescription:"",eventLocation:"",startDate:"",endDate:"",allDay:!1},B=!1;const q=e=>{C();const n=x.allDay?moment(x.startDate).format("Do MMM, YYYY"):moment(x.startDate).format("Do MMM, YYYY - h:mm a"),a=x.allDay?moment(x.endDate).format("Do MMM, YYYY"):moment(x.endDate).format("Do MMM, YYYY - h:mm a");var o={container:"body",trigger:"manual",boundary:"window",placement:"auto",dismiss:!0,html:!0,title:"Event Summary",content:'<div class="fw-bolder mb-2">'+x.eventName+'</div><div class="fs-7"><span class="fw-bold">Start:</span> '+n+'</div><div class="fs-7 mb-4"><span class="fw-bold">End:</span> '+a+'</div><div id="kt_calendar_event_view_button" type="button" class="btn btn-sm btn-light-primary">View More</div>'};(t=KTApp.initBootstrapPopover(e,o)).show(),B=!0,F()},C=()=>{B&&(t.dispose(),B=!1)},N=()=>{f.innerText="Add a New Event",v.show();const t=p.querySelectorAll('[data-kt-calendar="datepicker"]'),r=p.querySelector("#kt_calendar_datepicker_allday");r.addEventListener("click",(e=>{e.target.checked?t.forEach((e=>{e.classList.add("d-none")})):(d.setDate(x.startDate,!0,"Y-m-d"),t.forEach((e=>{e.classList.remove("d-none")})))})),O(x),_.addEventListener("click",(function(t){t.preventDefault(),y&&y.validate().then((function(t){console.log("validated!"),"Valid"==t?(_.setAttribute("data-kt-indicator","on"),_.disabled=!0,setTimeout((function(){_.removeAttribute("data-kt-indicator"),Swal.fire({text:"New event added to calendar!",icon:"success",buttonsStyling:!1,confirmButtonText:"Ok, got it!",customClass:{confirmButton:"btn btn-primary"}}).then((function(t){if(t.isConfirmed){v.hide(),_.disabled=!1;let t=!1;r.checked&&(t=!0),0===c.selectedDates.length&&(t=!0);var l=moment(i.selectedDates[0]).format(),s=moment(d.selectedDates[d.selectedDates.length-1]).format();if(!t){const e=moment(i.selectedDates[0]).format("YYYY-MM-DD"),t=e;l=e+"T"+moment(c.selectedDates[0]).format("HH:mm:ss"),s=t+"T"+moment(u.selectedDates[0]).format("HH:mm:ss")}e.addEvent({id:V(),title:n.value,description:a.value,location:o.value,start:l,end:s,allDay:t}),e.render(),p.reset()}}))}),2e3)):Swal.fire({text:"Error, harap mengisi semua data.",icon:"error",buttonsStyling:!1,confirmButtonText:"Ok, got it!",customClass:{confirmButton:"btn btn-primary"}})}))}))},A=()=>{var e,t,n;w.show(),x.allDay?(e="All Day",t=moment(x.startDate).format("Do MMM, YYYY"),n=moment(x.endDate).format("Do MMM, YYYY")):(e="",t=moment(x.startDate).format("Do MMM, YYYY - h:mm a"),n=moment(x.endDate).format("Do MMM, YYYY - h:mm a")),g.innerText=x.eventName,S.innerText=e,Y.innerText=x.eventDescription?x.eventDescription:"--",h.innerText=x.eventLocation?x.eventLocation:"--",T.innerText=t,M.innerText=n},H=()=>{E.addEventListener("click",(t=>{t.preventDefault(),w.hide(),(()=>{f.innerText="Edit Jadwal",v.show();const t=p.querySelectorAll('[data-kt-calendar="datepicker"]'),r=p.querySelector("#kt_calendar_datepicker_allday");r.addEventListener("click",(e=>{e.target.checked?t.forEach((e=>{e.classList.add("d-none")})):(d.setDate(x.startDate,!0,"Y-m-d"),t.forEach((e=>{e.classList.remove("d-none")})))})),O(x),_.addEventListener("click",(function(t){t.preventDefault(),y&&y.validate().then((function(t){console.log("validated!"),"Valid"==t?(_.setAttribute("data-kt-indicator","on"),_.disabled=!0,setTimeout((function(){_.removeAttribute("data-kt-indicator"),Swal.fire({text:"New event added to calendar!",icon:"success",buttonsStyling:!1,confirmButtonText:"Ok, got it!",customClass:{confirmButton:"btn btn-primary"}}).then((function(t){if(t.isConfirmed){v.hide(),_.disabled=!1,e.getEventById(x.id).remove();let t=!1;r.checked&&(t=!0),0===c.selectedDates.length&&(t=!0);var l=moment(i.selectedDates[0]).format(),s=moment(d.selectedDates[d.selectedDates.length-1]).format();if(!t){const e=moment(i.selectedDates[0]).format("YYYY-MM-DD"),t=e;l=e+"T"+moment(c.selectedDates[0]).format("HH:mm:ss"),s=t+"T"+moment(u.selectedDates[0]).format("HH:mm:ss")}e.addEvent({id:V(),title:n.value,description:a.value,location:o.value,start:l,end:s,allDay:t}),e.render(),p.reset()}}))}),2e3)):Swal.fire({text:"Error, harap mengisi semua data.",icon:"error",buttonsStyling:!1,confirmButtonText:"Ok, got it!",customClass:{confirmButton:"btn btn-primary"}})}))}))})()}))},F=()=>{document.querySelector("#kt_calendar_event_view_button").addEventListener("click",(e=>{e.preventDefault(),C(),A()}))},O=()=>{n.value=x.eventName?x.eventName:"",a.value=x.eventDescription?x.eventDescription:"",o.value=x.eventLocation?x.eventLocation:"",i.setDate(x.startDate,!0,"Y-m-d");const e=x.endDate?x.endDate:moment(x.startDate).format();d.setDate(e,!0,"Y-m-d");const t=p.querySelector("#kt_calendar_datepicker_allday"),r=p.querySelectorAll('[data-kt-calendar="datepicker"]');x.allDay?(t.checked=!0,r.forEach((e=>{e.classList.add("d-none")}))):(c.setDate(x.startDate,!0,"Y-m-d H:i"),u.setDate(x.endDate,!0,"Y-m-d H:i"),d.setDate(x.startDate,!0,"Y-m-d"),t.checked=!1,r.forEach((e=>{e.classList.remove("d-none")})))},P=e=>{x.id=e.id,x.eventName=e.title,x.eventDescription=e.description,x.eventLocation=e.location,x.startDate=e.startStr,x.endDate=e.endStr,x.allDay=e.allDay},V=()=>Date.now().toString()+Math.floor(1e3*Math.random()).toString();return{init:function(){const t=document.getElementById("kt_modal_add_event");p=t.querySelector("#kt_modal_add_event_form"),n=p.querySelector('[name="calendar_event_name"]'),a=p.querySelector('[name="calendar_event_description"]'),o=p.querySelector('[name="calendar_event_location"]'),r=p.querySelector("#kt_calendar_datepicker_start_date"),l=p.querySelector("#kt_calendar_datepicker_end_date"),s=p.querySelector("#kt_calendar_datepicker_start_time"),m=p.querySelector("#kt_calendar_datepicker_end_time"),D=document.querySelector('[data-kt-calendar="add"]'),_=p.querySelector("#kt_modal_add_event_submit"),b=p.querySelector("#kt_modal_add_event_cancel"),k=t.querySelector("#kt_modal_add_event_close"),f=p.querySelector('[data-kt-calendar="title"]'),v=new bootstrap.Modal(t);const B=document.getElementById("kt_modal_view_event");var F,O,I,R,G,K;w=new bootstrap.Modal(B),g=B.querySelector('[data-kt-calendar="event_name"]'),S=B.querySelector('[data-kt-calendar="all_day"]'),Y=B.querySelector('[data-kt-calendar="event_description"]'),h=B.querySelector('[data-kt-calendar="event_location"]'),T=B.querySelector('[data-kt-calendar="event_start_date"]'),M=B.querySelector('[data-kt-calendar="event_end_date"]'),E=B.querySelector("#kt_modal_view_event_edit"),L=B.querySelector("#kt_modal_view_event_delete"),F=document.getElementById("kt_calendar_app"),O=moment().startOf("day"),I=O.format("YYYY-MM"),R=O.clone().subtract(1,"day").format("YYYY-MM-DD"),G=O.format("YYYY-MM-DD"),K=O.clone().add(1,"day").format("YYYY-MM-DD"),(e=new FullCalendar.Calendar(F,{headerToolbar:{left:"prev,next today",center:"title",right:"dayGridMonth,timeGridWeek,timeGridDay"},initialDate:G,navLinks:!0,selectable:!0,selectMirror:!0,select:function(e){C(),P(e),N()},eventClick:function(e){C(),P({id:e.event.id,title:e.event.title,description:e.event.extendedProps.description,location:e.event.extendedProps.location,startStr:e.event.startStr,endStr:e.event.endStr,allDay:e.event.allDay}),A()},eventMouseEnter:function(e){P({id:e.event.id,title:e.event.title,description:e.event.extendedProps.description,location:e.event.extendedProps.location,startStr:e.event.startStr,endStr:e.event.endStr,allDay:e.event.allDay}),q(e.el)},editable:!0,dayMaxEvents:!0,events:[{id:V(),title:"All Day Event",start:I+"-01",end:I+"-02",description:"Toto lorem ipsum dolor sit incid idunt ut",className:"fc-event-danger fc-event-solid-warning",location:"Federation Square"},{id:V(),title:"Reporting",start:I+"-14T13:30:00",description:"Lorem ipsum dolor incid idunt ut labore",end:I+"-14T14:30:00",className:"fc-event-success",location:"Lapangan 1 Room 7.03"},{id:V(),title:"Company Trip",start:I+"-02",description:"Lorem ipsum dolor sit tempor incid",end:I+"-03",className:"fc-event-primary",location:"Seoul, Korea"},{id:V(),title:"ICT Expo 2021 - Product Release",start:I+"-03",description:"Lorem ipsum dolor sit tempor inci",end:I+"-05",className:"fc-event-light fc-event-solid-primary",location:"Melbourne Exhibition Hall"},{id:V(),title:"Dinner",start:I+"-12",description:"Lorem ipsum dolor sit amet, conse ctetur",end:I+"-13",location:"Squire's Loft"},{id:V(),title:"Repeating Event",start:I+"-09T16:00:00",end:I+"-09T17:00:00",description:"Lorem ipsum dolor sit ncididunt ut labore",className:"fc-event-danger",location:"General Area"},{id:V(),title:"Repeating Event",description:"Lorem ipsum dolor sit amet, labore",start:I+"-16T16:00:00",end:I+"-16T17:00:00",location:"General Area"},{id:V(),title:"Lapangan 2",start:R,end:K,description:"Lorem ipsum dolor eius mod tempor labore",className:"fc-event-primary",location:"Lapangan 2 Hall A"},{id:V(),title:"Lapangan 1",start:G+"T10:30:00",end:G+"T12:30:00",description:"Lorem ipsum dolor eiu idunt ut labore",location:"Lapangan 1 Room 11.06"},{id:V(),title:"Lunch",start:G+"T12:00:00",end:G+"T14:00:00",className:"fc-event-info",description:"Lorem ipsum dolor sit amet, ut labore",location:"Cafeteria"},{id:V(),title:"Lapangan 1",start:G+"T14:30:00",end:G+"T15:30:00",className:"fc-event-warning",description:"Lorem ipsum conse ctetur adipi scing",location:"Lapangan 1 Room 11.10"},{id:V(),title:"Happy Hour",start:G+"T17:30:00",end:G+"T21:30:00",className:"fc-event-info",description:"Lorem ipsum dolor sit amet, conse ctetur",location:"The English Pub"},{id:V(),title:"Dinner",start:K+"T18:00:00",end:K+"T21:00:00",className:"fc-event-solid-danger fc-event-light",description:"Lorem ipsum dolor sit ctetur adipi scing",location:"New York Steakhouse"},{id:V(),title:"Birthday Party",start:K+"T12:00:00",end:K+"T14:00:00",className:"fc-event-primary",description:"Lorem ipsum dolor sit amet, scing",location:"The English Pub"},{id:V(),title:"Site visit",start:I+"-28",end:I+"-29",className:"fc-event-solid-info fc-event-light",description:"Lorem ipsum dolor sit amet, labore",location:"271, Spring Street"}],datesSet:function(){C()}})).render(),y=FormValidation.formValidation(p,{fields:{calendar_event_name:{validators:{notEmpty:{message:"Event name is required"}}},calendar_event_start_date:{validators:{notEmpty:{message:"Start date is required"}}},calendar_event_end_date:{validators:{notEmpty:{message:"End date is required"}}}},plugins:{trigger:new FormValidation.plugins.Trigger,bootstrap:new FormValidation.plugins.Bootstrap5({rowSelector:".fv-row",eleInvalidClass:"",eleValidClass:""})}}),i=flatpickr(r,{enableTime:!1,dateFormat:"Y-m-d"}),d=flatpickr(l,{enableTime:!1,dateFormat:"Y-m-d"}),c=flatpickr(s,{enableTime:!0,noCalendar:!0,dateFormat:"H:i"}),u=flatpickr(m,{enableTime:!0,noCalendar:!0,dateFormat:"H:i"}),H(),D.addEventListener("click",(e=>{C(),x={id:"",eventName:"",eventDescription:"",startDate:new Date,endDate:new Date,allDay:!1},N()})),L.addEventListener("click",(t=>{t.preventDefault(),Swal.fire({text:"Are you sure you would like to delete this event?",icon:"warning",showCancelButton:!0,buttonsStyling:!1,confirmButtonText:"Yes, delete it!",cancelButtonText:"No, return",customClass:{confirmButton:"btn btn-primary",cancelButton:"btn btn-active-light"}}).then((function(t){t.value?(e.getEventById(x.id).remove(),w.hide()):"cancel"===t.dismiss&&Swal.fire({text:"Your event was not deleted!.",icon:"error",buttonsStyling:!1,confirmButtonText:"Ok, got it!",customClass:{confirmButton:"btn btn-primary"}})}))})),b.addEventListener("click",(function(e){e.preventDefault(),Swal.fire({text:"Are you sure you would like to cancel?",icon:"warning",showCancelButton:!0,buttonsStyling:!1,confirmButtonText:"Yes, cancel it!",cancelButtonText:"No, return",customClass:{confirmButton:"btn btn-primary",cancelButton:"btn btn-active-light"}}).then((function(e){e.value?(p.reset(),v.hide()):"cancel"===e.dismiss&&Swal.fire({text:"Your form has not been cancelled!.",icon:"error",buttonsStyling:!1,confirmButtonText:"Ok, got it!",customClass:{confirmButton:"btn btn-primary"}})}))})),k.addEventListener("click",(function(e){e.preventDefault(),Swal.fire({text:"Are you sure you would like to cancel?",icon:"warning",showCancelButton:!0,buttonsStyling:!1,confirmButtonText:"Yes, cancel it!",cancelButtonText:"No, return",customClass:{confirmButton:"btn btn-primary",cancelButton:"btn btn-active-light"}}).then((function(e){e.value?(p.reset(),v.hide()):"cancel"===e.dismiss&&Swal.fire({text:"Your form has not been cancelled!.",icon:"error",buttonsStyling:!1,confirmButtonText:"Ok, got it!",customClass:{confirmButton:"btn btn-primary"}})}))})),(e=>{e.addEventListener("hidden.bs.modal",(e=>{y&&y.resetForm(!0)}))})(t)}}}();KTUtil.onDOMContentLoaded((function(){KTAppCalendar.init()}));
+"use strict";
+var KTGeneralFullCalendarBasicDemos = {
+    init: function () {
+        var e, t, i, n, r, o;
+        e = moment().startOf("day"), t = e.format("YYYY-MM"), i = e.clone().subtract(1, "day").format("YYYY-MM-DD"), n = e.format("YYYY-MM-DD"), r = e.clone().add(1, "day").format("YYYY-MM-DD"), o = document.getElementById("kt_docs_fullcalendar_basic"), new FullCalendar.Calendar(o, {
+            headerToolbar: {
+                left: "prev,next today",
+                center: "title",
+                right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
+            },
+            height: 800,
+            contentHeight: 780,
+            aspectRatio: 3,
+            nowIndicator: !0,
+            now: n + "T09:25:00",
+            views: {
+                dayGridMonth: {
+                    buttonText: "month"
+                },
+                timeGridWeek: {
+                    buttonText: "week"
+                },
+                timeGridDay: {
+                    buttonText: "day"
+                }
+            },
+            initialView: "dayGridMonth",
+            initialDate: n,
+            editable: !0,
+            dayMaxEvents: !0,
+            navLinks: !0,
+            events: [{
+                title: "All Day Event",
+                start: t + "-01",
+                description: "Toto lorem ipsum dolor sit incid idunt ut",
+                className: "fc-event-danger fc-event-solid-warning"
+            }, {
+                title: "Reporting",
+                start: t + "-14T13:30:00",
+                description: "Lorem ipsum dolor incid idunt ut labore",
+                end: t + "-14",
+                className: "fc-event-success"
+            }, {
+                title: "Company Trip",
+                start: t + "-02",
+                description: "Lorem ipsum dolor sit tempor incid",
+                end: t + "-03",
+                className: "fc-event-primary"
+            }, {
+                title: "ICT Expo 2017 - Product Release",
+                start: t + "-03",
+                description: "Lorem ipsum dolor sit tempor inci",
+                end: t + "-05",
+                className: "fc-event-light fc-event-solid-primary"
+            }, {
+                title: "Dinner",
+                start: t + "-12",
+                description: "Lorem ipsum dolor sit amet, conse ctetur",
+                end: t + "-10"
+            }, {
+                id: 999,
+                title: "Repeating Event",
+                start: t + "-09T16:00:00",
+                description: "Lorem ipsum dolor sit ncididunt ut labore",
+                className: "fc-event-danger"
+            }, {
+                id: 1e3,
+                title: "Repeating Event",
+                description: "Lorem ipsum dolor sit amet, labore",
+                start: t + "-16T16:00:00"
+            }, {
+                title: "Conference",
+                start: i,
+                end: r,
+                description: "Lorem ipsum dolor eius mod tempor labore",
+                className: "fc-event-primary"
+            }, {
+                title: "Meeting",
+                start: n + "T10:30:00",
+                end: n + "T12:30:00",
+                description: "Lorem ipsum dolor eiu idunt ut labore"
+            }, {
+                title: "Lunch",
+                start: n + "T12:00:00",
+                className: "fc-event-info",
+                description: "Lorem ipsum dolor sit amet, ut labore"
+            }, {
+                title: "Meeting",
+                start: n + "T14:30:00",
+                className: "fc-event-warning",
+                description: "Lorem ipsum conse ctetur adipi scing"
+            }, {
+                title: "Happy Hour",
+                start: n + "T17:30:00",
+                className: "fc-event-info",
+                description: "Lorem ipsum dolor sit amet, conse ctetur"
+            }, {
+                title: "Dinner",
+                start: r + "T05:00:00",
+                className: "fc-event-solid-danger fc-event-light",
+                description: "Lorem ipsum dolor sit ctetur adipi scing"
+            }, {
+                title: "Birthday Party",
+                start: r + "T07:00:00",
+                className: "fc-event-primary",
+                description: "Lorem ipsum dolor sit amet, scing"
+            }, {
+                title: "Click for Google",
+                url: "http://google.com/",
+                start: t + "-28",
+                className: "fc-event-solid-info fc-event-light",
+                description: "Lorem ipsum dolor sit amet, labore"
+            }],
+            eventContent: function (e) {
+                var t = $(e.el);
+                e.event.extendedProps && e.event.extendedProps.description && (t.hasClass("fc-day-grid-event") ? (t.data("content", e.event.extendedProps.description), t.data("placement", "top"), KTApp.initPopover(t)) : t.hasClass("fc-time-grid-event") ? t.find(".fc-title").append('<div class="fc-description">' + e.event.extendedProps.description + "</div>") : 0 !== t.find(".fc-list-item-title").lenght && t.find(".fc-list-item-title").append('<div class="fc-description">' + e.event.extendedProps.description + "</div>"))
+            }
+        }).render()
+    }
+};
+KTUtil.onDOMContentLoaded((function () {
+    KTGeneralFullCalendarBasicDemos.init()
+}));

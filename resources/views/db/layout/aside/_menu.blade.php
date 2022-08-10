@@ -22,128 +22,16 @@
 											</span>
 											<div class="menu-sub menu-sub-accordion menu-active-bg">
 												<div class="menu-item">
-													<a class="menu-link active" href="?page=index">
+													<a class="menu-link active" href="/dashboard">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
 														<span class="menu-title">Home</span>
 													</a>
 												</div>
-												{{-- <div class="menu-item">
-													<a class="menu-link" href="?page=dashboards/ecommerce">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">eCommerce</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=dashboards/projects">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Projects</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=dashboards/online-courses">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Online Courses</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=dashboards/marketing">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Marketing</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=dashboards/bidding">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Bidding</span>
-													</a>
-												</div>
-												<div class="menu-inner flex-column collapse" id="kt_aside_menu_collapse">
+												
 													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/logistics">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Logistics</span>
-														</a>
-													</div>
-													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/delivery">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Delivery</span>
-														</a>
-													</div>
-													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/website-analytics">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Website Analytics</span>
-														</a>
-													</div> --}}
-													{{-- <div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/finance-performance">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Finance Performance</span>
-														</a>
-													</div>
-													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/store-analytics">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Store Analytics</span>
-														</a>
-													</div>
-													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/social">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Social</span>
-														</a>
-													</div>
-													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/crypto">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Crypto</span>
-														</a>
-													</div>
-													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/school">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">School</span>
-														</a>
-													</div>
-													<div class="menu-item">
-														<a class="menu-link" href="?page=dashboards/podcast">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-															<span class="menu-title">Podcast</span>
-														</a>
-													</div> --}}
-													<div class="menu-item">
-														<a class="menu-link" href="?page=landing">
+														<a class="menu-link" href="/">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -151,22 +39,7 @@
 														</a>
 													</div>
 												</div>
-												{{-- <div class="menu-item">
-													<div class="menu-content">
-														<a class="btn btn-flex btn-color-success fs-base p-0 ms-2 mb-2 collapsible collapsed rotate" data-bs-toggle="collapse" href="#kt_aside_menu_collapse" data-kt-toggle-text="Show Less">
-															<span data-kt-toggle-text-target="true">Show 10 More</span>
-															<!--begin::Svg Icon | path: icons/duotune/arrows/arr082.svg-->
-															<span class="svg-icon ms-2 svg-icon-3 rotate-180">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<path opacity="0.5" d="M12.5657 9.63427L16.75 5.44995C17.1642 5.03574 17.8358 5.03574 18.25 5.44995C18.6642 5.86416 18.6642 6.53574 18.25 6.94995L12.7071 12.4928C12.3166 12.8834 11.6834 12.8834 11.2929 12.4928L5.75 6.94995C5.33579 6.53574 5.33579 5.86416 5.75 5.44995C6.16421 5.03574 6.83579 5.03574 7.25 5.44995L11.4343 9.63427C11.7467 9.94669 12.2533 9.94668 12.5657 9.63427Z" fill="currentColor" />
-																	<path d="M12.5657 15.6343L16.75 11.45C17.1642 11.0357 17.8358 11.0357 18.25 11.45C18.6642 11.8642 18.6642 12.5357 18.25 12.95L12.7071 18.4928C12.3166 18.8834 11.6834 18.8834 11.2929 18.4928L5.75 12.95C5.33579 12.5357 5.33579 11.8642 5.75 11.45C6.16421 11.0357 6.83579 11.0357 7.25 11.45L11.4343 15.6343C11.7467 15.9467 12.2533 15.9467 12.5657 15.6343Z" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-														</a>
-													</div>
-												</div>
-											</div> --}}
+												
 										</div>
 										<div class="menu-item">
 											<div class="menu-content pt-8 pb-2">
@@ -208,7 +81,6 @@
 														<span class="menu-title">Tambah Data</span>
 													</a>
 												</div>
-												
 											</div>
 										</div>
 										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -272,14 +144,6 @@
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="/dashboard/admin/edit">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Pendapatan</span>
-													</a>
-												</div>
-												<div class="menu-item">
 													<a class="menu-link" href="/dashboard/admin/add">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
@@ -287,11 +151,20 @@
 														<span class="menu-title">Tambah Admin</span>
 													</a>
 												</div>
+												<div class="menu-item">
+													<a class="menu-link" href="/dashboard/admin/edit">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Pendapatan</span>
+													</a>
+												</div>
+												
 												
 											</div>
 										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
+										<div class="menu-item">
+											<a class="menu-link" href="/dashboard/lapangan">
 												<span class="menu-icon">
 													<!--begin::Svg Icon | path: icons/duotune/art/art009.svg-->
 													<span class="svg-icon svg-icon-2">
@@ -302,27 +175,8 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Lapangan</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="/dashboard/lapangan">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Data lapangan</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="/dashboard/lapangan/edit">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Edit lapangan</span>
-													</a>
-												</div>
-											</div>
+												<span class="menu-title">Data Lapangan</span>
+											</a>
 										</div>
 										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
 											<span class="menu-link">
@@ -362,11 +216,11 @@
 										</div>
 										<div class="menu-item">
 											<div class="menu-content pt-8 pb-2">
-												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Settings</span>
+												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Pengaturan</span>
 											</div>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="dashboard/paket">
+											<a class="menu-link" href="/dashboard/paket">
 												<span class="menu-icon">
 													<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 													<span class="svg-icon svg-icon-2">
@@ -377,7 +231,7 @@
 													</span>
 													<!--end::Svg Icon-->
 												</span>
-												<span class="menu-title">Pengaturan Paket</span>
+												<span class="menu-title">Paket</span>
 											</a>
 										</div>
 										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -397,7 +251,7 @@
 											</span>
 											<div class="menu-sub menu-sub-accordion">
 												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/list">
+													<a class="menu-link" href="/dashboard/user/edit/{{ auth()->user()->id }}">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -405,19 +259,11 @@
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/project">
+													<a class="menu-link" href="{{ auth()->user()->id }}">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
 														<span class="menu-title">Edit Akun</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/projects/targets">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Nonaktifkan Akun</span>
 													</a>
 												</div>
 											</div>
@@ -442,7 +288,7 @@
 											<div class="menu-sub menu-sub-accordion">
 					
 												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/ecommerce/settings">
+													<a class="menu-link" href="/dashboard/paket">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -450,7 +296,7 @@
 													</a>
 												</div>
 												<div class="menu-item">
-													<a class="menu-link" href="?page=apps/ecommerce/settings">
+													<a class="menu-link" href="/dashboard/paket/add">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>

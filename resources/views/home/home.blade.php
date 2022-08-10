@@ -133,7 +133,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<h4 class="text-center">1 bulan</h4>
 							<p class="text-center">3x/minggu</p>
-							<a class="btn disabled mt-5" href="#" role="button"><span>Daftar Sekarang</span></a>
+							<a class="btn disabled mt-5" href="/daftar" role="button"><span>Daftar Sekarang</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-sm-0">
@@ -142,7 +142,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<h4 class="text-center">Rp.25000</h4>
 							<p class="text-center">Senin - Minggu</p>
-							<a class="btn btn-primary table-ver mt-5 js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Pesan Lapangan</span></a>
+							<a class="btn btn-primary table-ver mt-5 js-tilt" href="/login" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-xl-0">
@@ -151,7 +151,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<h4 class="text-center">Rp.45000</h4>
 							<p class="text-center">Senin - Minggu</p>
-							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>Pesan Lapangan</span></a>
+							<a class="btn disabled mt-5 background-white" href="/login" role="button"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mt-4 mt-xl-0">
@@ -160,7 +160,7 @@
 							<div class="table-line mt-4 mb-4"></div>
 							<h4 class="text-center">Rp.65000</h4>
 							<p class="text-center">Senin - Minggu</p>
-							<a class="btn disabled mt-5 background-white" href="#" role="button"><span>Pesan Lapangan</span></a>
+							<a class="btn disabled mt-5 background-white" href="/login" role="button"><span>Pesan Lapangan</span></a>
 						</div>
 					</div>
 				</div>
@@ -221,21 +221,21 @@
 					<div class="concept-box">
 						<img class="mb-4" src="{{ asset('v2/img/con-2.svg') }}" alt="">
 						<h5>Murah</h5>
-						<p>Our mobility concept enables super-simple transportation and worldwide deployment.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente alias minus harum eveniet quos ut porro blanditiis accusamus debitis dicta!</p>
 					</div>
 				</div>
 				<div class="col-md-4 mt-4 mt-md-0">
 					<div class="concept-box">
 						<img class="mb-4" src="{{ asset('v2/img/con-2.svg') }}" alt="">
 						<h5>Mudah</h5>
-						<p>Mobile and efficient low-cost hardware and optimized propietary management.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorum nesciunt qui eaque quos nemo.</p>
 					</div>
 				</div>
 				<div class="col-md-4 mt-4 mt-md-0">
 					<div class="concept-box">
 						<img class="mb-4" src="{{ asset('v2/img/con-2.svg') }}" alt="">
 						<h5>Fasilitas Lengkap</h5>
-						<p>Our reinvestment strategy enables us to quickly grow our fleet of mobile units.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sint, tenetur sit inventore maxime saepe corporis vero assumenda vitae?</p>
 					</div>
 				</div>
 				<div class="col-md-12 padding-top-bottom">
@@ -254,7 +254,6 @@
                             <th scope="col">Nama Member</th>
                             <th scope="col">Email</th>
                             <th scope="col">No HP</th>
-                            <th scope="col">Username</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -265,7 +264,6 @@
                             <td>{{ $u->name }}</td>
                             <td>{{ $u->email }}</td>
                             <td>{{ $u->no_hp }}</td>
-                            <td>{{ $u->username }}</td>
                         </tr>
 						@endforeach
 						
@@ -491,244 +489,40 @@
 		</div>
 	</div>
 
-	<div class="section padding-top-bottom-big" id="fasilitas">
+	<div class="section padding-top-bottom-big background-dark-blue-1" id="fasilitas" >
 		<div class="background-parallax" style="background-image: url('img/parallax-3.jpg') }}')" data-enllax-ratio=".5" data-enllax-type="background" data-enllax-direction="vertical"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title-wrap text-center">
 						<div class="back-title">lapangan</div>
-						<h3>Daftar Lapangan</h3>
-						<p>GOR Badminton Garuda memiliki 3 lapangan yang terdiri dari.</p>
+						<h5 class="color-light">Daftar Lapangan</h3>
+						<h5 class="color-light">GOR Badminton Garuda memiliki 3 lapangan yang terdiri dari.</h5>
 					</div>
 				</div>
 			</div>	
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-					<div class="team-wrap">
-						<a class="d-inline" data-toggle="modal" data-target="#team-modal-1">
-							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('/img/l2.jpg') }}" alt="">
-								<div class="team-img-mask"></div>
-							</div>
-						</a>
-						<h6>Lapangan 1</h6>
-						<p>Lapangan 1</p>
-						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-					</div>
-				</div>
+				@foreach ($lapangan as $l)
 				<div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
 					<div class="team-wrap">
 						<a class="d-inline" data-toggle="modal" data-target="#team-modal-2">
 							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('/img/l3.jpg') }}" alt="">
+								<img src="img/fotolapangan/{{ $l->foto }}" alt="">
 								<div class="team-img-mask"></div>
 							</div>
 						</a>
-						<h6>Lapangan 2</h6>
-						<p>Lapangan 2</p>
+						<h5 class="color-light">{{ $l->nama }}</h5>
+						<span><h5 class="color-light">{{ $l->deskripsi }}</h5></span>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="team-wrap">
-						<a class="d-inline" data-toggle="modal" data-target="#team-modal-3">
-							<div class="team-img-wrap js-tilt" data-tilt-perspective="700" data-tilt-speed="700" data-tilt-max="24">
-								<img src="{{ asset('/img/l4.jpg') }}" alt="">
-								<div class="team-img-mask"></div>
-							</div>
-						</a>
-						<h6>Lapangan 3</h6>
-						<p>Lapangan 3</p>
-						<a class="app-btn" href="#"><i class="fa fa-twitter"></i></a>
-						<a class="app-btn ml-3" href="#"><i class="fa fa-facebook"></i></a>
-					</div>
-				</div>
+				@endforeach
+				
 			</div>	
 		</div>
 	</div>
 
-	<!-- Modal Team 1-->
-
-	<div class="modal fade bd-example-modal-lg" id="team-modal-1" tabindex="-1" role="dialog" aria-labelledby="team-modal-1" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-img-wrap" style="background-image: url('img/t5-modal.jpg')"></div>
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"></span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-								<h3 class="mb-0">Alex Andrews</h3>
-								<p class="lead">Officer & Founder</p>
-							</div>
-							<div class="col-xl-12">
-								<p class="mb-3">Design must reflect the practical and aesthetic in business but above all... good design must primarily serve people.</p>
-								<ul class="app-list mt-4">
-									<li>Lead marketing</li>
-									<li>Run logistics strategy</li>
-									<li>Advised software</li>
-								</ul>
-								<p class="mt-4 mb-0"><small>html</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 83%" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>css</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>php</small></p>
-								<div class="progress mt-1 mb-4">
-									<div class="progress-bar" style="width: 93%" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal Team 2-->
-
-	<div class="modal fade bd-example-modal-lg" id="team-modal-2" tabindex="-1" role="dialog" aria-labelledby="team-modal-2" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-img-wrap" style="background-image: url('img/t6-modal.jpg')"></div>
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"></span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-								<h3 class="mb-0">Marco Kulis</h3>
-								<p class="lead">Officer & Founder</p>
-							</div>
-							<div class="col-xl-12">
-								<p class="mb-3">Design must reflect the practical and aesthetic in business but above all... good design must primarily serve people.</p>
-								<ul class="app-list mt-4">
-									<li>Lead marketing</li>
-									<li>Run logistics strategy</li>
-									<li>Advised software</li>
-								</ul>
-								<p class="mt-4 mb-0"><small>html</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 83%" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>css</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>php</small></p>
-								<div class="progress mt-1 mb-4">
-									<div class="progress-bar" style="width: 93%" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>	
-
-	<!-- Modal Team 3-->
-
-	<div class="modal fade bd-example-modal-lg" id="team-modal-3" tabindex="-1" role="dialog" aria-labelledby="team-modal-3" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-img-wrap" style="background-image: url('img/t7-modal.jpg')"></div>
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"></span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-								<h3 class="mb-0">Anna Furius</h3>
-								<p class="lead">Officer & Founder</p>
-							</div>
-							<div class="col-xl-12">
-								<p class="mb-3">Design must reflect the practical and aesthetic in business but above all... good design must primarily serve people.</p>
-								<ul class="app-list mt-4">
-									<li>Lead marketing</li>
-									<li>Run logistics strategy</li>
-									<li>Advised software</li>
-								</ul>
-								<p class="mt-4 mb-0"><small>html</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 83%" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>css</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>php</small></p>
-								<div class="progress mt-1 mb-4">
-									<div class="progress-bar" style="width: 93%" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>	
-
-	<!-- Modal Team 4-->
-
-	<div class="modal fade bd-example-modal-lg" id="team-modal-4" tabindex="-1" role="dialog" aria-labelledby="team-modal-4" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-img-wrap" style="background-image: url('img/t1-modal.jpg')"></div>
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"></span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-								<h3 class="mb-0">Frank Furius</h3>
-								<p class="lead">Officer & Founder</p>
-							</div>
-							<div class="col-xl-12">
-								<p class="mb-3">Design must reflect the practical and aesthetic in business but above all... good design must primarily serve people.</p>
-								<ul class="app-list mt-4">
-									<li>Lead marketing</li>
-									<li>Run logistics strategy</li>
-									<li>Advised software</li>
-								</ul>
-								<p class="mt-4 mb-0"><small>html</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 83%" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>css</small></p>
-								<div class="progress mt-1 mb-2">
-									<div class="progress-bar" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-								<p class="mb-0"><small>php</small></p>
-								<div class="progress mt-1 mb-4">
-									<div class="progress-bar" style="width: 93%" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>	
 
 	<!-- Modal Team 5-->
 

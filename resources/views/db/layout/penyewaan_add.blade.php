@@ -207,8 +207,11 @@
 
 																	<!--begin::Info-->
 																	<div class="flex-grow-1">
-																		<h2 class="d-flex align-items-center fs-4 fw-bolder flex-wrap">
-																			{{ $p->nama }}
+																		<h2 class="d-flex align-items-center fs-4 fw-bolder flex-wrap" style="white-space: nowrap">
+																			{{ $p->nama }}  
+																			@if ($p->lama == '2')
+																			<span class="badge badge-light-success" style="margin-left: 6px">Paling populer</span>
+																			@endif
 																		</h2>
 																	</div>
 																	<!--end::Info-->
