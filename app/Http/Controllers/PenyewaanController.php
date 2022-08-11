@@ -155,15 +155,29 @@ class PenyewaanController extends Controller
             'waktu_main' => $request->waktu_main
         ];
 
+        $datapaket = Paket::find($getidpaket);
         
 
         $kosong = '';
+        $waktu = strtotime($request->waktu_main);
+        $lama = $datapaket->lama;
+        $waktus = [];
+        $min = 1;
+        $plus = (int)100;
+
+        for($i=1;$i<$lama; $i++){
+            $waktus[0] = (int)$waktu;
+            $waktus[$i] = (int)$waktus[$i-$min]+$plus;
+        }
+        
         
         foreach ($datalap as $l){
             if($request->tgl_main == $l->tgl_main){
-                if($request->waktu_main == $l->waktu_main){
-                    if($request->lapangan_id == $l->lapangan_id){
-                        $kosong = 'false';
+                if($request->lapangan_id == $l->lapangan_id){
+                    for($i=0;$i<$lama; $i++){
+                        if(strtotime($request->waktu_main) == $waktus[$i]){
+                            $kosong = 'false';
+                        }
                     }
                 }
             }

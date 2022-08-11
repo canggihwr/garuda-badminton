@@ -125,14 +125,17 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="text-gray-700 fw-bold fs-6 lh-lg">Informasi:
 										<a  class="fw-bolder me-1">Buka : </a>08:00 WITA
 										<a class="fw-bolder" >Tutup : </a>23:00 WITA</div>
+										
 										<!--end::Description-->
 									</div>
+@include('db.partials.widgets-2.lists._widget-x')
 									<!--end::Notice-->
                                         <!--begin::Calendar-->
                                         <div id="kt_calendar_app" class="mt-8"></div>
                                         <!--end::Calendar-->
                                     </div>
                                     <!--end::Card body-->
+									
                                 </div>
                                 <!--end::Card-->
                                 <!--begin::Modals-->

@@ -200,7 +200,9 @@ Route::get('/dashboard/paket/add', function () {
 });
 
 Route::get('/dashboard/jadwal', function () {
-    return view('db/jadwal');
+    return view('db/jadwal', [
+        'penyewaan' => Penyewaan::where('status', 'Dikonfirmasi')->get()
+    ]);
 });
 
 

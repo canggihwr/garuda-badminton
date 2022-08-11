@@ -249,7 +249,7 @@
 
                                         </script>
 
-                                <div class="card card-flush py-4">
+                                <div class="card card-flush py-4 d-flex" style="align-content: center" >
                                     <!--begin::Card header-->
                                     <div class="card-header">
                                         <div class="card-title">
@@ -258,7 +258,7 @@
                                     </div>
                                     <!--end::Card header-->
                                     <!--begin::Card body-->
-                                    <div class="card-body pt-0">
+                                    <div class="card-body pt-0 align-items-center d-flex justify-content-center">
                                         <!--begin::Image input-->
                                         <div class="image-input image-input-empty" data-kt-image-input="true" style="background-image: url(/db/media/icons/duotune/arrows/arr078.svg)">
                                             <!--begin::Image preview wrapper-->
@@ -270,7 +270,7 @@
                                             data-kt-image-input-action="change"
                                             data-bs-toggle="tooltip"
                                             data-bs-dismiss="click"
-                                            title="Change avatar">
+                                            title="Upload bukti bayar">
                                                 <i class="bi bi-pencil-fill fs-7"></i>
 
                                                 <!--begin::Inputs-->
@@ -303,7 +303,7 @@
                                         <!--end::Image input-->
 
                                         <!--begin::Input group-->
-                                        <div class="fv-row mb-2 form-input form-control">
+                                        {{-- <div class="fv-row mb-2 form-input form-control">
                                             <!--begin::Dropzone-->
                                             <div class="dropzone" id="kt_dropzonejs_example_1">
                                                 <!--begin::Message-->
@@ -319,7 +319,7 @@
                                                     <!--end::Info-->
                                                 </div>
                                             </div>
-                                            <!--end::Dropzone-->
+                                            <!--end::Dropzone--> --}}
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Description-->
