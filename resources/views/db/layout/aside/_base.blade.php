@@ -3,15 +3,18 @@
 						<div id="kt_aside" class="aside card" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_toggle">
 							<!--begin::Aside menu-->
 							<div class="aside-menu flex-column-fluid px-5">
-
-@include('db.layout.aside._menu')	
-
+							@if(Auth()->user()->tipe_akun == 'Admin')
+							@include('db.layout.aside._menu')	
+							@else
+							@include('db.layout.aside._menux')	
+							@endif
 
 							</div>
 							<!--end::Aside menu-->
 							<!--begin::Footer-->
+							@if(Auth()->user()->tipe_akun == 'Admin')
 							<div class="aside-footer flex-column-auto pt-5 pb-7 px-5" id="kt_aside_footer">
-								<a href="?page=documentation/getting-started" class="btn btn-bg-light btn-color-gray-500 btn-active-color-gray-900 w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="Cetak laporan penyewaan lapangan">
+								<a href="/dashboard/cetak" class="btn btn-bg-light btn-color-gray-500 btn-active-color-gray-900 w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="Cetak laporan penyewaan lapangan">
 									<span class="btn-label">Cetak Laporan</span>
 									<!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
 									<span class="svg-icon btn-icon svg-icon-2">
@@ -26,6 +29,8 @@
 									<!--end::Svg Icon-->
 								</a>
 							</div>
+							
+							@endif
 							<!--end::Footer-->
 						</div>
 						<!--end::Aside-->

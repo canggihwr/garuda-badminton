@@ -13,6 +13,8 @@ use App\Http\Controllers\LapanganController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PenyewaanController;
 use App\Http\Controllers\PeralatanController;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +55,20 @@ Route::get('/cara-penyewaan', function () {
 });
 
 Route::get('/dashboard', function() {
-    return view('/db/dashboard');
+    return view('/db/dashboard', [
+        'l1' => Penyewaan::where('lapangan_id', 1)->count(),
+        'l2' => Penyewaan::where('lapangan_id', 2)->count(),
+        'l3' => Penyewaan::where('lapangan_id', 3)->count(),
+        'h1' => Penyewaan::where('lapangan_id', 1)->get(),
+        'h2' => Penyewaan::where('lapangan_id', 2)->get(),
+        'h3' => Penyewaan::where('lapangan_id', 3)->get(),
+        'saya' => Penyewaan::where('user_id', Auth::user()->id)->get(),
+        'sayax' => Penyewaan::where('user_id', Auth::user()->id)->count(),
+        'penyewaanx' => Penyewaan::all()->count(),
+        'penyewaan' => Penyewaan::all(),
+        'peralatan' => Peralatan::all(),
+        'user' => User::all()->count()
+    ]);
 })->middleware('auth');
 
 Route::get('/redirect', function () {
@@ -64,6 +79,9 @@ Route::get('/redirect', function () {
 Route::get('/dashboard/penyewaan/', [PenyewaanController::class, 'list']);
 Route::get('/dashboard/penyewaan/add', [PenyewaanController::class, 'show']);
 Route::post('/dashboard/penyewaan/add', [PenyewaanController::class, 'store']);
+
+Route::get('/dashboard/cetak/', [PenyewaanController::class, 'cetak']);
+
 
 
 Route::get('/dashboard/penyewaan/detail', function () {
@@ -80,6 +98,8 @@ Route::get('/dashboard/penyewaan/batal/{penyewaan:id}', [PenyewaanController::cl
 Route::get('/dashboard/penyewaan/detail/{penyewaan:id}', [PenyewaanController::class, 'detail']);
 
 Route::get('/dashboard/penyewaan/bayar/{penyewaan:id}', [PenyewaanController::class, 'bayar']);
+
+Route::post('/dashboard/penyewaan/selesai/{penyewaan:id}', [PenyewaanController::class, 'selesai']);
 
 Route::post('/dashboard/penyewaan/pembayaran/{penyewaan:id}', [PenyewaanController::class, 'pembayaran']);
 
@@ -125,7 +145,7 @@ Route::post('/dashboard/user/update/{user:id}', [UserController::class, 'update'
 
 Route::get('/dashboard/admin', function () {
     return view('db/admin', [
-        'user' => User::all()
+        'user' => User::where('tipe_akun', 'Admin')->get()
 
     ]);
 });

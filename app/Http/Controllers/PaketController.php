@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Paket;
 use Illuminate\Http\Request;
+use Alert;
 
 class PaketController extends Controller
 {
@@ -20,10 +21,12 @@ class PaketController extends Controller
         $data = $request->validate([
             'nama' => 'required',
             'harga' => 'required',
-            'waktu_main' => 'required',
+            'lama' => 'required',
         ]);
 
         Paket::where('id', $paket->id)->update($data);
+        Alert::alert('Berhasil!', 'Paket berhasil diubah!', 'success');
+        
         return redirect('/dashboard/paket')->with('success', 'Paket berhasil diubah!');
 
     }
@@ -31,6 +34,8 @@ class PaketController extends Controller
     public function destroy(Paket $paket)
     {
         Paket::destroy($paket->id);
+        Alert::alert('Berhasil!', 'Paket berhasil dihapus!', 'success');
+
         return redirect('/dashboard/paket')->with('success', 'Paket berhasil dihapus!');
     }
 
@@ -44,6 +49,7 @@ class PaketController extends Controller
         ]);
 
         Paket::create($data);
+        Alert::alert('Berhasil!', 'Paket berhasil ditambahkan!', 'success');
 
         return redirect('/dashboard/paket')->with('success', 'Paket berhasil ditambahkan!');
     }

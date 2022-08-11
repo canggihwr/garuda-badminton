@@ -107,7 +107,7 @@
 						<p class="text-center">Merupakan salah satu lapangan bulu tangkis yang berada di Kota Mataram. Lapangan ini menggunakan standar dari peraturan bermain bulu tangkis dimana mulai dari ukuran lapangan bulu tangkis, garis lapangan, dan lainnya telah sesuai standar. Lapangan bulu tangkis (badminton) ini dibangun dengan kualitas terbaik sehingga pemain dapat berolahraga dengan nyaman. </p>
 					</div>
 					<div class="col-md-12 text-center mt-4">
-						<a class="btn btn-primary js-tilt" href="#" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Daftar Sekarang</span></a>
+						<a class="btn btn-primary js-tilt" href="/daftar" role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>Daftar Sekarang</span></a>
 					</div>
 					<div class="col-md-12 mt-5">
 						<p class="text-center">Pembayaran online melalui berbagai platform pembayaran digital </p>

@@ -8,13 +8,33 @@ use App\Models\Paket;
 use App\Models\Peralatan;
 use App\Models\Lapangan;
 use Illuminate\Http\Request;
+use Alert;
+use Illuminate\Support\Facades\Auth;
 
 class PenyewaanController extends Controller
 {
     public function list()
     {
-        return view('db/penyewaan', [
-            'penyewaan' => Penyewaan::orderBy('id', 'DESC')->get()
+        if(Auth::user()->tipe_akun == 'Member'){
+            $idget = Auth::user()->id;
+            return view('db/penyewaan', [
+                'penyewaan' => Penyewaan::where('user_id', $idget)->get()
+            ]);
+        }else{
+            return view('db/penyewaan', [
+                'penyewaan' => Penyewaan::orderBy('id', 'DESC')->get()
+    
+            ]);
+        }
+        
+    }
+
+    public function cetak()
+    {
+        $p = Penyewaan::where('status', 'Selesai')->get();
+
+        return view('db/cetaks', [
+            'penyewaan' => $p
 
         ]);
         
@@ -58,7 +78,7 @@ class PenyewaanController extends Controller
         ];
 
         Penyewaan::where('id', $id)->update($data);
-
+        Alert::alert('Pembayaran berhasil!', 'Harap menunggu konfirmasi admin', 'success');
         return redirect('/dashboard/penyewaan')->with('success', 'Pembayaran berhasil! Harap menunggu konfirmasi admin');
         
     }
@@ -72,7 +92,23 @@ class PenyewaanController extends Controller
         ];
 
         Penyewaan::where('id', $id)->update($data);
-        return redirect('/dashboard/penyewaan')->with('success', 'Pembayaran diknfirmasi!');
+        Alert::alert('Sukses!', 'Pembayaran dikonfirmasi!', 'success');
+        return redirect('/dashboard/penyewaan')->with('success', 'Pembayaran dikonfirmasi!');
+        
+    }
+
+    public function selesai(Request $request)
+    {
+        $id = $request->getid;
+        
+        $data = [
+            'status' => $request->status
+        ];
+
+        Penyewaan::where('id', $id)->update($data);
+
+        Alert::alert('Sukses!', 'Penyewaan Selesai!', 'success');
+        return redirect('/dashboard/penyewaan')->with('success', 'Penyewaan Selesai!');
         
     }
     
@@ -146,9 +182,13 @@ class PenyewaanController extends Controller
             return redirect('/dashboard/penyewaan')->with('fail', 'Lapangan gagal dipesan!, silahkan memilih jadwal atau lapangan lain!');
         } else{
             if (!empty($items)){
-                Penyewaan::create($data)->peralatan();
-            } else {
                 Penyewaan::create($data)->peralatan()->attach($sync);
+                Alert::alert('Berhasil dipesan!', 'Silahkan melakukan pembayaran!', 'success');
+
+            } else {
+                Penyewaan::create($data)->peralatan();
+                Alert::alert('Berhasil dipesan!', 'Silahkan melakukan pembayaran!', 'success');
+
             }
             return redirect('/dashboard/penyewaan')->with('success', 'Berhasil dipesan!, silahkan melakukan pembayaran!');
 
@@ -162,6 +202,7 @@ class PenyewaanController extends Controller
         $detach = Penyewaan::find($penyewaan->id);
         $detach->peralatan()->detach();
         $detach->delete($penyewaan->id);
+        Alert::alert('Batal!', 'Pesanan berhasil dibatalkan!', 'success');
         return redirect('/dashboard/penyewaan')->with('success', 'Pesanan berhasil dibatalkan!');
     }
 }

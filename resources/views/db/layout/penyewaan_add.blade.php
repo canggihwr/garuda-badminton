@@ -59,7 +59,7 @@
 														<label class="form-label">ID Pemesanan</label>
 														<!--end::Label-->
 														<!--begin::Auto-generated ID-->
-														<div class="fw-bolder fs-3 mb-3">#G-000X</div>
+														<div class="fw-bolder fs-3 mb-3">#G000X</div>
 														<!--end::Input-->
 														<!--begin::Alert-->
                                                             <div class="alert bg-light-primary d-flex flex-column flex-sm-row p-5 mb-7">
@@ -155,7 +155,7 @@
 																	</svg>
 																</span>
 																<!--end::Svg Icon-->
-																<input class="form-control form-control ps-12" name="tgl_main" placeholder="Pilih tanggal" id="kt_datepicker_1" />
+																<input class="form-control form-control ps-12" name="tgl_main" placeholder="Pilih tanggal" id="kt_datee" />
 															</div>
 															</div>
 															<!--end::Col-->
@@ -600,7 +600,7 @@
 											<a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-danger me-5">Batal</a>
 											<!--end::Button-->
 
-											<input type="hidden" class="form-control" name="kode" value="G-000" />
+											<input type="hidden" class="form-control" name="kode" value="G00" />
 											<input type="hidden" class="form-control" name="user_id" value="{{ auth()->user()->id }}" />
 											<input type="hidden" class="form-control" name="status" value="Menunggu Pembayaran" />
 

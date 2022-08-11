@@ -7,7 +7,7 @@
 								<!--begin::Page title-->
 								<div class="page-title d-flex flex-column me-3">
 									<!--begin::Title-->
-									<h1 class="d-flex text-dark fw-bolder my-1 fs-3">Data Penyewaan Lapangan</h1>
+									<h1 class="d-flex text-dark fw-bolder my-1 fs-3">Data Laporan Penyewaan</h1>
 									<!--end::Title-->
 									<!--begin::Breadcrumb-->
 									<ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
@@ -18,10 +18,10 @@
 										<!--end::Item-->
 										
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-gray-600">Transaksi</li>
+										<li class="breadcrumb-item text-gray-600">Laporan</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-gray-500">Data Penyewaan</li>
+										<li class="breadcrumb-item text-gray-500">Laporan Penyewaan</li>
 										<!--end::Item-->
 									</ul>
 									<!--end::Breadcrumb-->
@@ -45,7 +45,9 @@
 									</div>
 									<!--end::Wrapper-->
 									<!--begin::Button-->
-									<a href="#" class="btn btn-dark fw-bolder" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Cetak Data</a>
+									<a href="#" class="btn btn-dark fw-bolder" data-bs-toggle="modal" data-bs-target="#cetakmodal" id="cetakmodal">Cetak Data</a>
+									<!--end::Button-->
+									<!--begin::Button-->
 									<!--end::Button-->
 								</div>
 								<!--end::Actions-->
@@ -75,13 +77,16 @@
 											 </div>
 											 <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
 											  <!--begin::Export dropdown-->
-											  <button type="button" class="btn btn-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+											  <button type="button" class="btn btn-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
 											  <span class="svg-icon svg-icon-1 position-absolute ms-4"></span>
 											  Cetak Data
 											  </button>
-											  <!--begin::Add product-->
-											<a href="/dashboard/penyewaan/add" class="btn btn-primary">Tambah Data</a>
-											<!--end::Add product-->
+
+											  <button type="button" class="btn btn-light-primary"  data-bs-toggle="modal" data-bs-target="#cetakmodal" id="cetakmodal">
+												<span class="svg-icon svg-icon-1 position-absolute ms-4"></span>
+												Cetak Data
+												</button>
+											 
 											  <!--begin::Menu-->
 											  <div id="kt_datatable_example_1_export_menu" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-200px py-4" data-kt-menu="true">
 											   <!--begin::Menu item-->
@@ -138,14 +143,14 @@
 											   <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase">
 												<th style="white-space: nowrap" class="min-w-50px">ID Sewa</th>
 												<th style="white-space: nowrap" class="min-w-100px">Nama Penyewa</th>
+												<th style="white-space: nowrap" class="min-w-100px">No HP</th>
 												<th style="white-space: nowrap" class="min-w-90px">Lapangan</th>
+												<th style="white-space: nowrap" class="min-w-90px">Tanggal Pesan</th>
 												<th style="white-space: nowrap" class="min-w-90px">Tanggal Main</th>
 												<th style="white-space: nowrap" class="min-w-30px">Waktu Main</th>
 												<th style="white-space: nowrap; text-align: center" class="min-w-30px">Paket</th>
 												<th style="white-space: nowrap; text-align: center" class="text-center min-w-50px">Status</th>
-												<th style="white-space: nowrap" class="text-center min-w-145px">Bukti</th>
 												<th style="white-space: nowrap" class="text-end min-w-100px pe-5">Total</th>
-												<th style="white-space: nowrap" class="text-center min-w-100px">Actions</th>
 											   </tr>
 											   <!--end::Table row-->
 											  </thead>
@@ -153,14 +158,18 @@
 												@foreach ($penyewaan as $p)
 												<tr class="odd">
 												 <td style="white-space: nowrap">
-												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">#{{ $p->kode }}{{ $p->id }}</a>
+												  <a class="text-dark text-hover-primary">#{{ $p->kode }}{{ $p->id }}</a>
 												 </td>
 												 <td style="white-space: nowrap">
-												  <a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->user->name }}</a>
+												  <a class="text-dark text-hover-primary">{{ $p->user->name }}</a>
 												 </td>
 												 <td style="white-space: nowrap">
-													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
+													<a class="text-dark text-hover-primary">{{ $p->user->no_hp }}</a>
 												   </td>
+												 <td style="white-space: nowrap">
+													<a class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
+												   </td>
+												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">{{ $p->created_at->toDateString(); }}</td>
 												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">{{ $p->tgl_main }}</td>
 												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">{{ $p->waktu_main }}</td>
 												 <td style="white-space: nowrap" data-order="2022-03-10T14:40:00+05:00">{{ $p->paket->nama }}</td>
@@ -183,59 +192,9 @@
 													@endif
 												 </td>
 												   
-												 @if ($p->bukti == '')
-												 <td style="white-space: nowrap; text-align: center" class="text-center">
-													<div class="d-flex align-items-center text-center">
-													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
-													<span class="symbol-label" style="background-image:url(db/media/svg/files/blank-image.svg);"></span>
-													</a>
-													</div>
-												</td>
-												@else
-													<td style="white-space: nowrap" class="text-center"><div class="d-flex align-items-center text-center">
-														<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="symbol symbol-50px">
-													<span class="symbol-label" style="background-image:url(img/buktipembayaran/{{ $p->bukti }});"></span>
-														</a>
-													</div></td>
-												@endif
+												 
 												 <td style="white-space: nowrap" class="text-end">Rp.{{ $p->total }}</td>
-												 @if (auth()->user()->tipe_akun == 'Admin')
-													<td style="white-space: nowrap" class="text-center">
-														<div style="white-space: nowrap">
-													@if ($p->status == 'Dikonfirmasi')
-													<button type="button" class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i> detail</a></button>
-													<form action="/dashboard/penyewaan/selesai/{{ $p->id }}" method="POST">
-														@csrf
-														
-														<button type="submit" class="btn btn-success btn-sm">
-															<i class="bi bi-check"></i>Selesai
-															<input type="hidden" name="status" value="Selesai">
-															<input type="hidden" name="getid" value="{{ $p->id }}">
-													</button>
-													</form>
-													@else
-													<button type="button" class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i> detail</a></button>
-													<button type="button" class="btn btn-danger btn-sm"><a href="/dashboard/penyewaan/batal/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-trash"></i> hapus</a></button>
-													@endif
-												</div>
-													</td>
-												 @else 
-												 <td style="white-space: nowrap">
-													@if ($p->status == 'Dikonfirmasi')
-													<span class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i> detail</a></span>
-													@else
-													<span class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i>detail</a></span>
-													@endif
-													@if ($p->status == 'Menunggu Pembayaran')
-													<span class="btn btn-success btn-sm"><a href="/dashboard/penyewaan/bayar/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-currency-dollar"></i>bayar</a></span>	
-													@endif
-													@if ($p->status == 'Selesai')
-													<span class="btn btn-primary btn-sm"><a href="/dashboard/penyewaan/detail/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-eye-fill"></i>detail</a></span>
-													@else
-													<span class="btn btn-danger btn-sm"><a href="/dashboard/penyewaan/batal/{{ $p->id }}" style="text-decoration: none;color: inherit"><i class="bi bi-x"></i>batal</a></span>
-													@endif
-												</td>
-												 @endif
+												 
 												 
 
 												</tr>

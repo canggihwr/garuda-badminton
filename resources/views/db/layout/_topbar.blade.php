@@ -42,28 +42,7 @@
 									<!--end::Menu wrapper-->
 								</div>
 								<!--end::Chat-->
-								<!--begin::Quick links-->
-								<div class="d-flex align-items-center ms-1">
-									<!--begin::Menu wrapper-->
-									<div class="btn btn-icon btn-color-white bg-hover-white bg-hover-opacity-10 w-30px h-30px h-40px w-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-										<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-										<span class="svg-icon svg-icon-1">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-												<rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
-												<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
-												<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
-												<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
-											</svg>
-										</span>
-										<!--end::Svg Icon-->
-									</div>
 
-@include('db.partials.menus._quick-links-menu')
-
-
-									<!--end::Menu wrapper-->
-								</div>
-								<!--end::Quick links-->
 								<!--begin::Theme mode-->
 								<div class="d-flex align-items-center ms-1">
 

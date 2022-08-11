@@ -84,7 +84,7 @@
 											<div class="row mb-8">
 												<!--begin::Col-->
 												<div class="col-xl-3">
-													<div class="fs-6 fw-bold mt-2 mb-3">Waktu Main</div>
+													<div class="fs-6 fw-bold mt-2 mb-3">Waktu Main (Jam)</div>
 												</div>
 												<!--end::Col-->
 												<!--begin::Col-->

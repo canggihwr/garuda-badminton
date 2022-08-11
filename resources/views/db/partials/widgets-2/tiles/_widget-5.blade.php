@@ -14,11 +14,27 @@
 														</span>
 														<!--end::Svg Icon-->
 														<div class="d-flex flex-column">
-															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">23</div>
+															@if (auth()->user()->tipe_akun == 'Admin')
+															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">{{ $user }}</div>
 															<div class="text-muted fw-bold fs-6">Jumlah User</div>
+															@else
+															@foreach ($saya as $s)
+																<input type="hidden" name="totalsaya" value="{{ $s->total }}">
+															@endforeach
+															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">Rp.<span class="text-dark fw-bolder"  id="totsaya"></span></div>
+															<div class="text-muted fw-bold fs-6">Jumlah Transaksi Saya</div>
+															@endif
 														</div>
 													</div>
 													<!--end::Body-->
 												</a>
 												<!--end::Tiles Widget 5-->
-												
+												<script type="text/javascript">
+													var tot1 = document.querySelectorAll('input[name=totalsaya]')
+													var harga1 = 0
+													for (var i = 0; i < tot1.length; i++) {
+													harga1 = parseInt(harga1) + parseInt(tot1[i].value);
+													document.getElementById("totsaya").innerHTML = harga1;
+													}
+													
+													</script>

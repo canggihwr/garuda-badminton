@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Alert;
 
 class RegisterController extends Controller
 {
@@ -28,7 +29,7 @@ class RegisterController extends Controller
 
         $data['password'] = bcrypt($data['password']);
         User::create($data);
-
+        Alert::alert('Pendaftaran berhasil!', 'Silahkan login!', 'success');
         return redirect('/daftar')->with('success', 'Pendaftaran berhasil! silahkan login!');
         
         

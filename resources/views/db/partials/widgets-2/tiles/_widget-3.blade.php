@@ -8,7 +8,7 @@
 														<h2 class="fw-bolder text-white mb-2">Cetak Laporan Penyewaan </h2>Lapangan</div>
 														<!--end::Title-->
 														<!--begin::Link-->
-														<a href='#' class="text-warning fw-bold" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Cetak Laporan
+														<a href='/dashboard/cetak' class="text-warning fw-bold" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Cetak Laporan
 														<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
 														<span class="svg-icon svg-icon-2 svg-icon-warning">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

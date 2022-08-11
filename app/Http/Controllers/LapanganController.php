@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Lapangan;
 use Illuminate\Http\Request;
-
+use Alert;
 class LapanganController extends Controller
 {
        
@@ -34,13 +34,16 @@ class LapanganController extends Controller
         ];
 
         Lapangan::where('id', $lapangan->id)->update($data);
-        return redirect('/dashboard/lapangan')->with('success', 'Lapangan berhasil diubah!');
+        Alert::alert('Berhasil!', 'Lapangan berhasil diupdate!', 'success');
+        return redirect('/dashboard/lapangan')->with('success', 'Lapangan berhasil diupdate!');
 
     }
 
     public function destroy(Lapangan $lapangan)
     {
         Lapangan::destroy($lapangan->id);
+        Alert::alert('Berhasil!', 'Lapangan berhasil dihapus!', 'success');
+
         return redirect('/dashboard/lapangan')->with('success', 'Lapangan berhasil dihapus!');
     }
 
@@ -54,6 +57,7 @@ class LapanganController extends Controller
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         } 
+        Alert::alert('Berhasil!', 'Lapangan berhasil ditambahkan!', 'success');
 
         return redirect('/dashboard/lapangan')->with('success', 'Lapangan berhasil ditambahkan!');
         

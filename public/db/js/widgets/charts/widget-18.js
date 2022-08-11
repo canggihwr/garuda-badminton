@@ -1,7 +1,7 @@
 "use strict";
 
 // Class definition
-var KTChartsWidget18 = function () {
+var KTChartsWidget18 = function() {
     // Private methods
     var initChart = function() {
         var element = document.getElementById("kt_charts_widget_18_chart");
@@ -9,10 +9,10 @@ var KTChartsWidget18 = function () {
         if (!element) {
             return;
         }
-        
+
         var height = parseInt(KTUtil.css(element, 'height'));
         var labelColor = KTUtil.getCssVariableValue('--bs-gray-900');
-        var borderColor = KTUtil.getCssVariableValue('--bs-border-dashed-color');    
+        var borderColor = KTUtil.getCssVariableValue('--bs-border-dashed-color');
 
         var options = {
             series: [{
@@ -25,13 +25,13 @@ var KTChartsWidget18 = function () {
                 height: height,
                 toolbar: {
                     show: false
-                }              
+                }
             },
             plotOptions: {
                 bar: {
                     horizontal: false,
                     columnWidth: ['28%'],
-                    borderRadius: 5,                     
+                    borderRadius: 5,
                     dataLabels: {
                         position: "top" // top, center, bottom
                     },
@@ -42,15 +42,15 @@ var KTChartsWidget18 = function () {
                 show: false
             },
             dataLabels: {
-                enabled: true, 
-                offsetY: -28,                                             
+                enabled: true,
+                offsetY: -28,
                 style: {
                     fontSize: '13px',
                     colors: [labelColor]
                 },
-                    formatter: function(val) {
-                        return val;// + "H";
-                    }                           
+                formatter: function(val) {
+                    return val; // + "H";
+                }
             },
             stroke: {
                 show: true,
@@ -69,11 +69,11 @@ var KTChartsWidget18 = function () {
                     style: {
                         colors: KTUtil.getCssVariableValue('--bs-gray-500'),
                         fontSize: '13px'
-                    }                  
+                    }
                 },
                 crosshairs: {
-                    fill: {         
-                        gradient: {         
+                    fill: {
+                        gradient: {
                             opacityFrom: 0,
                             opacityTo: 0
                         }
@@ -88,7 +88,7 @@ var KTChartsWidget18 = function () {
                     },
                     formatter: function(val) {
                         return val + "H";
-                    } 
+                    }
                 }
             },
             fill: {
@@ -120,10 +120,10 @@ var KTChartsWidget18 = function () {
                     fontSize: '12px'
                 },
                 y: {
-                    formatter: function (val) {
-                        return  + val + ' hours' 
+                    formatter: function(val) {
+                        return +val + ' hours'
                     }
-                } 
+                }
             },
             colors: [KTUtil.getCssVariableValue('--bs-primary'), KTUtil.getCssVariableValue('--bs-light-primary')],
             grid: {
@@ -137,19 +137,19 @@ var KTChartsWidget18 = function () {
             }
         };
 
-        var chart = new ApexCharts(element, options);  
-        
+        var chart = new ApexCharts(element, options);
+
         // Set timeout to properly get the parent elements width
         setTimeout(function() {
-            chart.render();   
-        }, 200); 
+            chart.render();
+        }, 200);
     }
 
     // Public methods
     return {
-        init: function () {
+        init: function() {
             initChart();
-        }        
+        }
     }
 }();
 
@@ -162,6 +162,3 @@ if (typeof module !== 'undefined') {
 KTUtil.onDOMContentLoaded(function() {
     KTChartsWidget18.init();
 });
-
-
- 

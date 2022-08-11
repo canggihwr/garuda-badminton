@@ -1,7 +1,7 @@
 "use strict";
 
 // Class definition
-var KTTablesWidget14 = function () {
+var KTTablesWidget14 = function() {
     // Private methods
     var initChart = function(chartSelector, data) {
         var element = document.querySelector(chartSelector);
@@ -9,7 +9,7 @@ var KTTablesWidget14 = function () {
         if (!element) {
             return;
         }
-        
+
         var height = parseInt(KTUtil.css(element, 'height'));
         var color = element.getAttribute('data-kt-chart-color');
 
@@ -20,7 +20,7 @@ var KTTablesWidget14 = function () {
 
         var options = {
             series: [{
-                name: 'Net Profit',
+                name: 'Pendapatan',
                 data: data
             }],
             chart: {
@@ -55,7 +55,7 @@ var KTTablesWidget14 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                categories: ['Februari', 'Maret', 'April', 'May', 'Juni', 'Juli'],
                 axisBorder: {
                     show: false,
                 },
@@ -129,33 +129,23 @@ var KTTablesWidget14 = function () {
 
         // Set timeout to properly get the parent elements width
         setTimeout(function() {
-            chart.render();   
-        }, 200);           
+            chart.render();
+        }, 200);
     }
 
     // Public methods
     return {
-        init: function () {           
-            initChart('#kt_table_widget_14_chart_1', 
-                [7, 10, 5, 21, 6, 11, 5, 23, 5, 11, 18, 7, 21,13]            
-            );   
-            
-            initChart('#kt_table_widget_14_chart_2', 
-                [17, 5, 23, 2, 21, 9, 17, 23, 4, 24, 9, 17, 21,7]           
-            ); 
+        init: function() {
+            initChart('#kt_table_widget_14_chart_1', [7, 10, 5, 21, 6, 11, 5, 23, 5, 11, 18, 7, 21, 13]);
 
-            initChart('#kt_table_widget_14_chart_3', 
-                [2, 24, 5, 17, 7, 2, 12, 24, 5, 24, 2, 8, 12,7]           
-            ); 
+            initChart('#kt_table_widget_14_chart_2', [17, 5, 23, 2, 21, 9, 17, 23, 4, 24, 9, 17, 21, 7]);
 
-            initChart('#kt_table_widget_14_chart_4', 
-                [24, 3, 5, 19, 3, 7, 25, 14, 5, 14, 2, 8, 5,17]           
-            ); 
+            initChart('#kt_table_widget_14_chart_3', [2, 24, 5, 17, 7, 2, 12, 24, 5, 24, 2, 8, 12, 7]);
 
-            initChart('#kt_table_widget_14_chart_5', 
-                [3, 23, 1, 19, 3, 17, 3, 9, 25, 4, 2, 18, 25,3]           
-            );
-        }   
+            initChart('#kt_table_widget_14_chart_4', [24, 3, 5, 19, 3, 7, 25, 14, 5, 14, 2, 8, 5, 17]);
+
+            initChart('#kt_table_widget_14_chart_5', [3, 23, 1, 19, 3, 17, 3, 9, 25, 4, 2, 18, 25, 3]);
+        }
     }
 }();
 
@@ -168,6 +158,3 @@ if (typeof module !== 'undefined') {
 KTUtil.onDOMContentLoaded(function() {
     KTTablesWidget14.init();
 });
-
-
- 

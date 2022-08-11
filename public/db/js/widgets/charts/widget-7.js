@@ -1,7 +1,7 @@
 "use strict";
 
 // Class definition
-var KTChartsWidget7 = function () {
+var KTChartsWidget7 = function() {
     // Private methods
     var initChart = function(chartSelector) {
         var element = document.querySelector(chartSelector);
@@ -15,7 +15,7 @@ var KTChartsWidget7 = function () {
 
         var options = {
             series: [{
-                name: 'Net Profit',
+                name: 'Pendapatan',
                 data: data1
             }, {
                 name: 'Revenue',
@@ -48,7 +48,7 @@ var KTChartsWidget7 = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                categories: ['Februari', 'Maret', 'April', 'May', 'Juni', 'Juli'],
                 axisBorder: {
                     show: false,
                 },
@@ -99,8 +99,8 @@ var KTChartsWidget7 = function () {
                     fontSize: '12px'
                 },
                 y: {
-                    formatter: function (val) {
-                        return "$" + val + " thousands"
+                    formatter: function(val) {
+                        return "Rp" + val + "0000"
                     }
                 }
             },
@@ -120,31 +120,31 @@ var KTChartsWidget7 = function () {
 
         var init = false;
         var tab = document.querySelector(tabSelector);
-        
+
         if (initByDefault === true) {
             chart.render();
             init = true;
-        }        
+        }
 
-        tab.addEventListener('shown.bs.tab', function (event) {
+        tab.addEventListener('shown.bs.tab', function(event) {
             if (init == false) {
                 chart.render();
                 init = true;
             }
         })
-          
+
         var chart = new ApexCharts(element, options);
-        chart.render();   
+        chart.render();
     }
 
     // Public methods
     return {
-        init: function () {          
+        init: function() {
             initChart('#kt_chart_widget_7_tab_1', '#kt_chart_widget_7_chart_1', [44, 55, 57, 56, 61, 58], [76, 85, 101, 98, 87, 105], true);
             initChart('#kt_chart_widget_7_tab_2', '#kt_chart_widget_7_chart_2', [35, 60, 35, 50, 45, 30], [65, 80, 50, 80, 75, 105], false);
             initChart('#kt_chart_widget_7_tab_3', '#kt_chart_widget_7_chart_3', [25, 40, 45, 50, 40, 60], [76, 85, 101, 98, 87, 105], false);
-            initChart('#kt_chart_widget_7_tab_4', '#kt_chart_widget_7_chart_4', [50, 35, 45, 55, 30, 40], [76, 85, 101, 98, 87, 105], false);             
-        }   
+            initChart('#kt_chart_widget_7_tab_4', '#kt_chart_widget_7_chart_4', [50, 35, 45, 55, 30, 40], [76, 85, 101, 98, 87, 105], false);
+        }
     }
 }();
 
@@ -157,6 +157,3 @@ if (typeof module !== 'undefined') {
 KTUtil.onDOMContentLoaded(function() {
     //KTChartsWidget7.init();
 });
-
-
- 

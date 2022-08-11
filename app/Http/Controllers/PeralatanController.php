@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Peralatan;
 use Illuminate\Http\Request;
+use Alert;
+
 
 class PeralatanController extends Controller
 {
@@ -47,7 +49,7 @@ class PeralatanController extends Controller
         
 
         Peralatan::create($data);
-
+        Alert::alert('Sukses!', 'Peralatan berhasil ditambahkan!', 'success');
         return redirect('/dashboard/peralatan')->with('success', 'Peralatan berhasil ditambahkan!');
     }
 
@@ -97,6 +99,8 @@ class PeralatanController extends Controller
         
 
         Peralatan::where('id', $peralatan->id)->update($data);
+        Alert::alert('Sukses!', 'Peralatan berhasil diubah!', 'success');
+
         return redirect('/dashboard/peralatan')->with('success', 'Peralatan berhasil diubah!');
 
     }
@@ -104,6 +108,8 @@ class PeralatanController extends Controller
     public function destroy(Peralatan $peralatan)
     {
         Peralatan::destroy($peralatan->id);
+        Alert::alert('Sukses!', 'Peralatan berhasil dihapus!', 'success');
+        
         return redirect('/dashboard/peralatan')->with('success', 'Peralatan berhasil dihapus!');
     }
 

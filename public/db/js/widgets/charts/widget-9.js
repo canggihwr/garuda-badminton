@@ -1,7 +1,7 @@
 "use strict";
 
 // Class definition
-var KTChartsWidget9 = function () {
+var KTChartsWidget9 = function() {
     // Private methods
     var initChart = function() {
         var element = document.getElementById("kt_charts_widget_9");
@@ -12,7 +12,7 @@ var KTChartsWidget9 = function () {
 
         var height = parseInt(KTUtil.css(element, 'height'));
         var labelColor = KTUtil.getCssVariableValue('--bs-gray-400');
-        var borderColor = KTUtil.getCssVariableValue('--bs-border-dashed-color');    
+        var borderColor = KTUtil.getCssVariableValue('--bs-border-dashed-color');
 
         var baseColor = KTUtil.getCssVariableValue('--bs-gray-200');
         var secondaryColor = KTUtil.getCssVariableValue('--bs-primary');
@@ -20,7 +20,7 @@ var KTChartsWidget9 = function () {
 
         var options = {
             series: [{
-                name: 'Net Profit',
+                name: 'Pendapatan',
                 data: [21, 21, 26, 26, 31, 31, 27]
             }, {
                 name: 'Revenue',
@@ -113,7 +113,7 @@ var KTChartsWidget9 = function () {
                     fontSize: '12px'
                 },
                 y: {
-                    formatter: function (val) {
+                    formatter: function(val) {
                         return "$" + val + " thousands"
                     }
                 }
@@ -142,21 +142,21 @@ var KTChartsWidget9 = function () {
                 strokeColor: [KTUtil.getCssVariableValue('--bs-danger'), KTUtil.getCssVariableValue('--bs-warning')],
                 strokeWidth: 3
             }
-        };        
-          
+        };
+
         var chart = new ApexCharts(element, options);
 
         // Set timeout to properly get the parent elements width
         setTimeout(function() {
-            chart.render();   
-        }, 200);        
+            chart.render();
+        }, 200);
     }
 
     // Public methods
     return {
-        init: function () {
+        init: function() {
             initChart();
-        }   
+        }
     }
 }();
 
@@ -169,6 +169,3 @@ if (typeof module !== 'undefined') {
 KTUtil.onDOMContentLoaded(function() {
     KTChartsWidget9.init();
 });
-
-
- 

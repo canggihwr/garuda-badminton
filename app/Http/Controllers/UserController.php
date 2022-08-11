@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Alert;
 
 class UserController extends Controller
 {
@@ -42,6 +43,7 @@ class UserController extends Controller
         $data['password'] = bcrypt($data['password']);
 
         User::create($data);
+        Alert::alert('Berhasil', 'User berhasil ditambah!', 'success');
 
         return redirect('/dashboard/user')->with('success', 'User berhasil ditambah!');
         
@@ -70,6 +72,8 @@ class UserController extends Controller
         $id =  $request->getid;
 
         User::where('id', $id)->update($data);
+        Alert::alert('Berhasil', 'User berhasil diubah!', 'success');
+
         return redirect('/dashboard/user')->with('success', 'User berhasil diubah!');
 
     }
@@ -77,6 +81,8 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         User::destroy($user->id);
+        Alert::alert('Berhasil', 'User berhasil dihapus!', 'success');
+        
         return redirect('/dashboard/user')->with('success', 'User berhasil dihapus!');
     }
 }

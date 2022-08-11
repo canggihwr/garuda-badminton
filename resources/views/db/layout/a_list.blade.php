@@ -56,7 +56,7 @@
             <!--begin::Tab nav-->
             <ul class="nav nav-pills me-6 mb-2 mb-sm-0">
                 <li class="nav-item m-0">
-                    <a class="btn btn-sm btn-icon btn-light btn-color-muted btn-active-primary me-3 active" data-bs-toggle="tab" href="#kt_project_users_card_pane">
+                    <a class="btn btn-sm btn-icon btn-light btn-color-muted btn-active-primary me-3 active" data-bs-toggle="tab" >
                         <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@
                     </a>
                 </li>
                 <li class="nav-item m-0">
-                    <a class="btn btn-sm btn-icon btn-light btn-color-muted btn-active-primary" data-bs-toggle="tab" href="#kt_project_users_table_pane">
+                    <a class="btn btn-sm btn-icon btn-light btn-color-muted btn-active-primary" data-bs-toggle="tab" >
                         <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -111,7 +111,7 @@
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Name-->
-                            <a href="/dashboard/admin/edit" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">{{ $u->name }} <i class="bi bi-pencil-fill fs-7"></i></a>
+                            <a href="/dashboard/user/edit/{{ $u->id }}" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">{{ $u->name }} <i class="bi bi-pencil-fill fs-7"></i></a>
                             <div class="badge badge-light-success text-center mb-2">{{ $u->tipe_akun }}</div>
                             <!--end::Name-->
                             <!--begin::Position-->

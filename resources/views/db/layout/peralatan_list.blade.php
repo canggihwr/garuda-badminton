@@ -29,8 +29,9 @@
 								<!--begin::Actions-->
 								<div class="d-flex align-items-center py-2 py-md-1">
 
-									
+									@if(Auth()->user()->tipe_akun == 'Admin')
 									<a href="/dashboard/peralatan/add" class="btn btn-success fw-bolder">Tambah Peralatan</a>
+									@endif
 								</div>
 								<!--end::Actions-->
 							</div>
@@ -108,7 +109,9 @@
 													<th class="text-end min-w-100px">Status</th>
 													<th class="text-end min-w-100px">Tanggal Restock</th>
 													<th class="text-end min-w-70px">Deskripsi</th>
+													@if(Auth()->user()->tipe_akun == 'Admin')
 													<th class="text-end min-w-70px">Actions</th>
+													@endif
 												</tr>
 												<!--end::Table row-->
 											</thead>
@@ -176,6 +179,7 @@
 													</td>
 													<!--end::SKU=-->
 													<!--begin::Action=-->
+													@if(Auth()->user()->tipe_akun == 'Admin')
 													<td class="text-end">
 														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
 														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
@@ -200,6 +204,7 @@
 														</div>
 														<!--end::Menu-->
 													</td>
+													@endif
 													<!--end::Action=-->
 												</tr>
 												@endforeach

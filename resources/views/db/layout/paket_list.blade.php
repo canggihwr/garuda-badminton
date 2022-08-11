@@ -24,7 +24,9 @@
         <!--begin::Actions-->
         <div class="d-flex align-items-center py-2 py-md-1">
             <!--begin::Button-->
-            <a href="/dashboard/paket/add" class="btn btn-secondary fw-bolder">Tambah Paket</a>
+            @if(Auth()->user()->tipe_akun == 'Admin')
+            <a href="/dashboard/paket/add" class="btn btn-primary fw-bolder">Tambah Paket</a>
+            @endif
             <!--end::Button-->
         </div>
         <!--end::Actions-->
@@ -70,6 +72,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -89,6 +92,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -120,6 +124,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -139,6 +144,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -170,6 +176,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -189,6 +196,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -220,6 +228,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -239,6 +248,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -270,6 +280,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -289,6 +300,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -320,6 +332,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -339,6 +352,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -370,6 +384,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -389,6 +404,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -420,6 +436,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -439,6 +456,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>
@@ -470,6 +488,7 @@
                                         <!--end::Svg Icon-->
                                     </button>
                                     <!--begin::Menu 3-->
+                                    @if(Auth()->user()->tipe_akun == 'Admin')
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
@@ -489,6 +508,7 @@
                                         <!--end::Menu item-->
                                         
                                     </div>
+                                    @endif
                                     <!--end::Menu 3-->
                                     <!--end::Menu-->
                                 </div>

@@ -1,7 +1,7 @@
 "use strict";
 
 // Class definition
-var KTChartsWidget2 = function () {
+var KTChartsWidget2 = function() {
     // Private methods
     var initChart = function() {
         var element = document.querySelectorAll('.charts-widget-2');
@@ -9,7 +9,7 @@ var KTChartsWidget2 = function () {
         [].slice.call(element).map(function(element) {
             var height = parseInt(KTUtil.css(element, 'height'));
 
-            if ( !element ) {
+            if (!element) {
                 return;
             }
 
@@ -57,7 +57,7 @@ var KTChartsWidget2 = function () {
                     colors: [baseColor]
                 },
                 xaxis: {
-                    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    categories: ['Februari', 'Maret', 'April', 'May', 'Juni', 'Juli', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                     axisBorder: {
                         show: false,
                     },
@@ -126,7 +126,7 @@ var KTChartsWidget2 = function () {
                         fontSize: '12px'
                     },
                     y: {
-                        formatter: function (val) {
+                        formatter: function(val) {
                             return val
                         }
                     }
@@ -137,22 +137,22 @@ var KTChartsWidget2 = function () {
                     strokeColor: [baseColor],
                     strokeWidth: 3
                 }
-            }; 
-            
+            };
+
             var chart = new ApexCharts(element, options);
 
             // Set timeout to properly get the parent elements width
             setTimeout(function() {
-                chart.render();   
-            }, 200);  
-        });           
+                chart.render();
+            }, 200);
+        });
     }
 
     // Public methods
     return {
-        init: function () {
+        init: function() {
             initChart();
-        }   
+        }
     }
 }();
 

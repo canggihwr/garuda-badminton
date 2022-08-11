@@ -47,9 +47,11 @@
 												<!--begin::Title-->
 												<h3 class="text-dark">Daftar Lapangan</h3>
 												<!--end::Title-->
+												@if(Auth()->user()->tipe_akun == 'Admin')
 												<!--begin::Link-->
-												<a href="/dashboard/lapangan/add" class="fs-6 fw-bold btn btn-primary">Tambah Lapangan</a>
+												<a href="/dashboard/lapangan/add" class="fs-6 fw-bold btn btn-secondary">Tambah Lapangan</a>
 												<!--end::Link-->
+												@endif
 											</div>
 											<!--end::Content-->
 											@if(session()->has('success'))
@@ -99,6 +101,7 @@
 															<!--end::Text-->
 															<!--begin::Text-->
 															<div class="fs-6 fw-bolder mt-5 d-flex flex-stack">
+																@if(Auth()->user()->tipe_akun == 'Admin')
 																<!--begin::Label-->
 																<span class="badge border border-dashed fs-2 fw-bolder text-dark p-2">
 																{{-- <span class="fs-6 fw-bold text-gray-400">$</span>25</span> --}}
@@ -109,6 +112,7 @@
 																<!--begin::Action-->
 																<a href="/dashboard/lapangan/hapus/{{ $l->id }}" class="btn btn-sm btn-danger">Hapus </a>
 																<!--end::Action-->
+																@endif
 															</div>
 															<!--end::Text-->
 														</div>
