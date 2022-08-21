@@ -27,7 +27,7 @@
 													<table class="table table-striped table-rounded border border-gray-300 table-row-bordered table-row-gray-300 gy-7 gs-7">
 														<thead>
 															<tr class="fw-bold fs-4 text-gray-800">
-																<th scope="col">Daftar Jadwal </th>
+																<th scope="col">Pilih Jadwal </th>
 																
 															</tr>
 														</thead>

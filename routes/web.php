@@ -214,4 +214,41 @@ Route::get('/dashboard/jadwal', function () {
     ]);
 });
 
+Route::get('/dashboard/jadwal2', function () {
+    $date = Carbon::now();
+    $hari = $date->format('Y-m-d');
+    $book = '0';
+    $datasewa = Penyewaan::all();
+    foreach($datasewa as $p) {
+        $stime = substr($p->waktu_main, 0, 2);
+        $time = $p->paket_id;
+        $cal = (int)$stime + (int)$time - 1;
+        $etime = $cal.':00';
+        if($p->lapangan_id == '1'){
+            $color = '#007bff';
+        }elseif($p->lapangan_id == '2'){
+            $color = '#ffc107';
+        }elseif($p->lapangan_id == '3'){
+            $color = '#dc3545';
+        }else {
+            $color = '#6c757d';
+        }
+
+        $events[] = [
+            'title' => $p->lapangan->nama,
+            'start' => $p->tgl_main.' '.$p->waktu_main,
+            'end' => $p->tgl_main.' '.$etime,
+            'color' => $color
+        ];
+    }
+
+    return view('db/jadwal2', [
+        'penyewaan' => Penyewaan::all(),
+        'jadwal' => Jadwal::all(),
+        'hari' => $hari,
+        'book' => $book,
+        'events' => $events
+    ]);
+});
+
 

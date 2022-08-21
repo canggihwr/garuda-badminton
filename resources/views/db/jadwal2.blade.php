@@ -37,7 +37,31 @@ License: For each use you must have a valid license purchased only from above li
 		<link href="db/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="db/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
+		<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.min.css' rel='stylesheet' />
+		<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.min.js'></script>
+
 		
+
+	<script type="text/javascript">
+		var datasewa = @json($events);
+		
+		document.addEventListener('DOMContentLoaded', function() {
+		var calendarEl = document.getElementById('calendar');
+		var calendar = new FullCalendar.Calendar(calendarEl, {
+			timeZone: 'UTC',
+			initialView: 'timeGridWeek',
+			headerToolbar: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'timeGridWeek,timeGridDay'
+			},
+			events: datasewa
+		});
+	
+		calendar.render();
+		});
+	
+	</script>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -90,7 +114,7 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="card-header">
                                         <h2 class="card-title fw-bolder">Jadwal GOR Garuda Hari Ini</h2>
                                         <div class="card-toolbar">
-                                            <a class="btn btn-flex btn-primary" data-kt-calendar="add" href="/dashboard/jadwal2">
+                                            <a class="btn btn-flex btn-primary" data-kt-calendar="add" href="/dashboard/jadwal">
                                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
                                             <span class="svg-icon svg-icon-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -98,7 +122,7 @@ License: For each use you must have a valid license purchased only from above li
                                                     <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="currentColor" />
                                                 </svg>
                                             </span>
-                                            <!--end::Svg Icon-->Cek Jadwal</a>
+                                            <!--end::Svg Icon-->Pilih Jadwal</a>
                                         </div>
                                     </div>
                                     <!--end::Card header-->
@@ -130,9 +154,11 @@ License: For each use you must have a valid license purchased only from above li
 										
 										<!--end::Description-->
 									</div>
-@include('db.partials.widgets-2.lists._widget-x')
 									<!--end::Notice-->
-                                       
+                                        <!--begin::Calendar-->
+                                        <div id="kt_calendar_app" class="mt-8"></div>
+                                        <!--end::Calendar-->
+										<div id='calendar'></div>
                                     </div>
                                     <!--end::Card body-->
 									
