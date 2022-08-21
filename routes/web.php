@@ -1,10 +1,13 @@
 <?php
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Paket;
+use App\Models\Jadwal;
 use App\Models\Lapangan;
 use App\Models\Penyewaan;
 use App\Models\Peralatan;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
@@ -13,7 +16,6 @@ use App\Http\Controllers\LapanganController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PenyewaanController;
 use App\Http\Controllers\PeralatanController;
-use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -79,6 +81,7 @@ Route::get('/redirect', function () {
 Route::get('/dashboard/penyewaan/', [PenyewaanController::class, 'list']);
 Route::get('/dashboard/penyewaan/add', [PenyewaanController::class, 'show']);
 Route::post('/dashboard/penyewaan/add', [PenyewaanController::class, 'store']);
+Route::post('/dashboard/penyewaan/addinput', [PenyewaanController::class, 'showinput']);
 
 Route::get('/dashboard/cetak/', [PenyewaanController::class, 'cetak']);
 
@@ -200,8 +203,14 @@ Route::get('/dashboard/paket/add', function () {
 });
 
 Route::get('/dashboard/jadwal', function () {
+    $date = Carbon::now();
+    $hari = $date->format('Y-m-d');
+    $book = '0';
     return view('db/jadwal', [
-        'penyewaan' => Penyewaan::where('status', 'Dikonfirmasi')->get()
+        'penyewaan' => Penyewaan::all(),
+        'jadwal' => Jadwal::all(),
+        'hari' => $hari,
+        'book' => $book
     ]);
 });
 

@@ -78,8 +78,10 @@
 							<li>
 								<form id="log" action="/logout" method="POST">
 									@csrf
+									
 									<a  href="javascript:{}" onclick="document.getElementById('log').submit();">Logout</a>
 								</form>
+
 							</li>
 						</ul>
 					</li>

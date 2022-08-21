@@ -86,7 +86,7 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="card">
                                     <!--begin::Card header-->
                                     <div class="card-header">
-                                        <h2 class="card-title fw-bolder">Jadwal GOR Bulutangkis Garuda</h2>
+                                        <h2 class="card-title fw-bolder">Jadwal GOR Garuda Hari Ini</h2>
                                         <div class="card-toolbar">
                                             <button class="btn btn-flex btn-primary" data-kt-calendar="add">
                                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->

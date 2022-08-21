@@ -489,7 +489,7 @@
 		</div>
 	</div>
 
-	<div class="section padding-top-bottom-big background-dark-blue-1" id="fasilitas" >
+	<div class="section padding-top-bottom-big background-dark-blue-1"  >
 		<div class="background-parallax" style="background-image: url('img/parallax-3.jpg') }}')" data-enllax-ratio=".5" data-enllax-type="background" data-enllax-direction="vertical"></div>
 		<div class="container">
 			<div class="row">

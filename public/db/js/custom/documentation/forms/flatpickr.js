@@ -18,6 +18,10 @@ var KTFormsFlatpickrDemos = {
                 enableTime: 0,
                 dateFormat: "Y-m-d",
                 minDate: "today"
+            }), $("#kt_dateex").flatpickr({
+                enableTime: 0,
+                dateFormat: "Y-m-d",
+                defaultDate: document.getElementById('input_tanggal').value
             }),
             $("#kt_datepicker_5").flatpickr({
                 onReady: function() {
@@ -52,6 +56,13 @@ var KTFormsFlatpickrDemos = {
                 dateFormat: "H:i",
                 minTime: "08:00",
                 defaultHour: "8",
+                maxTime: "21:00"
+            }), $("#kt_datepicker_88").flatpickr({
+                enableTime: !0,
+                noCalendar: !0,
+                dateFormat: "H:i",
+                defaultDate: document.getElementById('input_waktu').value,
+                minTime: "08:00",
                 maxTime: "21:00"
             }),
             $("#kt_datepicker_9").flatpickr({

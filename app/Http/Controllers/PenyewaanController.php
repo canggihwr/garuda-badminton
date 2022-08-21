@@ -118,7 +118,24 @@ class PenyewaanController extends Controller
             'user' => User::all(),
             'paket' => Paket::all(),
             'peralatan' => Peralatan::all(),
-            'lapangan' => Lapangan::all()
+            'lapangan' => Lapangan::all(),
+            'input' => ''
+        ]);
+        
+    }
+
+    public function showinput(Request $request)
+    {
+        return view('db/add_penyewaan', [
+            'user' => User::all(),
+            'paket' => Paket::all(),
+            'peralatan' => Peralatan::all(),
+            'lapangan' => Lapangan::all(),
+            'date' => $request->date,
+            'waktu' => $request->waktu,
+            'tanggal' => $request->tanggal,
+            'lap' => $request->lapangan,
+            'input' => 'input'
         ]);
         
     }
@@ -159,23 +176,26 @@ class PenyewaanController extends Controller
         
 
         $kosong = '';
-        $waktu = strtotime($request->waktu_main);
-        $lama = $datapaket->lama;
+        $w = $request->waktu_main;
+        // $waktu = preg_replace('/[^1-9]/', '', $w);
+        $waktu = substr($w, 0, 2);
+        $lama = (int)$datapaket->lama;
         $waktus = [];
-        $min = 1;
-        $plus = (int)100;
+        $waktus[0] = (int)$waktu;
 
         for($i=1;$i<$lama; $i++){
-            $waktus[0] = (int)$waktu;
-            $waktus[$i] = (int)$waktus[$i-$min]+$plus;
+            $waktus[$i] = (int)$waktus[$i-1]+(int)1;
         }
-        
-        
+
+        // return $waktus;
+
         foreach ($datalap as $l){
+            $dataw = $l->waktu_main;
+            $datawaktu = substr($dataw, 0, 2);
             if($request->tgl_main == $l->tgl_main){
                 if($request->lapangan_id == $l->lapangan_id){
                     for($i=0;$i<$lama; $i++){
-                        if(strtotime($request->waktu_main) == $waktus[$i]){
+                        if($datawaktu == $waktus[$i]){
                             $kosong = 'false';
                         }
                     }

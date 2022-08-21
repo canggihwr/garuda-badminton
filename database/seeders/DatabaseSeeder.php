@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Paket;
+use App\Models\Jadwal;
 use App\Models\Lapangan;
 use App\Models\Peralatan;
 use Illuminate\Database\Seeder;
@@ -184,5 +185,90 @@ class DatabaseSeeder extends Seeder
             'deskripsi' => 'Penyewaan Sepatu',
             'restock' => '',
         ]);
+
+        Jadwal::create([
+            'waktu' => '08:00',
+            'tersedia' => 'Tersedia',
+            'date' => '800',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '09:00',
+            'tersedia' => 'Tersedia',
+            'date' => '900',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '10:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1000',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '11:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1100',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '12:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1200',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '13:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1300',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '14:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1400',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '15:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1500',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '16:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1600',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '17:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1700',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '18:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1800',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '19:00',
+            'tersedia' => 'Tersedia',
+            'date' => '1900',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '20:00',
+            'tersedia' => 'Tersedia',
+            'date' => '2000',
+        ]);
+
+        Jadwal::create([
+            'waktu' => '21:00',
+            'tersedia' => 'Tersedia',
+            'date' => '2100',
+        ]);
+        
     }
 }

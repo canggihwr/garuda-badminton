@@ -52,7 +52,7 @@
 															@foreach ($h1 as $hr1)
 																<input type="hidden" name="total1" value="{{ $hr1->total }}">
 															@endforeach
-															<span class="badge badge-light fw-bolder my-2">+Rp. <span id="tot1">150000</span> </span>
+															<span class="badge badge-light fw-bolder my-2">+Rp. <span id="tot1">0</span> </span>
 															
 														</div>
 														<!--end::Section-->
@@ -76,7 +76,7 @@
 															@foreach ($h2 as $hr2)
 																<input type="hidden" name="total2" value="{{ $hr2->total }}">
 															@endforeach
-															<span class="badge badge-light fw-bolder my-2">+Rp. <span id="tot2">558000</span></span>
+															<span class="badge badge-light fw-bolder my-2">+Rp. <span id="tot2">0</span></span>
 														</div>
 														<!--end::Section-->
 													</div>
@@ -99,7 +99,7 @@
 															@foreach ($h3 as $hr3)
 																<input type="hidden" name="total3" value="{{ $hr3->total }}">
 															@endforeach
-															<span class="badge badge-light fw-bolder my-2">+Rp. <span id="tot3">460000</span></span>
+															<span class="badge badge-light fw-bolder my-2">+Rp. <span id="tot3">0</span></span>
 														</div>
 														<!--end::Section-->
 													</div>

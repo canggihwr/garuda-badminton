@@ -122,14 +122,27 @@
 												<div class="d-flex flex-column gap-10">
 													<!--begin::Input group-->
 													<div class="fv-row">
+														@if ($input == 'input')
+														{{ $waktu }} {{ $tanggal }} {{ $lap }}
+														@endif
 														<!--begin::Label-->
 														<label class="required form-label">Pilih Lapangan</label>
 														<!--end::Label-->
 														<!--begin::Select2-->
 														<select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Pilih lapangan" name="lapangan_id" id="kt_ecommerce_edit_order_payment">
-															@foreach ($lapangan as $l)
-															<option value="{{ $l->id }}">{{ $l->nama }}</option>
-															@endforeach
+															@if ($input == 'input')
+																@foreach ($lapangan as $l)
+																	@if($l->nama == $lap)
+																	<option value="{{ $l->id }}" selected>{{ $l->nama }}</option>
+																	@else
+																	<option value="{{ $l->id }}">{{ $l->nama }}</option>
+																	@endif
+																@endforeach
+															@else
+																@foreach ($lapangan as $l)
+																<option value="{{ $l->id }}">{{ $l->nama }}</option>
+																@endforeach
+															@endif
 														</select>
 														<!--end::Select2-->
 													</div>
@@ -155,7 +168,14 @@
 																	</svg>
 																</span>
 																<!--end::Svg Icon-->
+																
+																@if ($input == 'input')
+																<input type="hidden" id="input_tanggal" value="{{ $tanggal }}">
+																<input class="form-control form-control ps-12" name="tgl_main" placeholder="Pilih tanggal" id="kt_dateex"/>
+																@else
+																<input type="hidden" id="input_tanggal" value="0">
 																<input class="form-control form-control ps-12" name="tgl_main" placeholder="Pilih tanggal" id="kt_datee" />
+																@endif
 															</div>
 															</div>
 															<!--end::Col-->
@@ -174,7 +194,13 @@
 																		</svg>
 																</span>
 																<!--end::Svg Icon-->
+																@if ($input == 'input')
+																<input type="hidden" id="input_waktu" value="{{ $waktu }}">
+																<input class="form-control form-control ps-12" name="waktu_main" placeholder="Pilih waktu" id="kt_datepicker_88" />
+																@else
+																<input type="hidden" id="input_waktu" value="8">
 																<input class="form-control form-control ps-12" name="waktu_main" placeholder="Pilih waktu" id="kt_datepicker_8" />
+																@endif
 															</div>
 															<!--end::Editor-->
 															</div>

@@ -5,11 +5,21 @@
 													<div class="card-body d-flex flex-column justify-content-between">
 														<!--begin::Title-->
 														<div class="text-white fw-bolder fs-2">
+														@if (auth()->user()->tipe_akun == 'Admin')
 														<h2 class="fw-bolder text-white mb-2">Cetak Laporan Penyewaan </h2>Lapangan</div>
+														@endif
+														@if (auth()->user()->tipe_akun == 'Member')
+														<h2 class="fw-bolder text-white mb-2">Tersedia berbagai perlengkapan </h2>bulu tangkis</div>
+														@endif
 														<!--end::Title-->
 														<!--begin::Link-->
+														@if (auth()->user()->tipe_akun == 'Admin')
 														<a href='/dashboard/cetak' class="text-warning fw-bold" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Cetak Laporan
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+														@endif
+														@if (auth()->user()->tipe_akun == 'Member')
+														<a href='/dashboard/jadwal' class="text-warning fw-bold" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Booking Lapangan
+														@endif
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
 														<span class="svg-icon svg-icon-2 svg-icon-warning">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 																<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />

@@ -16,12 +16,12 @@
 														<div class="d-flex flex-column">
 															@if (auth()->user()->tipe_akun == 'Admin')
 															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">{{ $user }}</div>
-															<div class="text-muted fw-bold fs-6">Jumlah User</div>
+															<div class="text-muted fw-bold fs-6">Jumlah Member</div>
 															@else
 															@foreach ($saya as $s)
 																<input type="hidden" name="totalsaya" value="{{ $s->total }}">
 															@endforeach
-															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">Rp.<span class="text-dark fw-bolder"  id="totsaya"></span></div>
+															<div class="text-dark fw-bolder fs-1 mb-0 mt-5">Rp.<span class="text-dark fw-bolder"  id="totsaya">0</span></div>
 															<div class="text-muted fw-bold fs-6">Jumlah Transaksi Saya</div>
 															@endif
 														</div>

@@ -145,12 +145,12 @@
 														<!--begin::Select2-->
 														<select name="metode" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Pilih metode pembayaran" id="kt_ecommerce_edit_order_payment">
 															<option></option>
-															<option value="Dana">Dana</option>
-															<option value="Gopay">Gopay</option>
-															<option value="OVO">OVO</option>
-															<option value="Shopeepay">Shopeepay</option>
-															<option value="QRIS">QRIS</option>
-															<option value="Bank">Transfer Bank</option>
+															<option value="Dana">Dana (<span class="fw-bolder text-gray-800">087759742xxx a/n GOR Garuda)</span></option>
+															<option value="Gopay">Gopay (<span class="fw-bolder text-gray-800">087759742xxx a/n GOR Garuda Mataram)</span></option>
+															<option value="OVO">OVO (<span class="fw-bolder text-gray-800">087759742xxx a/n GOR Bulu Tangkis Garuda)</span></option>
+															<option value="Shopeepay">Shopeepay (<span class="fw-bolder text-gray-800">087759742xxx a/n GOR Garuda)</span></option>
+															<option value="QRIS">QRIS (<span class="fw-bolder text-gray-800">087759742xxx a/n GOR Garuda)</span></option>
+															<option value="Bank">Transfer Bank (<span class="fw-bolder text-gray-800">BNI: 009301064337509 a/n Canggih Wahyu Rinaldi)</span></option>
 														</select>
 														<!--end::Select2-->
 														<!--begin::Description-->
@@ -329,21 +329,23 @@
                                     <!--end::Card header-->
                                 </div>
                                 <!--end::Media-->
-                                <div class="d-flex justify-content-end">
-                                    <!--begin::Button-->
-                                    <a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Batal</a>
-                                    <!--end::Button-->
-                                    <!--begin::Button-->
-                                    <button type="submit" id="kt_ecommerce_edit_order_submit" class="btn btn-primary">
-                                        <span class="indicator-label">Kirim</span>
-                                        <span class="indicator-progress">Please wait...
-                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                                    </button>
-                                    <!--end::Button-->
-                                </div>
+                                
 									</div>
 									<!--end::Main column-->
 								</form>
+                                    <div class="mt-9" style="text-align: end">
+
+                                        <!--begin::Button-->
+                                        <a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Batal</a>
+                                        <!--end::Button-->
+                                        <!--begin::Button-->
+                                        <button type="submit" id="kt_ecommerce_edit_order_submit" class="btn btn-primary">
+                                            <span class="indicator-label">Kirim</span>
+                                            <span class="indicator-progress">Please wait...
+                                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                        </button>
+                                        <!--end::Button-->
+                                    </div>
 								<!--end::Form-->
 							</div>
 							<!--end::Post-->

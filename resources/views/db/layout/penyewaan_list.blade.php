@@ -162,7 +162,23 @@
 													<a href="/dashboard/penyewaan/detail/{{ $p->id }}" class="text-dark text-hover-primary">{{ $p->lapangan->nama }}</a>
 												   </td>
 												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">{{ $p->tgl_main }}</td>
-												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">{{ $p->waktu_main }}</td>
+												 <td style="white-space: nowrap; text-align: center" data-order="2022-03-10T14:40:00+05:00">
+													@php
+														$w = $p->waktu_main;
+														// $waktu = preg_replace('/[^1-9]/', '', $w);
+														$waktu = substr($w, 0, 2);
+														$lama = (int)$p->paket->lama;
+														$waktus = [];
+														$waktus[0] = (int)$waktu;
+														$timeout = $waktus[0];
+														for($i=1;$i<$lama; $i++){
+															$waktus[$i] = (int)$waktus[$i-1]+(int)1;
+															$timeout = $waktus[$i];
+														}
+
+													@endphp
+													{{ $p->waktu_main }}-{{ $timeout }}:00
+												</td>
 												 <td style="white-space: nowrap" data-order="2022-03-10T14:40:00+05:00">{{ $p->paket->nama }}</td>
 												 <td style="white-space: nowrap; text-align: center">
 													@if($p->status == 'Menunggu Pembayaran')

@@ -111,7 +111,7 @@
 			
 
 			<!-- Portfolio -->
-			<div class="container" style="margin-top: 92px; margin-bottom:30px;">
+			<div class="container" style="margin-top: 92px; margin-bottom:30px;" id="fasilitas">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="title-wrap text-center">
