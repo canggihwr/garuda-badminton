@@ -18,7 +18,7 @@ class PenyewaanController extends Controller
         if(Auth::user()->tipe_akun == 'Member'){
             $idget = Auth::user()->id;
             return view('db/penyewaan', [
-                'penyewaan' => Penyewaan::where('user_id', $idget)->get()
+                'penyewaan' => Penyewaan::where('user_id', $idget)->orderBy('id', 'DESC')->get()
             ]);
         }else{
             return view('db/penyewaan', [

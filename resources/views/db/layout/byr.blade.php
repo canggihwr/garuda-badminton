@@ -332,20 +332,21 @@
                                 
 									</div>
 									<!--end::Main column-->
-								</form>
+								
                                     <div class="mt-9" style="text-align: end">
 
                                         <!--begin::Button-->
                                         <a href="/dashboard/penyewaan" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Batal</a>
                                         <!--end::Button-->
                                         <!--begin::Button-->
-                                        <button type="submit" id="kt_ecommerce_edit_order_submit" class="btn btn-primary">
+                                        <button type="submit" id="" class="btn btn-primary">
                                             <span class="indicator-label">Kirim</span>
                                             <span class="indicator-progress">Please wait...
                                             <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                         </button>
                                         <!--end::Button-->
                                     </div>
+                                </form>
 								<!--end::Form-->
 							</div>
 							<!--end::Post-->

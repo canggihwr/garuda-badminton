@@ -169,7 +169,7 @@
 														$waktu = substr($w, 0, 2);
 														$lama = (int)$p->paket->lama;
 														$waktus = [];
-														$waktus[0] = (int)$waktu;
+														$waktus[0] = (int)$waktu+1;
 														$timeout = $waktus[0];
 														for($i=1;$i<$lama; $i++){
 															$waktus[$i] = (int)$waktus[$i-1]+(int)1;

@@ -127,7 +127,7 @@
 																							            @endforeach
 
 																										@if ($book == 'true')
-																										<span class="badge badge-light-info">Sudah dibooking</span>
+																										<span class="badge badge-secondary"><i class="fa fa-ban text-danger" aria-hidden="true" style="margin-right: 3px"></i> Sudah dibooking</span>
 																										@else
 																										<button  type="submit" class="badge badge-light-success border border-success"><div><i class="fa fa-genderless fs-2 text-success"></i></div><div style="margin-left: 9px">Pesan Jadwal</button>
 																										@endif
@@ -240,7 +240,7 @@
 																							            @endforeach
 
 																										@if ($book == 'true')
-																										<span class="badge badge-light-info">Sudah dibooking</span>
+																										<span class="badge badge-secondary"><i class="fa fa-ban text-danger" aria-hidden="true" style="margin-right: 3px"></i>Sudah dibooking</span>
 																										@else
 																										<button  type="submit" class="badge badge-light-success border border-success"><div><i class="fa fa-genderless fs-2 text-success"></i></div><div style="margin-left: 9px">Pesan Jadwal</div> </button>
 																										@endif
@@ -353,7 +353,7 @@
 																							            @endforeach
 
 																										@if ($book == 'true')
-																										<span class="badge badge-light-info">Sudah dibooking</span>
+																										<span class="badge badge-secondary"><i class="fa fa-ban text-danger" aria-hidden="true" style="margin-right: 3px"></i>Sudah dibooking</span>
 																										@else
 																										<button  type="submit" class="badge badge-light-success border border-success"><div><i class="fa fa-genderless fs-2 text-success"></i></div><div style="margin-left: 9px">Pesan Jadwal</button>
 																										@endif
